@@ -1350,7 +1350,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.5", "@babel/runtime@^7.14.6":
+"@babel/runtime@^7.10.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8":
   version "7.14.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.8.tgz#7119a56f421018852694290b9f9148097391b446"
   integrity sha512-twj3L8Og5SaCRCErB4x4ajbvBIVV77CGeFglHpeg5WC5FF8TZzBWXtTJ4MqaD9QszLYTtr+IsaAL2rEUevb+eg==
@@ -2952,6 +2952,14 @@
     resolve-from "^5.0.0"
     store2 "^2.12.0"
 
+"@styled-icons/boxicons-logos@^10.37.0":
+  version "10.37.0"
+  resolved "https://registry.yarnpkg.com/@styled-icons/boxicons-logos/-/boxicons-logos-10.37.0.tgz#6574f5a084bf38f0abe84bf048791b321a0e86e4"
+  integrity sha512-+WVbzxZ9DcGk5iLQLWGfgTVwBX0mr4x0GlTeOXlXmgNXcMTyfJtRr5A2JP1qPDIa04K/+RDQt9eA5VOasK1pbA==
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    "@styled-icons/styled-icon" "^10.6.3"
+
 "@styled-icons/octicons@^10.35.0":
   version "10.35.0"
   resolved "https://registry.yarnpkg.com/@styled-icons/octicons/-/octicons-10.35.0.tgz#655a4af723ec770b23853a7a29ce91b652f2c73d"
@@ -3255,6 +3263,11 @@
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@types/npmlog/-/npmlog-4.1.2.tgz#d070fe6a6b78755d1092a3dc492d34c3d8f871c4"
   integrity sha512-4QQmOF5KlwfxJ5IGXFIudkeLCdMABz03RcUXu+LCb24zmln8QW6aDjuGl4d4XPVLf2j+FnjelHTP7dvceAFbhA==
+
+"@types/nprogress@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@types/nprogress/-/nprogress-0.2.0.tgz#86c593682d4199212a0509cc3c4d562bbbd6e45f"
+  integrity sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==
 
 "@types/overlayscrollbars@^1.12.0":
   version "1.12.0"
@@ -10111,6 +10124,11 @@ npmlog@^4.1.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.2:
   version "1.0.2"

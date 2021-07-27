@@ -3,11 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ThreeBars, X as TimesIcon } from '@styled-icons/octicons'
 import { Container } from '../UI'
+import { useRouter } from 'next/router'
 
 import * as S from './styles'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true)
+  const router = useRouter()
 
   const navItems = [
     {
@@ -28,7 +30,7 @@ const Navbar = () => {
   ]
 
   return (
-    <S.Wrapper>
+    <S.Wrapper isOverlapVisible={isOpen}>
       <Container fillHeight>
         <S.Content>
           <S.Brand>
@@ -43,10 +45,12 @@ const Navbar = () => {
               <TimesIcon width={35} fill="#fff" />
             )}
           </S.Toggler>
-          <S.List isVisible={isOpen}>
+          <S.List onClick={() => setIsOpen((old) => !old)} isVisible={isOpen}>
             {navItems.map((item, index) => (
               <Link key={index} href={item.href} passHref={true}>
-                <S.Item onClick={() => setIsOpen(false)}>{item.label}</S.Item>
+                <S.Item isActive={router.pathname === item.href}>
+                  {item.label}
+                </S.Item>
               </Link>
             ))}
           </S.List>

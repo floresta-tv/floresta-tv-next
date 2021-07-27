@@ -11,7 +11,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
     
       --navy: #002936;
-      --primary: 3006686;
+      --primary: #006686;
+      --primary--darken: #015a75;
+      --secondary: #003D50;
+      --light: #9BC4CA;
   }
 
   html, body, #__next {
@@ -21,6 +24,24 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
+  }
+
+  main{
+    min-height: 70vh;
+  }
+
+  #nprogress{
+    position: absolute;
+    z-index: 2000;
+  }
+  
+  #nprogress .bar {
+    background-color: var(--primary) !important;
+    height: 5px;
+    z-index: 2000;
+  }
+  #nprogress .peg {
+    box-shadow: 0 0 10px var(--primary--darken), 0 0 5px var(--primary--darken);
   }
 `
 

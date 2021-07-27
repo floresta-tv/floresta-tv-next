@@ -1,13 +1,33 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+type WrapperProps = {
+  isOverlapVisible: boolean
+}
+
 export const Wrapper = styled.nav`
+  position: relative;
   width: 100%;
   height: 90px;
   background-color: var(--navy);
 
   ${media.greaterThan('large')`
     height: 120px;
+  `}
+
+  ${(props: WrapperProps) =>
+    media.lessThan('large')`
+    &::after {
+      content: '';
+      z-index: -1;
+      position: fixed;
+      top: 0px;
+      left: ${props.isOverlapVisible ? `-100vw` : `0`};
+      width: calc(100vw - 90px);
+      height: 91px;
+      background-color: #003d50;
+      transition: all 0.7s;
+    }
   `}
 `
 
@@ -16,6 +36,7 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  z-index: 300;
 `
 
 export const Brand = styled.div`
@@ -28,6 +49,9 @@ export const Brand = styled.div`
 `
 
 export const Toggler = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +63,7 @@ export const Toggler = styled.button`
   border: none;
 
   &:hover {
-    background-color: #006686;
+    background-color: var(--primary);
   }
 
   ${media.greaterThan('large')`
@@ -56,10 +80,11 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   height: calc(100vh - 90px);
-  width: 71vw;
+  width: calc(100vw - 90px);
   top: 90px;
   left: 0;
   padding-top: 15px;
+  z-index: 1000;
 
   ${(props: ListProps) =>
     media.lessThan('large')`
@@ -79,6 +104,10 @@ export const List = styled.ul`
   `}
 `
 
+type ItemProps = {
+  isActive: boolean
+}
+
 export const Item = styled.li`
   display: flex;
   align-items: center;
@@ -93,9 +122,15 @@ export const Item = styled.li`
   font-size: 20px;
 
   &:hover {
-    background-color: #006686;
+    background-color: var(--primary);
     font-size: 20.5px;
   }
+
+  ${(props: ItemProps) =>
+    props.isActive &&
+    `
+  background-color: var(--primary);
+  `}
 
   ${media.greaterThan('large')`
     font-size: 30px;
@@ -105,7 +140,7 @@ export const Item = styled.li`
     width: auto;
 
     &:hover {
-      background-color: #006686;
+      background-color: var(--primary);
       font-size: 30.5px;
     }
   `}

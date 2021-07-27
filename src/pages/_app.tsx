@@ -1,6 +1,10 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import NProgress from 'nprogress'
+import Router from 'next/router'
+import 'nprogress/nprogress.css'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 import GlobalStyles from 'styles/global'
 
@@ -23,9 +27,23 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Navbar />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </>
   )
 }
+
+NProgress.configure({
+  minimum: 0.3,
+  easing: 'ease',
+  speed: 800,
+  showSpinner: false
+})
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 export default App
