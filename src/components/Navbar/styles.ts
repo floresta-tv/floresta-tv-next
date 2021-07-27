@@ -22,8 +22,10 @@ export const Content = styled.div`
 `
 
 export const Brand = styled.div`
+  position: relative;
   width: 160px;
   cursor: pointer;
+  z-index: 10;
 
   ${media.greaterThan('large')`
     width: 220px;
@@ -66,7 +68,6 @@ export const List = styled.ul`
   top: 0px;
   left: 0;
   padding-top: 105px;
-  z-index: -1;
 
   ${(props: ListProps) =>
     media.lessThan('large')`
