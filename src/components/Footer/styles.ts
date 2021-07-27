@@ -235,11 +235,11 @@ export const CopySocialItem = styled.a`
   }
 
   ${media.greaterThan('large')`
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
 
     svg{
-      width: 35px;
+      width: 34px;
     }
 
     &:not(:last-child) {
