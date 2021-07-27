@@ -121,10 +121,6 @@ const Footer = () => {
                 <YoutubeIcon width={35} fill="#fff" />
               </S.CopySocialItem>
             </S.CopySocial>
-
-            <S.CopyContactButton>
-              <span>Olá, como podemos te ajudar?</span>
-            </S.CopyContactButton>
           </S.CopyContent>
         </S.CopyContainer>
       </S.CopyWrapper>

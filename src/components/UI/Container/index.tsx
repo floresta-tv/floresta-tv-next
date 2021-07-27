@@ -2,10 +2,10 @@ import * as S from './styles'
 
 type ContainerProps = {
   children: JSX.Element
-  fillHeight: boolean
+  fillHeight?: boolean
 }
 
-const Container = ({ children, fillHeight }: ContainerProps) => {
+const Container = ({ children, fillHeight = false }: ContainerProps) => {
   return (
     <S.Wrapper style={{ height: fillHeight ? '100%' : 'auto' }}>
       {children}

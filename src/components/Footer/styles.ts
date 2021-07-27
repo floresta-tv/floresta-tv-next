@@ -168,35 +168,6 @@ export const CopyInfo = styled.div`
   }
 `
 
-export const CopyContactButton = styled.button`
-  font-size: 15px;
-  color: #9bc4ca;
-  font-weight: 700;
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 30px 16px 30px;
-  border-radius: 40px 40px 0 0;
-  background-color: var(--primary);
-  transition: all 0.3s;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #01546e;
-  }
-
-  ${media.greaterThan('large')`
-    font-size: 22px;
-    padding: 29px 50px 24px 50px;
-    border-radius: 65px 65px 0 0;
-    right: 30px;
-  `}
-`
-
 export const CopySocial = styled.div`
   position: relative;
   display: flex;

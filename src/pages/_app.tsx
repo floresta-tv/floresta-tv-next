@@ -7,6 +7,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import GlobalStyles from 'styles/global'
+import GlossarioFooter from 'components/GlossarioFooter'
+import ContactButton from 'components/ContactButton'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -30,6 +32,8 @@ function App({ Component, pageProps }: AppProps) {
       <main>
         <Component {...pageProps} />
       </main>
+      <GlossarioFooter />
+      <ContactButton />
       <Footer />
     </>
   )
