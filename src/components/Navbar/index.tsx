@@ -35,7 +35,13 @@ const Navbar = () => {
         <S.Content>
           <S.Brand>
             <Link href="/" passHref={true}>
-              <Image src="/img/brand.png" width={313} height={82} />
+              <Image
+                placeholder="blur"
+                blurDataURL="/img/brand.png"
+                src="/img/brand.png"
+                width={313}
+                height={82}
+              />
             </Link>
           </S.Brand>
           <S.Toggler onClick={() => setIsOpen((old) => !old)}>
