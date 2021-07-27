@@ -26,10 +26,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
-  main{
-    min-height: 70vh;
-  }
-
   #nprogress{
     position: absolute;
     z-index: 2000;

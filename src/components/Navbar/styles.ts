@@ -1,33 +1,15 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-type WrapperProps = {
-  isOverlapVisible: boolean
-}
-
 export const Wrapper = styled.nav`
   position: relative;
   width: 100%;
   height: 90px;
   background-color: var(--navy);
+  z-index: 1200;
 
   ${media.greaterThan('large')`
     height: 120px;
-  `}
-
-  ${(props: WrapperProps) =>
-    media.lessThan('large')`
-    &::after {
-      content: '';
-      z-index: -1;
-      position: fixed;
-      top: 0px;
-      left: ${props.isOverlapVisible ? `-100vw` : `0`};
-      width: calc(100vw - 90px);
-      height: 91px;
-      background-color: #003d50;
-      transition: all 0.7s;
-    }
   `}
 `
 
@@ -79,18 +61,30 @@ export const List = styled.ul`
   position: fixed;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 90px);
+  height: calc(100vh);
   width: calc(100vw - 90px);
-  top: 90px;
+  top: 0px;
   left: 0;
-  padding-top: 15px;
-  z-index: 1000;
+  padding-top: 105px;
+  z-index: -1;
 
   ${(props: ListProps) =>
     media.lessThan('large')`
-      background-color: #003d50;
+      background-color: var(--secondary);
       left: ${props.isVisible ? `-100vw` : `0`};
       transition: all 0.7s;
+
+      &::after {
+        content: '';
+        position: fixed;
+        top: 0px;
+        left: ${props.isVisible ? `-100vw` : `0`};
+        width: calc(100vw - 90px);
+        height: 90px;
+        background-color: var(--navy);
+        transition: all 0.7s;
+        z-index: -1;
+      }
   `}
 
   ${media.greaterThan('large')`

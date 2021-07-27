@@ -30,7 +30,7 @@ const Navbar = () => {
   ]
 
   return (
-    <S.Wrapper isOverlapVisible={isOpen}>
+    <S.Wrapper>
       <Container fillHeight>
         <S.Content>
           <S.Brand>
@@ -51,10 +51,13 @@ const Navbar = () => {
               <TimesIcon width={35} fill="#fff" />
             )}
           </S.Toggler>
-          <S.List onClick={() => setIsOpen((old) => !old)} isVisible={isOpen}>
+          <S.List isVisible={isOpen}>
             {navItems.map((item, index) => (
               <Link key={index} href={item.href} passHref={true}>
-                <S.Item isActive={router.pathname === item.href}>
+                <S.Item
+                  onClick={() => setIsOpen((old) => !old)}
+                  isActive={router.pathname === item.href}
+                >
                   {item.label}
                 </S.Item>
               </Link>
