@@ -9,6 +9,7 @@ export const Wrapper = styled.nav`
   position: relative;
   width: 100%;
   background-color: var(--primary);
+  z-index: 300;
 
   ${(props: WrapperProps) =>
     media.lessThan('large')`

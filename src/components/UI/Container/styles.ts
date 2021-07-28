@@ -20,6 +20,6 @@ export const Wrapper = styled.div`
     max-width: 1140px;
   }
   @media (min-width: 1400px) {
-    max-width: 1230px;
+    max-width: 1180px;
   }
 `

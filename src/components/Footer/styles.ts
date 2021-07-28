@@ -2,9 +2,11 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.footer`
+  position: relative;
   width: 100%;
   padding: 24px 30px 24px 30px;
   background-color: var(--secondary);
+  z-index: 400;
 
   ${media.greaterThan('large')`
     padding: 34px 60px 34px 60px;
@@ -107,9 +109,11 @@ export const GridListItem = styled.li`
 `
 
 export const CopyWrapper = styled.footer`
+  position: relative;
   width: 100%;
   padding: 22px 30px 70px 30px;
   background-color: var(--navy);
+  z-index: 300;
 
   ${media.greaterThan('large')`
     padding: 22px 60px 26px 60px;
