@@ -194,15 +194,30 @@ export const EficienciaImage = styled.div`
   `}
 `
 
+export const EficienciaBrand = styled.div`
+  z-index: 2;
+  margin-top: 110px;
+  margin-left: 15px;
+  width: 190px;
+
+  ${media.lessThan('medium')`
+    margin-top: 30px;
+
+    div, img{
+      width: 140px;
+    }
+  `}
+`
+
 export const MenuWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 240px;
+  margin-top: -40px;
   text-align: left;
 
   @media screen and (max-width: 900px) {
-    margin-top: 0;
+    margin-top: 10px;
   }
 `
 
@@ -362,7 +377,7 @@ export const MenuItem = styled.div`
       color: #003d50;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 768px) {
       top: -280px;
       left: 35px;
     }

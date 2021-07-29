@@ -62,7 +62,7 @@ const Produtos = () => {
             </S.EficienciaBackground>
             <S.EficienciaImage>
               <Image
-                blurDataURL="/img/produtos-chart.svg"
+                blurDataURL="/img/percent-icon.svg"
                 src="/img/percent-icon.svg"
                 placeholder="blur"
                 width={291}
@@ -79,6 +79,15 @@ const Produtos = () => {
               podem fazer a gestão de qualquer tipo de patrimônio numa
               plataforma online, segura, com alta disponibilidade e performance.
             </S.EficienciaDescription>
+            <S.EficienciaBrand>
+              <Image
+                blurDataURL="/img/vertical-brand.png"
+                src="/img/vertical-brand.png"
+                placeholder="blur"
+                width={230}
+                height={174}
+              />
+            </S.EficienciaBrand>
           </S.EficienciaWrapper>
 
           <S.MenuWrapper>
