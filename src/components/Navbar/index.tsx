@@ -37,8 +37,8 @@ const Navbar = () => {
             <Link href="/" passHref={true}>
               <Image
                 placeholder="blur"
-                blurDataURL="/img/brand.png"
-                src="/img/brand.png"
+                blurDataURL="/img/brand.svg"
+                src="/img/brand.svg"
                 width={313}
                 height={82}
               />
@@ -56,7 +56,11 @@ const Navbar = () => {
               <Link key={index} href={item.href} passHref={true}>
                 <S.Item
                   onClick={() => setIsOpen((old) => !old)}
-                  isActive={router.pathname === item.href}
+                  isActive={
+                    router.pathname === '/'
+                      ? router.pathname === item.href
+                      : item.href.includes(router.pathname)
+                  }
                 >
                   {item.label}
                 </S.Item>

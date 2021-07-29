@@ -24,6 +24,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   main{

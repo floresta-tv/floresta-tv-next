@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Container } from '../UI/'
+import { Container } from '../../components/UI'
 
 import * as S from './styles'
 
