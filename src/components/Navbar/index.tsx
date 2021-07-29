@@ -57,9 +57,9 @@ const Navbar = () => {
                 <S.Item
                   onClick={() => setIsOpen((old) => !old)}
                   isActive={
-                    router.pathname === '/'
+                    item.href === '/'
                       ? router.pathname === item.href
-                      : item.href.includes(router.pathname)
+                      : router.pathname.includes(item.href)
                   }
                 >
                   {item.label}
