@@ -5,6 +5,8 @@ export const Wrapper = styled.section`
   width: 100%;
   padding-bottom: 52px;
   background-color: #e6e6e6;
+  max-width: 100vw;
+  overflow-x: hidden;
 `
 
 export const CarouselWrapper = styled.div`

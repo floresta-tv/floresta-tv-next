@@ -82,14 +82,16 @@ const Produtos = () => {
           </S.EficienciaWrapper>
 
           <S.MenuWrapper>
-            <S.MenuBrackets>
-              <Image
-                placeholder="blur"
-                src="/img/produtos-brackets.png"
-                blurDataURL="/img/produtos-brackets.png"
-                layout="fill"
-              />
-            </S.MenuBrackets>
+            <Container position="relative">
+              <S.MenuBrackets>
+                <Image
+                  placeholder="blur"
+                  src="/img/produtos-brackets.png"
+                  blurDataURL="/img/produtos-brackets.png"
+                  layout="fill"
+                />
+              </S.MenuBrackets>
+            </Container>
 
             <S.MenuItems>
               <S.MenuItem>
