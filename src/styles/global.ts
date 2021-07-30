@@ -26,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     max-width: 100vw;
     overflow-x: hidden;
+    background-color: #e6e6e6;
   }
 
   main{

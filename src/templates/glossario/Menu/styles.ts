@@ -1,57 +1,59 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.nav`
+export const MenuWrapper = styled.nav`
   position: relative;
   width: 100%;
   background-color: var(--primary);
   z-index: 300;
 `
 
-export const Container = styled.div`
-  width: 100%;
-  padding: 24px 30px 24px 30px;
-
-  ${media.greaterThan('large')`
-    padding: 40px 60px 40px 60px;
-  `}
-`
-
-export const Content = styled.div`
+export const MenuContent = styled.div`
   display: flex;
   justify-content: start;
   align-items: start;
   flex-direction: column;
   z-index: 300;
+  padding-top: 40px;
+
+  hr {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 25px 0 10px 0;
+  }
 `
 
-export const Title = styled.h2`
+export const MenuTitle = styled.h2`
   font-size: 23px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
 `
 
-export const Desc = styled.p`
+export const MenuDesc = styled.p`
   font-size: 15px;
   color: #fff;
   margin-bottom: 4px;
   letter-spacing: 0.5px;
 `
 
-export const List = styled.ul`
+export const MenuList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: 15px;
   z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
   ${media.greaterThan('large')`
     
   `}
 `
 
-export const Item = styled.li`
+export const MenuItem = styled.li`
   display: block;
   font-size: 18px;
   font-weight: 900;
@@ -75,4 +77,28 @@ export const Item = styled.li`
       background-color: var(--primary);
     }
   `}
+`
+
+export const MenuSelectedLetter = styled.div`
+  display: flex;
+  align-items: flex-end;
+  font-size: 113px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: -30px;
+
+  .upper {
+    text-transform: uppercase;
+  }
+
+  .lower {
+    text-transform: lowercase;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 100px;
+    margin-bottom: -25px;
+    width: 100%;
+    justify-content: center;
+  }
 `
