@@ -31,7 +31,7 @@ const GlossarioResult = () => {
 
           <h2>Sinônimo</h2>
           <p>
-            <Link scroll={false} href="/glossario/word/socio">
+            <Link scroll={false} href="/glossario/palavra/socio">
               <a>sócio.</a>
             </Link>
           </p>

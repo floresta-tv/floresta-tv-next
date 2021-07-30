@@ -13,7 +13,7 @@ const GlossarioResults = () => {
             <Link
               passHref={true}
               scroll={false}
-              href="/glossario/word/acionista"
+              href="/glossario/palavra/acionista"
             >
               <div>
                 <S.ResultItemTitle>Lorem</S.ResultItemTitle>
@@ -33,7 +33,7 @@ const GlossarioResults = () => {
             <Link
               passHref={true}
               scroll={false}
-              href="/glossario/word/acionista"
+              href="/glossario/palavra/acionista"
             >
               <div>
                 <S.ResultItemTitle>Lorem</S.ResultItemTitle>
@@ -53,7 +53,7 @@ const GlossarioResults = () => {
             <Link
               passHref={true}
               scroll={false}
-              href="/glossario/word/acionista"
+              href="/glossario/palavra/acionista"
             >
               <div>
                 <S.ResultItemTitle>Lorem</S.ResultItemTitle>
