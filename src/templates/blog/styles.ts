@@ -146,12 +146,12 @@ export const ColumnTitle = styled.h3`
 
 export const ArticleLarge = styled.div`
   width: 46%;
-  gap: 30px;
   margin-right: 20px;
   margin-bottom: 30px;
 
   ${media.lessThan('medium')`
     width: 100%;
+    margin-right: 0;
   `}
 
   .img {

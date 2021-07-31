@@ -6,9 +6,13 @@ export default function Home() {
     <>
       <T.Header />
       <T.Testimonial />
-      <T.Menu />
+      <T.Menu
+        selectedWord={{
+          word: 'Acionista',
+          description: 'Latim actio, -onis, ação + -ista)'
+        }}
+      />
       <T.Result />
-
       <BlogRelated />
     </>
   )

@@ -3,11 +3,10 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   width: 100%;
-  padding-bottom: 90px;
-  background-color: #fff;
+  padding-bottom: 0px;
 
   ${media.lessThan('medium')`
-    padding-bottom: 70px;
+    padding-bottom: 0px;
   `}
 `
 

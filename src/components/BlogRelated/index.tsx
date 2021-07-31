@@ -10,6 +10,7 @@ import { Container } from 'components/UI'
 export const BlogRelated = () => {
   const slickConfig = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     autoplay: true,

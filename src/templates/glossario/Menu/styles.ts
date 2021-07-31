@@ -53,6 +53,10 @@ export const MenuList = styled.ul`
   `}
 `
 
+type MenuItemProps = {
+  isActive?: boolean
+}
+
 export const MenuItem = styled.li`
   display: block;
   font-size: 18px;
@@ -77,15 +81,22 @@ export const MenuItem = styled.li`
       background-color: var(--primary);
     }
   `}
+
+  ${(props: MenuItemProps) =>
+    props.isActive &&
+    `
+    color: #fff;
+  `}
 `
 
-export const MenuSelectedLetter = styled.div`
+export const MenuSelectedLetter = styled.h3`
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   font-size: 113px;
   color: #fff;
   font-weight: 700;
-  margin-bottom: -30px;
+  margin-bottom: -28px;
 
   .upper {
     text-transform: uppercase;
@@ -100,5 +111,31 @@ export const MenuSelectedLetter = styled.div`
     margin-bottom: -25px;
     width: 100%;
     justify-content: center;
+  }
+`
+
+export const MenuSelectedWord = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 60px;
+      margin-bottom: -5px;
+    }
+  }
+`
+
+export const MenuSelectedLetterDesc = styled.span`
+  font-size: 20px;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
   }
 `

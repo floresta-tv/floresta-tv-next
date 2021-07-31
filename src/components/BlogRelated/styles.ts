@@ -10,11 +10,12 @@ export const CarouselTitle = styled.h3`
 export const CarouselWrapper = styled.div`
   position: relative;
   padding-top: 80px;
-  padding-bottom: 60px;
+  margin-bottom: 90px;
 
   ${media.lessThan('medium')`
-  padding-top: 40px;
-`}
+    padding-top: 40px;
+    margin-bottom: 70px;
+  `}
 
   .slick-list {
     overflow-x: hidden;

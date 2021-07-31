@@ -1,20 +1,25 @@
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 import { Container } from '../../../components/UI'
 
 import * as S from './styles'
 
-const GlossarioMenu = () => {
-  const [selectedLetter, setSelectedLetter] = useState<string>()
+type GlossarioMenuProps = {
+  selectedWord?: {
+    word: string
+    description: string
+  }
+
+  selectedLetter?: string
+}
+
+const GlossarioMenu = ({
+  selectedWord,
+  selectedLetter
+}: GlossarioMenuProps) => {
   const alphabet = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'.split(
     ','
   )
-
-  useEffect(() => {
-    setSelectedLetter('a')
-  }, [])
-
   return (
     <S.MenuWrapper>
       <Container>
@@ -32,15 +37,30 @@ const GlossarioMenu = () => {
                 href={`/glossario/${letter}`}
                 passHref={true}
               >
-                <S.MenuItem>{letter}</S.MenuItem>
+                <S.MenuItem isActive={selectedLetter === letter}>
+                  {letter}
+                </S.MenuItem>
               </Link>
             ))}
           </S.MenuList>
 
-          <S.MenuSelectedLetter>
-            <div className="upper">{selectedLetter}</div>
-            <div className="lower">{selectedLetter}</div>
-          </S.MenuSelectedLetter>
+          {selectedLetter && (
+            <S.MenuSelectedLetter>
+              <div className="upper">{selectedLetter}</div>
+              <div className="lower">{selectedLetter}</div>
+            </S.MenuSelectedLetter>
+          )}
+
+          {selectedWord && (
+            <S.MenuSelectedWord>
+              <S.MenuSelectedLetter>
+                <div className="word">{selectedWord.word}</div>
+              </S.MenuSelectedLetter>
+              <S.MenuSelectedLetterDesc>
+                <div className="word">{selectedWord.description}</div>
+              </S.MenuSelectedLetterDesc>
+            </S.MenuSelectedWord>
+          )}
         </S.MenuContent>
       </Container>
     </S.MenuWrapper>
