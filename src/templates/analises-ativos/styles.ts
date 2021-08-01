@@ -325,12 +325,28 @@ export const MenuItems = styled.div`
 export const MenuItem = styled.div`
   position: absolute;
   z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+
+    .img {
+      img {
+        transform: rotate(360deg);
+      }
+    }
+  }
 
   .img {
     position: relative;
     display: block;
     width: 214px;
     height: 214px;
+
+    img {
+      transition: all 0.7s;
+    }
 
     @media screen and (max-width: 768px) {
       width: 100px;

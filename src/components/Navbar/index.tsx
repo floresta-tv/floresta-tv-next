@@ -58,7 +58,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen((old) => !old)}
                   isActive={
                     item.href === '/'
-                      ? router.pathname === item.href
+                      ? router.pathname === item.href ||
+                        router.pathname.includes('/produtos')
                       : router.pathname.includes(item.href)
                   }
                 >

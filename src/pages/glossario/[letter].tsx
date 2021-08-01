@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next'
 import * as T from 'templates/glossario'
 
-type PageGlossarioProps = {
+type PageGlossarioLetterProps = {
   letter: string
 }
 
-export default function Glossario({ letter }: PageGlossarioProps) {
+export default function GlossarioLetter({ letter }: PageGlossarioLetterProps) {
   return (
     <>
       <T.Header />
@@ -16,18 +16,7 @@ export default function Glossario({ letter }: PageGlossarioProps) {
   )
 }
 
-export async function getStaticPaths() {
-  const alphabet = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'.split(
-    ','
-  )
-  const paths = alphabet.map((letter) => ({
-    params: { letter }
-  }))
-
-  return { paths, fallback: true }
-}
-
-export const getStaticProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   return {
     props: {
       letter: params?.letter

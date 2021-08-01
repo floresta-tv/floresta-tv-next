@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Container } from '../../components/UI'
 
 import * as S from './styles'
@@ -103,59 +104,64 @@ const Produtos = () => {
             </Container>
 
             <S.MenuItems>
-              <S.MenuItem>
-                <div className="img">
-                  <Image
-                    placeholder="blur"
-                    src="/img/atena-icon.png"
-                    blurDataURL="/img/atena-icon.png"
-                    layout="fill"
-                  />
-                </div>
-                <div className="description">
-                  <h3 className="title">Atena</h3>
-                  <p className="desc">
-                    A sabedoria do mercado financeiro onshore e offshore.
-                    Cadastros, preços, indíces e muito mais.
-                  </p>
-                </div>
-              </S.MenuItem>
+              <Link passHref={true} href="/produtos/atena">
+                <S.MenuItem>
+                  <div className="img">
+                    <Image
+                      placeholder="blur"
+                      src="/img/atena-icon.png"
+                      blurDataURL="/img/atena-icon.png"
+                      layout="fill"
+                    />
+                  </div>
+                  <div className="description">
+                    <h3 className="title">Atena</h3>
+                    <p className="desc">
+                      A sabedoria do mercado financeiro onshore e offshore.
+                      Cadastros, preços, indíces e muito mais.
+                    </p>
+                  </div>
+                </S.MenuItem>
+              </Link>
 
-              <S.MenuItem>
-                <div className="description">
-                  <h3 className="title">One</h3>
-                  <p className="desc">
-                    Tão amigável quanto é poderoso para unificar seus
-                    investimentos.
-                  </p>
-                </div>
-                <div className="img">
-                  <Image
-                    placeholder="blur"
-                    src="/img/one-icon.png"
-                    blurDataURL="/img/one-icon.png"
-                    layout="fill"
-                  />
-                </div>
-              </S.MenuItem>
-
-              <S.MenuItem>
-                <div className="img">
-                  <Image
-                    placeholder="blur"
-                    src="/img/bpo-icon.png"
-                    blurDataURL="/img/bpo-icon.png"
-                    layout="fill"
-                  />
-                </div>
-                <div className="description">
-                  <h3 className="title">BPO</h3>
-                  <p className="desc">
-                    Amplie a capacidade operacional da sua empresa com nosso
-                    Business Process Outsourcing.
-                  </p>
-                </div>
-              </S.MenuItem>
+              <Link passHref={true} href="/produtos/one">
+                <S.MenuItem>
+                  <div className="description">
+                    <h3 className="title">One</h3>
+                    <p className="desc">
+                      Tão amigável quanto é poderoso para unificar seus
+                      investimentos.
+                    </p>
+                  </div>
+                  <div className="img">
+                    <Image
+                      placeholder="blur"
+                      src="/img/one-icon.png"
+                      blurDataURL="/img/one-icon.png"
+                      layout="fill"
+                    />
+                  </div>
+                </S.MenuItem>
+              </Link>
+              <Link passHref={true} href="/produtos/bpo">
+                <S.MenuItem>
+                  <div className="img">
+                    <Image
+                      placeholder="blur"
+                      src="/img/bpo-icon.png"
+                      blurDataURL="/img/bpo-icon.png"
+                      layout="fill"
+                    />
+                  </div>
+                  <div className="description">
+                    <h3 className="title">BPO</h3>
+                    <p className="desc">
+                      Amplie a capacidade operacional da sua empresa com nosso
+                      Business Process Outsourcing.
+                    </p>
+                  </div>
+                </S.MenuItem>
+              </Link>
             </S.MenuItems>
 
             <S.MenuTestimonial>
