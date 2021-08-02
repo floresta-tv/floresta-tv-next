@@ -42,9 +42,11 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--primary) !important;
     height: 5px;
     z-index: 2000;
+    border-bottom: 2px solid var(--light);
   }
+  
   #nprogress .peg {
-    box-shadow: 0 0 10px var(--primary--darken), 0 0 5px var(--primary--darken);
+    box-shadow: 0 0 20px var(--primary--darken), 0 0 5px var(--primary--darken);
   }
 `
 
