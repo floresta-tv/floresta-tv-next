@@ -86,6 +86,7 @@ export const HeroWrapper = styled.div`
       @media screen and (max-width: 768px) {
         font-size: 14px;
         max-width: 150px;
+        color: #fff;
       }
     }
 
