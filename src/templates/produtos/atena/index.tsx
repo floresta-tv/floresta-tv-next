@@ -1,0 +1,68 @@
+import { Container } from 'components/UI'
+import Image from 'next/image'
+import * as S from './styles'
+
+const AtenaTemplate = () => {
+  return (
+    <S.Wrapper>
+      <Container position="relative">
+        <S.Content>
+          <S.HeroWrapper>
+            <div className="ico">
+              <h1>Atena</h1>
+              <Image
+                placeholder="blur"
+                src="/img/atena-icon.png"
+                blurDataURL="/img/atena-icon.png"
+                width={240}
+                height={240}
+              />
+              <h2>
+                A sabedoria do mercado financeiro onshore e offshore. Cadastros,
+                preços, indíces e muito mais.
+              </h2>
+            </div>
+
+            <div className="shape">
+              <Image
+                placeholder="blur"
+                src="/img/atena-shape.png"
+                blurDataURL="/img/atena-shape.png"
+                width={1300}
+                height={1100}
+              />
+            </div>
+          </S.HeroWrapper>
+          <S.Body>
+            <h3>Big Data</h3>
+            <p style={{ maxWidth: '450px' }}>
+              Através de integrações, serviços e suporte da nossa equipe de
+              especialistas, o Athena tornou-se uma grande base de dados de
+              ativos concentrando assim as informações necessárias para que
+              nossos clientes possam direcionar sua atenção para as estratégias
+              de negócio.
+            </p>
+            <h3>Integração</h3>
+            <p style={{ maxWidth: '450px' }}>
+              Athena está integrado aos nossos produtos provendo as atualizações
+              necessárias para manter as informações de ativos sempre
+              consistentes, potencializando assim os resultados de rentabilidade
+              e posição das carteiras dentro da plataforma Meuportfolio.
+            </p>
+            <div className="mockup-img">
+              <Image
+                placeholder="blur"
+                src="/img/atena-mockup.png"
+                blurDataURL="/img/atena-mockup.png"
+                width={595}
+                height={375}
+              />
+            </div>
+          </S.Body>
+        </S.Content>
+      </Container>
+    </S.Wrapper>
+  )
+}
+
+export default AtenaTemplate

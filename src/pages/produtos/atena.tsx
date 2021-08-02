@@ -1,7 +1,8 @@
 import { GetServerSideProps } from 'next'
+import AtenaTemplate from 'templates/produtos/atena'
 
 export default function Atena() {
-  return <></>
+  return <AtenaTemplate />
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {

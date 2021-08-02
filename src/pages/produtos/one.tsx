@@ -1,7 +1,8 @@
 import { GetServerSideProps } from 'next'
+import OneTemplate from 'templates/produtos/one'
 
 export default function One() {
-  return <></>
+  return <OneTemplate />
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
