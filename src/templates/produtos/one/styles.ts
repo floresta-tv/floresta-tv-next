@@ -108,6 +108,7 @@ export const Body = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding-top: 130px;
   }
 
   .mockup-caption {

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
+  position: relative;
   width: 100%;
   padding-bottom: 52px;
   background-color: #e6e6e6;

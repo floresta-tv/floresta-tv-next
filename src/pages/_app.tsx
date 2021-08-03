@@ -5,6 +5,7 @@ import Router from 'next/router'
 import 'nprogress/nprogress.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { AnimatePresence } from 'framer-motion'
 
 import GlobalStyles from 'styles/global'
 import GlossarioFooter from 'components/GlossarioFooter'
@@ -30,7 +31,9 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Navbar />
       <main>
-        <Component {...pageProps} />
+        <AnimatePresence>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </main>
       <GlossarioFooter />
       <ContactButton />

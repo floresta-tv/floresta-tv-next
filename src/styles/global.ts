@@ -42,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--primary) !important;
     height: 5px;
     z-index: 2000;
-    border-bottom: 2px solid var(--light);
+    border-bottom: 0.4px solid var(--light);
   }
   
   #nprogress .peg {

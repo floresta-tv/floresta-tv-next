@@ -328,21 +328,16 @@ export const MenuItem = styled.div`
   cursor: pointer;
   transition: all 0.3s;
 
-  &:hover {
-    transform: scale(1.03);
-
-    .img {
-      img {
-        transform: rotate(360deg);
-      }
-    }
-  }
-
   .img {
     position: relative;
     display: block;
     width: 214px;
     height: 214px;
+    overflow: visible;
+
+    div {
+      overflow: visible !important;
+    }
 
     img {
       transition: all 0.7s;
@@ -357,6 +352,10 @@ export const MenuItem = styled.div`
   .description {
     text-align: center;
     margin-top: -19px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: -7px;
+    }
 
     .title {
       font-size: 38px;
@@ -385,6 +384,16 @@ export const MenuItem = styled.div`
     }
   }
 
+  &:hover {
+    transform: scale(1.03);
+
+    .img {
+      img {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
   &:first-child {
     top: -600px;
     left: 180px;
@@ -395,7 +404,7 @@ export const MenuItem = styled.div`
 
     @media screen and (max-width: 768px) {
       top: -280px;
-      left: 35px;
+      left: calc(49vw - 170px);
     }
   }
 
@@ -409,8 +418,8 @@ export const MenuItem = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-      top: -290px;
-      left: 145px;
+      top: -300px;
+      left: calc(49vw - 60px);
     }
   }
 
@@ -420,7 +429,7 @@ export const MenuItem = styled.div`
 
     @media screen and (max-width: 768px) {
       top: -323px;
-      left: 255px;
+      left: calc(49vw + 52px);
     }
 
     .title,
