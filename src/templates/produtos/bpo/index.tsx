@@ -1,9 +1,9 @@
 import { Container } from 'components/UI'
 import Image from 'next/image'
-import * as S from './styles'
 import { motion } from 'framer-motion'
 
-import * as animations from '../animations'
+import * as S from './styles'
+import * as animations from './animations'
 
 const BPOTemplate = () => {
   return (
@@ -14,7 +14,7 @@ const BPOTemplate = () => {
             <S.HeroWrapper>
               <div className="ico">
                 <h1>BPO</h1>
-                <motion.div {...animations.rotate}>
+                <motion.div key={1025} {...animations.rotate}>
                   <Image
                     placeholder="blur"
                     src="/img/bpo-icon.png"

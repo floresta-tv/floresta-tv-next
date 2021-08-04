@@ -1,9 +1,9 @@
 import { Container } from 'components/UI'
 import Image from 'next/image'
-import * as S from './styles'
 import { motion } from 'framer-motion'
 
-import * as animations from '../animations'
+import * as S from './styles'
+import * as animations from './animations'
 
 const OneTemplate = () => {
   return (
