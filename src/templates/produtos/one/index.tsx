@@ -14,7 +14,7 @@ const OneTemplate = () => {
             <S.HeroWrapper>
               <div className="ico">
                 <h1>One</h1>
-                <motion.div {...animations.rotate}>
+                <motion.div key={1023} {...animations.rotate}>
                   <Image
                     placeholder="blur"
                     src="/img/one-icon.png"

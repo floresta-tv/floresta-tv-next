@@ -52,7 +52,7 @@ export const HeroWrapper = styled.div`
 
   .ico {
     position: absolute;
-    top: 305px;
+    top: 295px;
     right: 124px;
     transform: translateY(-40%);
     z-index: 2;
