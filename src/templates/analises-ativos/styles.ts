@@ -339,6 +339,20 @@ export const MenuItem = styled.div`
     height: 214px;
     overflow: visible;
 
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    &.rotating,
+    &:hover {
+      animation: rotate 1.5s linear infinite;
+    }
+
     div {
       overflow: visible !important;
     }
@@ -391,12 +405,6 @@ export const MenuItem = styled.div`
   &:hover,
   &:active {
     transform: scale(1.03);
-
-    .img {
-      img {
-        transform: rotate(360deg);
-      }
-    }
   }
 
   &:first-child {

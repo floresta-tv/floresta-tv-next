@@ -58,7 +58,7 @@ export const HeroWrapper = styled.div`
     z-index: 2;
 
     @media screen and (max-width: 768px) {
-      top: 130px;
+      top: 126px;
       right: 80px;
     }
 
@@ -72,6 +72,7 @@ export const HeroWrapper = styled.div`
       transform: translateX(10px);
 
       @media screen and (max-width: 768px) {
+        margin-bottom: 0px;
         font-size: 40px;
       }
     }

@@ -29,7 +29,7 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <Navbar />
         <main>
           <Component {...pageProps} />

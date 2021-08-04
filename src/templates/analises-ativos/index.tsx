@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '../../components/UI'
@@ -9,6 +10,8 @@ import * as animations from './animations'
 import * as S from './styles'
 
 const Produtos = () => {
+  const [isRotating, setIsRotating] = useState('')
+
   return (
     <motion.div key={6} {...animations.wrapper}>
       <S.Wrapper>
@@ -136,8 +139,10 @@ const Produtos = () => {
               <Fade>
                 <S.MenuItems>
                   <Link passHref={true} href="/produtos/atena">
-                    <S.MenuItem>
-                      <div className="img">
+                    <S.MenuItem onClick={() => setIsRotating('atena')}>
+                      <div
+                        className={`img ${isRotating === 'atena' && 'rotate'}`}
+                      >
                         <Image
                           placeholder="blur"
                           src="/img/atena-icon.png"
@@ -156,7 +161,7 @@ const Produtos = () => {
                   </Link>
 
                   <Link passHref={true} href="/produtos/one">
-                    <S.MenuItem>
+                    <S.MenuItem onClick={() => setIsRotating('one')}>
                       <div className="description">
                         <h3 className="title">One</h3>
                         <p className="desc">
@@ -164,7 +169,9 @@ const Produtos = () => {
                           investimentos.
                         </p>
                       </div>
-                      <div className="img">
+                      <div
+                        className={`img ${isRotating === 'one' && 'rotate'}`}
+                      >
                         <Image
                           placeholder="blur"
                           src="/img/one-icon.png"
@@ -175,8 +182,10 @@ const Produtos = () => {
                     </S.MenuItem>
                   </Link>
                   <Link passHref={true} href="/produtos/bpo">
-                    <S.MenuItem>
-                      <div className="img">
+                    <S.MenuItem onClick={() => setIsRotating('bpo')}>
+                      <div
+                        className={`img ${isRotating === 'bpo' && 'rotate'}`}
+                      >
                         <Image
                           placeholder="blur"
                           src="/img/bpo-icon.png"
