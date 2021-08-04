@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Fade from 'react-reveal/Fade'
+
 import * as S from './styles'
 
 const GlossarioFooter = () => {
@@ -6,23 +8,25 @@ const GlossarioFooter = () => {
     ','
   )
   return (
-    <S.Wrapper>
-      <S.Container>
-        <S.Content>
-          <S.Title>Glossário de Finanças e Investimentos</S.Title>
-          <S.Desc>
-            Pesquise a(s) palavra(s) navegando pelo alfabeto abaixo
-          </S.Desc>
-          <S.List>
-            {alphabet.map((letter, index) => (
-              <Link key={index} href={`/glossario/${letter}`} passHref={true}>
-                <S.Item>{letter}</S.Item>
-              </Link>
-            ))}
-          </S.List>
-        </S.Content>
-      </S.Container>
-    </S.Wrapper>
+    <Fade>
+      <S.Wrapper>
+        <S.Container>
+          <S.Content>
+            <S.Title>Glossário de Finanças e Investimentos</S.Title>
+            <S.Desc>
+              Pesquise a(s) palavra(s) navegando pelo alfabeto abaixo
+            </S.Desc>
+            <S.List>
+              {alphabet.map((letter, index) => (
+                <Link key={index} href={`/glossario/${letter}`} passHref={true}>
+                  <S.Item>{letter}</S.Item>
+                </Link>
+              ))}
+            </S.List>
+          </S.Content>
+        </S.Container>
+      </S.Wrapper>
+    </Fade>
   )
 }
 

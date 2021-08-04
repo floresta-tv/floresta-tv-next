@@ -7,6 +7,10 @@ export const Wrapper = styled.section`
   min-height: 100vh;
   padding-bottom: 50px;
   overflow: hidden;
+
+  .react-reveal {
+    z-index: 100;
+  }
 `
 
 export const HeaderBackground = styled.div`
@@ -340,7 +344,7 @@ export const MenuItem = styled.div`
     }
 
     img {
-      transition: all 0.7s;
+      transition: all 1.5s;
     }
 
     @media screen and (max-width: 768px) {
@@ -384,7 +388,8 @@ export const MenuItem = styled.div`
     }
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     transform: scale(1.03);
 
     .img {

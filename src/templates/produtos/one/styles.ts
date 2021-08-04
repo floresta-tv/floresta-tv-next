@@ -68,6 +68,7 @@ export const HeroWrapper = styled.div`
       color: #006686;
       text-transform: uppercase;
       text-align: center;
+      margin-bottom: 10px;
       transform: translateX(10px);
 
       @media screen and (max-width: 768px) {

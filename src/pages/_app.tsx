@@ -29,15 +29,15 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Navbar />
-      <main>
-        <AnimatePresence>
+      <AnimatePresence>
+        <Navbar />
+        <main>
           <Component {...pageProps} />
-        </AnimatePresence>
-      </main>
-      <GlossarioFooter />
-      <ContactButton />
-      <Footer />
+        </main>
+        <GlossarioFooter />
+        <ContactButton />
+        <Footer />
+      </AnimatePresence>
     </>
   )
 }

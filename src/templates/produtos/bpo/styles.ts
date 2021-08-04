@@ -84,7 +84,7 @@ export const HeroWrapper = styled.div`
       font-weight: 400;
       color: #287e7e;
       text-align: center;
-      margin-top: -35px;
+      margin-top: -15px;
       transform: translateX(5px);
 
       @media screen and (max-width: 768px) {

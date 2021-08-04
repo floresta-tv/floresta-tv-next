@@ -7,20 +7,22 @@ import * as animations from '../animations'
 
 const OneTemplate = () => {
   return (
-    <motion.div {...animations.wrapper}>
+    <motion.div key={1} {...animations.wrapper}>
       <S.Wrapper>
         <Container position="relative">
           <S.Content>
             <S.HeroWrapper>
               <div className="ico">
                 <h1>One</h1>
-                <Image
-                  placeholder="blur"
-                  src="/img/one-icon.png"
-                  blurDataURL="/img/one-icon.png"
-                  width={240}
-                  height={240}
-                />
+                <motion.div {...animations.rotate}>
+                  <Image
+                    placeholder="blur"
+                    src="/img/one-icon.png"
+                    blurDataURL="/img/one-icon.png"
+                    width={240}
+                    height={240}
+                  />
+                </motion.div>
                 <h2>
                   Tão amigável quanto é poderoso para unificar seus
                   investimentos.

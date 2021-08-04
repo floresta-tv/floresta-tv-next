@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Fade from 'react-reveal/Fade'
 
 import { Container } from '../../../components/UI'
 
@@ -18,8 +19,12 @@ const GlossarioHeader = () => {
             />
           </S.HeaderBackground>
           <S.HeaderContent>
-            <S.HeaderTitle>Glossário</S.HeaderTitle>
-            <S.HeaderSubTitle>Lorem ipsum dolor sit amet.</S.HeaderSubTitle>
+            <Fade bottom>
+              <S.HeaderTitle>Glossário</S.HeaderTitle>
+            </Fade>
+            <Fade bottom delay={300}>
+              <S.HeaderSubTitle>Lorem ipsum dolor sit amet.</S.HeaderSubTitle>
+            </Fade>
           </S.HeaderContent>
         </>
       </Container>

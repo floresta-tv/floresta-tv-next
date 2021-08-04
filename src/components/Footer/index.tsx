@@ -6,12 +6,13 @@ import {
   Whatsapp as WhatsappIcon,
   Youtube as YoutubeIcon
 } from '@styled-icons/boxicons-logos'
+import Fade from 'react-reveal/Fade'
 
 import * as S from './styles'
 
 const Footer = () => {
   return (
-    <>
+    <Fade>
       <S.Wrapper>
         <S.Content>
           <S.Grid>
@@ -124,7 +125,7 @@ const Footer = () => {
           </S.CopyContent>
         </S.CopyContainer>
       </S.CopyWrapper>
-    </>
+    </Fade>
   )
 }
 

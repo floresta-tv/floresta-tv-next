@@ -7,20 +7,22 @@ import * as animations from '../animations'
 
 const BPOTemplate = () => {
   return (
-    <motion.div {...animations.wrapper}>
+    <motion.div key={2} {...animations.wrapper}>
       <S.Wrapper>
         <Container position="relative">
           <S.Content>
             <S.HeroWrapper>
               <div className="ico">
                 <h1>BPO</h1>
-                <Image
-                  placeholder="blur"
-                  src="/img/bpo-icon.png"
-                  blurDataURL="/img/bpo-icon.png"
-                  width={240}
-                  height={240}
-                />
+                <motion.div {...animations.rotate}>
+                  <Image
+                    placeholder="blur"
+                    src="/img/bpo-icon.png"
+                    blurDataURL="/img/bpo-icon.png"
+                    width={240}
+                    height={240}
+                  />
+                </motion.div>
                 <h2>
                   Amplie a capacidade operacional da sua empresa com nosso
                   Business Process Outsourcing.

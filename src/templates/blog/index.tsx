@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { ArrowRight } from '@styled-icons/bootstrap/'
 import { Container } from '../../components/UI/'
 import { motion } from 'framer-motion'
+import Fade from 'react-reveal/Fade'
 
 import * as animations from './animations'
 import * as S from './styles'
@@ -21,23 +22,27 @@ const Blog = () => {
   }
 
   return (
-    <motion.div {...animations.wrapper}>
+    <motion.div key={5} {...animations.wrapper}>
       <S.Wrapper>
         <S.CarouselWrapper>
           <Slick {...slickConfig}>
             <S.CarouselItem background={`/img/background-blog.png`}>
               <Container>
                 <S.CarouselItemCaption>
-                  <h2 className="title">Lorem ipsum dolor</h2>
-                  <p className="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <Link href="/blog/0">
-                    <a className="link">Confira</a>
-                  </Link>
+                  <Fade bottom>
+                    <h2 className="title">Lorem ipsum dolor</h2>
+                    <p className="desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </Fade>
+                  <Fade bottom>
+                    <Link href="/blog/0">
+                      <a className="link">Confira</a>
+                    </Link>
+                  </Fade>
                 </S.CarouselItemCaption>
               </Container>
             </S.CarouselItem>
@@ -66,7 +71,6 @@ const Blog = () => {
             <S.Grid>
               <S.ColumnLeft>
                 <S.ColumnTitle>Posts recentes</S.ColumnTitle>
-
                 <S.ArticleLarge>
                   <div className="img">
                     <Image
@@ -218,103 +222,105 @@ const Blog = () => {
                 </S.ArticleLarge>
               </S.ColumnLeft>
               <S.ColumnRight>
-                <S.ColumnTitle>Destaque</S.ColumnTitle>
+                <Fade right>
+                  <S.ColumnTitle>Destaque</S.ColumnTitle>
 
-                <S.ArticleSmall>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-1.png"
-                      src="/img/blog-image-1.png"
-                      width={172}
-                      height={140}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <p className="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing dolore
-                      magna aliqua.
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleSmall>
+                  <S.ArticleSmall>
+                    <div className="img">
+                      <Image
+                        placeholder="blur"
+                        blurDataURL="/img/blog-image-1.png"
+                        src="/img/blog-image-1.png"
+                        width={172}
+                        height={140}
+                      />
+                    </div>
+                    <div className="caption">
+                      <span className="date">08/06/2021</span>
+                      <p className="desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        dolore magna aliqua.
+                      </p>
+                      <Link href="/blog/0">
+                        <a className="link">
+                          Confira <ArrowRight width={30} fill="006686" />
+                        </a>
+                      </Link>
+                    </div>
+                  </S.ArticleSmall>
 
-                <S.ArticleSmall>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-1.png"
-                      src="/img/blog-image-1.png"
-                      width={172}
-                      height={140}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <p className="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing dolore
-                      magna aliqua.
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleSmall>
+                  <S.ArticleSmall>
+                    <div className="img">
+                      <Image
+                        placeholder="blur"
+                        blurDataURL="/img/blog-image-1.png"
+                        src="/img/blog-image-1.png"
+                        width={172}
+                        height={140}
+                      />
+                    </div>
+                    <div className="caption">
+                      <span className="date">08/06/2021</span>
+                      <p className="desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        dolore magna aliqua.
+                      </p>
+                      <Link href="/blog/0">
+                        <a className="link">
+                          Confira <ArrowRight width={30} fill="006686" />
+                        </a>
+                      </Link>
+                    </div>
+                  </S.ArticleSmall>
 
-                <S.ArticleSmall>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-1.png"
-                      src="/img/blog-image-1.png"
-                      width={172}
-                      height={140}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <p className="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing dolore
-                      magna aliqua.
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleSmall>
+                  <S.ArticleSmall>
+                    <div className="img">
+                      <Image
+                        placeholder="blur"
+                        blurDataURL="/img/blog-image-1.png"
+                        src="/img/blog-image-1.png"
+                        width={172}
+                        height={140}
+                      />
+                    </div>
+                    <div className="caption">
+                      <span className="date">08/06/2021</span>
+                      <p className="desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        dolore magna aliqua.
+                      </p>
+                      <Link href="/blog/0">
+                        <a className="link">
+                          Confira <ArrowRight width={30} fill="006686" />
+                        </a>
+                      </Link>
+                    </div>
+                  </S.ArticleSmall>
 
-                <S.ArticleSmall>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-1.png"
-                      src="/img/blog-image-1.png"
-                      width={172}
-                      height={140}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <p className="desc">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing dolore
-                      magna aliqua.
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleSmall>
+                  <S.ArticleSmall>
+                    <div className="img">
+                      <Image
+                        placeholder="blur"
+                        blurDataURL="/img/blog-image-1.png"
+                        src="/img/blog-image-1.png"
+                        width={172}
+                        height={140}
+                      />
+                    </div>
+                    <div className="caption">
+                      <span className="date">08/06/2021</span>
+                      <p className="desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        dolore magna aliqua.
+                      </p>
+                      <Link href="/blog/0">
+                        <a className="link">
+                          Confira <ArrowRight width={30} fill="006686" />
+                        </a>
+                      </Link>
+                    </div>
+                  </S.ArticleSmall>
+                </Fade>
               </S.ColumnRight>
             </S.Grid>
           </>

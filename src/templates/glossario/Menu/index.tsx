@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 import { Container } from '../../../components/UI'
 
@@ -24,11 +26,15 @@ const GlossarioMenu = ({
     <S.MenuWrapper>
       <Container>
         <S.MenuContent>
-          <S.MenuTitle>Glossário de Finanças e Investimentos</S.MenuTitle>
-          <S.MenuDesc>
-            Pesquise a(s) palavra(s) navegando pelo alfabeto abaixo
-          </S.MenuDesc>
-          <hr />
+          <Fade bottom>
+            <S.MenuTitle>Glossário de Finanças e Investimentos</S.MenuTitle>
+          </Fade>
+          <Fade bottom>
+            <S.MenuDesc>
+              Pesquise a(s) palavra(s) navegando pelo alfabeto abaixo
+            </S.MenuDesc>
+            <hr />
+          </Fade>
           <S.MenuList>
             {alphabet.map((letter, index) => (
               <Link
@@ -45,21 +51,25 @@ const GlossarioMenu = ({
           </S.MenuList>
 
           {selectedLetter && (
-            <S.MenuSelectedLetter>
-              <div className="upper">{selectedLetter}</div>
-              <div className="lower">{selectedLetter}</div>
-            </S.MenuSelectedLetter>
+            <Zoom>
+              <S.MenuSelectedLetter>
+                <div className="upper">{selectedLetter}</div>
+                <div className="lower">{selectedLetter}</div>
+              </S.MenuSelectedLetter>
+            </Zoom>
           )}
 
           {selectedWord && (
-            <S.MenuSelectedWord>
-              <S.MenuSelectedLetter>
-                <div className="word">{selectedWord.word}</div>
-              </S.MenuSelectedLetter>
-              <S.MenuSelectedLetterDesc>
-                <div className="word">{selectedWord.description}</div>
-              </S.MenuSelectedLetterDesc>
-            </S.MenuSelectedWord>
+            <Zoom>
+              <S.MenuSelectedWord>
+                <S.MenuSelectedLetter>
+                  <div className="word">{selectedWord.word}</div>
+                </S.MenuSelectedLetter>
+                <S.MenuSelectedLetterDesc>
+                  <div className="word">{selectedWord.description}</div>
+                </S.MenuSelectedLetterDesc>
+              </S.MenuSelectedWord>
+            </Zoom>
           )}
         </S.MenuContent>
       </Container>

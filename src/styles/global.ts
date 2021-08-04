@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100vw;
     overflow-x: hidden;
     background-color: #e6e6e6;
+    scroll-behavior: smooth;
   }
 
   main{

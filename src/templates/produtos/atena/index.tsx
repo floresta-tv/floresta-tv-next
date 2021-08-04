@@ -7,20 +7,22 @@ import * as animations from '../animations'
 
 const AtenaTemplate = () => {
   return (
-    <motion.div {...animations.wrapper}>
+    <motion.div key={3} {...animations.wrapper}>
       <S.Wrapper>
         <Container position="relative">
           <S.Content>
             <S.HeroWrapper>
               <div className="ico">
                 <h1>Atena</h1>
-                <Image
-                  placeholder="blur"
-                  src="/img/atena-icon.png"
-                  blurDataURL="/img/atena-icon.png"
-                  width={240}
-                  height={240}
-                />
+                <motion.div {...animations.rotate}>
+                  <Image
+                    placeholder="blur"
+                    src="/img/atena-icon.png"
+                    blurDataURL="/img/atena-icon.png"
+                    width={240}
+                    height={240}
+                  />
+                </motion.div>
                 <h2>
                   A sabedoria do mercado financeiro onshore e offshore.
                   Cadastros, preços, indíces e muito mais.
