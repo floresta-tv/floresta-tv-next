@@ -81,6 +81,7 @@ export const Item = styled.li`
     width: auto;
     height: 100%;
     margin-bottom: 0;
+    margin-right: 1.65rem;
 
     &:hover {
       background-color: var(--primary);
