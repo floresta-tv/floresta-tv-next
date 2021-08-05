@@ -134,74 +134,69 @@ const Produtos = () => {
                 </S.MenuBrackets>
               </Container>
 
-              <Fade>
-                <S.MenuItems>
-                  <Link passHref={true} href="/produtos/atena">
-                    <S.MenuItem onClick={() => setIsRotating('atena')}>
-                      <div
-                        className={`img ${isRotating === 'atena' && 'rotate'}`}
-                      >
-                        <Image
-                          placeholder="blur"
-                          src="/img/atena-icon.png"
-                          blurDataURL="/img/atena-icon.png"
-                          layout="fill"
-                        />
-                      </div>
-                      <div className="description">
-                        <h3 className="title">Atena</h3>
-                        <p className="desc">
-                          A sabedoria do mercado financeiro onshore e offshore.
-                          Cadastros, preços, indíces e muito mais.
-                        </p>
-                      </div>
-                    </S.MenuItem>
-                  </Link>
+              <S.MenuItems>
+                <Link passHref={true} href="/produtos/atena">
+                  <S.MenuItem onClick={() => setIsRotating('atena')}>
+                    <div
+                      className={`img ${isRotating === 'atena' && 'rotate'}`}
+                    >
+                      <Image
+                        placeholder="blur"
+                        src="/img/atena-icon.png"
+                        blurDataURL="/img/atena-icon.png"
+                        layout="fill"
+                      />
+                    </div>
+                    <div className="description">
+                      <h3 className="title">Atena</h3>
+                      <p className="desc">
+                        A sabedoria do mercado financeiro onshore e offshore.
+                        Cadastros, preços, indíces e muito mais.
+                      </p>
+                    </div>
+                  </S.MenuItem>
+                </Link>
 
-                  <Link passHref={true} href="/produtos/one">
-                    <S.MenuItem onClick={() => setIsRotating('one')}>
-                      <div className="description">
-                        <h3 className="title">One</h3>
-                        <p className="desc">
-                          Tão amigável quanto é poderoso para unificar seus
-                          investimentos.
-                        </p>
-                      </div>
-                      <div
-                        className={`img ${isRotating === 'one' && 'rotate'}`}
-                      >
-                        <Image
-                          placeholder="blur"
-                          src="/img/one-icon.png"
-                          blurDataURL="/img/one-icon.png"
-                          layout="fill"
-                        />
-                      </div>
-                    </S.MenuItem>
-                  </Link>
-                  <Link passHref={true} href="/produtos/bpo">
-                    <S.MenuItem onClick={() => setIsRotating('bpo')}>
-                      <div
-                        className={`img ${isRotating === 'bpo' && 'rotate'}`}
-                      >
-                        <Image
-                          placeholder="blur"
-                          src="/img/bpo-icon.png"
-                          blurDataURL="/img/bpo-icon.png"
-                          layout="fill"
-                        />
-                      </div>
-                      <div className="description">
-                        <h3 className="title">BPO</h3>
-                        <p className="desc">
-                          Amplie a capacidade operacional da sua empresa com
-                          nosso Business Process Outsourcing.
-                        </p>
-                      </div>
-                    </S.MenuItem>
-                  </Link>
-                </S.MenuItems>
-              </Fade>
+                <Link passHref={true} href="/produtos/one">
+                  <S.MenuItem onClick={() => setIsRotating('one')}>
+                    <div className="description">
+                      <h3 className="title">One</h3>
+                      <p className="desc">
+                        Tão amigável quanto é poderoso para unificar seus
+                        investimentos.
+                      </p>
+                    </div>
+                    <div className={`img ${isRotating === 'one' && 'rotate'}`}>
+                      <Image
+                        placeholder="blur"
+                        src="/img/one-icon.png"
+                        blurDataURL="/img/one-icon.png"
+                        layout="fill"
+                      />
+                    </div>
+                  </S.MenuItem>
+                </Link>
+                <Link passHref={true} href="/produtos/bpo">
+                  <S.MenuItem onClick={() => setIsRotating('bpo')}>
+                    <div className={`img ${isRotating === 'bpo' && 'rotate'}`}>
+                      <Image
+                        placeholder="blur"
+                        src="/img/bpo-icon.png"
+                        blurDataURL="/img/bpo-icon.png"
+                        layout="fill"
+                      />
+                    </div>
+                    <div className="description">
+                      <h3 className="title">BPO</h3>
+                      <p className="desc">
+                        Amplie a capacidade operacional da sua empresa com nosso
+                        Business Process Outsourcing.
+                      </p>
+                    </div>
+                  </S.MenuItem>
+                </Link>
+              </S.MenuItems>
+
               <S.MenuTestimonial>
                 <Fade bottom>
                   <S.MenuDescription>

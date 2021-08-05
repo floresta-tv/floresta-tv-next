@@ -45,6 +45,7 @@ export const Toggler = styled.button`
   height: 100%;
   width: 90px;
   border: none;
+  z-index: 3;
 
   &:hover {
     background-color: var(--primary);
@@ -64,7 +65,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   height: calc(100vh);
-  width: calc(100vw - 90px);
+  width: calc(100vw);
   top: 0px;
   left: 0;
   padding-top: 105px;
@@ -80,9 +81,9 @@ export const List = styled.ul`
         position: fixed;
         top: 0px;
         left: ${props.isVisible ? `-100vw` : `0`};
-        width: calc(100vw - 90px);
+        width: calc(100vw);
         height: 90px;
-        background-color: var(--navy);
+        background-color: var(--secondary);
         transition: all 0.7s;
         z-index: -1;
       }

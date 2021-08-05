@@ -33,7 +33,7 @@ export const HeaderBackground = styled.div`
 
   img {
     object-fit: cover;
-    object-position: top center;
+    object-position: bottom center;
   }
 `
 
