@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.nav`
   position: relative;
   width: 100%;
-  height: 90px;
+  height: 85px;
   background-color: var(--navy);
   z-index: 1200;
 
@@ -26,9 +26,11 @@ export const Brand = styled.div`
   width: 130px;
   cursor: pointer;
   z-index: 10;
+  margin-bottom: -4px;
 
   ${media.greaterThan('large')`
     width: 220px;
+    margin-bottom: 0;
   `}
 `
 
@@ -42,7 +44,7 @@ export const Toggler = styled.button`
   cursor: pointer;
   transition: all 0.3s;
   height: 100%;
-  width: 90px;
+  width: 70px;
   border: none;
   z-index: 3;
   background-color: var(--navy);
@@ -68,18 +70,20 @@ export const List = styled.ul`
 
   ${(props: ListProps) =>
     media.lessThan('large')`
-      background-color: var(--secondary);
-      left: ${props.isVisible ? `-100vw` : `0`};
+      background-color: var(--navy);
+      left: 0;
+      opacity: ${props.isVisible ? `0` : `1`};
       transition: all 0.7s;
 
       &::after {
         content: '';
         position: fixed;
         top: 0px;
-        left: ${props.isVisible ? `-100vw` : `0`};
+        left: 0;
+        opacity: ${props.isVisible ? `0` : `1`};
         width: calc(100vw);
         height: 90px;
-        background-color: var(--secondary);
+        background-color: var(--navy);
         transition: all 0.7s;
         z-index: -1;
       }
@@ -105,7 +109,6 @@ export const ItemWrapper = styled.div``
 export const Item = styled.li`
   display: flex;
   align-items: center;
-  background-color: #003d50;
   font-weight: 900;
   color: #fff;
   text-transform: lowercase;
@@ -114,6 +117,7 @@ export const Item = styled.li`
   cursor: pointer;
   transition: all 0.3s;
   font-size: 20px;
+  background-color: var(--navy);
 
   &:hover {
     background-color: var(--primary);
@@ -123,8 +127,8 @@ export const Item = styled.li`
   ${(props: ItemProps) =>
     props.isActive &&
     `
-  background-color: var(--primary);
-  `}
+    background-color: var(--primary);
+    `}
 
   ${media.greaterThan('large')`
     font-size: 30px;
@@ -132,6 +136,8 @@ export const Item = styled.li`
     padding: 0 5rem;
     height: 100%;
     width: auto;
+    background-color: #003d50;
+   
 
     &:hover {
       background-color: var(--primary);

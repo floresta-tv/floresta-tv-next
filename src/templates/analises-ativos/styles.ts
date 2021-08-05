@@ -109,7 +109,7 @@ export const DescubraDescription = styled.p`
   color: #002936;
 
   ${media.lessThan('medium')`
-    font-size: 16px;
+    font-size: 15px;
   `}
 `
 
@@ -118,8 +118,10 @@ export const DescubraChart = styled.div`
   margin-right: 15px;
 
   ${media.lessThan('medium')`
-    div, img{
-      width: 160px;
+    margin-bottom: 30px;
+  
+  div, img{
+      width: 140px;
     }
   `}
 `
@@ -162,7 +164,7 @@ export const EficienciaDescription = styled.p`
   z-index: 2;
 
   ${media.lessThan('medium')`
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
   `}
 `
