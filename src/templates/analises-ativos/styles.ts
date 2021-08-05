@@ -96,7 +96,9 @@ export const DescubraTitle = styled.h3`
   max-width: 480px;
 
   ${media.lessThan('medium')`
-    font-size: 34px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    max-width: 300px;
   `}
 `
 
@@ -107,7 +109,7 @@ export const DescubraDescription = styled.p`
   color: #002936;
 
   ${media.lessThan('medium')`
-    font-size: 18px;
+    font-size: 16px;
   `}
 `
 
@@ -126,7 +128,7 @@ export const EficienciaWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: -200px;
+  margin-top: -220px;
   text-align: left;
 
   @media screen and (max-width: 992px) {
@@ -137,27 +139,31 @@ export const EficienciaWrapper = styled.section`
 export const EficienciaTitle = styled.h3`
   font-size: 42px;
   font-weight: 700;
-  color: #1685a8;
+  color: var(--secondary);
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   max-width: 640px;
   z-index: 2;
 
   ${media.lessThan('medium')`
-    font-size: 34px;
+    font-size: 31px;
+    line-height: 1;
+    margin-bottom: 25px;
+    margin-top: 20px;
   `}
 `
 
 export const EficienciaDescription = styled.p`
   font-size: 20px;
-  font-weight: 300;
-  line-height: 1.8;
+  font-weight: 400;
+  line-height: 1.5;
   color: #002936;
-  max-width: 610px;
+  max-width: 760px;
   z-index: 2;
 
   ${media.lessThan('medium')`
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.6;
   `}
 `
 
@@ -166,10 +172,11 @@ export const EficienciaBackground = styled.div`
   left: 0;
   width: 100vw;
   z-index: 1;
-  height: 1600px;
+  height: 1550px;
   overflow: hidden;
   z-index: 1;
   transform: translateY(-280px);
+  opacity: 0.9;
 
   @media screen and (max-width: 1200px) {
     height: 1500px;
@@ -190,10 +197,12 @@ export const EficienciaBackground = styled.div`
 
 export const EficienciaImage = styled.div`
   z-index: 2;
+  margin-left: -4%;
 
   ${media.lessThan('medium')`
+
     div, img{
-      width: 200px;
+      width: 80px;
     }
   `}
 `
@@ -205,10 +214,11 @@ export const EficienciaBrand = styled.div`
   width: 190px;
 
   ${media.lessThan('medium')`
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: -30px;
 
     div, img{
-      width: 140px;
+      width: 80px;
     }
   `}
 `
@@ -249,15 +259,14 @@ export const MenuDescription = styled.p`
   margin-left: 35%;
   z-index: 2;
 
-  @media screen and (max-width: 768px) {
-    padding-top: 60px;
-  }
-
   ${media.lessThan('medium')`
-    font-size: 18px;
+    font-size: 16px;
+    padding: 0 10px;
     max-width: unset;
     margin: 0;
-    text-align: center;
+    font-weight: 400;
+    text-align: left;
+    padding-top: 60px;
   `}
 `
 
@@ -286,8 +295,9 @@ export const MenuAuthor = styled.div`
 
   ${media.lessThan('medium')`
     max-width: unset;
-    font-size: 15px;
-    margin: 15px 0 0 0;
+    font-size: 12px;
+    max-width: 180px;
+    margin: 15px auto 0 auto;
   `}
 
   strong {
@@ -398,6 +408,7 @@ export const MenuItem = styled.div`
       @media screen and (max-width: 768px) {
         font-size: 12px;
         max-width: 120px;
+        font-weight: 400;
       }
     }
   }

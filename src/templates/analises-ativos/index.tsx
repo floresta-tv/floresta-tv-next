@@ -78,8 +78,8 @@ const Produtos = () => {
               <S.EficienciaBackground>
                 <Image
                   placeholder="blur"
-                  src="/img/produtos-stairs.png"
-                  blurDataURL="/img/produtos-stairs.png"
+                  src="/img/produtos-stairs-1.png"
+                  blurDataURL="/img/produtos-stairs-1.png"
                   layout="fill"
                 />
               </S.EficienciaBackground>

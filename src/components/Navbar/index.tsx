@@ -1,17 +1,27 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ThreeBars, X as TimesIcon } from '@styled-icons/octicons'
+import { X as TimesIcon } from '@styled-icons/octicons'
 import { Container } from '../UI'
 import { useRouter } from 'next/router'
 
 import * as S from './styles'
 
+type navItemsProps = {
+  label: string
+  href: string
+  isActive: boolean
+  subItems?: {
+    label: string
+    href: string
+  }[]
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const router = useRouter()
 
-  const navItems = [
+  const navItems: navItemsProps[] = [
     {
       label: 'Produtos',
       href: '/',
@@ -46,26 +56,36 @@ const Navbar = () => {
           </S.Brand>
           <S.Toggler onClick={() => setIsOpen((old) => !old)}>
             {isOpen ? (
-              <ThreeBars width={30} fill="#fff" />
+              <Image src="/img/toggler.svg" width={26} height={18} />
             ) : (
-              <TimesIcon width={35} fill="#fff" />
+              <TimesIcon width={30} fill="#fff" />
             )}
           </S.Toggler>
           <S.List isVisible={isOpen}>
             {navItems.map((item, index) => (
-              <Link key={index} href={item.href} passHref={true}>
-                <S.Item
-                  onClick={() => setIsOpen((old) => !old)}
-                  isActive={
-                    item.href === '/'
-                      ? router.pathname === item.href ||
-                        router.pathname.includes('/produtos')
-                      : router.pathname.includes(item.href)
-                  }
-                >
-                  {item.label}
-                </S.Item>
-              </Link>
+              <S.ItemWrapper key={index}>
+                <Link href={item.href} passHref={true}>
+                  <S.Item
+                    onClick={() => setIsOpen((old) => !old)}
+                    isActive={
+                      item.href === '/'
+                        ? router.pathname === item.href ||
+                          router.pathname.includes('/produtos')
+                        : router.pathname.includes(item.href)
+                    }
+                  >
+                    {item.label}
+                  </S.Item>
+                </Link>
+                {item.subItems &&
+                  item.subItems.map((subItem, subIndex) => (
+                    <Link key={subIndex} href={subItem.href} passHref={true}>
+                      <S.SubItem
+                        onClick={() => setIsOpen((old) => !old)}
+                      ></S.SubItem>
+                    </Link>
+                  ))}
+              </S.ItemWrapper>
             ))}
           </S.List>
         </S.Content>

@@ -30,6 +30,10 @@ export const Title = styled.h2`
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 export const Desc = styled.p`
@@ -37,12 +41,17 @@ export const Desc = styled.p`
   color: #fff;
   margin-bottom: 4px;
   letter-spacing: 0.5px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
 `
 
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   padding-top: 15px;
   z-index: 1000;
 
@@ -53,12 +62,13 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   display: block;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 900;
+  width: 20%;
+  text-align: center;
   color: var(--navy);
   text-transform: uppercase;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
   transition: all 0.3s;
   cursor: pointer;
 
@@ -68,6 +78,7 @@ export const Item = styled.li`
 
   ${media.greaterThan('large')`
     font-size: 27px;
+    width: auto;
     height: 100%;
     margin-bottom: 0;
 

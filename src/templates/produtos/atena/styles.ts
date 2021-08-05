@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.section`
-  background-image: url('/img/produtos-stairs.png');
+  background-image: url('/img/produtos-stairs-4.png');
   background-size: 110% 1500px;
   background-position: 10% 55%;
   background-repeat: no-repeat;

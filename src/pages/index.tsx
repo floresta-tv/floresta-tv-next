@@ -1,5 +1,5 @@
-import ProdutosTemplate from 'templates/produtos/one'
+import AnalisesAtivos from 'templates/analises-ativos'
 
 export default function Home() {
-  return <ProdutosTemplate />
+  return <AnalisesAtivos />
 }

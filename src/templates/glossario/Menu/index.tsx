@@ -51,25 +51,25 @@ const GlossarioMenu = ({
           </S.MenuList>
 
           {selectedLetter && (
-            <Zoom>
-              <S.MenuSelectedLetter>
+            <S.MenuSelectedLetter>
+              <Zoom>
                 <div className="upper">{selectedLetter}</div>
                 <div className="lower">{selectedLetter}</div>
-              </S.MenuSelectedLetter>
-            </Zoom>
+              </Zoom>
+            </S.MenuSelectedLetter>
           )}
 
           {selectedWord && (
-            <Zoom>
-              <S.MenuSelectedWord>
+            <S.MenuSelectedWord>
+              <Zoom>
                 <S.MenuSelectedLetter>
                   <div className="word">{selectedWord.word}</div>
                 </S.MenuSelectedLetter>
                 <S.MenuSelectedLetterDesc>
                   <div className="word">{selectedWord.description}</div>
                 </S.MenuSelectedLetterDesc>
-              </S.MenuSelectedWord>
-            </Zoom>
+              </Zoom>
+            </S.MenuSelectedWord>
           )}
         </S.MenuContent>
       </Container>

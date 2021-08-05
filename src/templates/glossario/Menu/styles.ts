@@ -6,6 +6,10 @@ export const MenuWrapper = styled.nav`
   width: 100%;
   background-color: var(--primary);
   z-index: 300;
+
+  .react-reveal {
+    width: 100%;
+  }
 `
 
 export const MenuContent = styled.div`
@@ -21,6 +25,11 @@ export const MenuContent = styled.div`
     height: 3px;
     background-color: #fff;
     margin: 25px 0 10px 0;
+
+    @media screen and (max-width: 768px) {
+      order: 1;
+      margin: 15px 0 10px 0;
+    }
   }
 `
 
@@ -42,10 +51,10 @@ export const MenuList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 15px;
-  z-index: 1000;
   justify-content: center;
   align-items: center;
+  padding-top: 15px;
+  z-index: 1000;
   width: 100%;
 
   ${media.greaterThan('large')`
@@ -59,12 +68,13 @@ type MenuItemProps = {
 
 export const MenuItem = styled.li`
   display: block;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 900;
   color: var(--navy);
+  width: 20%;
+  text-align: center;
   text-transform: uppercase;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   transition: all 0.3s;
   cursor: pointer;
 
@@ -75,6 +85,8 @@ export const MenuItem = styled.li`
   ${media.greaterThan('large')`
     font-size: 27px;
     height: 100%;
+    width: unset;
+    margin-right: 1.9rem;
     margin-bottom: 0;
 
     &:hover {
@@ -107,10 +119,11 @@ export const MenuSelectedLetter = styled.h3`
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 100px;
-    margin-bottom: -25px;
-    width: 100%;
-    justify-content: center;
+    font-size: 60px;
+    margin-bottom: -16px;
+    width: unset;
+    justify-content: flex-start;
+    order: 2;
   }
 `
 
@@ -121,12 +134,13 @@ export const MenuSelectedWord = styled.div`
   width: 100%;
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    order: 2;
+    padding-top: 10px;
 
     h3 {
-      font-size: 60px;
-      margin-bottom: -5px;
+      font-size: 33px;
+      margin-bottom: -8px;
     }
   }
 `
@@ -136,6 +150,6 @@ export const MenuSelectedLetterDesc = styled.span`
   color: #fff;
 
   @media screen and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 10px;
   }
 `

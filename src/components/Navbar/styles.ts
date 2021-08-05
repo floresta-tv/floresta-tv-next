@@ -23,7 +23,7 @@ export const Content = styled.div`
 
 export const Brand = styled.div`
   position: relative;
-  width: 160px;
+  width: 130px;
   cursor: pointer;
   z-index: 10;
 
@@ -39,17 +39,13 @@ export const Toggler = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #003d50;
   cursor: pointer;
   transition: all 0.3s;
   height: 100%;
   width: 90px;
   border: none;
   z-index: 3;
-
-  &:hover {
-    background-color: var(--primary);
-  }
+  background-color: var(--navy);
 
   ${media.greaterThan('large')`
     display: none;
@@ -104,6 +100,8 @@ type ItemProps = {
   isActive: boolean
 }
 
+export const ItemWrapper = styled.div``
+
 export const Item = styled.li`
   display: flex;
   align-items: center;
@@ -127,6 +125,76 @@ export const Item = styled.li`
     `
   background-color: var(--primary);
   `}
+
+  ${media.greaterThan('large')`
+    font-size: 30px;
+    height: 100%;
+    padding: 0 5rem;
+    height: 100%;
+    width: auto;
+
+    &:hover {
+      background-color: var(--primary);
+      font-size: 30.5px;
+    }
+  `}
+`
+
+export const SubWrapper = styled.ul`
+  display: flex;
+  align-items: center;
+  background-color: #003d50;
+  font-weight: 900;
+  color: #fff;
+  text-transform: lowercase;
+  width: 100%;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 20px;
+
+  &:hover {
+    background-color: var(--primary);
+    font-size: 20.5px;
+  }
+
+  ${(props: ItemProps) =>
+    props.isActive &&
+    `
+  background-color: var(--primary);
+  `}
+
+  ${media.greaterThan('large')`
+    font-size: 30px;
+    height: 100%;
+    padding: 0 5rem;
+    height: 100%;
+    width: auto;
+
+    &:hover {
+      background-color: var(--primary);
+      font-size: 30.5px;
+    }
+  `}
+`
+
+export const SubItem = styled.li`
+  display: flex;
+  align-items: center;
+  background-color: #003d50;
+  font-weight: 900;
+  color: #fff;
+  text-transform: lowercase;
+  width: 100%;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 20px;
+
+  &:hover {
+    background-color: var(--primary);
+    font-size: 20.5px;
+  }
 
   ${media.greaterThan('large')`
     font-size: 30px;
