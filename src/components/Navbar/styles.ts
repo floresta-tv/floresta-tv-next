@@ -66,13 +66,14 @@ export const List = styled.ul`
   width: calc(100vw);
   top: 0px;
   left: 0;
-  padding-top: 105px;
+  padding-top: 95px;
 
   ${(props: ListProps) =>
     media.lessThan('large')`
       background-color: var(--navy);
       left: 0;
       opacity: ${props.isVisible ? `0` : `1`};
+      pointer-events:  ${props.isVisible ? `none` : `unset`};
       transition: all 0.7s;
 
       &::after {
@@ -124,12 +125,6 @@ export const Item = styled.li`
     font-size: 20.5px;
   }
 
-  ${(props: ItemProps) =>
-    props.isActive &&
-    `
-    background-color: var(--primary);
-    `}
-
   ${media.greaterThan('large')`
     font-size: 30px;
     height: 100%;
@@ -144,6 +139,12 @@ export const Item = styled.li`
       font-size: 30.5px;
     }
   `}
+
+  ${(props: ItemProps) =>
+    props.isActive &&
+    `
+      background-color: var(--primary) !important;
+    `}
 `
 
 export const SubWrapper = styled.ul`

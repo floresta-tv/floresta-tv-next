@@ -91,7 +91,7 @@ export const CarouselItemCaption = styled.div`
     opacity: 0.9;
     max-width: 800px;
     line-height: 1.5;
-    margin-bottom: 24px;
+    margin-bottom: 54px;
 
     ${media.lessThan('large')`
       font-size: 16px;

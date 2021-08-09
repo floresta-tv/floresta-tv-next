@@ -28,6 +28,26 @@ const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     background-color: #e6e6e6;
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 15px;
+      border: 2px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
 
   main{

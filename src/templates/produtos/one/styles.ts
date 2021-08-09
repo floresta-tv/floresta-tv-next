@@ -5,10 +5,12 @@ export const Wrapper = styled.section`
   background-size: 110% 1700px;
   background-position: 10% 60%;
   background-repeat: no-repeat;
+  max-width: 100vw;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
-    background-size: 200% 1800px;
-    background-position: 40% 44%;
+    background-size: 900px 1150px;
+    background-position: -320px -330px;
   }
 `
 
@@ -36,8 +38,8 @@ export const HeroWrapper = styled.div`
     transform: translateY(-40%);
 
     @media screen and (max-width: 768px) {
-      right: -10px;
-      transform: translateY(-49%);
+      right: 40px;
+      transform: translateY(-44%);
     }
 
     div,
@@ -45,7 +47,7 @@ export const HeroWrapper = styled.div`
       width: 900px;
 
       @media screen and (max-width: 768px) {
-        width: 500px;
+        width: 440px;
       }
     }
   }
@@ -58,8 +60,11 @@ export const HeroWrapper = styled.div`
     z-index: 2;
 
     @media screen and (max-width: 768px) {
-      top: 126px;
-      right: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 140px;
+      right: 40px;
     }
 
     h1 {
@@ -72,8 +77,10 @@ export const HeroWrapper = styled.div`
       transform: translateX(10px);
 
       @media screen and (max-width: 768px) {
-        margin-bottom: 0px;
-        font-size: 40px;
+        font-size: 27px;
+        margin-bottom: 10px;
+        transform: translateX(5px);
+        color: #fff;
       }
     }
 
@@ -86,9 +93,10 @@ export const HeroWrapper = styled.div`
       transform: translateX(5px);
 
       @media screen and (max-width: 768px) {
-        font-size: 14px;
-        max-width: 150px;
-        color: #fff;
+        font-size: 16px;
+        max-width: 290px;
+        color: #162933;
+        margin-top: 20px;
       }
     }
 
@@ -97,7 +105,7 @@ export const HeroWrapper = styled.div`
       width: 240px;
 
       @media screen and (max-width: 768px) {
-        width: 150px;
+        width: 100px;
       }
     }
   }
@@ -125,14 +133,12 @@ export const Body = styled.div`
       bottom: unset;
       max-width: unset;
       transform: unset;
+      padding-bottom: 50px;
+      padding-top: 220px;
     }
 
     p {
       color: #003d50;
-
-      @media screen and (max-width: 768px) {
-        color: #fff;
-      }
     }
   }
 
@@ -172,8 +178,55 @@ export const Body = styled.div`
     margin-bottom: 22px;
 
     @media screen and (max-width: 768px) {
-      font-size: 15px;
+      font-size: 16px;
       margin-bottom: 10px;
     }
   }
 `
+
+export const BodyCarouselWrapper = styled.div`
+  position: relative;
+
+  .slick-list {
+    overflow-x: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-dots {
+    transform: translateY(0px);
+
+    li {
+      margin: 0 2px;
+
+      button {
+        transform: scale(1.15);
+
+        &::before {
+          font-size: 10px;
+          opacity: 1;
+          text-shadow: 0px 3px 6px #00000029;
+          transition: opacity 0.2s;
+          color: #fff;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &::before {
+            opacity: 1;
+            color: #002936;
+          }
+        }
+      }
+    }
+  }
+
+  h3 {
+    color: #fff !important;
+  }
+`
+
+export const BodyCarouselItem = styled.div``

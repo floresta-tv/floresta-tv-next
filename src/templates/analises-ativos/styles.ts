@@ -134,7 +134,7 @@ export const EficienciaWrapper = styled.section`
   text-align: left;
 
   @media screen and (max-width: 992px) {
-    margin-top: 40px;
+    margin-top: -40px;
   }
 `
 
@@ -148,10 +148,11 @@ export const EficienciaTitle = styled.h3`
   z-index: 2;
 
   ${media.lessThan('medium')`
-    font-size: 31px;
+    font-size: 25px;
     line-height: 1;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
     margin-top: 20px;
+    font-weight: 900;
   `}
 `
 
@@ -166,6 +167,7 @@ export const EficienciaDescription = styled.p`
   ${media.lessThan('medium')`
     font-size: 15px;
     line-height: 1.6;
+    font-weight: 400;
   `}
 `
 
@@ -191,9 +193,9 @@ export const EficienciaBackground = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 190vw;
-    height: 900px;
-    transform: translateY(-150px);
+    width: 240vw;
+    height: 1050px;
+    transform: translate(-450px, -390px);
   }
 `
 
@@ -204,20 +206,21 @@ export const EficienciaImage = styled.div`
   ${media.lessThan('medium')`
 
     div, img{
-      width: 80px;
+      width: 90px;
     }
   `}
 `
 
 export const EficienciaBrand = styled.div`
   z-index: 2;
-  margin-top: 110px;
+  margin-top: 180px;
+  margin-bottom: -50px;
   margin-left: 15px;
   width: 190px;
 
   ${media.lessThan('medium')`
-    margin-top: 50px;
-    margin-bottom: -30px;
+    margin-top: 100px;
+    margin-bottom: -70px;
 
     div, img{
       width: 80px;
@@ -233,7 +236,7 @@ export const MenuWrapper = styled.section`
   text-align: left;
 
   @media screen and (max-width: 900px) {
-    margin-top: 10px;
+    margin-top: 50px;
   }
 `
 

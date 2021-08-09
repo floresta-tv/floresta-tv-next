@@ -18,7 +18,8 @@ const Blog = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoHeight: true
   }
 
   return (
@@ -50,16 +51,20 @@ const Blog = () => {
             <S.CarouselItem background={`/img/background-blog.png`}>
               <Container>
                 <S.CarouselItemCaption>
-                  <h2 className="title">Lorem ipsum dolor</h2>
-                  <p className="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <Link href="/blog/0">
-                    <a className="link">Confira</a>
-                  </Link>
+                  <Fade bottom>
+                    <h2 className="title">Lorem ipsum dolor</h2>
+                    <p className="desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </Fade>
+                  <Fade bottom>
+                    <Link href="/blog/0">
+                      <a className="link">Confira</a>
+                    </Link>
+                  </Fade>
                 </S.CarouselItemCaption>
               </Container>
             </S.CarouselItem>

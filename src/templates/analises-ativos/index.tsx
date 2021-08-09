@@ -28,7 +28,7 @@ const Produtos = () => {
             <S.Header>
               <motion.div {...animations.text}>
                 <S.HeaderTitle>
-                  wealth manag ement poderosamente simples
+                  wealth management poderosamente simples
                 </S.HeaderTitle>
               </motion.div>
               <motion.div

@@ -11,3 +11,10 @@ export const rotate = {
   animate: { rotate: '0deg' },
   exit: { rotate: '360deg' }
 }
+
+export const wrapperFade = {
+  transition: { duration: 1.2 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 }
+}
