@@ -1,11 +1,27 @@
 import { Container } from 'components/UI'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import MediaQuery from 'react-responsive'
+import Slick from 'react-slick'
+import 'slick-carousel/slick/slick-theme.css'
 
 import * as S from './styles'
 import * as animations from './animations'
 
 const AtenaTemplate = () => {
+  const slickConfig = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoHeight: true,
+    adaptiveHeight: true
+  }
+
   return (
     <motion.div key={3} {...animations.wrapperFade}>
       <S.Wrapper>
@@ -31,43 +47,83 @@ const AtenaTemplate = () => {
                 </div>
 
                 <div className="shape">
-                  <Image
-                    placeholder="blur"
-                    src="/img/atena-shape.png"
-                    blurDataURL="/img/atena-shape.png"
-                    width={1300}
-                    height={1100}
-                  />
+                  <MediaQuery minWidth={768}>
+                    <Image
+                      placeholder="blur"
+                      src="/img/atena-shape.png"
+                      blurDataURL="/img/atena-shape.png"
+                      width={1300}
+                      height={1100}
+                    />
+                  </MediaQuery>
+                  <MediaQuery maxWidth={767}>
+                    <Image
+                      placeholder="blur"
+                      src="/img/atena-shape-mobile.png"
+                      blurDataURL="/img/atena-shape-mobile.png"
+                      width={458}
+                      height={497}
+                    />
+                  </MediaQuery>
                 </div>
               </motion.div>
             </S.HeroWrapper>
             <S.Body>
               <motion.div key={3} {...animations.wrapper}>
-                <h3>Big Data</h3>
-                <p style={{ maxWidth: '450px' }}>
-                  Através de integrações, serviços e suporte da nossa equipe de
-                  especialistas, o Athena tornou-se uma grande base de dados de
-                  ativos concentrando assim as informações necessárias para que
-                  nossos clientes possam direcionar sua atenção para as
-                  estratégias de negócio.
-                </p>
-                <h3>Integração</h3>
-                <p style={{ maxWidth: '450px' }}>
-                  Athena está integrado aos nossos produtos provendo as
-                  atualizações necessárias para manter as informações de ativos
-                  sempre consistentes, potencializando assim os resultados de
-                  rentabilidade e posição das carteiras dentro da plataforma
-                  Meuportfolio.
-                </p>
-                <div className="mockup-img">
-                  <Image
-                    placeholder="blur"
-                    src="/img/atena-mockup.png"
-                    blurDataURL="/img/atena-mockup.png"
-                    width={595}
-                    height={375}
-                  />
-                </div>
+                <MediaQuery minWidth={768}>
+                  <h3>Big Data</h3>
+                  <p style={{ maxWidth: '450px' }}>
+                    Através de integrações, serviços e suporte da nossa equipe
+                    de especialistas, o Athena tornou-se uma grande base de
+                    dados de ativos concentrando assim as informações
+                    necessárias para que nossos clientes possam direcionar sua
+                    atenção para as estratégias de negócio.
+                  </p>
+                  <h3>Integração</h3>
+                  <p style={{ maxWidth: '450px' }}>
+                    Athena está integrado aos nossos produtos provendo as
+                    atualizações necessárias para manter as informações de
+                    ativos sempre consistentes, potencializando assim os
+                    resultados de rentabilidade e posição das carteiras dentro
+                    da plataforma Meuportfolio.
+                  </p>
+                  <div className="mockup-img">
+                    <Image
+                      placeholder="blur"
+                      src="/img/atena-mockup.png"
+                      blurDataURL="/img/atena-mockup.png"
+                      width={595}
+                      height={375}
+                    />
+                  </div>
+                </MediaQuery>
+                <MediaQuery maxWidth={767}>
+                  <S.BodyCarouselWrapper>
+                    <Slick {...slickConfig}>
+                      <S.BodyCarouselItem>
+                        <h3>Big Data</h3>
+                        <p style={{ maxWidth: '450px' }}>
+                          Através de integrações, serviços e suporte da nossa
+                          equipe de especialistas, o Athena tornou-se uma grande
+                          base de dados de ativos concentrando assim as
+                          informações necessárias para que nossos clientes
+                          possam direcionar sua atenção para as estratégias de
+                          negócio.
+                        </p>
+                      </S.BodyCarouselItem>
+                      <S.BodyCarouselItem>
+                        <h3>Integração</h3>
+                        <p style={{ maxWidth: '450px' }}>
+                          Athena está integrado aos nossos produtos provendo as
+                          atualizações necessárias para manter as informações de
+                          ativos sempre consistentes, potencializando assim os
+                          resultados de rentabilidade e posição das carteiras
+                          dentro da plataforma Meuportfolio.
+                        </p>
+                      </S.BodyCarouselItem>
+                    </Slick>
+                  </S.BodyCarouselWrapper>
+                </MediaQuery>
               </motion.div>
             </S.Body>
           </S.Content>
