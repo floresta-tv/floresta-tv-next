@@ -363,10 +363,10 @@ export const MenuItem = styled.div`
       }
     }
 
-    /* &.rotating,
+    &.rotating,
     &:hover {
       animation: rotate 1.5s linear infinite;
-    } */
+    }
 
     div {
       overflow: visible !important;
