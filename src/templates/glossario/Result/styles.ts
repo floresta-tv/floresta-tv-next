@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ResultWrapper = styled.div`
-  padding: 20px 0 00px 0;
+  padding: 40px 0 0px 0;
   background-color: #e6e6e6;
 
   .markup {

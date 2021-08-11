@@ -10,5 +10,6 @@ export type BlogPost = {
   description: string
   created_at: string
   updated_at: string
+  created: string
   author: string
 }

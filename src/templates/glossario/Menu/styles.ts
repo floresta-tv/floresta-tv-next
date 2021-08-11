@@ -133,6 +133,12 @@ export const MenuSelectedWord = styled.div`
   align-items: flex-end;
   width: 100%;
 
+  h3 {
+    font-size: 70px;
+    margin-bottom: -18px;
+    margin-top: 15px;
+  }
+
   @media screen and (max-width: 768px) {
     justify-content: space-between;
     order: 2;
@@ -141,6 +147,7 @@ export const MenuSelectedWord = styled.div`
     h3 {
       font-size: 33px;
       margin-bottom: -8px;
+      margin-top: 0;
     }
   }
 `

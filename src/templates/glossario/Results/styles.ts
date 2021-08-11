@@ -10,6 +10,22 @@ export const ResultsList = styled.ul`
   @media screen and (min-width: 1200px) {
     padding-right: 200px;
   }
+
+  .error {
+    font-size: 40px;
+    color: var(--navy);
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 100px 0 100px 20%;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      padding-left: 0px;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
 `
 
 export const ResultItem = styled.li`

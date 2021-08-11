@@ -1,13 +1,38 @@
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Slick from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import { ArrowRight } from '@styled-icons/bootstrap/'
+import { Container } from 'components/UI'
+import { BlogPost } from 'types/blog'
+import { getRelatedPosts } from 'services/blog'
 
 import * as S from './styles'
-import { Container } from 'components/UI'
 
-export const BlogRelated = () => {
+type BlogRelatedProps = {
+  slug: string
+}
+
+export const BlogRelated = ({ slug }: BlogRelatedProps) => {
+  const [currPosts, setCurrPosts] = useState<BlogPost[]>([])
+
+  const setPosts = async () => {
+    try {
+      getRelatedPosts(slug).then((newPosts) => {
+        // @ts-ignore
+        setCurrPosts(newPosts.posts)
+      })
+    } catch (e) {
+      setCurrPosts([])
+    }
+  }
+
+  useEffect(() => {
+    setPosts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slug])
+
   const slickConfig = {
     dots: true,
     arrows: false,
@@ -48,109 +73,39 @@ export const BlogRelated = () => {
   return (
     <Container>
       <S.CarouselWrapper>
-        <S.CarouselTitle>Relacionados</S.CarouselTitle>
-        <Slick {...slickConfig}>
-          <S.CarouselItem>
-            <S.ArticleLarge>
-              <div className="img">
-                <Image
-                  placeholder="blur"
-                  blurDataURL="/img/blog-image-2.png"
-                  src="/img/blog-image-2.png"
-                  width={403}
-                  height={235}
-                />
-              </div>
-              <div className="caption">
-                <span className="date">08/06/2021</span>
-                <h2 className="title">Lorem ipsum dolor sit.</h2>
-                <p className="desc">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                </p>
-                <Link href="/blog/0">
-                  <a className="link">
-                    Confira <ArrowRight width={30} fill="006686" />
-                  </a>
-                </Link>
-              </div>
-            </S.ArticleLarge>
-          </S.CarouselItem>
-          <S.CarouselItem>
-            <S.ArticleLarge>
-              <div className="img">
-                <Image
-                  placeholder="blur"
-                  blurDataURL="/img/blog-image-2.png"
-                  src="/img/blog-image-2.png"
-                  width={403}
-                  height={235}
-                />
-              </div>
-              <div className="caption">
-                <span className="date">08/06/2021</span>
-                <h2 className="title">Lorem ipsum dolor sit.</h2>
-                <p className="desc">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                </p>
-                <Link href="/blog/0">
-                  <a className="link">
-                    Confira <ArrowRight width={30} fill="006686" />
-                  </a>
-                </Link>
-              </div>
-            </S.ArticleLarge>
-          </S.CarouselItem>
-          <S.CarouselItem>
-            <S.ArticleLarge>
-              <div className="img">
-                <Image
-                  placeholder="blur"
-                  blurDataURL="/img/blog-image-2.png"
-                  src="/img/blog-image-2.png"
-                  width={403}
-                  height={235}
-                />
-              </div>
-              <div className="caption">
-                <span className="date">08/06/2021</span>
-                <h2 className="title">Lorem ipsum dolor sit.</h2>
-                <p className="desc">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                </p>
-                <Link href="/blog/0">
-                  <a className="link">
-                    Confira <ArrowRight width={30} fill="006686" />
-                  </a>
-                </Link>
-              </div>
-            </S.ArticleLarge>
-          </S.CarouselItem>
-          <S.CarouselItem>
-            <S.ArticleLarge>
-              <div className="img">
-                <Image
-                  placeholder="blur"
-                  blurDataURL="/img/blog-image-2.png"
-                  src="/img/blog-image-2.png"
-                  width={403}
-                  height={235}
-                />
-              </div>
-              <div className="caption">
-                <span className="date">08/06/2021</span>
-                <h2 className="title">Lorem ipsum dolor sit.</h2>
-                <p className="desc">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                </p>
-                <Link href="/blog/0">
-                  <a className="link">
-                    Confira <ArrowRight width={30} fill="006686" />
-                  </a>
-                </Link>
-              </div>
-            </S.ArticleLarge>
-          </S.CarouselItem>
-        </Slick>
+        {currPosts.length > 0 && (
+          <>
+            <S.CarouselTitle>Relacionados</S.CarouselTitle>
+            <Slick {...slickConfig}>
+              {currPosts?.map(
+                ({ image, created_at, title, description, slug }) => (
+                  <S.CarouselItem key={slug}>
+                    <S.ArticleLarge>
+                      <div className="img">
+                        <Image
+                          placeholder="blur"
+                          blurDataURL={image || '/img/blog-thumbnail.jpg'}
+                          src={image || '/img/blog-thumbnail.jpg'}
+                          layout={'fill'}
+                        />
+                      </div>
+                      <div className="caption">
+                        <span className="date">{created_at}</span>
+                        <h2 className="title">{title}</h2>
+                        <p className="desc">{description}</p>
+                        <Link href={`/blog/${slug}`}>
+                          <a className="link">
+                            Confira <ArrowRight width={30} fill="006686" />
+                          </a>
+                        </Link>
+                      </div>
+                    </S.ArticleLarge>
+                  </S.CarouselItem>
+                )
+              )}
+            </Slick>
+          </>
+        )}
       </S.CarouselWrapper>
     </Container>
   )

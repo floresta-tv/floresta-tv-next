@@ -4,6 +4,8 @@ import media from 'styled-media-query'
 export const Wrapper = styled.section`
   width: 100%;
   padding-bottom: 0px;
+  max-width: 100vw;
+  overflow: hidden;
 
   ${media.lessThan('medium')`
     padding-bottom: 0px;
@@ -104,6 +106,7 @@ export const ColumnLeft = styled.div`
   .main-img {
     position: relative;
     width: 100%;
+    min-height: 300px;
     margin-bottom: 15.2px;
 
     ${media.lessThan('medium')`

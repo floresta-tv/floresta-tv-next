@@ -65,9 +65,9 @@ const GlossarioMenu = ({
                 <S.MenuSelectedLetter>
                   <div className="word">{selectedWord.word}</div>
                 </S.MenuSelectedLetter>
-                <S.MenuSelectedLetterDesc>
+                {/* <S.MenuSelectedLetterDesc>
                   <div className="word">{selectedWord.description}</div>
-                </S.MenuSelectedLetterDesc>
+                </S.MenuSelectedLetterDesc> */}
               </Zoom>
             </S.MenuSelectedWord>
           )}

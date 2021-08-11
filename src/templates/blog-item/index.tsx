@@ -37,10 +37,11 @@ const BlogItemTemplate = ({ post, featured }: BlogItemTemplateProps) => {
                 <S.HeaderTitle>{post.title}</S.HeaderTitle>
                 <S.HeaderInfo>
                   <span className="author">
-                    {post.author || `Autor desconhecido`}
+                    {post.author || `Autor desconhecido `}
                   </span>
                   {` - `}
-                  <span className="date">{post.created_at}</span>
+                  <span className="date">{post.created}</span>
+                  {` - `}
                   <ul className="social">
                     <li>
                       <a href="#" target="_blank">
@@ -93,10 +94,13 @@ const BlogItemTemplate = ({ post, featured }: BlogItemTemplateProps) => {
                       layout={'fill'}
                     />
                   </div>
-                  <div
+                  {/* <div
                     className="markup"
                     dangerouslySetInnerHTML={{ __html: post.content }}
-                  ></div>
+                  ></div> */}
+                  <div className="markup">
+                    <p>{post.content}</p>
+                  </div>
                 </Fade>
               </S.ColumnLeft>
               <S.ColumnRight>
@@ -114,9 +118,8 @@ const BlogItemTemplate = ({ post, featured }: BlogItemTemplateProps) => {
                 </Fade>
               </S.ColumnRight>
             </S.Grid>
-
             <Fade bottom>
-              <BlogRelated />
+              <BlogRelated slug={post.slug} />
             </Fade>
           </>
         </Container>

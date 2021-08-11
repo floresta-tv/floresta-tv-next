@@ -115,6 +115,7 @@ export const ArticleLarge = styled.div`
   width: 100%;
 
   .img {
+    position: relative;
     width: 100%;
     height: 180px;
 
@@ -130,6 +131,10 @@ export const ArticleLarge = styled.div`
     box-shadow: 0px 3px 6px #0000001a;
     background-color: #fff;
     padding: 15px;
+
+    @media screen and (min-width: 768px) {
+      min-height: 130px;
+    }
 
     .date {
       font-size: 12px;

@@ -30,3 +30,15 @@ export const getBlogPost = async (slug: string) => {
     post: posts[0]
   }
 }
+
+export const getRelatedPosts = async (slug: string) => {
+  const fetchUrl = REQUEST_URL + '/post-related/' + slug
+  console.log(fetchUrl)
+  const response = await fetch(fetchUrl)
+  const data = await response.json()
+  const { posts } = data
+
+  return {
+    posts
+  }
+}

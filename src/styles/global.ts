@@ -60,14 +60,14 @@ const GlobalStyles = createGlobalStyle`
   }
   
   #nprogress .bar {
-    background-color: var(--primary) !important;
+    background-color: var(--light) !important;
     height: 5px;
     z-index: 2000;
-    border-bottom: 0.4px solid var(--light);
+    /* border-bottom: 0.4px solid var(--light); */
   }
   
   #nprogress .peg {
-    box-shadow: 0 0 20px var(--primary--darken), 0 0 5px var(--primary--darken);
+    box-shadow: 0 0 20px var(--light--darken), 0 0 5px var(--light--darken);
   }
 `
 
