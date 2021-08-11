@@ -1,16 +1,22 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Slick from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
-import { ArrowRight } from '@styled-icons/bootstrap/'
 import { Container } from '../../components/UI/'
 import { motion } from 'framer-motion'
 import Fade from 'react-reveal/Fade'
+import { BlogPost } from 'types/blog'
+import ArticleSmall from 'components/UI/ArticleSmall'
+import ArticleLarge from 'components/UI/ArticleLarge'
 
 import * as animations from './animations'
 import * as S from './styles'
 
-const Blog = () => {
+type BlogTemplateProps = {
+  recent: BlogPost[]
+  featured: BlogPost[]
+}
+
+const BlogTemplate = ({ recent, featured }: BlogTemplateProps) => {
   const slickConfig = {
     dots: true,
     infinite: true,
@@ -76,255 +82,29 @@ const Blog = () => {
             <S.Grid>
               <S.ColumnLeft>
                 <S.ColumnTitle>Posts recentes</S.ColumnTitle>
-                <S.ArticleLarge>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-2.png"
-                      src="/img/blog-image-2.png"
-                      width={403}
-                      height={235}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <h2 className="title">Lorem ipsum dolor sit.</h2>
-                    <p className="desc">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleLarge>
-
-                <S.ArticleLarge>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-2.png"
-                      src="/img/blog-image-2.png"
-                      width={403}
-                      height={235}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <h2 className="title">Lorem ipsum dolor sit.</h2>
-                    <p className="desc">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleLarge>
-
-                <S.ArticleLarge>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-2.png"
-                      src="/img/blog-image-2.png"
-                      width={403}
-                      height={235}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <h2 className="title">Lorem ipsum dolor sit.</h2>
-                    <p className="desc">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleLarge>
-
-                <S.ArticleLarge>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-2.png"
-                      src="/img/blog-image-2.png"
-                      width={403}
-                      height={235}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <h2 className="title">Lorem ipsum dolor sit.</h2>
-                    <p className="desc">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleLarge>
-
-                <S.ArticleLarge>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-2.png"
-                      src="/img/blog-image-2.png"
-                      width={403}
-                      height={235}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <h2 className="title">Lorem ipsum dolor sit.</h2>
-                    <p className="desc">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleLarge>
-
-                <S.ArticleLarge>
-                  <div className="img">
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/blog-image-2.png"
-                      src="/img/blog-image-2.png"
-                      width={403}
-                      height={235}
-                    />
-                  </div>
-                  <div className="caption">
-                    <span className="date">08/06/2021</span>
-                    <h2 className="title">Lorem ipsum dolor sit.</h2>
-                    <p className="desc">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
-                    <Link href="/blog/0">
-                      <a className="link">
-                        Confira <ArrowRight width={30} fill="006686" />
-                      </a>
-                    </Link>
-                  </div>
-                </S.ArticleLarge>
+                {recent.map((post: BlogPost) => (
+                  <ArticleLarge
+                    date={post.created_at}
+                    key={post.slug}
+                    slug={post.slug}
+                    title={post.title}
+                    img={post.image}
+                    desc={post.description}
+                  />
+                ))}
               </S.ColumnLeft>
               <S.ColumnRight>
                 <Fade right>
                   <S.ColumnTitle>Destaque</S.ColumnTitle>
-
-                  <S.ArticleSmall>
-                    <div className="img">
-                      <Image
-                        placeholder="blur"
-                        blurDataURL="/img/blog-image-1.png"
-                        src="/img/blog-image-1.png"
-                        width={172}
-                        height={140}
-                      />
-                    </div>
-                    <div className="caption">
-                      <span className="date">08/06/2021</span>
-                      <p className="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        dolore magna aliqua.
-                      </p>
-                      <Link href="/blog/0">
-                        <a className="link">
-                          Confira <ArrowRight width={30} fill="006686" />
-                        </a>
-                      </Link>
-                    </div>
-                  </S.ArticleSmall>
-
-                  <S.ArticleSmall>
-                    <div className="img">
-                      <Image
-                        placeholder="blur"
-                        blurDataURL="/img/blog-image-1.png"
-                        src="/img/blog-image-1.png"
-                        width={172}
-                        height={140}
-                      />
-                    </div>
-                    <div className="caption">
-                      <span className="date">08/06/2021</span>
-                      <p className="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        dolore magna aliqua.
-                      </p>
-                      <Link href="/blog/0">
-                        <a className="link">
-                          Confira <ArrowRight width={30} fill="006686" />
-                        </a>
-                      </Link>
-                    </div>
-                  </S.ArticleSmall>
-
-                  <S.ArticleSmall>
-                    <div className="img">
-                      <Image
-                        placeholder="blur"
-                        blurDataURL="/img/blog-image-1.png"
-                        src="/img/blog-image-1.png"
-                        width={172}
-                        height={140}
-                      />
-                    </div>
-                    <div className="caption">
-                      <span className="date">08/06/2021</span>
-                      <p className="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        dolore magna aliqua.
-                      </p>
-                      <Link href="/blog/0">
-                        <a className="link">
-                          Confira <ArrowRight width={30} fill="006686" />
-                        </a>
-                      </Link>
-                    </div>
-                  </S.ArticleSmall>
-
-                  <S.ArticleSmall>
-                    <div className="img">
-                      <Image
-                        placeholder="blur"
-                        blurDataURL="/img/blog-image-1.png"
-                        src="/img/blog-image-1.png"
-                        width={172}
-                        height={140}
-                      />
-                    </div>
-                    <div className="caption">
-                      <span className="date">08/06/2021</span>
-                      <p className="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        dolore magna aliqua.
-                      </p>
-                      <Link href="/blog/0">
-                        <a className="link">
-                          Confira <ArrowRight width={30} fill="006686" />
-                        </a>
-                      </Link>
-                    </div>
-                  </S.ArticleSmall>
+                  {featured.map((post: BlogPost) => (
+                    <ArticleSmall
+                      date={post.created_at}
+                      key={post.slug}
+                      slug={post.slug}
+                      title={post.title}
+                      img={post.image}
+                    />
+                  ))}
                 </Fade>
               </S.ColumnRight>
             </S.Grid>
@@ -335,4 +115,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default BlogTemplate

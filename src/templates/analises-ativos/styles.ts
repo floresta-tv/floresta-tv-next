@@ -363,10 +363,10 @@ export const MenuItem = styled.div`
       }
     }
 
-    &.rotating,
+    /* &.rotating,
     &:hover {
       animation: rotate 1.5s linear infinite;
-    }
+    } */
 
     div {
       overflow: visible !important;
@@ -457,8 +457,8 @@ export const MenuItem = styled.div`
     left: 700px;
 
     @media screen and (max-width: 768px) {
-      top: -323px;
-      left: calc(49vw + 52px);
+      top: -326px;
+      left: calc(49vw + 49px);
     }
 
     .title,

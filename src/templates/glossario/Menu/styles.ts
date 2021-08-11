@@ -148,6 +148,7 @@ export const MenuSelectedWord = styled.div`
 export const MenuSelectedLetterDesc = styled.span`
   font-size: 20px;
   color: #fff;
+  text-align: right;
 
   @media screen and (max-width: 768px) {
     font-size: 10px;
