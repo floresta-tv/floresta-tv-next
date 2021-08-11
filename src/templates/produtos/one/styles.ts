@@ -10,6 +10,10 @@ export const Wrapper = styled.section`
 
   @media screen and (max-width: 768px) {
     background-size: 900px 1150px;
+  }
+
+  @media screen and (max-width: 450px) {
+    background-size: 900px 1150px;
     background-position: -320px -330px;
   }
 `
