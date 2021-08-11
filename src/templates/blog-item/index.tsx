@@ -108,7 +108,7 @@ const BlogItemTemplate = ({ post, featured }: BlogItemTemplateProps) => {
                   <S.ColumnTitle>Destaque</S.ColumnTitle>
                   {featured.map((post: BlogPost) => (
                     <ArticleSmall
-                      date={post.created_at}
+                      date={post.created}
                       key={post.slug}
                       slug={post.slug}
                       title={post.title}
