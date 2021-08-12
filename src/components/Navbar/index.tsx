@@ -24,7 +24,7 @@ const Navbar = () => {
   const navItems: navItemsProps[] = [
     {
       label: 'Produtos',
-      href: '/',
+      href: '/produtos',
       isActive: false
     },
     {
@@ -69,8 +69,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen((old) => !old)}
                     isActive={
                       item.href === '/'
-                        ? router.pathname === item.href ||
-                          router.pathname.includes('/produtos')
+                        ? false
                         : router.pathname.includes(item.href)
                     }
                   >

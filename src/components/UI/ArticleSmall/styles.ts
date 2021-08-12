@@ -6,6 +6,7 @@ export const ArticleSmall = styled.div`
   align-items: stretch;
   width: 100%;
   margin-bottom: 22px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
 
   .img {
     position: relative;
@@ -21,7 +22,6 @@ export const ArticleSmall = styled.div`
 
   .caption {
     width: 60%;
-    box-shadow: 0px 3px 6px #0000001a;
     background-color: #fff;
     padding: 10px 15px;
 

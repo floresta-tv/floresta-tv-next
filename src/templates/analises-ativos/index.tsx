@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '../../components/UI'
 import { motion } from 'framer-motion'
+import { Element } from 'react-scroll'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
 
@@ -122,104 +123,110 @@ const Produtos = () => {
               </Fade>
             </S.EficienciaWrapper>
 
-            <S.MenuWrapper>
-              <Container position="relative">
-                <S.MenuBrackets>
-                  <Image
-                    placeholder="blur"
-                    src="/img/produtos-brackets.png"
-                    blurDataURL="/img/produtos-brackets.png"
-                    layout="fill"
-                  />
-                </S.MenuBrackets>
-              </Container>
+            <Element name="produtos">
+              <S.MenuWrapper>
+                <Container position="relative">
+                  <S.MenuBrackets>
+                    <Image
+                      placeholder="blur"
+                      src="/img/produtos-brackets.png"
+                      blurDataURL="/img/produtos-brackets.png"
+                      layout="fill"
+                    />
+                  </S.MenuBrackets>
+                </Container>
 
-              <S.MenuItems>
-                <Link passHref={true} href="/produtos/atena">
-                  <S.MenuItem onClick={() => setIsRotating('atena')}>
-                    <div
-                      className={`img ${isRotating === 'atena' && 'rotate'}`}
-                    >
-                      <Image
-                        placeholder="blur"
-                        src="/img/atena-icon.png"
-                        blurDataURL="/img/atena-icon.png"
-                        layout="fill"
-                      />
-                    </div>
-                    <div className="description">
-                      <h3 className="title">Atena</h3>
-                      <p className="desc">
-                        A sabedoria do mercado financeiro onshore e offshore.
-                        Cadastros, preços, indíces e muito mais.
-                      </p>
-                    </div>
-                  </S.MenuItem>
-                </Link>
+                <S.MenuItems>
+                  <Link passHref={true} href="/produtos/atena">
+                    <S.MenuItem onClick={() => setIsRotating('atena')}>
+                      <div
+                        className={`img ${isRotating === 'atena' && 'rotate'}`}
+                      >
+                        <Image
+                          placeholder="blur"
+                          src="/img/atena-icon.png"
+                          blurDataURL="/img/atena-icon.png"
+                          layout="fill"
+                        />
+                      </div>
+                      <div className="description">
+                        <h3 className="title">Atena</h3>
+                        <p className="desc">
+                          A sabedoria do mercado financeiro onshore e offshore.
+                          Cadastros, preços, indíces e muito mais.
+                        </p>
+                      </div>
+                    </S.MenuItem>
+                  </Link>
 
-                <Link passHref={true} href="/produtos/one">
-                  <S.MenuItem onClick={() => setIsRotating('one')}>
-                    <div className="description">
-                      <h3 className="title">One</h3>
-                      <p className="desc">
-                        Tão amigável quanto é poderoso para unificar seus
-                        investimentos.
-                      </p>
-                    </div>
-                    <div className={`img ${isRotating === 'one' && 'rotate'}`}>
-                      <Image
-                        placeholder="blur"
-                        src="/img/one-icon.png"
-                        blurDataURL="/img/one-icon.png"
-                        layout="fill"
-                      />
-                    </div>
-                  </S.MenuItem>
-                </Link>
-                <Link passHref={true} href="/produtos/bpo">
-                  <S.MenuItem onClick={() => setIsRotating('bpo')}>
-                    <div className={`img ${isRotating === 'bpo' && 'rotate'}`}>
-                      <Image
-                        placeholder="blur"
-                        src="/img/bpo-icon.png"
-                        blurDataURL="/img/bpo-icon.png"
-                        layout="fill"
-                      />
-                    </div>
-                    <div className="description">
-                      <h3 className="title">BPO</h3>
-                      <p className="desc">
-                        Amplie a capacidade operacional da sua empresa com nosso
-                        Business Process Outsourcing.
-                      </p>
-                    </div>
-                  </S.MenuItem>
-                </Link>
-              </S.MenuItems>
+                  <Link passHref={true} href="/produtos/one">
+                    <S.MenuItem onClick={() => setIsRotating('one')}>
+                      <div className="description">
+                        <h3 className="title">One</h3>
+                        <p className="desc">
+                          Tão amigável quanto é poderoso para unificar seus
+                          investimentos.
+                        </p>
+                      </div>
+                      <div
+                        className={`img ${isRotating === 'one' && 'rotate'}`}
+                      >
+                        <Image
+                          placeholder="blur"
+                          src="/img/one-icon.png"
+                          blurDataURL="/img/one-icon.png"
+                          layout="fill"
+                        />
+                      </div>
+                    </S.MenuItem>
+                  </Link>
+                  <Link passHref={true} href="/produtos/bpo">
+                    <S.MenuItem onClick={() => setIsRotating('bpo')}>
+                      <div
+                        className={`img ${isRotating === 'bpo' && 'rotate'}`}
+                      >
+                        <Image
+                          placeholder="blur"
+                          src="/img/bpo-icon.png"
+                          blurDataURL="/img/bpo-icon.png"
+                          layout="fill"
+                        />
+                      </div>
+                      <div className="description">
+                        <h3 className="title">BPO</h3>
+                        <p className="desc">
+                          Amplie a capacidade operacional da sua empresa com
+                          nosso Business Process Outsourcing.
+                        </p>
+                      </div>
+                    </S.MenuItem>
+                  </Link>
+                </S.MenuItems>
 
-              <S.MenuTestimonial>
-                <Fade bottom>
-                  <S.MenuDescription>
-                    “MeuPortfolio é uma empresa de tecnologia que vai além do
-                    software e infraestruturas robustas que entregam
-                    performance, integridade e alta disponibilidade. É uma
-                    empresa construída por pessoas que trazem consigo muita
-                    experiência, paixão pelo trabalho e compromisso com o
-                    cliente. Nossa busca incessante pela excelência está
-                    associada ao desejo de transformar a nossa plataforma no
-                    roadmap que vai auxiliar nossos clientes em suas tomadas de
-                    decisão.”
-                  </S.MenuDescription>
-                </Fade>
+                <S.MenuTestimonial>
+                  <Fade bottom>
+                    <S.MenuDescription>
+                      “MeuPortfolio é uma empresa de tecnologia que vai além do
+                      software e infraestruturas robustas que entregam
+                      performance, integridade e alta disponibilidade. É uma
+                      empresa construída por pessoas que trazem consigo muita
+                      experiência, paixão pelo trabalho e compromisso com o
+                      cliente. Nossa busca incessante pela excelência está
+                      associada ao desejo de transformar a nossa plataforma no
+                      roadmap que vai auxiliar nossos clientes em suas tomadas
+                      de decisão.”
+                    </S.MenuDescription>
+                  </Fade>
 
-                <Fade bottom>
-                  <S.MenuAuthor>
-                    <strong>Felipe Bossolani</strong>
-                    CEO &amp; Fundador da MeuPortfolio Tecnologia
-                  </S.MenuAuthor>
-                </Fade>
-              </S.MenuTestimonial>
-            </S.MenuWrapper>
+                  <Fade bottom>
+                    <S.MenuAuthor>
+                      <strong>Felipe Bossolani</strong>
+                      CEO &amp; Fundador da MeuPortfolio Tecnologia
+                    </S.MenuAuthor>
+                  </Fade>
+                </S.MenuTestimonial>
+              </S.MenuWrapper>
+            </Element>
           </>
         </Container>
       </S.Wrapper>

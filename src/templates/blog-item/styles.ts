@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
   padding-bottom: 0px;
   max-width: 100vw;
   overflow: hidden;
+  background-color: #fff;
 
   ${media.lessThan('medium')`
     padding-bottom: 0px;
