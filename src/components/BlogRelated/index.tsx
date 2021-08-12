@@ -78,7 +78,7 @@ export const BlogRelated = ({ slug }: BlogRelatedProps) => {
             <S.CarouselTitle>Relacionados</S.CarouselTitle>
             <Slick {...slickConfig}>
               {currPosts?.map(
-                ({ image, created_at, title, description, slug }) => (
+                ({ image, created, title, description, slug }) => (
                   <S.CarouselItem key={slug}>
                     <S.ArticleLarge>
                       <div className="img">
@@ -90,7 +90,7 @@ export const BlogRelated = ({ slug }: BlogRelatedProps) => {
                         />
                       </div>
                       <div className="caption">
-                        <span className="date">{created_at}</span>
+                        <span className="date">{created}</span>
                         <h2 className="title">{title}</h2>
                         <p className="desc">{description}</p>
                         <Link href={`/blog/${slug}`}>
