@@ -22,7 +22,7 @@ const GlossarioResultsTemplate = ({ words }: GlossarioResultsTemplateProps) => {
                   <Link
                     passHref={true}
                     scroll={false}
-                    href={`/glossario/palavra/${slug}`}
+                    href={`/glossario/palavra/${slug}?scroll=true`}
                   >
                     <div>
                       <S.ResultItemTitle>{title}</S.ResultItemTitle>

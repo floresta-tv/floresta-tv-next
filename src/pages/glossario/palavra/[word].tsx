@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { scroller } from 'react-scroll'
 import { GetServerSideProps } from 'next'
 import BlogRelated from 'components/BlogRelated'
 import * as T from 'templates/glossario'
@@ -12,8 +14,18 @@ type PageGlossarioWordProps = {
 export default function PageGlossarioWord({ word }: PageGlossarioWordProps) {
   const router = useRouter()
 
-  // retorna um loading, qq coisa enquanto tá sendo criado
-  if (router.isFallback) return null
+  useEffect(() => {
+    // @ts-ignore
+    const shouldScroll = router.query.scroll === 'true'
+
+    if (shouldScroll) {
+      scroller.scrollTo('glossario', {
+        duration: 500,
+        offset: window.innerWidth > 768 ? 100 : 400,
+        smooth: true
+      })
+    }
+  }, [word]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

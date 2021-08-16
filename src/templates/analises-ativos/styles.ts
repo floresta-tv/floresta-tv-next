@@ -91,7 +91,7 @@ export const DescubraWrapper = styled.section`
 export const DescubraTitle = styled.h3`
   font-size: 42px;
   font-weight: 700;
-  color: #1685a8;
+  color: #006686;
   margin-bottom: 40px;
   max-width: 480px;
 
@@ -180,7 +180,7 @@ export const EficienciaBackground = styled.div`
   overflow: hidden;
   z-index: 1;
   transform: translateY(-280px);
-  opacity: 0.9;
+  opacity: 0.8;
 
   @media screen and (max-width: 1200px) {
     height: 1500px;

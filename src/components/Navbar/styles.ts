@@ -7,6 +7,7 @@ export const Wrapper = styled.nav`
   height: 85px;
   background-color: var(--navy);
   z-index: 1200;
+  cursor: default;
 
   ${media.greaterThan('large')`
     height: 120px;
@@ -73,8 +74,11 @@ export const List = styled.ul`
       background-color: var(--navy);
       left: 0;
       opacity: ${props.isVisible ? `0` : `1`};
-      pointer-events:  ${props.isVisible ? `none` : `unset`};
       transition: all 0.7s;
+
+      &, *{
+        pointer-events:  ${props.isVisible ? `none` : `unset`} !important;
+      }
 
       &::after {
         content: '';
@@ -101,11 +105,29 @@ export const List = styled.ul`
   `}
 `
 
+export const SubItemsWrapper = styled.ul`
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    opacity: 1;
+    pointer-events: all;
+  }
+`
+
 type ItemProps = {
   isActive: boolean
 }
 
-export const ItemWrapper = styled.div``
+export const ItemWrapper = styled.div`
+  &:hover {
+    ${SubItemsWrapper} {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+`
 
 export const Item = styled.li`
   display: flex;
@@ -147,53 +169,14 @@ export const Item = styled.li`
     `}
 `
 
-export const SubWrapper = styled.ul`
-  display: flex;
-  align-items: center;
-  background-color: #003d50;
-  font-weight: 900;
-  color: #fff;
-  text-transform: lowercase;
-  width: 100%;
-  padding: 2rem 4rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-size: 20px;
-
-  &:hover {
-    background-color: var(--primary);
-    font-size: 20.5px;
-  }
-
-  ${(props: ItemProps) =>
-    props.isActive &&
-    `
-  background-color: var(--primary);
-  `}
-
-  ${media.greaterThan('large')`
-    font-size: 30px;
-    height: 100%;
-    padding: 0 5rem;
-    height: 100%;
-    width: auto;
-
-    &:hover {
-      background-color: var(--primary);
-      font-size: 30.5px;
-    }
-  `}
-`
-
 export const SubItem = styled.li`
   display: flex;
   align-items: center;
   background-color: #003d50;
   font-weight: 900;
   color: #fff;
-  text-transform: lowercase;
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   cursor: pointer;
   transition: all 0.3s;
   font-size: 20px;
@@ -204,15 +187,15 @@ export const SubItem = styled.li`
   }
 
   ${media.greaterThan('large')`
-    font-size: 30px;
-    height: 100%;
-    padding: 0 5rem;
-    height: 100%;
+    font-size: 22px;
+    padding: 3rem 3rem;
     width: auto;
-
+    text-align: center;
+    justify-content: center;
+  
     &:hover {
       background-color: var(--primary);
-      font-size: 30.5px;
+      font-size: 22px;
     }
   `}
 `

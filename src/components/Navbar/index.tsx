@@ -4,13 +4,13 @@ import Image from 'next/image'
 import { X as TimesIcon } from '@styled-icons/octicons'
 import { Container } from '../UI'
 import { useRouter } from 'next/router'
+import { useMediaQuery } from 'react-responsive'
 
 import * as S from './styles'
 
 type navItemsProps = {
   label: string
   href: string
-  isActive: boolean
   subItems?: {
     label: string
     href: string
@@ -20,22 +20,47 @@ type navItemsProps = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const router = useRouter()
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)'
+  })
+
+  const toggleNavbar = () => {
+    if (isMobile) {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'unset'
+      }
+      setIsOpen((old) => !old)
+    }
+  }
 
   const navItems: navItemsProps[] = [
     {
       label: 'Produtos',
       href: '/produtos',
-      isActive: false
+      subItems: [
+        {
+          label: 'One',
+          href: '/produtos/one'
+        },
+        {
+          label: 'Atena',
+          href: '/produtos/atena'
+        },
+        {
+          label: 'BPO',
+          href: '/produtos/bpo'
+        }
+      ]
     },
     {
       label: 'Análises ativos',
-      href: '/analises-ativos',
-      isActive: false
+      href: '/analises-ativos'
     },
     {
       label: 'Blog',
-      href: '/blog',
-      isActive: false
+      href: '/blog'
     }
   ]
 
@@ -54,7 +79,7 @@ const Navbar = () => {
               />
             </Link>
           </S.Brand>
-          <S.Toggler onClick={() => setIsOpen((old) => !old)}>
+          <S.Toggler onClick={toggleNavbar}>
             {isOpen ? (
               <Image src="/img/toggler.svg" width={26} height={18} />
             ) : (
@@ -66,7 +91,7 @@ const Navbar = () => {
               <S.ItemWrapper key={index}>
                 <Link href={item.href} passHref={true}>
                   <S.Item
-                    onClick={() => setIsOpen((old) => !old)}
+                    onClick={toggleNavbar}
                     isActive={
                       item.href === '/'
                         ? false
@@ -76,14 +101,17 @@ const Navbar = () => {
                     {item.label}
                   </S.Item>
                 </Link>
-                {item.subItems &&
-                  item.subItems.map((subItem, subIndex) => (
-                    <Link key={subIndex} href={subItem.href} passHref={true}>
-                      <S.SubItem
-                        onClick={() => setIsOpen((old) => !old)}
-                      ></S.SubItem>
-                    </Link>
-                  ))}
+                {item.subItems && (
+                  <S.SubItemsWrapper>
+                    {item.subItems.map((subItem, subIndex) => (
+                      <Link key={subIndex} href={subItem.href} passHref={true}>
+                        <S.SubItem onClick={toggleNavbar}>
+                          {subItem.label}
+                        </S.SubItem>
+                      </Link>
+                    ))}
+                  </S.SubItemsWrapper>
+                )}
               </S.ItemWrapper>
             ))}
           </S.List>
