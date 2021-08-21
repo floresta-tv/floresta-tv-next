@@ -106,13 +106,19 @@ export const List = styled.ul`
 `
 
 export const SubItemsWrapper = styled.ul`
-  transition: opacity 0.3s;
+  transition: all 0.3s;
   opacity: 0;
+  transform: translateY(-10px);
   pointer-events: none;
+  background-color: var(--primary);
+  padding: 5px;
+  margin-top: -10px;
 
   @media screen and (max-width: 768px) {
     opacity: 1;
+    transform: translateY(-0);
     pointer-events: all;
+    margin-top: 0;
   }
 `
 
@@ -125,6 +131,7 @@ export const ItemWrapper = styled.div`
     ${SubItemsWrapper} {
       opacity: 1;
       pointer-events: all;
+      transform: translateY(0);
     }
   }
 `
@@ -140,7 +147,6 @@ export const Item = styled.li`
   cursor: pointer;
   transition: all 0.3s;
   font-size: 20px;
-  background-color: var(--navy);
 
   &:hover {
     background-color: var(--primary);
@@ -180,22 +186,21 @@ export const SubItem = styled.li`
   cursor: pointer;
   transition: all 0.3s;
   font-size: 20px;
+  border-bottom: 1px solid var(--primary);
 
   &:hover {
     background-color: var(--primary);
-    font-size: 20.5px;
   }
 
   ${media.greaterThan('large')`
-    font-size: 22px;
-    padding: 3rem 3rem;
+    font-size: 20px;
+    padding: 2rem 3rem;
     width: auto;
     text-align: center;
     justify-content: center;
   
     &:hover {
       background-color: var(--primary);
-      font-size: 22px;
     }
   `}
 `

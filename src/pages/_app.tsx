@@ -5,13 +5,12 @@ import Router from 'next/router'
 import 'nprogress/nprogress.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { AnimatePresence } from 'framer-motion'
 
 import GlobalStyles from 'styles/global'
 import GlossarioFooter from 'components/GlossarioFooter'
 import ContactButton from 'components/ContactButton'
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
@@ -31,9 +30,7 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Navbar />
       <main>
-        <AnimatePresence>
-          <Component {...pageProps} />
-        </AnimatePresence>
+        <Component {...pageProps} key={router.route} />
       </main>
       <GlossarioFooter />
       <ContactButton />
