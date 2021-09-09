@@ -164,8 +164,7 @@ export const Item = styled.li`
   ${(props: ItemProps) =>
     props.isActive &&
     `
-      transforscale(1.05)m
-    text-shadow: .5 .5 .5 .5 #fff;
+    text-decoration: underline;
     `}
 `
 

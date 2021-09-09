@@ -85,7 +85,7 @@ const Navbar = () => {
                     onClick={toggleNavbar}
                     isActive={
                       item.href === '/'
-                        ? false
+                        ? router.pathname === '/'
                         : router.pathname.includes(item.href)
                     }
                   >

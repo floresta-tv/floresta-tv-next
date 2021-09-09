@@ -18,7 +18,7 @@ import ContactButton from 'components/ContactButton'
 import * as animations from './animations'
 import * as S from './styles'
 
-const Produtos = () => {
+const VozDaFloresta = () => {
   return (
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
@@ -98,7 +98,7 @@ const Produtos = () => {
                 Assine a carta <Signature size={24} />
               </span>
             }
-            buttonLink={`/`}
+            buttonLink={`https://www.change.org/p/carta-aberta-dos-povos-origin%C3%A1rios-do-brasil-contagem-progressiva`}
             image={`/img/mulheres_indigenas_em_brasilia_segurando_velas_banner.png`}
             body={
               <span>
@@ -315,4 +315,4 @@ const Produtos = () => {
   )
 }
 
-export default Produtos
+export default VozDaFloresta

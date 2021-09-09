@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 
 import Fade from 'react-reveal/Fade'
@@ -43,11 +42,14 @@ const ArticlePreview = ({
                   <p className="desc">{subtitle}</p>
                 </Fade>
                 <Fade left>
-                  <Link href={buttonLink}>
-                    <a href="#" className="link">
-                      {buttonText}
-                    </a>
-                  </Link>
+                  <a
+                    href={buttonLink}
+                    target="_blank"
+                    className="link"
+                    rel="noreferrer"
+                  >
+                    {buttonText}
+                  </a>
                 </Fade>
               </S.ArticlePreviewHeader>
             </Col>

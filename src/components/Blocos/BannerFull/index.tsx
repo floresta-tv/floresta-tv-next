@@ -16,6 +16,8 @@ type BannerFullProps = {
     desc?: JSX.Element
     subtitle?: JSX.Element
     links?: JSX.Element
+    position?: string
+    textAlign?: string
   }[]
 }
 
@@ -23,7 +25,7 @@ const BannerFull = ({ items }: BannerFullProps) => {
   const slickRef = useRef<Slider>(null)
   return (
     <S.BannerFullWrapper>
-      {items.length > 0 && (
+      {items.length > 1 && (
         <S.SliderNav>
           <S.SliderNavArrow
             className="left"
@@ -55,7 +57,13 @@ const BannerFull = ({ items }: BannerFullProps) => {
             background={item.background}
           >
             <Container fillHeight>
-              <S.BannerFullContent>
+              <S.BannerFullContent
+                style={{
+                  alignItems: item.position || 'flex-start',
+                  // @ts-ignore
+                  textAlign: item.textAlign || 'left'
+                }}
+              >
                 <div className="caption">
                   <Fade bottom>
                     <h1 className="title">{item.title}</h1>
@@ -69,7 +77,16 @@ const BannerFull = ({ items }: BannerFullProps) => {
                     )}
                   </Fade>
                   <Fade top>
-                    <div className="links">{item.links}</div>
+                    <div
+                      className="links"
+                      style={{
+                        justifyContent: item.position || 'flex-start',
+                        // @ts-ignore
+                        textAlign: item.textAlign || 'left'
+                      }}
+                    >
+                      {item.links}
+                    </div>
                   </Fade>
                 </div>
               </S.BannerFullContent>
