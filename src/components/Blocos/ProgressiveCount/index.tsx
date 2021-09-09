@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Container } from 'components/UI'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 import * as S from './styles'
 
@@ -67,30 +69,38 @@ const ProgressiveCount = ({ title, desc, caption }: ProgressiveCountProps) => {
       <Container>
         <>
           <S.ProgressiveCountHeader>
-            <h2 className="title">{title}</h2>
-            <p className="desc">{desc}</p>
+            <Fade top>
+              <h2 className="title">{title}</h2>
+            </Fade>
+            <Fade top>
+              <p className="desc">{desc}</p>
+            </Fade>
           </S.ProgressiveCountHeader>
 
-          <S.ProgressiveCountNumbers>
-            <S.ProgressiveCountNumbersItem>
-              <span className="number">{days}</span>
-              <span className="label">Dias</span>
-            </S.ProgressiveCountNumbersItem>
-            <S.ProgressiveCountNumbersItem>
-              <span className="number">{hours}</span>
-              <span className="label">Horas</span>
-            </S.ProgressiveCountNumbersItem>
-            <S.ProgressiveCountNumbersItem>
-              <span className="number">{minutes}</span>
-              <span className="label">Minutos</span>
-            </S.ProgressiveCountNumbersItem>
-            <S.ProgressiveCountNumbersItem>
-              <span className="number">{seconds}</span>
-              <span className="label">Segundos</span>
-            </S.ProgressiveCountNumbersItem>
-          </S.ProgressiveCountNumbers>
+          <Zoom>
+            <S.ProgressiveCountNumbers>
+              <S.ProgressiveCountNumbersItem>
+                <span className="number">{days}</span>
+                <span className="label">Dias</span>
+              </S.ProgressiveCountNumbersItem>
+              <S.ProgressiveCountNumbersItem>
+                <span className="number">{hours}</span>
+                <span className="label">Horas</span>
+              </S.ProgressiveCountNumbersItem>
+              <S.ProgressiveCountNumbersItem>
+                <span className="number">{minutes}</span>
+                <span className="label">Minutos</span>
+              </S.ProgressiveCountNumbersItem>
+              <S.ProgressiveCountNumbersItem>
+                <span className="number">{seconds}</span>
+                <span className="label">Segundos</span>
+              </S.ProgressiveCountNumbersItem>
+            </S.ProgressiveCountNumbers>
+          </Zoom>
 
-          <S.ProgressiveCountCaption>{caption}</S.ProgressiveCountCaption>
+          <Fade bottom>
+            <S.ProgressiveCountCaption>{caption}</S.ProgressiveCountCaption>
+          </Fade>
         </>
       </Container>
     </S.ProgressiveCountWrapper>

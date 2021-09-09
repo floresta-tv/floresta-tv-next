@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Container } from 'components/UI'
 import { Col, Row } from 'react-bootstrap'
 
+import Fade from 'react-reveal/Fade'
+
 import * as S from './styles'
 
 type ImageTextProps = {
@@ -18,22 +20,26 @@ const ImageText = ({ title, desc, type, image }: ImageTextProps) => {
         <>
           <Row>
             <Col style={{ order: type === 'left' ? 0 : 2 }} lg={6}>
-              <S.ImageTextHeader
-                style={{ textAlign: type === 'left' ? 'right' : 'left' }}
-              >
-                <h2 className="title">{title}</h2>
-                <p className="desc">{desc}</p>
-              </S.ImageTextHeader>
+              <Fade right>
+                <S.ImageTextHeader
+                  style={{ textAlign: type === 'left' ? 'right' : 'left' }}
+                >
+                  <h2 className="title">{title}</h2>
+                  <p className="desc">{desc}</p>
+                </S.ImageTextHeader>
+              </Fade>
             </Col>
             <Col lg={6}>
-              <S.ImageTextImg>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={image}
-                  src={image}
-                  layout={`fill`}
-                />
-              </S.ImageTextImg>
+              <Fade left>
+                <S.ImageTextImg>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={image}
+                    src={image}
+                    layout={`fill`}
+                  />
+                </S.ImageTextImg>
+              </Fade>
             </Col>
           </Row>
         </>

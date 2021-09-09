@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import Fade from 'react-reveal/Fade'
+
 import { Container } from 'components/UI'
 import { Row, Col } from 'react-bootstrap'
 
@@ -34,33 +36,45 @@ const ArticlePreview = ({
           <Row>
             <Col lg={4}>
               <S.ArticlePreviewHeader>
-                <h2 className="title">{title}</h2>
-                <p className="desc">{subtitle}</p>
-                <Link href={buttonLink}>
-                  <a href="#" className="link">
-                    {buttonText}
-                  </a>
-                </Link>
+                <Fade left>
+                  <h2 className="title">{title}</h2>
+                </Fade>
+                <Fade left>
+                  <p className="desc">{subtitle}</p>
+                </Fade>
+                <Fade left>
+                  <Link href={buttonLink}>
+                    <a href="#" className="link">
+                      {buttonText}
+                    </a>
+                  </Link>
+                </Fade>
               </S.ArticlePreviewHeader>
             </Col>
             <Col lg={8}>
-              <S.ArticlePreviewImage>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={image}
-                  src={image}
-                  layout="fill"
-                />
-              </S.ArticlePreviewImage>
+              <Fade right>
+                <S.ArticlePreviewImage>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={image}
+                    src={image}
+                    layout="fill"
+                  />
+                </S.ArticlePreviewImage>
+              </Fade>
             </Col>
           </Row>
 
-          <S.ArticlePreviewBody>{body}</S.ArticlePreviewBody>
+          <Fade up>
+            <S.ArticlePreviewBody>{body}</S.ArticlePreviewBody>
+          </Fade>
 
-          <S.ArticlePreviewBox>
-            <h3 className="box-title">{boxtitle}</h3>
-            <p className="box-desc">{boxdesc}</p>
-          </S.ArticlePreviewBox>
+          <Fade up>
+            <S.ArticlePreviewBox>
+              <h3 className="box-title">{boxtitle}</h3>
+              <p className="box-desc">{boxdesc}</p>
+            </S.ArticlePreviewBox>
+          </Fade>
         </>
       </Container>
     </S.ArticlePreviewWrapper>

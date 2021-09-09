@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import Slider from 'react-slick'
-
+import Fade from 'react-reveal/Fade'
 import { Container } from 'components/UI'
 
 import 'slick-carousel/slick/slick.css'
@@ -57,10 +57,20 @@ const BannerFull = ({ items }: BannerFullProps) => {
             <Container fillHeight>
               <S.BannerFullContent>
                 <div className="caption">
-                  <h1 className="title">{item.title}</h1>
-                  {item.desc && <p className="desc">{item.desc}</p>}
-                  {item.subtitle && <p className="subtitle">{item.subtitle}</p>}
-                  <div className="links">{item.links}</div>
+                  <Fade bottom>
+                    <h1 className="title">{item.title}</h1>
+                  </Fade>
+                  <Fade bottom>
+                    {item.desc && <p className="desc">{item.desc}</p>}
+                  </Fade>
+                  <Fade bottom>
+                    {item.subtitle && (
+                      <p className="subtitle">{item.subtitle}</p>
+                    )}
+                  </Fade>
+                  <Fade top>
+                    <div className="links">{item.links}</div>
+                  </Fade>
                 </div>
               </S.BannerFullContent>
             </Container>
