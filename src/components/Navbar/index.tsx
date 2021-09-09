@@ -12,6 +12,7 @@ import * as S from './styles'
 type navItemsProps = {
   label: string
   href: string
+  external?: boolean
   subItems?: {
     label: string
     href: string
@@ -47,7 +48,8 @@ const Navbar = () => {
     },
     {
       label: 'Blog',
-      href: '/blog'
+      href: 'https://medium.com/florestatv/about',
+      external: true
     },
     {
       label: 'Contato',
@@ -80,18 +82,38 @@ const Navbar = () => {
           <S.List isVisible={isOpen}>
             {navItems.map((item, index) => (
               <S.ItemWrapper key={index}>
-                <Link href={item.href} passHref={true}>
-                  <S.Item
-                    onClick={toggleNavbar}
-                    isActive={
-                      item.href === '/'
-                        ? router.pathname === '/'
-                        : router.pathname.includes(item.href)
-                    }
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: 'none' }}
                   >
-                    {item.label}
-                  </S.Item>
-                </Link>
+                    <S.Item
+                      onClick={toggleNavbar}
+                      isActive={
+                        item.href === '/'
+                          ? router.pathname === '/'
+                          : router.pathname.includes(item.href)
+                      }
+                    >
+                      {item.label}
+                    </S.Item>
+                  </a>
+                ) : (
+                  <Link href={item.href} passHref={true}>
+                    <S.Item
+                      onClick={toggleNavbar}
+                      isActive={
+                        item.href === '/'
+                          ? router.pathname === '/'
+                          : router.pathname.includes(item.href)
+                      }
+                    >
+                      {item.label}
+                    </S.Item>
+                  </Link>
+                )}
               </S.ItemWrapper>
             ))}
 
@@ -124,7 +146,6 @@ const Navbar = () => {
             height={34}
           ></Image>
         </S.LanguageButton>
-        s
         <S.LanguageButton>
           <Image
             src="/img/bandeira_idioma_frances.png"

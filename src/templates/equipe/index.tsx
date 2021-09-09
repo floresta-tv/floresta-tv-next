@@ -1,6 +1,7 @@
 import { Button } from '../../components/UI'
 import { motion } from 'framer-motion'
-import { Element } from 'react-scroll'
+import Link from 'next/link'
+import { Element, Link as ScrollLink } from 'react-scroll'
 
 import BannerFull from 'components/Blocos/BannerFull'
 import HeaderText from 'components/Blocos/HeaderText'
@@ -8,6 +9,7 @@ import ContactButton from 'components/ContactButton'
 import ImageFullWidth from 'components/Blocos/ImageFullWidth'
 import InfoCard from 'components/Blocos/InfoCard'
 import { Container } from 'components/UI'
+import Footer from 'components/Footer'
 
 import * as animations from './animations'
 import * as S from './styles'
@@ -172,12 +174,14 @@ const Equipe = () => {
       subtitle: <span>Da Floresta à Tecnologia</span>,
       desc: (
         <span>
-          Vitor é uma alma visionária que tem como propósito a integração da
-          tecnologia com a espiritualidade para expandir soluções harmoniosas
-          nas causas coletivas. Atua liderando e gerenciando equipes
-          internacionais na área de desenvolvimento a mais de 5 anos e desde os
-          12 anos de idade é envolvido em programação. Auxilia o Coletivo nas
-          áreas de tecnologia, programação, gestão e desenvolvimento.
+          Uma Yogini que trabalha no despertar do feminino consciente como fator
+          urgente e primordial na reconexão com a Terra. Ativadora da
+          consciência autorresponsável sobre a proteção do maior bioma do mundo,
+          dedica sua força criativa junto a FlorestaTV atuando como escritora e
+          criadora de conteúdo audiovisual, sua missão é promover o
+          amadurecimento da consciência social, sexual, psicoemocional e
+          ambiental para uma humanidade verdadeiramente livre, justa e
+          harmônica.
         </span>
       ),
       social: {
@@ -211,15 +215,20 @@ const Equipe = () => {
                 ),
                 links: (
                   <>
-                    <Button variant="green">Conheça nossa equipe</Button>
-                    <Button variant="white">Quero fazer parte</Button>
+                    <ScrollLink to="equipe">
+                      <Button variant="green">Conheça nossa equipe</Button>
+                    </ScrollLink>
+
+                    <Link passHref={true} href="/">
+                      <Button variant="white">Quero fazer parte</Button>
+                    </Link>
                   </>
                 )
               }
             ]}
           />
         </Element>
-        <Element name="protecao-cultural">
+        <Element name="equipe">
           <HeaderText
             title={
               <span>
@@ -247,46 +256,72 @@ const Equipe = () => {
           />
         </Element>
 
-        <ImageFullWidth
-          style={{ paddingTop: '0', marginTop: '-20px' }}
-          caption={
-            <span>
-              Equipe FlorestaTV nos acampamentos &quot;Luta Pela Vida&quot; -
-              Brasilia - Dia 30 de Agosto de 2021{' '}
-            </span>
-          }
-          image="/img/familia_floresta_tv.jpg"
-        />
+        <Element name="equipe-florestatv">
+          <ImageFullWidth
+            style={{ paddingTop: '0', marginTop: '-20px' }}
+            caption={
+              <span>
+                Equipe FlorestaTV nos acampamentos &quot;Luta Pela Vida&quot; -
+                Brasilia - Dia 30 de Agosto de 2021{' '}
+              </span>
+            }
+            image="/img/familia_floresta_tv.jpg"
+          />
+        </Element>
 
-        <section style={{ padding: '80px 0' }}>
-          <Container>
-            <>
-              {equipeData.map(
-                ({ image, title, subtitle, desc, social }, index) => (
-                  <InfoCard
-                    key={index}
-                    image={image}
-                    title={title}
-                    subtitle={subtitle}
-                    desc={desc}
-                    social={social}
-                  />
-                )
-              )}
-            </>
-          </Container>
-        </section>
+        <Element name="membros-equipe">
+          <section style={{ padding: '80px 0' }}>
+            <Container>
+              <>
+                {equipeData.map(
+                  ({ image, title, subtitle, desc, social }, index) => (
+                    <InfoCard
+                      key={index}
+                      image={image}
+                      title={title}
+                      subtitle={subtitle}
+                      desc={desc}
+                      social={social}
+                    />
+                  )
+                )}
+              </>
+            </Container>
+          </section>
+        </Element>
 
-        <ImageFullWidth
-          image="/img/povo_indigena_huni_kuin.jpg"
-          caption={
-            <span>
-              Familia Original Brasileira - Aldeia Segredo do Artesão, dia 31 de
-              Julho 2021 - Photo : Guilherme Meneghelli
-            </span>
-          }
-        />
+        <Element name="familia-original-brasileira">
+          <ImageFullWidth
+            image="/img/povo_indigena_huni_kuin.jpg"
+            caption={
+              <span>
+                Familia Original Brasileira - Aldeia Segredo do Artesão, dia 31
+                de Julho 2021 - Photo : Guilherme Meneghelli
+              </span>
+            }
+          />
+        </Element>
       </S.Wrapper>
+      <Footer
+        links={[
+          {
+            label: 'Uma grande família',
+            to: 'home'
+          },
+          {
+            label: 'Talentos interdependentes',
+            to: 'equipe'
+          },
+          {
+            label: 'Membros da equipe',
+            to: 'membros-equipe'
+          },
+          {
+            label: 'Familía Original Brasileira',
+            to: 'familia-original-brasileira'
+          }
+        ]}
+      />
     </motion.div>
   )
 }

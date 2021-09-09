@@ -1,10 +1,13 @@
 import MediaQuery from 'react-responsive'
+import Link from 'next/link'
+import { Button } from 'components/UI'
 
 export default function page() {
   return (
     <section
       style={{
-        minHeight: '80vh',
+        minHeight: '100vh',
+        paddingTop: 150,
         paddingBottom: '100px',
         display: 'flex',
         justifyContent: 'center',
@@ -28,6 +31,11 @@ export default function page() {
           Página não encontrada.
         </h2>
       </MediaQuery>
+      <div style={{ marginTop: 20, fontFamily: 'Montserrat' }}>
+        <Link href="/" passHref={true}>
+          <Button variant={'white'}>Voltar para home</Button>
+        </Link>
+      </div>
     </section>
   )
 }

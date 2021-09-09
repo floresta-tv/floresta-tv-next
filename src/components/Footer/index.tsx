@@ -14,7 +14,15 @@ import Fade from 'react-reveal/Fade'
 
 import * as S from './styles'
 
-const Footer = () => {
+type FooterLink = {
+  label: string
+  to: string
+}
+type FooterProps = {
+  links: FooterLink[]
+}
+
+const Footer = ({ links }: FooterProps) => {
   return (
     <Fade>
       <S.Wrapper>
@@ -66,51 +74,13 @@ const Footer = () => {
             <S.GridColumn>
               <S.GridTitle>Nesta página:</S.GridTitle>
               <S.GridList>
-                <S.GridListItem>
-                  <ScrollLink to="home">
-                    <a href="#">Ouvir a voz da floresta</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="documentario-em-tempo-real">
-                    <a href="#">Documentário em tempo real</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="contagem-progressiva">
-                    <a href="#">Contagem progressiva</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="carta-aberta">
-                    <a href="#">Carta aberta</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="mapu-huni-kui">
-                    <a href="#">Mapu Huni Kuī</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="chief-phill">
-                    <a href="#">Chief Phil Lane Jr.</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="protecao-cultural">
-                    <a href="#">Proteção da cultura</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="amazonia-a-live">
-                    <a href="#">Amazônia aLive</a>
-                  </ScrollLink>
-                </S.GridListItem>
-                <S.GridListItem>
-                  <ScrollLink to="biblioteca-viva">
-                    <a href="#">A biblioteca viva da floresta</a>
-                  </ScrollLink>
-                </S.GridListItem>
+                {links.map(({ label, to }, index) => (
+                  <S.GridListItem key={index}>
+                    <ScrollLink to={to}>
+                      <a href="#">{label}</a>
+                    </ScrollLink>
+                  </S.GridListItem>
+                ))}
               </S.GridList>
             </S.GridColumn>
 

@@ -1,6 +1,7 @@
 import { Button } from '../../components/UI'
 import { motion } from 'framer-motion'
-import { Element } from 'react-scroll'
+import Link from 'next/link'
+import { Element, Link as ScrollLink } from 'react-scroll'
 
 import { Signature } from '@styled-icons/fluentui-system-regular'
 
@@ -14,6 +15,7 @@ import ArticlePreview from 'components/Blocos/ArticlePreview'
 import HeroBlock from 'components/Blocos/HeroBlock'
 import DoubleImage from 'components/Blocos/DoubleImage'
 import ContactButton from 'components/ContactButton'
+import Footer from 'components/Footer'
 
 import * as animations from './animations'
 import * as S from './styles'
@@ -40,9 +42,15 @@ const VozDaFloresta = () => {
                 ),
                 links: (
                   <>
-                    <Button variant="white">Equipe</Button>
-                    <Button variant="green">Carta aberta</Button>
-                    <Button variant="transparent">Contato</Button>
+                    <Link passHref={true} href="/equipe">
+                      <Button variant="white">Equipe</Button>
+                    </Link>
+                    <ScrollLink to="carta-aberta">
+                      <Button variant="green">Carta aberta</Button>
+                    </ScrollLink>
+                    <Link passHref={true} href="/contato">
+                      <Button variant="transparent">Contato</Button>
+                    </Link>
                   </>
                 )
               },
@@ -54,7 +62,9 @@ const VozDaFloresta = () => {
                 links: (
                   <>
                     <Button variant="white">Leia mais</Button>
-                    <Button variant="transparent">A voz da Floresta</Button>
+                    <Link passHref={true} href="/">
+                      <Button variant="transparent">A voz da Floresta</Button>
+                    </Link>
                   </>
                 )
               }
@@ -311,6 +321,42 @@ const VozDaFloresta = () => {
           />
         </Element>
       </S.Wrapper>
+      <Footer
+        links={[
+          {
+            label: 'Ouvir a voz da floresta',
+            to: 'home'
+          },
+          {
+            label: 'Documentário em tempo real',
+            to: 'documentario-em-tempo-real'
+          },
+          {
+            label: 'Contagem progressiva',
+            to: 'contagem-progressiva'
+          },
+          {
+            label: 'Mapu Huni Kuí',
+            to: 'mapu-huni-kui'
+          },
+          {
+            label: 'Chief Phil Lane Jr.',
+            to: 'chief-phill'
+          },
+          {
+            label: 'Proteção da Cultura',
+            to: 'protecao-cultural'
+          },
+          {
+            label: 'Amazônia aLive',
+            to: 'amazonia-a-live'
+          },
+          {
+            label: 'A biblioteca viva da floresta',
+            to: 'A biblioteca viva da floresta'
+          }
+        ]}
+      />
     </motion.div>
   )
 }

@@ -11,8 +11,9 @@ export const InfoCardImage = styled.div`
   border: 10px solid #e0ffe7;
 
   ${media.lessThan('medium')`
-      height: 300px;
-      width: 100%;
+      height: 260px;
+      width: 260px;
+      margin: 0 auto;
       margin-top: 20px;
   `}
 
@@ -45,6 +46,14 @@ export const InfoCardBody = styled.div`
     font-weight: 300;
     margin: 20px 0;
   }
+
+  ${media.lessThan('medium')`
+      border-radius: 15px !important;
+      margin: -80px 0 0 0 !important;
+      height: auto !important;
+      padding: 90px 15px 15px 15px !important;
+      text-align: center !important;
+  `}
 `
 
 export const SocialLinks = styled.div`
@@ -62,24 +71,26 @@ export const InfoCardWrapper = styled.article`
   margin-bottom: 30px;
 
   &:nth-child(2n) {
-    ${InfoCardImage} {
-    }
+    @media screen and (min-width: 768px) {
+      ${InfoCardImage} {
+      }
 
-    ${InfoCardBody} {
-      margin-left: none;
-      transform: translateX(150px);
-      text-align: right;
-      border-radius: 130px 0 0 130px;
-    }
+      ${InfoCardBody} {
+        margin-left: none;
+        transform: translateX(150px);
+        text-align: right;
+        border-radius: 130px 0 0 130px;
+      }
 
-    ${SocialLinks} {
-      justify-content: flex-end;
-    }
+      ${SocialLinks} {
+        justify-content: flex-end;
+      }
 
-    .col-lg-3 {
-      position: relative;
-      z-index: 4;
-      order: 2;
+      .col-lg-3 {
+        position: relative;
+        z-index: 4;
+        order: 2;
+      }
     }
   }
 `

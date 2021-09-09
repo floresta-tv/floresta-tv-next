@@ -3,7 +3,6 @@ import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 import 'nprogress/nprogress.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -17,6 +16,7 @@ function App({ Component, pageProps, router }: AppProps) {
         <title>Floresta.TV • Movimento em serviço da Floresta.</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <link rel="og:image" itemProp="image" href="/img/og-image.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#149A41" />
         <meta
@@ -29,7 +29,6 @@ function App({ Component, pageProps, router }: AppProps) {
       <main>
         <Component {...pageProps} key={router.route} />
       </main>
-      <Footer />
     </>
   )
 }
