@@ -14,12 +14,12 @@ export const Wrapper = styled.div`
     max-width: 720px;
   }
   @media (min-width: 992px) {
-    max-width: 960px;
+    max-width: 1100px;
   }
   @media (min-width: 1200px) {
     max-width: 1140px;
   }
   @media (min-width: 1400px) {
-    max-width: 1180px;
+    max-width: 1300px;
   }
 `

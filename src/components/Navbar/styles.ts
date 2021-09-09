@@ -2,15 +2,14 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.nav`
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 85px;
-  background-color: var(--navy);
   z-index: 1200;
   cursor: default;
+  padding-top: 50px;
 
-  ${media.greaterThan('large')`
-    height: 120px;
+  ${media.lessThan('medium')`
+    padding-top: 60px;
   `}
 `
 
@@ -18,37 +17,45 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
   z-index: 300;
 `
 
 export const Brand = styled.div`
   position: relative;
-  width: 130px;
+  width: 210px;
   cursor: pointer;
   z-index: 10;
-  margin-bottom: -4px;
+  margin-top: -10px;
 
   ${media.greaterThan('large')`
-    width: 220px;
+    width: 230px;
     margin-bottom: 0;
+    margin-top: -20px;
   `}
 `
 
 export const Toggler = styled.button`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 72px;
+  right: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
-  height: 100%;
-  width: 70px;
   border: none;
   z-index: 3;
   background-color: var(--navy);
+
+  div,
+  img {
+    width: 37px;
+  }
+
+  &:focus,
+  &:active {
+    background-color: none;
+  }
 
   ${media.greaterThan('large')`
     display: none;
@@ -64,14 +71,16 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   height: calc(100vh);
-  width: calc(100vw);
+  width: calc(101vw);
   top: 0px;
   left: 0;
   padding-top: 95px;
 
   ${(props: ListProps) =>
     media.lessThan('large')`
-      background-color: var(--navy);
+      padding-top: 120px;
+      justify-content: flex-start;
+      background-color: #024a05;
       left: 0;
       opacity: ${props.isVisible ? `0` : `1`};
       transition: all 0.7s;
@@ -86,9 +95,9 @@ export const List = styled.ul`
         top: 0px;
         left: 0;
         opacity: ${props.isVisible ? `0` : `1`};
-        width: calc(100vw);
+        width: calc(101vw);
         height: 90px;
-        background-color: var(--navy);
+        background-color: #024a05;
         transition: all 0.7s;
         z-index: -1;
       }
@@ -105,33 +114,23 @@ export const List = styled.ul`
   `}
 `
 
-export const SubItemsWrapper = styled.ul`
-  transition: all 0.3s;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  background-color: var(--primary);
-  padding: 5px;
-  margin-top: -10px;
-
-  @media screen and (max-width: 768px) {
-    opacity: 1;
-    transform: translateY(-0);
-    pointer-events: all;
-    margin-top: 0;
-  }
-`
-
 type ItemProps = {
   isActive: boolean
 }
 
 export const ItemWrapper = styled.div`
-  &:hover {
-    ${SubItemsWrapper} {
-      opacity: 1;
-      pointer-events: all;
-      transform: translateY(0);
+  position: relative;
+
+  &:not(:nth-last-child(2)) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(100%, -50%);
+      right: 0;
+      height: 20px;
+      width: 2.3px;
+      background-color: #fff;
     }
   }
 `
@@ -139,68 +138,105 @@ export const ItemWrapper = styled.div`
 export const Item = styled.li`
   display: flex;
   align-items: center;
-  font-weight: 900;
+  font-weight: 400;
   color: #fff;
   text-transform: lowercase;
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   cursor: pointer;
-  transition: all 0.3s;
   font-size: 20px;
-
-  &:hover {
-    background-color: var(--primary);
-    font-size: 20.5px;
-  }
+  transition: all 0.3s;
 
   ${media.greaterThan('large')`
-    font-size: 30px;
+    font-size: 18px;
     height: 100%;
-    padding: 0 5rem;
+    padding: 0rem 3rem;
     height: 100%;
     width: auto;
-    background-color: #003d50;
    
 
     &:hover {
-      background-color: var(--primary);
-      font-size: 30.5px;
+      transform: scale(1.05);
+      text-shadow: .5 .5 .5 .5 #fff;
     }
   `}
 
   ${(props: ItemProps) =>
     props.isActive &&
     `
-      background-color: var(--primary) !important;
+      transforscale(1.05)m
+    text-shadow: .5 .5 .5 .5 #fff;
     `}
 `
 
-export const SubItem = styled.li`
-  display: flex;
-  align-items: center;
-  background-color: #003d50;
-  font-weight: 900;
-  color: #fff;
-  width: 100%;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-size: 20px;
-  border-bottom: 1px solid var(--primary);
+export const ItemButton = styled.a`
+  font-size: 16px;
+  font-weight: 500;
+  color: #161e02;
+  text-transform: lowercase;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: #ecfff5;
+  text-decoration: none;
+  transition: all 0.4s;
+
+  ${media.lessThan('large')`
+    margin: 10px 30px;
+    font-size: 20px;
+  `}
 
   &:hover {
     background-color: var(--primary);
+    color: #fff;
+  }
+`
+
+export const LanguagesWrapper = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 13px;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+`
+
+export const LanguageButton = styled.button`
+  position: relative;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 5px;
+  border: none;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale(1.05);
   }
 
-  ${media.greaterThan('large')`
-    font-size: 20px;
-    padding: 2rem 3rem;
-    width: auto;
-    text-align: center;
-    justify-content: center;
-  
-    &:hover {
-      background-color: var(--primary);
-    }
+  &.active {
+    border: 3px solid var(--secondary);
+  }
+
+  &:not(:last-child) {
+  }
+
+  div,
+  img {
+    object-fit: cover;
+    width: 102%;
+    height: 102%;
+  }
+
+  ${media.lessThan('large')`
+    width: 29px;
+    height: 29px;
   `}
 `

@@ -2,29 +2,27 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
-import 'nprogress/nprogress.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
+import 'nprogress/nprogress.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import GlobalStyles from 'styles/global'
-import GlossarioFooter from 'components/GlossarioFooter'
 import ContactButton from 'components/ContactButton'
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
-        <title>
-          MeuPortfolio • Descubra a plataforma mais avançada em gestão de
-          patrimônios
-        </title>
+        <title>Floresta.TV • Movimento em serviço da Floresta.</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#002936" />
+        <meta name="theme-color" content="#149A41" />
         <meta
           name="description"
-          content="MeuPortfolio Tecnologia é uma empresa formada por um grupo de pessoas apaixonadas e dedicadas a ajudar sua organização na gestão de patrimônio do seu cliente. Nossa plataforma foi totalmente construída com base nos pilares da experiência e dedicação, oferecendo assim aos nossos clientes produtos com: Alta disponibilidade, performance, estabilidade, interface eficiente e intuitiva e um atendimento de excelência."
+          content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria altamente sustentável, integrativa, coletiva e pacífica com o mundo digital binário."
         />
       </Head>
       <GlobalStyles />
@@ -32,7 +30,6 @@ function App({ Component, pageProps, router }: AppProps) {
       <main>
         <Component {...pageProps} key={router.route} />
       </main>
-      <GlossarioFooter />
       <ContactButton />
       <Footer />
     </>

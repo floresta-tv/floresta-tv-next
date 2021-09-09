@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import Link from 'next/link'
+
 import {
-  Facebook as FacebookIcon,
+  Medium as MediumIcon,
   Instagram as InstagramIcon,
-  Twitter as TwitterIcon,
-  Whatsapp as WhatsappIcon,
-  Youtube as YoutubeIcon
+  Youtube as YoutubeIcon,
+  Twitter as TwitterIcon
 } from '@styled-icons/boxicons-logos'
 import Fade from 'react-reveal/Fade'
 
@@ -17,114 +18,113 @@ const Footer = () => {
         <S.Content>
           <S.Grid>
             <S.GridColumn>
-              <S.GridTitle>Onde Estamos</S.GridTitle>
+              <S.Brand>
+                <Link href="/" passHref={true}>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL="/img/logo_florestatv_vertical.png"
+                    src="/img/logo_florestatv_vertical.png"
+                    width={230}
+                    height={170}
+                  />
+                </Link>
+              </S.Brand>
+              <S.SocialLinks>
+                <S.SocialLink>
+                  <MediumIcon />
+                </S.SocialLink>
+                <S.SocialLink>
+                  <InstagramIcon />
+                </S.SocialLink>
+                <S.SocialLink>
+                  <YoutubeIcon />
+                </S.SocialLink>
+                <S.SocialLink>
+                  <TwitterIcon />
+                </S.SocialLink>
+              </S.SocialLinks>
+            </S.GridColumn>
+            <S.GridColumn>
+              <S.GridTitle>Nesta página:</S.GridTitle>
               <S.GridList>
                 <S.GridListItem>
-                  <strong>São Paulo</strong>
-                  <span className="adress">
-                    Alameda Santos, 1165 cj 321, Jd. Paulista, São Paulo - SP,
-                    01419-001s
-                  </span>
+                  <a href="#">Ouvir a voz da floresta</a>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <strong>Sorocaba</strong>
-                  <span className="adress">
-                    Rua Eugênio Rabello, 74 - Jd.Paulistano, Sorocaba - SP,
-                    18040-436
-                  </span>
+                  <a href="#">Documentário em tempo real</a>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <a href="#">Contagem progressiva</a>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <a href="#">Mapu Huni Kuī</a>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <a href="#">Proteção da cultura</a>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <a href="#">Amazônia aLive</a>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <a href="#">A biblioteca viva da floresta</a>
                 </S.GridListItem>
               </S.GridList>
             </S.GridColumn>
 
             <S.GridColumn>
-              <S.GridTitle>Sobre nós</S.GridTitle>
+              <S.GridTitle>Outras páginas:</S.GridTitle>
               <S.GridList>
                 <S.GridListItem>
-                  <Link href="/quem-somos">Quem somos</Link>
+                  <Link href="#">Dia da amazônia</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/politica-de-privacidade">
-                    Política de privacidade
-                  </Link>
+                  <Link href="#">Marco ancestral</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/trabalhe-conosco">Trabalhe conosco</Link>
+                  <Link href="#">A voz da floresta</Link>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <Link href="#">Nossa equipe</Link>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <Link href="#">Nosso Blog</Link>
                 </S.GridListItem>
               </S.GridList>
             </S.GridColumn>
 
             <S.GridColumn>
-              <S.GridTitle>Ferramentas</S.GridTitle>
+              <S.GridTitle>Outras iniciativas:</S.GridTitle>
               <S.GridList>
                 <S.GridListItem>
-                  <Link href="/melhores-fundos">Melhores Fundos </Link>
+                  <Link href="#">Floresta TV</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/comparacao-de-fundos">Comparação de fundos</Link>
+                  <Link href="#">Floresta Coin</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/lista-de-fundos">Lista de fundos</Link>
-                </S.GridListItem>
-              </S.GridList>
-            </S.GridColumn>
-
-            <S.GridColumn>
-              <S.GridTitle>Conteúdos</S.GridTitle>
-              <S.GridList>
-                <S.GridListItem>
-                  <Link href="/blog">Blog</Link>
+                  <Link href="#">Floresta Wiki</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/materias">Matérias</Link>
+                  <Link href="#">Floresta Maps</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/cursos">Cursos</Link>
+                  <Link href="#">Floresta Network</Link>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <Link href="#">Floresta NFTMarketplace</Link>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <Link href="#">Floresta Permacultura</Link>
                 </S.GridListItem>
               </S.GridList>
             </S.GridColumn>
           </S.Grid>
+          <S.Copy>
+            Todos os Direitos Demarcados aos Povos Originários. 25 de Agosto de
+            2021 em Contagem Progressiva. 🌳
+          </S.Copy>
         </S.Content>
       </S.Wrapper>
-      <S.CopyWrapper>
-        <S.CopyContainer>
-          <S.CopyContent>
-            <S.CopyInfo>
-              <span>Mais informações</span>
-              <span>
-                <a href="mailto:contato@meuportfol.io" rel="noreferrer">
-                  contato@meuportfol.io
-                </a>
-              </span>
-              <span>
-                <a href="phoneto:+5511930276739" rel="noreferrer">
-                  +55 11 9 3027 6739
-                </a>
-              </span>
-            </S.CopyInfo>
-
-            <S.CopySocial>
-              <S.CopySocialItem href="https://www.facebook.com" target="_blank">
-                <FacebookIcon width={40} fill="#fff" />
-              </S.CopySocialItem>
-              <S.CopySocialItem
-                href="https://www.instagram.com"
-                target="_blank"
-              >
-                <InstagramIcon width={35} fill="#fff" />
-              </S.CopySocialItem>
-              <S.CopySocialItem href="https://www.twitter.com" target="_blank">
-                <TwitterIcon width={35} fill="#fff" />
-              </S.CopySocialItem>
-              <S.CopySocialItem href="https://www.whatsapp.com" target="_blank">
-                <WhatsappIcon width={35} fill="#fff" />
-              </S.CopySocialItem>
-              <S.CopySocialItem href="https://www.youtube.com" target="_blank">
-                <YoutubeIcon width={35} fill="#fff" />
-              </S.CopySocialItem>
-            </S.CopySocial>
-          </S.CopyContent>
-        </S.CopyContainer>
-      </S.CopyWrapper>
     </Fade>
   )
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { X as TimesIcon } from '@styled-icons/octicons'
 import { Container } from '../UI'
 import { useRouter } from 'next/router'
@@ -37,30 +38,20 @@ const Navbar = () => {
 
   const navItems: navItemsProps[] = [
     {
-      label: 'Produtos',
-      href: '/produtos',
-      subItems: [
-        {
-          label: 'One',
-          href: '/produtos/one'
-        },
-        {
-          label: 'Atena',
-          href: '/produtos/atena'
-        },
-        {
-          label: 'BPO',
-          href: '/produtos/bpo'
-        }
-      ]
+      label: 'Home',
+      href: '/'
     },
     {
-      label: 'Análises ativos',
-      href: '/analises-ativos'
+      label: 'Nossa equipe',
+      href: '/nossa-equipe'
     },
     {
       label: 'Blog',
       href: '/blog'
+    },
+    {
+      label: 'Contato',
+      href: '/contato'
     }
   ]
 
@@ -72,10 +63,10 @@ const Navbar = () => {
             <Link href="/" passHref={true}>
               <Image
                 placeholder="blur"
-                blurDataURL="/img/brand.svg"
-                src="/img/brand.svg"
-                width={313}
-                height={82}
+                blurDataURL="/img/logo_florestatv_horizontal.png"
+                src="/img/logo_florestatv_horizontal.png"
+                width={363}
+                height={102}
               />
             </Link>
           </S.Brand>
@@ -83,7 +74,7 @@ const Navbar = () => {
             {isOpen ? (
               <Image src="/img/toggler.svg" width={26} height={18} />
             ) : (
-              <TimesIcon width={30} fill="#fff" />
+              <TimesIcon width={35} fill="#fff" />
             )}
           </S.Toggler>
           <S.List isVisible={isOpen}>
@@ -101,22 +92,40 @@ const Navbar = () => {
                     {item.label}
                   </S.Item>
                 </Link>
-                {item.subItems && (
-                  <S.SubItemsWrapper>
-                    {item.subItems.map((subItem, subIndex) => (
-                      <Link key={subIndex} href={subItem.href} passHref={true}>
-                        <S.SubItem onClick={toggleNavbar}>
-                          {subItem.label}
-                        </S.SubItem>
-                      </Link>
-                    ))}
-                  </S.SubItemsWrapper>
-                )}
               </S.ItemWrapper>
             ))}
+
+            <Link href={'/seja-um-voluntario'} passHref={true}>
+              <S.ItemButton>Seja um voluntário</S.ItemButton>
+            </Link>
           </S.List>
         </S.Content>
       </Container>
+      <S.LanguagesWrapper>
+        <span>lang: </span>
+
+        <S.LanguageButton className="active">
+          <Image
+            src="/img/bandeira_idioma_portugues.png"
+            width={51}
+            height={34}
+          ></Image>
+        </S.LanguageButton>
+        <S.LanguageButton>
+          <Image
+            src="/img/bandeira_idioma_ingles.png"
+            width={51}
+            height={34}
+          ></Image>
+        </S.LanguageButton>
+        <S.LanguageButton>
+          <Image
+            src="/img/bandeira_idioma_frances.png"
+            width={51}
+            height={34}
+          ></Image>
+        </S.LanguageButton>
+      </S.LanguagesWrapper>
     </S.Wrapper>
   )
 }

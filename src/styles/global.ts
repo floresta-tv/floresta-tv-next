@@ -10,10 +10,10 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
     
-      --navy: #002936;
-      --primary: #006686;
-      --primary--darken: #015a75;
-      --secondary: #003D50;
+      --dark: #170101;
+      --primary: #149A41;
+      --primary--darken: #0d8535;
+      --secondary: #FFB300;
       --light: #9BC4CA;
   }
 
@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     max-width: 100vw;
     overflow-x: hidden;
     background-color: #e6e6e6;
@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
     }
     /* Track */
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: var(--dark);
     }
     
     /* Handle */
@@ -43,10 +43,6 @@ const GlobalStyles = createGlobalStyle`
       border-radius: 15px;
       border: 2px solid rgba(0, 0, 0, 0);
       background-clip: padding-box;
-    }
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
     }
   }
 
@@ -60,14 +56,18 @@ const GlobalStyles = createGlobalStyle`
   }
   
   #nprogress .bar {
-    background-color: var(--light) !important;
-    height: 5px;
+    background-color: var(--primary) !important;
+    height: 3px;
     z-index: 2000;
     /* border-bottom: 0.4px solid var(--light); */
   }
   
   #nprogress .peg {
-    box-shadow: 0 0 20px var(--light--darken), 0 0 5px var(--light--darken);
+    box-shadow: 0 0 20px var(--primary-darken), 0 0 5px var(--primary-darken);
+  }
+
+  ul{
+    padding-left: 0;
   }
 `
 

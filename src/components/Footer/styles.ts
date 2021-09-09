@@ -4,12 +4,24 @@ import media from 'styled-media-query'
 export const Wrapper = styled.footer`
   position: relative;
   width: 100%;
-  padding: 24px 30px 24px 30px;
-  background-color: var(--secondary);
+  padding: 54px 30px 54px 30px;
+  background-color: #0d2e03;
+  background-size: cover;
   z-index: 400;
 
   ${media.greaterThan('large')`
-    padding: 34px 60px 34px 60px;
+    padding: 84px 90px 34px 130px;
+  `}
+`
+
+export const Brand = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+
+  ${media.lessThan('large')`
+    width: 100%;
   `}
 `
 
@@ -47,13 +59,19 @@ export const GridColumn = styled.div`
 
 export const GridTitle = styled.h4`
   display: block;
-  color: var(--light);
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 15px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  ${media.lessThan('medium')`
+    max-width: unset;
+    text-align: center;
+  `}
 
   ${media.greaterThan('large')`
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   `}
 `
 
@@ -68,6 +86,11 @@ export const GridListItem = styled.li`
   display: block;
   color: #fff;
   max-width: 252px;
+
+  ${media.lessThan('medium')`
+    max-width: unset;
+    text-align: center;
+  `}
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -91,135 +114,62 @@ export const GridListItem = styled.li`
   a {
     display: block;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.2s;
 
     &:hover {
-      color: var(--light);
+      color: var(#efefef);
     }
   }
 
   ${media.greaterThan('large')`
-    a{
-      margin-bottom: -10px;
-    }
+  a{
+    margin-bottom: -10px;
+  }
   `}
 `
 
-export const CopyWrapper = styled.footer`
-  position: relative;
-  width: 100%;
-  padding: 22px 30px 70px 30px;
-  background-color: var(--navy);
-  z-index: 300;
-
-  ${media.greaterThan('large')`
-    padding: 22px 60px 26px 60px;
-  `}
-`
-
-export const CopyContainer = styled.div`
-  width: 100%;
-`
-
-export const CopyContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-
-  ${media.greaterThan('large')`
-    flex-direction: row;
-  `}
-`
-
-export const CopyInfo = styled.div`
-  position: relative;
-  font-size: 14px;
+export const Copy = styled.p`
+  margin-top: 35px;
   text-align: center;
-  font-weight: 700;
-  width: 216px;
-  margin-bottom: 10px;
-
-  ${media.greaterThan('large')`
-  font-size: 16px;
-  width: 220px;
-  text-align: left;
-  margin-bottom: 0px;
-  `}
-
-  span {
-    display: block;
-    margin: 4px 0;
-    color: var(--light);
-
-    &:first-child {
-      text-transform: uppercase;
-    }
-
-    a {
-      color: inherit;
-      cursor: pointer;
-      transition: color 0.2s;
-      text-decoration: none;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
+  font-size: 15px;
+  color: #fff;
 `
 
-export const CopySocial = styled.div`
-  position: relative;
+export const SocialLinks = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  margin-top: 10px;
+
+  ${media.lessThan('large')`
+    justify-content: center;
+  `}
+`
+
+export const SocialLink = styled.a`
+  display: flex;
   justify-content: center;
-  margin-left: 10px;
-
-  ${media.greaterThan('large')`
-    margin-left: 140px;
-  `}
-`
-
-export const CopySocialItem = styled.a`
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  background-color: var(--primary);
+  height: 37px;
+  width: 37px;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
   cursor: pointer;
-  transition: all 0.3s;
-  border-radius: 10px;
-
-  &:not(:last-child) {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
-  &:hover {
-    transform: scale(1.04);
-    background-color: var(--light);
-  }
+  transition: all 0.45s;
 
   svg {
     width: 25px;
+    fill: #ffffff;
+    transition: all 0.45s;
   }
 
-  ${media.greaterThan('large')`
-    width: 44px;
-    height: 44px;
+  &:hover {
+    background-color: #fff;
 
-    svg{
-      width: 34px;
+    svg {
+      fill: #024a05;
     }
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-      margin-right: 14px;
-    }
-  `}
+  }
 `
