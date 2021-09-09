@@ -43,7 +43,7 @@ const Navbar = () => {
     },
     {
       label: 'Nossa equipe',
-      href: '/nossa-equipe'
+      href: '/equipe'
     },
     {
       label: 'Blog',

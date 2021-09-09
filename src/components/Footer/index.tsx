@@ -33,19 +33,32 @@ const Footer = () => {
                 </Link>
               </S.Brand>
               <S.SocialLinks>
-                <S.SocialLink>
+                <S.SocialLink
+                  target="_blank"
+                  href="https://medium.com/florestatv/about"
+                >
                   <MediumIcon />
                 </S.SocialLink>
-                <S.SocialLink>
+                <S.SocialLink
+                  target="_blank"
+                  href="https://www.instagram.com/florestatv/"
+                >
                   <InstagramIcon />
                 </S.SocialLink>
-                <S.SocialLink>
+
+                <S.SocialLink
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCo9JpvxflH3WP6vms6EBDYQ"
+                >
                   <YoutubeIcon />
                 </S.SocialLink>
                 <S.SocialLink>
                   <TwitterIcon />
                 </S.SocialLink>
-                <S.SocialLink>
+                <S.SocialLink
+                  target="_blank"
+                  href="https://discord.gg/CSqAFfyM"
+                >
                   <DiscordIcon />
                 </S.SocialLink>
               </S.SocialLinks>
@@ -118,6 +131,9 @@ const Footer = () => {
                 </S.GridListItem>
                 <S.GridListItem>
                   <Link href="/blog">Nosso Blog</Link>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <Link href="/contato">Entre em contato</Link>
                 </S.GridListItem>
               </S.GridList>
             </S.GridColumn>
