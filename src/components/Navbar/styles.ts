@@ -221,7 +221,7 @@ export const LanguageButton = styled.button`
   }
 
   &.active {
-    border: 3px solid var(--secondary);
+    border: 3px solid #fff;
   }
 
   &:not(:last-child) {

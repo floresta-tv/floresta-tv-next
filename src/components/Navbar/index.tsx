@@ -103,7 +103,6 @@ const Navbar = () => {
       </Container>
       <S.LanguagesWrapper>
         <span>lang: </span>
-
         <S.LanguageButton className="active">
           <Image
             src="/img/bandeira_idioma_portugues.png"
@@ -118,6 +117,14 @@ const Navbar = () => {
             height={34}
           ></Image>
         </S.LanguageButton>
+        <S.LanguageButton>
+          <Image
+            src="/img/bandeira_idioma_espanhol.png"
+            width={51}
+            height={34}
+          ></Image>
+        </S.LanguageButton>
+        s
         <S.LanguageButton>
           <Image
             src="/img/bandeira_idioma_frances.png"
