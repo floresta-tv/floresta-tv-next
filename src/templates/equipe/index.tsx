@@ -128,6 +128,45 @@ const Equipe = () => {
       }
     },
     {
+      image: '/img/fran_diniz_mulher_shakit_florestatv.jfif',
+      title: <span>Fran Diniz, Mulher Shakti</span>,
+      subtitle: <span>Yogini da Floresta</span>,
+      desc: (
+        <span>
+          Ativadora da consciência autorresponsável na proteção do maior bioma
+          do mundo, bem como de nossa floresta interna. Reconhece que a Amazônia
+          é a Shakti do planeta e portanto, através do Templo Yogini Power
+          trabalha no despertar do feminino consciente como fator primordial no
+          resgate e conexão com Gaia, nossa Terra. Dedica sua força criativa
+          junto a FlorestaTv atuando como escritora e criadora de conteúdo
+          audiovisual, promovendo o amadurecimento da consciência social,
+          sexual, psicoemocional e ambiental para uma humanidade verdadeiramente
+          justa e harmônica.
+        </span>
+      ),
+      social: {
+        instagram: 'https://www.instagram.com/mulhershakti/'
+      }
+    },
+    {
+      image: '/img/sheide_mara_florestatv.jfif',
+      title: <span>Sheide Mara</span>,
+      subtitle: (
+        <span>Mãe, artesã, desing em crochê, cantora e compositora</span>
+      ),
+      desc: (
+        <span>
+          Mãe, artesã, desing em crochê, cantora e compositora. Dedica sua vida
+          no aprendizado e disseminação das tradições e caminho ancestral.
+          Compreende que os ensinos dos Povos Originários são essenciais para o
+          cuidado e conservação da Terra e daqueles que vivem nela.
+        </span>
+      ),
+      social: {
+        instagram: 'https://www.instagram.com/sheidemara/'
+      }
+    },
+    {
       image: '/img/vitor_regis_florestatv.jpeg',
       title: <span>Vitor Régis de Ramos</span>,
       subtitle: <span>Da Floresta à Tecnologia</span>,
@@ -142,34 +181,9 @@ const Equipe = () => {
         </span>
       ),
       social: {
-        medium: 'https://visionariovegetal.medium.com/',
-        facebook:
-          'https://www.facebook.com/Advan-Haschi-Vision%C3%A1rio-Vegetal-109359397505378/?ref=py_c',
-        instagram: 'https://www.instagram.com/advanhx/'
-      }
-    },
-    {
-      image: '/img/fran_diniz_mulher_shakit_florestatv.jfif',
-      title: <span>Fran Diniz, Mulher Shakti</span>,
-      subtitle: <span>Yogini da Floresta</span>,
-      desc: (
-        <span>
-          Ativadora da consciência autorresponsável na proteção do maior bioma
-          do mundo, bem como de nossa floresta interna. Reconhece que a Amazônia
-          é a Shakti do planeta e portanto, através do Templo Yogini Power
-          trabalha no despertar do feminino consciente como fator primordial no
-          resgate e conexão com Gaia, nossa Terra. Uma Yogini que dedica sua
-          força criativa junto a FlorestaTv atuando como escritora e criadora de
-          conteúdo audiovisual, sua missão é promover o amadurecimento da
-          consciência social, sexual, psicoemocional e ambiental para uma
-          humanidade verdadeiramente justa e harmônica.
-        </span>
-      ),
-      social: {
-        medium: 'https://visionariovegetal.medium.com/',
-        facebook:
-          'https://www.facebook.com/Advan-Haschi-Vision%C3%A1rio-Vegetal-109359397505378/?ref=py_c',
-        instagram: 'https://www.instagram.com/advanhx/'
+        website: 'https://www.vitorr.dev',
+        medium: 'https://medium.com/@vitorregisrr',
+        instagram: 'https://www.instagram.com/caminomedicina/'
       }
     }
   ]
