@@ -23,16 +23,18 @@ const BannerFull = ({ items }: BannerFullProps) => {
   const slickRef = useRef<Slider>(null)
   return (
     <S.BannerFullWrapper>
-      <S.SliderNav>
-        <S.SliderNavArrow
-          className="left"
-          onClick={() => slickRef.current.slickNext()}
-        ></S.SliderNavArrow>
-        <S.SliderNavArrow
-          onClick={() => slickRef.current.slickPrev()}
-          className="right"
-        ></S.SliderNavArrow>
-      </S.SliderNav>
+      {items.length > 0 && (
+        <S.SliderNav>
+          <S.SliderNavArrow
+            className="left"
+            onClick={() => slickRef.current.slickNext()}
+          ></S.SliderNavArrow>
+          <S.SliderNavArrow
+            onClick={() => slickRef.current.slickPrev()}
+            className="right"
+          ></S.SliderNavArrow>
+        </S.SliderNav>
+      )}
       <Slider
         dots={true}
         infinite={true}

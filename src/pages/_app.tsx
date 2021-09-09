@@ -9,7 +9,6 @@ import 'nprogress/nprogress.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import GlobalStyles from 'styles/global'
-import ContactButton from 'components/ContactButton'
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -30,7 +29,6 @@ function App({ Component, pageProps, router }: AppProps) {
       <main>
         <Component {...pageProps} key={router.route} />
       </main>
-      <ContactButton />
       <Footer />
     </>
   )

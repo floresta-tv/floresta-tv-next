@@ -1,5 +1,5 @@
-import AnalisesAtivos from 'templates/a-voz-da-floresta'
+import VozDaFloresta from 'templates/a-voz-da-floresta'
 
 export default function Home() {
-  return <AnalisesAtivos />
+  return <VozDaFloresta />
 }
