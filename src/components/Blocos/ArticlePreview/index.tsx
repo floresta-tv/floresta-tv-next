@@ -67,7 +67,7 @@ const ArticlePreview = ({
             </Col>
           </Row>
 
-          <Fade up>
+          <Fade>
             <S.ArticlePreviewBody>{body}</S.ArticlePreviewBody>
           </Fade>
 
