@@ -67,6 +67,25 @@ const VozDaFloresta = () => {
                     </Link>
                   </>
                 )
+              },
+              {
+                backgroundPosition: 'center 40% !important',
+                background:
+                  '/img/protesto_indigenas_brasilia_marco_temporal.png',
+                title: <span>O Último Recurso</span>,
+                desc: (
+                  <span>
+                    <b> 7 de Setembro de 2021:</b> manifestações de apoio ao
+                    presidente Jair Bolsonaro no dia da Independência do Brasil.
+                    No discurso o ultimato e a ruptura com o Supremo Tribunal
+                    Federal atacando Alexandre de Moraes.
+                  </span>
+                ),
+                links: (
+                  <>
+                    <Button variant="white">Leia mais</Button>
+                  </>
+                )
               }
             ]}
           />

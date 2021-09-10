@@ -219,7 +219,7 @@ const Equipe = () => {
                       <Button variant="green">Conheça nossa equipe</Button>
                     </ScrollLink>
 
-                    <Link passHref={true} href="/">
+                    <Link passHref={true} href="/seja-um-voluntario">
                       <Button variant="white">Quero fazer parte</Button>
                     </Link>
                   </>

@@ -118,7 +118,11 @@ const Navbar = () => {
             ))}
 
             <Link href={'/seja-um-voluntario'} passHref={true}>
-              <S.ItemButton>Seja um voluntário</S.ItemButton>
+              <S.ItemButton
+                isActive={router.pathname === '/seja-um-voluntario'}
+              >
+                Seja um voluntário
+              </S.ItemButton>
             </Link>
           </S.List>
         </S.Content>

@@ -168,7 +168,11 @@ export const Item = styled.li`
     `}
 `
 
-export const ItemButton = styled.a`
+interface ItemButtonProps {
+  isActive: boolean
+}
+
+export const ItemButton = styled.a<ItemButtonProps>`
   font-size: 16px;
   font-weight: 500;
   color: #161e02;
@@ -182,6 +186,14 @@ export const ItemButton = styled.a`
   ${media.lessThan('large')`
     margin: 10px 30px;
     font-size: 20px;
+  `}
+
+  ${(props) =>
+    props.isActive &&
+    `
+     background-color: var(--primary);
+     color: #fff;
+     text-decoration: underline;
   `}
 
   &:hover {
