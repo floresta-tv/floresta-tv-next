@@ -174,14 +174,12 @@ const Equipe = () => {
       subtitle: <span>Da Floresta à Tecnologia</span>,
       desc: (
         <span>
-          Uma Yogini que trabalha no despertar do feminino consciente como fator
-          urgente e primordial na reconexão com a Terra. Ativadora da
-          consciência autorresponsável sobre a proteção do maior bioma do mundo,
-          dedica sua força criativa junto a FlorestaTV atuando como escritora e
-          criadora de conteúdo audiovisual, sua missão é promover o
-          amadurecimento da consciência social, sexual, psicoemocional e
-          ambiental para uma humanidade verdadeiramente livre, justa e
-          harmônica.
+          Vitor é uma alma visionária que tem como propósito a integração da
+          tecnologia com a espiritualidade para expandir soluções harmoniosas
+          nas causas coletivas. Atua liderando e gerenciando equipes
+          internacionais na área de desenvolvimento a mais de 5 anos e desde os
+          12 anos de idade é envolvido em programação. Auxilia o Coletivo nas
+          áreas de tecnologia, programação, gestão e desenvolvimento.
         </span>
       ),
       social: {
