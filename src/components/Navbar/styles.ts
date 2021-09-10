@@ -8,9 +8,9 @@ export const Wrapper = styled.nav`
   cursor: default;
   padding-top: 50px;
 
-  ${media.lessThan('medium')`
+  @media screen and (max-width: 992px) {
     padding-top: 60px;
-  `}
+  }
 `
 
 export const Content = styled.div`
@@ -57,9 +57,9 @@ export const Toggler = styled.button`
     background-color: none;
   }
 
-  ${media.greaterThan('large')`
+  @media screen and (min-width: 992px) {
     display: none;
-  `}
+  }
 `
 
 type ListProps = {
@@ -76,14 +76,24 @@ export const List = styled.ul`
   left: 0;
   padding-top: 95px;
 
-  ${(props: ListProps) =>
-    media.lessThan('large')`
-      padding-top: 120px;
+  @media screen and (min-width: 992px) {
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    top: unset;
+    left: unset;
+    width: auto;
+    padding: 0;
+  }
+
+  ${(props: ListProps) => `
+    @media screen and (max-width: 992px){
       justify-content: flex-start;
       background-color: #024a05;
       left: 0;
       opacity: ${props.isVisible ? `0` : `1`};
       transition: all 0.7s;
+      padding-top: 120px;
 
       &, *{
         pointer-events:  ${props.isVisible ? `none` : `unset`} !important;
@@ -101,16 +111,7 @@ export const List = styled.ul`
         transition: all 0.7s;
         z-index: -1;
       }
-  `}
-
-  ${media.greaterThan('large')`
-    position: relative;
-    flex-direction: row;
-    height: 100%;
-    top: unset;
-    left: unset;
-    width: auto;
-    padding: 0;
+    }
   `}
 `
 
@@ -119,6 +120,8 @@ type ItemProps = {
 }
 
 export const ItemWrapper = styled.div`
+  display: flex;
+  align-items: center;
   position: relative;
 
   &:not(:nth-last-child(2)) {
@@ -147,24 +150,23 @@ export const Item = styled.li`
   font-size: 20px;
   transition: all 0.3s;
 
-  ${media.greaterThan('large')`
+  @media screen and (min-width: 992px) {
     font-size: 18px;
     height: 100%;
     padding: 0rem 3rem;
     height: 100%;
     width: auto;
-   
 
     &:hover {
       transform: scale(1.05);
-      text-shadow: .5 .5 .5 .5 #fff;
+      text-shadow: 0.5 0.5 0.5 0.5 #fff;
     }
-  `}
+  }
 
   ${(props: ItemProps) =>
     props.isActive &&
     `
-    text-decoration: underline;
+      text-decoration: underline;
     `}
 `
 
@@ -173,7 +175,7 @@ interface ItemButtonProps {
 }
 
 export const ItemButton = styled.a<ItemButtonProps>`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: #161e02;
   text-transform: lowercase;
@@ -184,10 +186,15 @@ export const ItemButton = styled.a<ItemButtonProps>`
   transition: all 0.4s;
 
   ${media.lessThan('large')`
+  font-size: 18px;
     margin: 10px 30px;
-    font-size: 20px;
   `}
 
+  ${media.between('medium', 'large')`
+    font-size: 16px;
+    margin: 10px 15px;
+  `}
+  
   ${(props) =>
     props.isActive &&
     `
@@ -246,8 +253,8 @@ export const LanguageButton = styled.button`
     height: 102%;
   }
 
-  ${media.lessThan('large')`
+  @media screen and (max-width: 992px) {
     width: 29px;
     height: 29px;
-  `}
+  }
 `

@@ -43,13 +43,17 @@ const VozDaFloresta = () => {
                 links: (
                   <>
                     <Link passHref={true} href="/equipe">
-                      <Button variant="white">Equipe</Button>
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="white">Equipe</Button>
+                      </a>
                     </Link>
                     <ScrollLink to="carta-aberta">
                       <Button variant="green">Carta aberta</Button>
                     </ScrollLink>
                     <Link passHref={true} href="/contato">
-                      <Button variant="transparent">Contato</Button>
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="transparent">Contato</Button>
+                      </a>
                     </Link>
                   </>
                 )
@@ -261,7 +265,7 @@ const VozDaFloresta = () => {
                 nasceu para apoiar a digitalização da cultura dos Povos
                 Originários e garantir o Marco Atemporal através da
                 representatividade cultural daqueles que habitam e protegem as
-                nossas florestas a milhares de anos.{' '}
+                nossas florestas a milhares de anos.
               </span>
             }
             image1={`/img/indigena_escrevendo_rabiscando_tablet.png`}

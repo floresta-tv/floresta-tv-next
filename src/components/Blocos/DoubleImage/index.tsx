@@ -42,7 +42,7 @@ const DoubleImage = ({
         <>
           <S.DoubleImageHeader>
             <Fade bottom>
-              <h2 className="title">{title}</h2>s
+              <h2 className="title">{title}</h2>
             </Fade>
             <Fade bottom>
               <p className="desc">{subtitle}</p>

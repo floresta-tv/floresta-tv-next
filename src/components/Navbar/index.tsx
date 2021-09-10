@@ -23,7 +23,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const router = useRouter()
   const isMobile = useMediaQuery({
-    query: '(max-width: 768px)'
+    query: '(max-width: 1168px)'
   })
 
   const toggleNavbar = () => {
