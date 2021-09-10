@@ -135,15 +135,14 @@ const Equipe = () => {
       subtitle: <span>Yogini da Floresta</span>,
       desc: (
         <span>
-          Ativadora da consciência autorresponsável na proteção do maior bioma
-          do mundo, bem como de nossa floresta interna. Reconhece que a Amazônia
-          é a Shakti do planeta e portanto, através do Templo Yogini Power
-          trabalha no despertar do feminino consciente como fator primordial no
-          resgate e conexão com Gaia, nossa Terra. Dedica sua força criativa
-          junto a FlorestaTv atuando como escritora e criadora de conteúdo
-          audiovisual, promovendo o amadurecimento da consciência social,
-          sexual, psicoemocional e ambiental para uma humanidade verdadeiramente
-          justa e harmônica.
+          Uma Yogini que trabalha no despertar do feminino consciente como fator
+          urgente e primordial na reconexão com a Terra. Ativadora da
+          consciência autorresponsável sobre a proteção do maior bioma do mundo,
+          dedica sua força criativa junto a FlorestaTV atuando como escritora e
+          criadora de conteúdo audiovisual, sua missão é promover o
+          amadurecimento da consciência social, sexual, psicoemocional e
+          ambiental para uma humanidade verdadeiramente livre, justa e
+          harmônica.
         </span>
       ),
       social: {
