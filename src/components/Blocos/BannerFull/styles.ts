@@ -46,6 +46,10 @@ export const BannerFullItem = styled.div<BannerFullItemProps>`
   background-image: url(${(props) => props.background});
   background-position: ${(props) => props.backgroundPosition};
   background-size: cover;
+
+  @media screen and (max-width: 768px) {
+    background-position: 40%;
+  }
 `
 
 export const BannerFullContent = styled.div`
