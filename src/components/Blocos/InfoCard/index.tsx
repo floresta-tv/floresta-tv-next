@@ -19,6 +19,8 @@ type InfoCardProps = {
   title: JSX.Element
   subtitle: JSX.Element
   desc: JSX.Element
+  bgc?: string
+  color?: string
   social?: {
     website?: string
     instagram?: string
@@ -29,7 +31,15 @@ type InfoCardProps = {
   }
 }
 
-const InfoCard = ({ image, title, subtitle, desc, social }: InfoCardProps) => {
+const InfoCard = ({
+  image,
+  title,
+  subtitle,
+  desc,
+  social,
+  bgc,
+  color
+}: InfoCardProps) => {
   return (
     <S.InfoCardWrapper>
       <Zoom>
@@ -37,7 +47,7 @@ const InfoCard = ({ image, title, subtitle, desc, social }: InfoCardProps) => {
           <Col lg={3}>
             <Zoom>
               {' '}
-              <S.InfoCardImage>
+              <S.InfoCardImage border={bgc}>
                 <Image
                   placeholder="blur"
                   blurDataURL={image}
@@ -48,39 +58,69 @@ const InfoCard = ({ image, title, subtitle, desc, social }: InfoCardProps) => {
             </Zoom>
           </Col>
           <Col lg={9} style={{ display: 'flex', alignItems: 'center' }}>
-            <S.InfoCardBody>
+            <S.InfoCardBody bgc={bgc} color={color}>
               <div className="caption">
                 <h2 className="title">{title}</h2>
                 <h3 className="subtitle">{subtitle}</h3>
                 <p className="desc">{desc}</p>
                 <S.SocialLinks>
                   {social.website && (
-                    <S.SocialLink target="_blank" href={social.website}>
+                    <S.SocialLink
+                      bgc={bgc}
+                      color={color}
+                      target="_blank"
+                      href={social.website}
+                    >
                       <WebsiteIcon />
                     </S.SocialLink>
                   )}
                   {social.facebook && (
-                    <S.SocialLink target="_blank" href={social.facebook}>
+                    <S.SocialLink
+                      bgc={bgc}
+                      color={color}
+                      target="_blank"
+                      href={social.facebook}
+                    >
                       <FacebookIcon />
                     </S.SocialLink>
                   )}
                   {social.medium && (
-                    <S.SocialLink target="_blank" href={social.medium}>
+                    <S.SocialLink
+                      bgc={bgc}
+                      color={color}
+                      target="_blank"
+                      href={social.medium}
+                    >
                       <MediumIcon />
                     </S.SocialLink>
                   )}
                   {social.instagram && (
-                    <S.SocialLink target="_blank" href={social.instagram}>
+                    <S.SocialLink
+                      bgc={bgc}
+                      color={color}
+                      target="_blank"
+                      href={social.instagram}
+                    >
                       <InstagramIcon />
                     </S.SocialLink>
                   )}
                   {social.youtube && (
-                    <S.SocialLink target="_blank" href={social.youtube}>
+                    <S.SocialLink
+                      bgc={bgc}
+                      color={color}
+                      target="_blank"
+                      href={social.youtube}
+                    >
                       <YoutubeIcon />
                     </S.SocialLink>
                   )}
                   {social.twitter && (
-                    <S.SocialLink target="_blank" href={social.twitter}>
+                    <S.SocialLink
+                      bgc={bgc}
+                      color={color}
+                      target="_blank"
+                      href={social.twitter}
+                    >
                       <TwitterIcon />
                     </S.SocialLink>
                   )}

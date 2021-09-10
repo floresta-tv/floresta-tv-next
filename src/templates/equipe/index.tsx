@@ -19,6 +19,8 @@ type EquipePerson = {
   title: JSX.Element
   subtitle: JSX.Element
   desc: JSX.Element
+  bgc?: string
+  color?: string
   social?: {
     website?: string
     instagram?: string
@@ -36,6 +38,8 @@ const Equipe = () => {
       image: '/img/guilherme_meneghelli_florestatv.jpg',
       title: <span>Guilherme Meneghelli</span>,
       subtitle: <span>Cinema da Vida Real</span>,
+      bgc: '#ffd35c',
+      color: '#362701',
       desc: (
         <span>
           Guilherme trabalha como diretor de filmes nas áreas de publicidade,
@@ -53,6 +57,8 @@ const Equipe = () => {
     },
     {
       image: '/img/mathilde_everare_florestatv.jpeg',
+      bgc: '#58cc5c',
+      color: '#023004',
       title: <span>Mathilde Everaere</span>,
       subtitle: <span>Diplomacia da Paz</span>,
       desc: (
@@ -74,6 +80,8 @@ const Equipe = () => {
     {
       image: '/img/flora_dutra_florestatv.jpg',
       title: <span>Flora Dutra</span>,
+      bgc: '#383cba',
+      color: '#fff',
       subtitle: <span>Vida em comunidade da floresta ao espaço</span>,
       desc: (
         <span>
@@ -93,6 +101,8 @@ const Equipe = () => {
     {
       image: '/img/camila_saibro_florestatv.jpeg',
       title: <span>Camila Saibro</span>,
+      bgc: '#d45f82',
+      color: '#2e020f',
       subtitle: <span>Do Direito ao Dever</span>,
       desc: (
         <span>
@@ -114,6 +124,8 @@ const Equipe = () => {
       image: '/img/eduardo_pizaroli_florestatv.jpeg',
       title: <span>Eduardo Pizaroli </span>,
       subtitle: <span>Fundador do Instituto Nawa</span>,
+      bgc: '#25517d',
+      color: '#fff',
       desc: (
         <span>
           Idealizador do Instituto Nawá, Eduardo se formou em 2001 em
@@ -130,9 +142,33 @@ const Equipe = () => {
       }
     },
     {
+      image: '/img/advan_haschi_florestatv.jpeg',
+      title: <span>Advan Haschi</span>,
+      subtitle: <span>Música do Futuro</span>,
+      bgc: '#260b4f',
+      color: '#fff',
+      desc: (
+        <span>
+          Advan é músico multi-instrumentista e compositor. Ganhou seu primeiro
+          violão do avô aos 10 anos, mas somente aos 14 se conectou com o
+          instrumento e a partir daí seguiram como um só até hoje. Seu último
+          álbum “Humanxs” nos conduz a nossa própria essência como humanos e aos
+          nossos sentimentos líquidos.
+        </span>
+      ),
+      social: {
+        medium: 'https://visionariovegetal.medium.com/',
+        facebook:
+          'https://www.facebook.com/Advan-Haschi-Vision%C3%A1rio-Vegetal-109359397505378/?ref=py_c',
+        instagram: 'https://www.instagram.com/advanhx/'
+      }
+    },
+    {
       image: '/img/fran_diniz_mulher_shakit_florestatv.jfif',
       title: <span>Fran Diniz, Mulher Shakti</span>,
       subtitle: <span>Yogini da Floresta</span>,
+      bgc: '#8c3039',
+      color: '#fff',
       desc: (
         <span>
           Uma Yogini que trabalha no despertar do feminino consciente como fator
@@ -146,7 +182,8 @@ const Equipe = () => {
         </span>
       ),
       social: {
-        instagram: 'https://www.instagram.com/mulhershakti/'
+        instagram: 'https://www.instagram.com/mulhershakti/',
+        website: 'https://www.temployoginipower.com/'
       }
     },
     {
@@ -155,6 +192,8 @@ const Equipe = () => {
       subtitle: (
         <span>Mãe, artesã, desing em crochê, cantora e compositora</span>
       ),
+      bgc: '#915e5e',
+      color: '#fff',
       desc: (
         <span>
           Mãe, artesã, desing em crochê, cantora e compositora. Dedica sua vida
@@ -169,8 +208,10 @@ const Equipe = () => {
     },
     {
       image: '/img/vitor_regis_florestatv.jpeg',
+      bgc: '#292101',
+      color: '#fff',
       title: <span>Vitor Régis de Ramos</span>,
-      subtitle: <span>Da Floresta à Tecnologia</span>,
+      subtitle: <span>Da Tecnologia à Floresta</span>,
       desc: (
         <span>
           Vitor é uma alma visionária que tem como propósito a integração da
@@ -217,7 +258,9 @@ const Equipe = () => {
                     </ScrollLink>
 
                     <Link passHref={true} href="/seja-um-voluntario">
-                      <Button variant="white">Quero fazer parte</Button>
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="white">Quero fazer parte</Button>
+                      </a>
                     </Link>
                   </>
                 )
@@ -271,8 +314,13 @@ const Equipe = () => {
             <Container>
               <>
                 {equipeData.map(
-                  ({ image, title, subtitle, desc, social }, index) => (
+                  (
+                    { image, title, subtitle, desc, social, color, bgc },
+                    index
+                  ) => (
                     <InfoCard
+                      color={color}
+                      bgc={bgc}
                       key={index}
                       image={image}
                       title={title}
