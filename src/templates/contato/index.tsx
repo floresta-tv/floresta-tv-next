@@ -46,7 +46,7 @@ const Contato = () => {
                   <>
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                       <S.WhatsappLink
-                        href="https://api.whatsapp.com/send?phone=554891818781&text=Hey!%20Estou%20em%20entrando%20em%20contato%20atrav%C3%A9s%20do%20website%20Floresta.TV"
+                        href="https://api.whatsapp.com/send?phone=55984457911&text=Hey!%20Estou%20em%20entrando%20em%20contato%20atrav%C3%A9s%20do%20website%20Floresta.TV"
                         target="_blank"
                       >
                         Chamar no Whatsapp <WhatsappIcon size={30} />
