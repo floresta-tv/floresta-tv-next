@@ -20,7 +20,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           {/* @ts-ignore */}
-          <link rel="og:image" itemProp="image" content="/img/og-image.png" />
+          <link rel="og:image" itemProp="image" content="/img/og-img.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#149A41" />
           <meta
