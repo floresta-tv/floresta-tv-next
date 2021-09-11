@@ -25,6 +25,7 @@ const Contato = () => {
           <BannerFull
             items={[
               {
+                width: 'large',
                 position: 'center',
                 textAlign: 'center',
                 background: '/img/povo_indigena_huni_kuin-2.png',

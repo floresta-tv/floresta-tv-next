@@ -10,6 +10,7 @@ import * as S from './styles'
 
 type BannerFullProps = {
   items: {
+    width: string
     title: JSX.Element
     background: string
     backgroundPosition?: string
@@ -58,6 +59,7 @@ const BannerFull = ({ items }: BannerFullProps) => {
           >
             <Container fillHeight>
               <S.BannerFullContent
+                width={item.width}
                 style={{
                   alignItems: item.position || 'flex-start',
                   // @ts-ignore

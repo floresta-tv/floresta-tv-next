@@ -268,6 +268,7 @@ const Equipe = () => {
           <BannerFull
             items={[
               {
+                width: 'large',
                 position: 'center',
                 textAlign: 'center',
                 background: '/img/comunidade_indigena_banner.png',

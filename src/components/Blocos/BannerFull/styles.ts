@@ -51,8 +51,11 @@ export const BannerFullItem = styled.div<BannerFullItemProps>`
     background-position: 40%;
   }
 `
+interface BannerFullContent {
+  width: string
+}
 
-export const BannerFullContent = styled.div`
+export const BannerFullContent = styled.div<BannerFullContent>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -64,6 +67,12 @@ export const BannerFullContent = styled.div`
 
   .caption {
     max-width: 590px;
+
+    ${(props) =>
+      props.width === 'large' &&
+      `
+       max-width: 750px;
+    `}
 
     .title {
       font-family: 'Merriweather';
@@ -87,6 +96,13 @@ export const BannerFullContent = styled.div`
     .desc {
       font-size: 20px;
       max-width: 520px;
+      margin: 0 auto;
+
+      ${(props) =>
+        props.width === 'large' &&
+        `
+       max-width: 560px;
+    `}
 
       ${media.lessThan('medium')`
         font-size: 17px;

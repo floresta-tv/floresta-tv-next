@@ -26,6 +26,7 @@ const SejaUmVoluntario = () => {
           <BannerFull
             items={[
               {
+                width: 'large',
                 position: 'center',
                 textAlign: 'center',
                 background: '/img/familia-florestatv-2.png',
