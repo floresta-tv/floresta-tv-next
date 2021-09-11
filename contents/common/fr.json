@@ -1,0 +1,21 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "equipe": "Équiper",
+    "news": "Nouvelles",
+    "contato": "Contact",
+    "seja-um-voluntario": "Être bénévole"
+  },
+  "footer": {
+    "copy": "Tous droits délimités aux peuples d'origine. 25 août 2021 dans Compte à rebours progressif. 🌳",
+    "nesta-pagina": "Cette page",
+    "outras-paginas": "Autres pages",
+    "outros-projetos": "Autres projets",
+    "nossa-equipe": "Notre équipe",
+    "nosso-blog": "Notre équipe",
+    "contato": "Contact"
+  },
+  "contact-button": {
+    "label": "Comment pouvons nous aider?"
+  }
+}

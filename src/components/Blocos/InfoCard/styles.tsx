@@ -13,7 +13,7 @@ export const InfoCardImage = styled.div<InfoCardImage>`
   overflow: hidden;
   border: 10px solid ${(props) => props.border};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     height: 260px;
     width: 260px;
     margin: 0 auto;
@@ -37,7 +37,7 @@ export const InfoCardBody = styled.div<ColorProps>`
   justify-content: center;
   height: 280px;
   margin-left: -100px;
-  padding: 0 140px;
+  padding: 0 140px 0 150px;
   border-radius: 0 130px 130px 0;
   max-width: 1000px;
   background-color: ${(props) => props.bgc};
@@ -55,7 +55,7 @@ export const InfoCardBody = styled.div<ColorProps>`
     margin: 20px 0;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     border-radius: 15px !important;
     margin: -80px 0 0 0 !important;
     height: auto !important;
@@ -68,7 +68,7 @@ export const SocialLinks = styled.div`
   display: flex;
   margin-top: 10px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     justify-content: center;
   }
 `
@@ -78,8 +78,16 @@ export const InfoCardWrapper = styled.article`
   align-items: center;
   margin-bottom: 30px;
 
+  &:nth-child(1n) {
+    @media screen and (min-width: 992px) and (max-width: 1300px) {
+      ${InfoCardBody} {
+        padding-left: 180px;
+      }
+    }
+  }
+
   &:nth-child(2n) {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       ${InfoCardImage} {
       }
 

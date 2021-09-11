@@ -1,0 +1,21 @@
+{
+  "navbar": {
+    "home": "Comienzo",
+    "equipe": "Equipo",
+    "news": "Noticias",
+    "contato": "Contacto",
+    "seja-um-voluntario": "Sea un voluntario"
+  },
+  "footer": {
+    "copy": "Todos los derechos demarcados a los pueblos originarios. 25 de agosto de 2021 en Countdown Progressive. 🌳",
+    "nesta-pagina": "Otros proyectos",
+    "outras-paginas": "Esta página",
+    "outros-projetos": "Otros proyectos",
+    "nossa-equipe": "Nossa equipe",
+    "nosso-blog": "Nosso blog",
+    "contato": "Entre em contato"
+  },
+  "contact-button": {
+    "label": "¿Cómo podemos ayudar?"
+  }
+}

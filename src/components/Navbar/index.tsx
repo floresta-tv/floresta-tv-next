@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { X as TimesIcon } from '@styled-icons/octicons'
 import { Container } from '../UI'
@@ -25,6 +26,7 @@ const Navbar = () => {
   const isMobile = useMediaQuery({
     query: '(max-width: 1168px)'
   })
+  const t = useTranslations('navbar')
 
   const toggleNavbar = () => {
     if (isMobile) {
@@ -39,20 +41,20 @@ const Navbar = () => {
 
   const navItems: navItemsProps[] = [
     {
-      label: 'Home',
+      label: 'home',
       href: '/'
     },
     {
-      label: 'Nossa equipe',
+      label: 'equipe',
       href: '/equipe'
     },
     {
-      label: 'Blog',
+      label: 'news',
       href: 'https://medium.com/florestatv/about',
       external: true
     },
     {
-      label: 'Contato',
+      label: 'contato',
       href: '/contato'
     }
   ]
@@ -97,7 +99,7 @@ const Navbar = () => {
                           : router.pathname.includes(item.href)
                       }
                     >
-                      {item.label}
+                      {t.raw(item.label)}
                     </S.Item>
                   </a>
                 ) : (
@@ -110,7 +112,7 @@ const Navbar = () => {
                           : router.pathname.includes(item.href)
                       }
                     >
-                      {item.label}
+                      {t.raw(item.label)}
                     </S.Item>
                   </Link>
                 )}
@@ -121,7 +123,7 @@ const Navbar = () => {
               <S.ItemButton
                 isActive={router.pathname === '/seja-um-voluntario'}
               >
-                Seja um voluntário
+                {t.raw('seja-um-voluntario')}
               </S.ItemButton>
             </Link>
           </S.List>
@@ -129,34 +131,50 @@ const Navbar = () => {
       </Container>
       <S.LanguagesWrapper>
         <span>lang: </span>
-        <S.LanguageButton className="active">
-          <Image
-            src="/img/bandeira_idioma_portugues.png"
-            width={51}
-            height={34}
-          ></Image>
-        </S.LanguageButton>
-        <S.LanguageButton>
-          <Image
-            src="/img/bandeira_idioma_ingles.png"
-            width={51}
-            height={34}
-          ></Image>
-        </S.LanguageButton>
-        <S.LanguageButton>
-          <Image
-            src="/img/bandeira_idioma_espanhol.png"
-            width={51}
-            height={34}
-          ></Image>
-        </S.LanguageButton>
-        <S.LanguageButton>
-          <Image
-            src="/img/bandeira_idioma_frances.png"
-            width={51}
-            height={34}
-          ></Image>
-        </S.LanguageButton>
+        <Link passHref={true} href="" locale="pt">
+          <S.LanguageButton
+            className={router.locale.includes('pt') && 'active'}
+          >
+            <Image
+              src="/img/bandeira_idioma_portugues.png"
+              width={51}
+              height={34}
+            ></Image>
+          </S.LanguageButton>
+        </Link>
+        <Link passHref={true} href="" locale="en">
+          <S.LanguageButton
+            className={router.locale.includes('en') && 'active'}
+          >
+            <Image
+              src="/img/bandeira_idioma_ingles.png"
+              width={51}
+              height={34}
+            ></Image>
+          </S.LanguageButton>
+        </Link>
+        <Link passHref={true} href="" locale="es">
+          <S.LanguageButton
+            className={router.locale.includes('es') && 'active'}
+          >
+            <Image
+              src="/img/bandeira_idioma_espanhol.png"
+              width={51}
+              height={34}
+            ></Image>
+          </S.LanguageButton>
+        </Link>
+        <Link passHref={true} href="" locale="fr">
+          <S.LanguageButton
+            className={router.locale.includes('fr') && 'active'}
+          >
+            <Image
+              src="/img/bandeira_idioma_frances.png"
+              width={51}
+              height={34}
+            ></Image>
+          </S.LanguageButton>
+        </Link>
       </S.LanguagesWrapper>
     </S.Wrapper>
   )

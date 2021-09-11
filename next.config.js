@@ -8,3 +8,18 @@ module.exports = withPWA({
     disable: !isProd
   }
 })
+
+// next.config.js
+module.exports = {
+  i18n: {
+    locales: ['en', 'pt', 'fr', 'es'],
+    defaultLocale: 'pt',
+    pages: {
+      '*': ['common'],
+      '/': ['home'],
+      '/contato': ['about'],
+      '/equipe': ['equipe'],
+      '/seja-um-voluntario': ['seja-um-voluntario']
+    }
+  }
+}

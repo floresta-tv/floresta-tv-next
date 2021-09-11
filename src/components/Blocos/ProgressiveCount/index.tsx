@@ -10,9 +10,20 @@ type ProgressiveCountProps = {
   desc: JSX.Element
   countStart?: string
   caption: JSX.Element
+  texts: {
+    seconds: string
+    minutes: string
+    hours: string
+    days: string
+  }
 }
 
-const ProgressiveCount = ({ title, desc, caption }: ProgressiveCountProps) => {
+const ProgressiveCount = ({
+  title,
+  desc,
+  caption,
+  texts
+}: ProgressiveCountProps) => {
   const [years, setYears] = useState(0)
   const [days, setDays] = useState(0)
   const [hours, setHours] = useState(0)
@@ -81,19 +92,19 @@ const ProgressiveCount = ({ title, desc, caption }: ProgressiveCountProps) => {
             <S.ProgressiveCountNumbers>
               <S.ProgressiveCountNumbersItem>
                 <span className="number">{days}</span>
-                <span className="label">Dias</span>
+                <span className="label">{texts.days}</span>
               </S.ProgressiveCountNumbersItem>
               <S.ProgressiveCountNumbersItem>
                 <span className="number">{hours}</span>
-                <span className="label">Horas</span>
+                <span className="label">{texts.hours}</span>
               </S.ProgressiveCountNumbersItem>
               <S.ProgressiveCountNumbersItem>
                 <span className="number">{minutes}</span>
-                <span className="label">Minutos</span>
+                <span className="label">{texts.minutes}</span>
               </S.ProgressiveCountNumbersItem>
               <S.ProgressiveCountNumbersItem>
                 <span className="number">{seconds}</span>
-                <span className="label">Segundos</span>
+                <span className="label">{texts.seconds}</span>
               </S.ProgressiveCountNumbersItem>
             </S.ProgressiveCountNumbers>
           </Zoom>

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import { useTranslations } from 'next-intl'
 import { Link as ScrollLink } from 'react-scroll'
 import Link from 'next/link'
 
@@ -23,6 +23,8 @@ type FooterProps = {
 }
 
 const Footer = ({ links }: FooterProps) => {
+  const t = useTranslations('footer')
+
   return (
     <Fade>
       <S.Wrapper>
@@ -72,7 +74,7 @@ const Footer = ({ links }: FooterProps) => {
               </S.SocialLinks>
             </S.GridColumn>
             <S.GridColumn>
-              <S.GridTitle>Nesta página:</S.GridTitle>
+              <S.GridTitle>{t('nesta-pagina')}</S.GridTitle>
               <S.GridList>
                 {links.map(({ label, to }, index) => (
                   <S.GridListItem key={index}>
@@ -85,7 +87,7 @@ const Footer = ({ links }: FooterProps) => {
             </S.GridColumn>
 
             <S.GridColumn>
-              <S.GridTitle>Outras páginas:</S.GridTitle>
+              <S.GridTitle>{t('outras-paginas')}</S.GridTitle>
               <S.GridList>
                 <S.GridListItem>
                   <Link href="/">A voz da floresta</Link>
@@ -97,19 +99,19 @@ const Footer = ({ links }: FooterProps) => {
                   <Link href="/marco-ancestral">Marco ancestral</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/equipe">Nossa equipe</Link>
+                  <Link href="/equipe">{t('nossa-equipe')}</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/blog">Nosso Blog</Link>
+                  <Link href="/blog">{t('nosso-blog')}</Link>
                 </S.GridListItem>
                 <S.GridListItem>
-                  <Link href="/contato">Entre em contato</Link>
+                  <Link href="/contato">{t('contato')}</Link>
                 </S.GridListItem>
               </S.GridList>
             </S.GridColumn>
 
             <S.GridColumn>
-              <S.GridTitle>Outras iniciativas:</S.GridTitle>
+              <S.GridTitle>{t('outros-projetos')}</S.GridTitle>
               <S.GridList>
                 <S.GridListItem>
                   <Link href="/">Floresta TV</Link>
@@ -139,10 +141,7 @@ const Footer = ({ links }: FooterProps) => {
               </S.GridList>
             </S.GridColumn>
           </S.Grid>
-          <S.Copy>
-            Todos os Direitos Demarcados aos Povos Originários. 25 de Agosto de
-            2021 em Contagem Progressiva. 🌳
-          </S.Copy>
+          <S.Copy>{t('copy')}</S.Copy>
         </S.Content>
       </S.Wrapper>
     </Fade>

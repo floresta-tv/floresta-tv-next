@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Início",
+    "equipe": "Equipe",
+    "news": "Notícias",
+    "contato": "Contato",
+    "seja-um-voluntario": "Seja um voluntário"
+  },
+
+  "footer": {
+    "copy": "Todos os Direitos Demarcados aos Povos Originários. 25 de Agosto de 2021 em Contagem Progressiva. 🌳",
+    "nesta-pagina": "Nesta página",
+    "outras-paginas": "Outras páginas",
+    "outros-projetos": "Outros projetos",
+    "nossa-equipe": "Nossa equipe",
+    "nosso-blog": "Nosso blog",
+    "contato": "Entre em contato"
+  },
+
+  "contact-button": {
+    "label": "Como podemos ajudar?"
+  }
+}

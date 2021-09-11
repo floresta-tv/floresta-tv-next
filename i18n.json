@@ -1,9 +1,11 @@
 {
-    "locales": ["en", "pt", "fr"],
+    "locales": ["en", "pt", "fr", "es"],
     "defaultLocale": "pt",
     "pages": {
       "*": ["common"],
       "/": ["home"],
-      "/about": ["about"]
+      "/contato": ["about"],
+      "/equipe": ["equipe"],
+      "/seja-um-voluntario": ["seja-um-voluntario"]
     }
   }

@@ -38,8 +38,8 @@ const Equipe = () => {
       image: '/img/guilherme_meneghelli_florestatv.jpg',
       title: <span>Guilherme Meneghelli</span>,
       subtitle: <span>Cinema da Vida Real</span>,
-      bgc: '#ffd35c',
-      color: '#362701',
+      bgc: '#ff8d29',
+      color: '#fff',
       desc: (
         <span>
           Guilherme trabalha como diretor de filmes nas áreas de publicidade,
@@ -101,8 +101,8 @@ const Equipe = () => {
     {
       image: '/img/camila_saibro_florestatv.jpeg',
       title: <span>Camila Saibro</span>,
-      bgc: '#d45f82',
-      color: '#2e020f',
+      bgc: '#ffd642',
+      color: '#332801',
       subtitle: <span>Do Direito ao Dever</span>,
       desc: (
         <span>
@@ -145,7 +145,7 @@ const Equipe = () => {
       image: '/img/advan_haschi_florestatv.jpeg',
       title: <span>Advan Haschi</span>,
       subtitle: <span>Música do Futuro</span>,
-      bgc: '#260b4f',
+      bgc: '#280140',
       color: '#fff',
       desc: (
         <span>
@@ -192,7 +192,7 @@ const Equipe = () => {
       subtitle: (
         <span>Mãe, artesã, desing em crochê, cantora e compositora</span>
       ),
-      bgc: '#915e5e',
+      bgc: '#165c03',
       color: '#fff',
       desc: (
         <span>
@@ -208,8 +208,8 @@ const Equipe = () => {
     },
     {
       image: '/img/vitor_regis_florestatv.jpeg',
-      bgc: '#292101',
-      color: '#fff',
+      bgc: '#fff68c',
+      color: '#634a04',
       title: <span>Vitor Régis de Ramos</span>,
       subtitle: <span>Da Tecnologia à Floresta</span>,
       desc: (

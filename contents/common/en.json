@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "home": "Home",
+    "equipe": "Team",
+    "news": "News",
+    "contato": "Contact",
+    "seja-um-voluntario": "Be a volunteer"
+  },
+  "footer": {
+    "copy": "All Rights Demarcated to Original Peoples. August 25, 2021 in Countdown Progressive. 🌳",
+    "nesta-pagina": "Other projects",
+    "outras-paginas": "Other pages",
+    "outros-projetos": "Other projects"
+  },
+  "contact-button": {
+    "label": "How can we help?"
+  }
+}
