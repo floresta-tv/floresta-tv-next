@@ -1,0 +1,13 @@
+{
+  "Voluntareer": {
+    "bannerfull": {
+      "title": "<span> Faça parte da <br /> Nossa família </span>",
+      "desc": "<span> Você acredita que pode aliar seus potênciais únicos ao Movimento Floresta.TV e juntos servirmos ao coletivo e o auxílio dos Povos Originários? <br /> <b>Entre já em contato e se integre conosco!</b> <br /> </span>",
+      "botao-1": "Chamar no Whatsapp"
+    },
+
+    "footer-links": {
+      "link1": "Seja um voluntário"
+    }
+  }
+}

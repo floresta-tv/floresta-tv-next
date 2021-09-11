@@ -103,3 +103,40 @@ export const ProgressiveCountCaption = styled.div`
     margin-top: 40px;
    `}
 `
+
+export const SocialLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  ${media.lessThan('large')`
+    justify-content: center;
+  `}
+`
+
+export const SocialLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.45s;
+
+  svg {
+    width: 35px;
+    fill: #ffffff;
+    transition: all 0.45s;
+  }
+
+  &:hover {
+    background-color: #fff;
+
+    svg {
+      fill: #024a05;
+    }
+  }
+`

@@ -55,7 +55,10 @@ App.getInitialProps = async function getInitialProps(context: AppContext) {
     ...(await NextApp.getInitialProps(context)),
     messages: {
       ...require(`../../contents/common/${locale}.json`),
-      ...require(`../../contents/index/${locale}.json`)
+      ...require(`../../contents/index/${locale}.json`),
+      ...require(`../../contents/equipe/${locale}.json`),
+      ...require(`../../contents/contato/${locale}.json`),
+      ...require(`../../contents/voluntareer/${locale}.json`)
     }
   }
 }

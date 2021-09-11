@@ -1,0 +1,77 @@
+{
+  "Equipe": {
+    "bannerfull": {
+      "title": "<span>Una grande familia</span>",
+      "desc": "<span> Además de toda la dedicación de sus 4 fundadores, Florestatv tiene el apoyo de docenas de talentos que contribuyen al proyecto de manera descentralizada, autónoma y colectiva (fotógrafos, videógrafos, investigadores, etc.).<br /> ¡Conozca y sé una parte!</span>",
+      "botao-1": "Conozca a nuestro equipo",
+      "botao-2": "Quiero ser parte"
+    },
+
+    "header": {
+      "title": "<span> Talentos interdependientes <br /> Para un alcance global </span>",
+      "desc": "<span> <h3>Revelar nuestra Onicity <br /> Por, por supuesto, por supuesto, sirve al conjunto: <br /> KAIA </ H3> Colabore: Latin Co-Labore & quot; Trabajo juntos & quot;Pedimos y aceptamos su ayuda.Una invitación a dividir el trabajo a un alcance orgánico en red.</ p> <p> <b> i & quot; i & quot;Es un invento de cada uno de nosotros. </ B> </ p> </span>"
+    },
+
+    "image1": {
+      "caption": "<span>Equipo de FlorestTv en los campamentos & quot; lucha por la vida & quot;- Brasilia - 30 de agosto, 2021</span>"
+    },
+
+    "team": {
+      "gui": {
+        "title": "",
+        "subtitle": "Cine de la vida real",
+        "desc": "<span>Guilherme trabaja como director de películas en las áreas de publicidad, cine, arte y música.Suma más de 15 años de experiencia de su primera película y desde allí hasta aquí suma más de 1000 películas publicadas en varias redes sociales, destacadas para la Recepción y después de Cannely; N & TUS DESPUÉS; </span>"
+      },
+      "mathilde": {
+        "title": "",
+        "subtitle": "<span>Diplomacia</span>",
+        "desc": "<span> Mathilde es Master en Relaciones Internacionales y ha estado gestionando muchos proyectos de cooperación intercultural entre Europa y terceros países.Habiendo llevado a cabo este trabajo para las instituciones internacionales como en Brasil, en Senegal y Perú, actualmente se manifiesta de forma autónoma y se centra en la unión de las sabidurías nativas de los 5 continentes. </span>"
+      },
+      "flora": {
+        "title": "",
+        "subtitle": "<span>Vida en la comunidad forestal al espacio.</span>",
+        "desc": "<span>Flora es periodista y doctorado en antropología social (UFRGS).Actualmente desarrolla y propone políticas de protección y defensa planetarias para un programa 2022-2033 en la ciencia planetaria.También es gerente Comunidad del Instituto de Preservación de Culturas Indígenas Brasileñas (Instituto Nawa) que actúa sobre la preservación del Amazonas. </span>"
+      },
+      "camila": {
+        "title": "",
+        "subtitle": "<span>Del derecho al deber</span>",
+        "desc": "<span> Camila, modelo internacional y estudiante de derecho con énfasis en la causa ambiental.Un ciudadano global que trabaja en asociación con el bosque colectivo de la televisión por la representatividad cultural de los pueblos indígenas.También actúa como el desarrollo del Gerente del Instituto NAWA, para la preservación del Bosque Amazónico y la Biodiversidad de los Bosques. </span>"
+      },
+      "eduardopiz": {
+        "title": "",
+        "subtitle": "<span>Fundador del Instituto Nawa</span>",
+        "desc": "<span> Idealizador del Instituto Nawa, Eduardo se graduó en 2001 en Administración de Empresas de la Universidad de Anhembi Morumbi.El investigador comenzó y bautizado en la tradición de Huni Kuin, actúa como profesor, mantenedor de cultivos ancestrales y es una referencia entre los líderes indígenas durante más de 20 años.</span>"
+      },
+      "advan": {
+        "title": "",
+        "subtitle": "<span>Música del futuro.</span>",
+        "desc": "<span>Advan es un músico y compositor multi-instrumental.Ganó la guitarra de su primer abuelo a los 10 años, pero solo a las 14 se conectó con el instrumento y desde allí lo siguieron hasta hoy.Su último álbum 'Humanxs' nos lleva a nuestra propia esencia como humanos y nuestros sentimientos líquidos.</span>"
+      },
+      "fran": {
+        "title": "",
+        "subtitle": "<span>Yogini da Floresta</span>",
+        "desc": "<span>Un yogini trabajando en el despertar de la mujer consciente como un factor urgente y primordial en la reconexión con la Tierra.Activador de la conciencia automática sobre la protección del bioma más grande del mundo, dedica su fuerza creativa con FlorestTV que actúa como escritor y creador de contenido audiovisual, su misión es promover la maduración de la conciencia social, sexual, psicoemocional y ambiental para un verdadero verdadero libre Humanidad, justa y armónica. </span>"
+      },
+      "sheide": {
+        "title": "",
+        "subtitle": "<span>Madre, artesano, desing en crochet, cantante y compositor.</span>",
+        "desc": "<span>Madre, artesano, diseño en crochet, cantante y compositor.Dedica su vida en el aprendizaje y la difusión de las tradiciones y el camino ancestral.Entiende que las enseñanzas de los pueblos originados son esenciales para el cuidado y la conservación de la Tierra y aquellos que viven en ella. </span>"
+      },
+      "vitor": {
+        "title": "",
+        "subtitle": "<span>Tecnología forestal</span>",
+        "desc": "<span>El Vitor es un alma visionaria que apunta a integrar la tecnología con la espiritualidad para ampliar soluciones armoniosas en las causas colectivas.Ha estado liderando y administrando equipos internacionales en el área de desarrollo durante más de 5 años y desde hace 12 años de edad está involucrado en la programación.Ayuda al colectivo en las áreas de tecnología, programación, gestión y desarrollo. </span>"
+      }
+    },
+    "image2": {
+      "caption": "<span> Familia original brasileña - Aldeia Secret of Artisan, 31 de julio 2021 - Foto: Guilherme Meneghelli </span>"
+    },
+
+    "footer-links": {
+      "link1": "Una gran familia",
+      "link2": "Talentos interdependientes",
+      "link3": "Miembros del equipo",
+      "link4": "Familia brasileña"
+    }
+  }
+}

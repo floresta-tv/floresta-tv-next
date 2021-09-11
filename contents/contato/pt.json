@@ -1,0 +1,13 @@
+{
+  "Contato": {
+    "bannerfull": {
+      "title": "<span> Como podemos <br /> ajudar?</span>",
+      "desc": "<span> Nossa equipe de talentos está a disposição de causas coletivas que levem auxílio, suporte e benefício aos Povos Originários. <br /> <b>Contate-nos por:</b> </span>",
+      "botao-1": "Chamar no Whatsapp"
+    },
+
+    "footer-links": {
+      "link1": "Entre em contato"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Element } from 'react-scroll'
-
+import { useTranslations } from 'next-intl'
 import {
   Medium as MediumIcon,
   Instagram as InstagramIcon,
@@ -17,6 +17,8 @@ import * as animations from './animations'
 import * as S from './styles'
 
 const SejaUmVoluntario = () => {
+  const t = useTranslations('Voluntareer')
+
   return (
     <motion.div key={6} {...animations.wrapper}>
       <S.Wrapper>
@@ -28,20 +30,18 @@ const SejaUmVoluntario = () => {
                 textAlign: 'center',
                 background: '/img/familia-florestatv-2.png',
                 title: (
-                  <span>
-                    Faça parte da <br />
-                    Nossa família
-                  </span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t.raw('bannerfull.title')
+                    }}
+                  ></span>
                 ),
                 desc: (
-                  <span>
-                    Você acredita que pode aliar seus potênciais únicos ao
-                    Movimento Floresta.TV e juntos servirmos ao coletivo e o
-                    auxílio dos Povos Originários?
-                    <br />
-                    <b>Entre já em contato e se integre conosco!</b>
-                    <br />
-                  </span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t.raw('bannerfull.desc')
+                    }}
+                  ></span>
                 ),
                 links: (
                   <>
@@ -50,7 +50,7 @@ const SejaUmVoluntario = () => {
                         href="https://api.whatsapp.com/send?phone=554891818781&text=Hey!%20Estou%20em%20entrando%20em%20SejaUmVoluntario%20atrav%C3%A9s%20do%20website%20Floresta.TV"
                         target="_blank"
                       >
-                        Chamar no Whatsapp <WhatsappIcon size={30} />
+                        {t.raw('bannerfull.botao-1')} <WhatsappIcon size={30} />
                       </S.WhatsappLink>
                       <S.SocialLinks>
                         <S.SocialLink
@@ -93,7 +93,7 @@ const SejaUmVoluntario = () => {
       <Footer
         links={[
           {
-            label: 'Seja Um Voluntário',
+            label: t.raw('footer-links.link1'),
             to: 'home'
           }
         ]}

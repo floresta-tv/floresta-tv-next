@@ -1,0 +1,13 @@
+{
+  "Contato": {
+    "bannerfull": {
+      "title": "<span> Comment pouvons nous aider?</span>",
+      "desc": "<span>Notre équipe de talents est accessible aux causes collectives qui mènent de l'aide, du soutien et de l'avantage des peuples d'origine.<br /> <B> Contactez-nous par: </ B> </span>",
+      "botao-1": "Appeler whatsapp"
+    },
+
+    "footer-links": {
+      "link1": "Contact"
+    }
+  }
+}

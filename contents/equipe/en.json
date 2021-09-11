@@ -1,0 +1,77 @@
+{
+  "Equipe": {
+    "bannerfull": {
+      "title": "<span>A big family </span>",
+      "desc": "<span>In addition to the entire dedication of its 4 founders, Florestatv has the support of dozens of talents contributing to the project in a decentralized, autonomous and collective (photographers, videographers, researchers etc).<br /> Get to know and be a part! </span>",
+      "botao-1": "Meet our team",
+      "botao-2": "I want to be part"
+    },
+
+    "header": {
+      "title": "<span> Interdependent talents <br /> for a global reach </span>",
+      "desc": "<span><H3> Reveal our oneness <br /> For, of course, serve the whole: <br /> kaia </ h3> <p> Collaborate: Latin co-labore & quot; work together & quot;We ask and accept your help.An invitation to divide work to a networked organic reach.</ p> <p> <b> & quot; I & quot;It is an invention of each of us. </ b> </ p> </span>"
+    },
+
+    "image1": {
+      "caption": "<span> Florestatv team in the camps & quot; fight for life & quot;- Brasilia - August 30, 2021 {'} </span>"
+    },
+
+    "team": {
+      "gui": {
+        "title": "",
+        "subtitle": "Real life cinema",
+        "desc": "<span>Guilherme works as director of films in the areas of advertising, cinema, art and music.It sums more than 15 years of experience since your first film and from there to here adds more than 1000 films published in several social networks, highlighting the REC & AFTER CHANNELY; N & POST; Play that has more than 700.</span>"
+      },
+      "mathilde": {
+        "title": "",
+        "subtitle": "<span>Diplomacy</span>",
+        "desc": "<span>Mathilde is master in international relations and has been managing many intercultural cooperation projects between Europe and third countries.Having already carried out this work for international institutions such as in Brazil, in Senegal and Peru, it currently manifests itself autonomously and focuses on the union of native wisdoms of the 5 continents. </span>"
+      },
+      "flora": {
+        "title": "",
+        "subtitle": "<span>Life in forest community to space</span>",
+        "desc": "<span> Flora is a journalist and doctoral in social anthropology (UFRGS).Currently it develops and proposes planetary protection and defense policies for a 2022-2033 schedule at Planetary Science.She is also Manager Community of the Institute of Preservation of Brazilian Indigenous Cultures (Instituto Nawa) that acts on the preservation of the Amazon.</span>"
+      },
+      "camila": {
+        "title": "",
+        "subtitle": "<span>Of the right to duty</span>",
+        "desc": "<span>Camila, international model and law student with emphasis on the environmental cause.A global citizen who works in partnership with the collective TV forest by the cultural representativeness of indigenous peoples.It also acts as Manager Development of the Nawa Institute, for the preservation of the Amazon Forest and Biodiversity of Forests. </span>"
+      },
+      "eduardopiz": {
+        "title": "",
+        "subtitle": "<span>Founder of the Nawa Institute</span>",
+        "desc": "<span>Idealizer of the Nawa Institute, Eduardo graduated in 2001 in Business Administration from Anhembi Morumbi University.Researcher started and baptized in the Huni Kuin tradition, he acts as a lecturer, ancestral crop maintainer and is a reference among indigenous leaders for more than 20 years. </span>"
+      },
+      "advan": {
+        "title": "",
+        "subtitle": "<span>Music of the future</span>",
+        "desc": "<span> Advan is a multi-instrumental musician and composer.He won his first grandfather's guitar at age 10, but only at 14 he connected with the instrument and from there they followed as one until today.Your last album 'Humanxs' leads us to our own essence as humans and our liquid feelings. </span>"
+      },
+      "fran": {
+        "title": "",
+        "subtitle": "<span>Forest yogini</span>",
+        "desc": "<span> A Yogini working on the awakening of the female conscious as an urgent and primordial factor in reconnection with the Earth.Activator of the autoresponsible consciousness on the protection of the world's largest biome, dedicates its creative force with Florestatv acting as a writer and creator of audiovisual content, its mission is to promote the ripening of social, sexual, psychoemotional and environmental consciousness for a truly free humanity,fair and harmonic.</span>"
+      },
+      "sheide": {
+        "title": "",
+        "subtitle": "<span>Mother, artisan, desing in crochet, singer and composer</span>",
+        "desc": "<span> Mother, artisan, desing in crochet, singer and composer.She dedicates her life into learning and disseminating traditions and ancestral path.It understands that the teachings of the original peoples are essential for the care and conservation of the Earth and those living in it. </span>"
+      },
+      "vitor": {
+        "title": "",
+        "subtitle": "<span>Forest technology</span>",
+        "desc": "<span> Vitor is a visionary soul that aims to integrate technology with spirituality to expand harmonious solutions in collective causes.It has been leading and managing international teams in the area of development for more than 5 years and since 12 years of age is involved in programming.Helps the collective in the areas of technology, programming, management and development.</span>"
+      }
+    },
+    "image2": {
+      "caption": "<span> Brazilian Original Family - Aldeia Secret of Artisan, July 31 2021 - Photo: Guilherme Meneghelli</span>"
+    },
+
+    "footer-links": {
+      "link1": "A big family",
+      "link2": "Interdependent talents",
+      "link3": "Team members",
+      "link4": "Brazilian Family"
+    }
+  }
+}

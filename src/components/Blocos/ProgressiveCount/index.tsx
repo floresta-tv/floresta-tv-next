@@ -3,6 +3,14 @@ import { Container } from 'components/UI'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
 
+import {
+  Medium as MediumIcon,
+  Instagram as InstagramIcon,
+  Youtube as YoutubeIcon,
+  Twitter as TwitterIcon,
+  Discord as DiscordIcon
+} from '@styled-icons/boxicons-logos'
+
 import * as S from './styles'
 
 type ProgressiveCountProps = {
@@ -111,6 +119,33 @@ const ProgressiveCount = ({
 
           <Fade bottom>
             <S.ProgressiveCountCaption>{caption}</S.ProgressiveCountCaption>
+            <S.SocialLinks>
+              <S.SocialLink
+                target="_blank"
+                href="https://medium.com/florestatv/about"
+              >
+                <MediumIcon />
+              </S.SocialLink>
+              <S.SocialLink
+                target="_blank"
+                href="https://www.instagram.com/florestatv/"
+              >
+                <InstagramIcon />
+              </S.SocialLink>
+
+              <S.SocialLink
+                target="_blank"
+                href="https://www.youtube.com/channel/UCo9JpvxflH3WP6vms6EBDYQ"
+              >
+                <YoutubeIcon />
+              </S.SocialLink>
+              <S.SocialLink>
+                <TwitterIcon />
+              </S.SocialLink>
+              <S.SocialLink target="_blank" href="https://discord.gg/CSqAFfyM">
+                <DiscordIcon />
+              </S.SocialLink>
+            </S.SocialLinks>
           </Fade>
         </>
       </Container>

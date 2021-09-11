@@ -1,0 +1,77 @@
+{
+  "Equipe": {
+    "bannerfull": {
+      "title": "<span>Une famille nombreuse</span>",
+      "desc": "<span> En plus de l'ensemble du dévouement de ses 4 fondateurs, Florestatv a le soutien de dizaines de talents contribuant au projet dans un groupe autonome et collectif décentralisé, autonome et collectif (photographes, vidéographes, chercheurs, etc.).<br /> Apprenez à connaître et à faire partie! </span>",
+      "botao-1": "Rencontrez notre équipe",
+      "botao-2": "Je veux faire partie"
+    },
+
+    "header": {
+      "title": "<span>Talents interdépendants <br /> pour une portée globale </span>",
+      "desc": "<span> <h3> Révéler notre onctention <br /> pour, bien sûr, desservir le tout: <br /> Kaia </ h3> Collaborez: latine co-labore & quot; travail ensemble 'Nous demandons et acceptons votre aide.Une invitation à diviser le travail à une portée biologique en réseau. < / p> <p> <b> 'i & quot;C'est une invention de chacun de nous.</b > < /p> </span > "
+    },
+
+    "image1": {
+      "caption": "<span> L'équipe de Florestatv dans les camps & quot; combat pour la vie et quot;- Brasilia - 30 août 2021 </span>"
+    },
+
+    "team": {
+      "gui": {
+        "title": "",
+        "subtitle": "Cinéma de vie réelle",
+        "desc": "<span> Guilherme travaille en tant que directeur des films dans les domaines de la publicité, du cinéma, de l'art et de la musique.Somme plus de 15 ans d'expérience de votre premier film et de là à la somme de plus de 1000 films publiés dans plusieurs réseaux sociaux, mis en évidence pour la Rec & Suite Chaver; N & Après;</span>"
+      },
+      "mathilde": {
+        "title": "",
+        "subtitle": "<span>Diplomatie</span>",
+        "desc": "<span> Mathilde est maître dans les relations internationales et gère de nombreux projets de coopération interculturelle entre l'Europe et les pays tiers.Après avoir déjà effectué ce travail pour les institutions internationales comme au Brésil, au Sénégal et au Pérou, se manifeste actuellement de manière autonome et se concentre sur l'Union des sagesse indigènes des 5 continents. </span>"
+      },
+      "flora": {
+        "title": "",
+        "subtitle": "<span>La vie dans la communauté forestière à l'espace</span>",
+        "desc": "<span> Flora est journaliste et doctorat en anthropologie sociale (UFRGS).Développe et propose actuellement des politiques de protection planétaires et de défense pour une annexe 2022-2033 à la science planétaire.Il s'agit également de directeur communautaire de l'Institut de préservation des cultures indigènes brésiliennes (Instituto Nawa) qui agit sur la préservation de l'Amazonie.</span>"
+      },
+      "camila": {
+        "title": "",
+        "subtitle": "<span>Du droit au devoir</span>",
+        "desc": "<span> Camila, modèle international et étudiant en droit mettant l'accent sur la cause environnementale.Un citoyen mondial qui travaille en partenariat avec la forêt de télévision collective par la représentativité culturelle des peuples autochtones.Il agit également en tant que gestionnaire développement de l'Institut Nawa, pour la préservation de la forêt amazonienne et de la biodiversité des forêts. </span>"
+      },
+      "eduardopiz": {
+        "title": "",
+        "subtitle": "<span>Fondateur de l'Institut Nawa</span>",
+        "desc": "<span>L'idéalisateur de l'Institut Nawa, Eduardo est diplômé en 2001 en administration des affaires de l'Université d'Anhembi Morumbi.Le chercheur a commencé et baptialisé dans la tradition de Huni Kuin, agit en tant que conférencier, responsable des cultures ancestrales et est une référence entre les dirigeants autochtones depuis plus de 20 ans.</span>"
+      },
+      "advan": {
+        "title": "",
+        "subtitle": "<span>Musique du futur</span>",
+        "desc": "<span> Advan est un musicien et un compositeur multi-instrumentaux.Il a remporté sa première guitare de grand-père à 10 ans, mais seulement à 14 ans, il est connecté à l'instrument et de là, ils ont suivi comme un jusqu'à aujourd'hui.Votre dernier album 'Humanxs' nous conduit à notre propre essence comme des humains et nos sentiments liquides. </span>"
+      },
+      "fran": {
+        "title": "",
+        "subtitle": "<span>Yogini forestier</span>",
+        "desc": "<span>Un yogini travaillant sur le réveil de la femme consciente comme un facteur urgent et primordial en reconnexion avec la Terre.Activateur de la conscience autoritaire sur la protection du plus grand biome du monde, consacre sa force créative avec Florestatv d'un écrivain et de créateur de contenu audiovisuel, sa mission est de promouvoir la maturation de la conscience sociale, sexuelle, psychoémotionnelle et environnementale pour un véritable libre L'humanité, juste et harmonique. </span>"
+      },
+      "sheide": {
+        "title": "",
+        "subtitle": "<span>Mère, artisan, dessin dans le crochet, chanteur et compositeur</span>",
+        "desc": "<span>Mère, artisan, dessin en crochet, chanteur et compositeur.Il consacre sa vie dans l'apprentissage et la diffusion de traditions et de sentiers ancestraux.Il comprend que les enseignements des peuples originaires sont essentiels pour les soins et la conservation de la Terre et ceux qui y vivent. </span>"
+      },
+      "vitor": {
+        "title": "",
+        "subtitle": "<span>Technologie forestière</span>",
+        "desc": "<span>Vitor est une âme visionnaire qui vise à intégrer la technologie avec la spiritualité pour développer des solutions harmonieuses dans les causes collectives.Il dirige et gère des équipes internationales dans le domaine du développement depuis plus de 5 ans et depuis 12 ans est impliquée dans la programmation.Aide le collectif dans les domaines de la technologie, de la programmation, de la gestion et du développement. </span>"
+      }
+    },
+    "image2": {
+      "caption": "<span> Familia Original Brasileira - Aldeia Segredo do Artesão, dia 31 de Julho 2021 - Photo : Guilherme Meneghelli </span>"
+    },
+
+    "footer-links": {
+      "link1": "Une famille nombreuse",
+      "link2": "Talents interdépendants",
+      "link3": "Membres de l'équipe",
+      "link4": "Famille brésilienne"
+    }
+  }
+}
