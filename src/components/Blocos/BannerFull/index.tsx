@@ -10,10 +10,10 @@ import * as S from './styles'
 
 type BannerFullProps = {
   items: {
-    width: string
     title: JSX.Element
     background: string
     backgroundPosition?: string
+    width?: string
     desc?: JSX.Element
     subtitle?: JSX.Element
     links?: JSX.Element
