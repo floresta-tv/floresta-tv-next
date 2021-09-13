@@ -1,9 +1,17 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const ArticlePreviewWrapper = styled.section`
+interface ArticlePreviewWrapperProps {
+  bgc?: string
+}
+
+export const ArticlePreviewWrapper = styled.section<ArticlePreviewWrapperProps>`
   display: block;
   padding: 60px 0;
+  background-color: ${(props) => props.bgc};
+`
+
+export const ArticlePreviewContent = styled.div`
   max-width: 1100px;
   margin: 0 auto;
 `
@@ -96,7 +104,7 @@ export const ArticlePreviewBody = styled.div`
 
 export const ArticlePreviewBox = styled.div`
   padding: 23px;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   border-left: 6px solid #053310;
   font-family: 'Merriweather';
   margin-top: 55px;

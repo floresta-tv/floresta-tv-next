@@ -32,6 +32,8 @@ const VozDaFloresta = () => {
           <BannerFull
             items={[
               {
+                backgroundAlt:
+                  'Homem indígena cantando com expressão de grito, expressando fortemente sua voz',
                 background: '/img/homem_indigena_banner.png',
                 title: (
                   <span
@@ -72,6 +74,8 @@ const VozDaFloresta = () => {
                 )
               },
               {
+                backgroundAlt:
+                  'Menino indígena coberto de Urucum em cima da Bandeira do Brasil',
                 backgroundPosition: 'center 40% !important',
                 background: '/img/indigena_com_urucum_banner.png',
                 title: (
@@ -90,13 +94,19 @@ const VozDaFloresta = () => {
                 ),
                 links: (
                   <>
-                    <Button variant="green">
-                      {t.raw('bannerfull1.item2.botao-1')}
-                    </Button>
+                    <Link passHref={true} href="/urucum-na-bandeira">
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="green">
+                          {t.raw('bannerfull1.item2.botao-1')}
+                        </Button>
+                      </a>
+                    </Link>
                   </>
                 )
               },
               {
+                backgroundAlt:
+                  'Protesto indígenas em Brasília sobre o Marco Temporal',
                 backgroundPosition: 'center 40% !important',
                 background:
                   '/img/protesto_indigenas_brasilia_marco_temporal.png',
@@ -116,9 +126,45 @@ const VozDaFloresta = () => {
                 ),
                 links: (
                   <>
-                    <Button variant="green">
-                      {t.raw('bannerfull1.item3.botao-1')}
-                    </Button>
+                    <Link passHref={true} href="/o-ultimo-recurso">
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="green">
+                          {t.raw('bannerfull1.item3.botao-1')}
+                        </Button>
+                      </a>
+                    </Link>
+                  </>
+                )
+              },
+              {
+                backgroundAlt:
+                  'Protesto de mulheres indígenas em Brasília sobre o Marco Temporal',
+                backgroundPosition: 'center 40% !important',
+                width: 'extralarge',
+                background: '/img/protesto_mulheres_indigenas_brasilia.jpg',
+                title: (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t.raw('bannerfull1.item4.title')
+                    }}
+                  ></span>
+                ),
+                desc: (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t.raw('bannerfull1.item4.desc')
+                    }}
+                  ></span>
+                ),
+                links: (
+                  <>
+                    <Link passHref={true} href="/marcha-mulheres-indigenas">
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="green">
+                          {t.raw('bannerfull1.item4.botao-1')}
+                        </Button>
+                      </a>
+                    </Link>
                   </>
                 )
               }
@@ -175,6 +221,7 @@ const VozDaFloresta = () => {
 
         <Element name="carta-aberta">
           <ArticlePreview
+            bgc={`#fff6cc`}
             title={
               <span
                 dangerouslySetInnerHTML={{
@@ -196,6 +243,7 @@ const VozDaFloresta = () => {
             }
             buttonLink={`https://www.change.org/p/carta-aberta-dos-povos-origin%C3%A1rios-do-brasil-contagem-progressiva`}
             image={`/img/mulheres_indigenas_em_brasilia_segurando_velas_banner.png`}
+            imageAlt={`Mulheres indígenas em Brasília segurando velas`}
             body={
               <span
                 dangerouslySetInnerHTML={{
@@ -244,6 +292,7 @@ const VozDaFloresta = () => {
 
         <Element name="mapu-huni-kui">
           <VideoBlock
+            bgc={`#c4ffadff`}
             title={
               <span
                 dangerouslySetInnerHTML={{
@@ -304,6 +353,7 @@ const VozDaFloresta = () => {
 
         <Element name="chief-phill">
           <VideoBlockHor
+            bgc={`#c0a3a3`}
             title={
               <span
                 dangerouslySetInnerHTML={{
@@ -318,7 +368,7 @@ const VozDaFloresta = () => {
                 }}
               ></span>
             }
-            caption={``}
+            caption={`Vídeo do Chief Phill compartilhando sua sabedoria.`}
             videoId={`0bDVbECBgcM`}
           />
         </Element>
@@ -340,6 +390,7 @@ const VozDaFloresta = () => {
               ></span>
             }
             image={`/img/sementes_no_chao_da_floresta.png`}
+            imageAlt={`Sementes no chão da floresta`}
             type={'right'}
           />
         </Element>

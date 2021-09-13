@@ -6,7 +6,6 @@ import {
   Instagram as InstagramIcon,
   Whatsapp as WhatsappIcon,
   Youtube as YoutubeIcon,
-  Twitter as TwitterIcon,
   Discord as DiscordIcon
 } from '@styled-icons/boxicons-logos'
 
@@ -25,6 +24,7 @@ const Contato = () => {
           <BannerFull
             items={[
               {
+                backgroundAlt: 'Povo Indígena Huni Kuin',
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
@@ -72,9 +72,9 @@ const Contato = () => {
                         >
                           <YoutubeIcon />
                         </S.SocialLink>
-                        <S.SocialLink>
+                        {/* <S.SocialLink>
                           <TwitterIcon />
-                        </S.SocialLink>
+                        </S.SocialLink> */}
                         <S.SocialLink
                           target="_blank"
                           href="https://discord.gg/CSqAFfyM"

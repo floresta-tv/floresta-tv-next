@@ -35,8 +35,9 @@ const VideoBlock = ({
             <S.VideoBlockIframe>
               <iframe
                 src={`https://www.youtube.com/embed/${videoId}`}
-                title="YouTube video player"
+                title={caption}
                 frameBorder="0"
+                loading={'lazy'}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

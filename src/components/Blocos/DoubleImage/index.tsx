@@ -57,6 +57,7 @@ const DoubleImage = ({
                     blurDataURL={image1}
                     src={image1}
                     layout="fill"
+                    alt={caption1}
                   />
                 </S.DoubleImageImage>
               </Zoom>
@@ -72,6 +73,7 @@ const DoubleImage = ({
                     blurDataURL={image2}
                     src={image2}
                     layout="fill"
+                    alt={caption2}
                   />
                 </S.DoubleImageImage>
               </Zoom>

@@ -17,12 +17,25 @@ function App({ Component, pageProps, messages, router }: AppProps) {
       <NextIntlProvider messages={{ ...messages, ...pageProps.messages }}>
         <Head>
           <title>Floresta.TV • Movimento em serviço da Floresta.</title>
+          <meta
+            name="description"
+            content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria altamente sustentável, integrativa, coletiva e pacífica com o mundo digital binário."
+          />
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           {/* @ts-ignore */}
           <link rel="og:image" itemProp="image" content="/img/og-img.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#149A41" />
+          <meta name="format-detection" content="telephone=no" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="application-name" content="Floresta.TV" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="default"
+          />
+          <meta name="apple-mobile-web-app-title" content="Floresta.TV" />
           <meta
             name="description"
             content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria altamente sustentável, integrativa, coletiva e pacífica com o mundo digital binário."

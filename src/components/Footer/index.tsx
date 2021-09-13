@@ -7,7 +7,6 @@ import {
   Medium as MediumIcon,
   Instagram as InstagramIcon,
   Youtube as YoutubeIcon,
-  Twitter as TwitterIcon,
   Discord as DiscordIcon
 } from '@styled-icons/boxicons-logos'
 import Fade from 'react-reveal/Fade'
@@ -39,6 +38,7 @@ const Footer = ({ links }: FooterProps) => {
                     src="/img/logo_florestatv_vertical.png"
                     width={230}
                     height={170}
+                    alt="Logo Floresta.tv vertical"
                   />
                 </Link>
               </S.Brand>
@@ -62,9 +62,9 @@ const Footer = ({ links }: FooterProps) => {
                 >
                   <YoutubeIcon />
                 </S.SocialLink>
-                <S.SocialLink>
+                {/* <S.SocialLink>
                   <TwitterIcon />
-                </S.SocialLink>
+                </S.SocialLink> */}
                 <S.SocialLink
                   target="_blank"
                   href="https://discord.gg/CSqAFfyM"

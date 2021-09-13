@@ -53,6 +53,7 @@ const InfoCard = ({
                   blurDataURL={image}
                   src={image}
                   layout={`fill`}
+                  alt={title.toString()}
                 />
               </S.InfoCardImage>
             </Zoom>

@@ -71,6 +71,7 @@ const Navbar = () => {
                 src="/img/logo_florestatv_horizontal.png"
                 width={363}
                 height={102}
+                alt="Logo Floresta.tv horizontal"
               />
             </Link>
           </S.Brand>

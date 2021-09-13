@@ -7,7 +7,6 @@ import {
   Medium as MediumIcon,
   Instagram as InstagramIcon,
   Youtube as YoutubeIcon,
-  Twitter as TwitterIcon,
   Discord as DiscordIcon
 } from '@styled-icons/boxicons-logos'
 
@@ -139,9 +138,9 @@ const ProgressiveCount = ({
               >
                 <YoutubeIcon />
               </S.SocialLink>
-              <S.SocialLink>
+              {/* <S.SocialLink>
                 <TwitterIcon />
-              </S.SocialLink>
+              </S.SocialLink> */}
               <S.SocialLink target="_blank" href="https://discord.gg/CSqAFfyM">
                 <DiscordIcon />
               </S.SocialLink>

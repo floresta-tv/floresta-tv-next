@@ -1,6 +1,25 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+interface BannerFullItemBackgroundProps {
+  position?: string
+}
+
+export const BannerFullItemBackground = styled.div<BannerFullItemBackgroundProps>`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  div,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: ${(props) => props.position || `center center`};
+  }
+`
 export const BannerFullWrapper = styled.section`
   position: relative;
   width: 100vw;
@@ -34,18 +53,10 @@ export const BannerFullCarousel = styled.div`
   height: 100%;
 `
 
-interface BannerFullItemProps {
-  background: string
-  backgroundPosition?: string
-}
-
-export const BannerFullItem = styled.div<BannerFullItemProps>`
+export const BannerFullItem = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url(${(props) => props.background});
-  background-position: ${(props) => props.backgroundPosition};
-  background-size: cover;
 
   @media screen and (max-width: 768px) {
     background-position: 40%;
@@ -74,6 +85,12 @@ export const BannerFullContent = styled.div<BannerFullContent>`
        max-width: 750px;
     `}
 
+    ${(props) =>
+      props.width === 'extralarge' &&
+      `
+        max-width: 900px;
+    `}
+
     .title {
       font-family: 'Merriweather';
       font-size: 50px;
@@ -96,12 +113,18 @@ export const BannerFullContent = styled.div<BannerFullContent>`
     .desc {
       font-size: 20px;
       max-width: 520px;
-      margin: 0 auto;
 
       ${(props) =>
         props.width === 'large' &&
         `
+        margin: 0 auto;
        max-width: 560px;
+    `}
+
+      ${(props) =>
+        props.width === 'extralarge' &&
+        `
+        max-width: 700px;
     `}
 
       ${media.lessThan('medium')`

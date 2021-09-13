@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import Slider from 'react-slick'
 import Fade from 'react-reveal/Fade'
+import Image from 'next/image'
 import { Container } from 'components/UI'
 
 import 'slick-carousel/slick/slick.css'
@@ -12,6 +13,7 @@ type BannerFullProps = {
   items: {
     title: JSX.Element
     background: string
+    backgroundAlt: string
     backgroundPosition?: string
     width?: string
     desc?: JSX.Element
@@ -30,10 +32,10 @@ const BannerFull = ({ items }: BannerFullProps) => {
         <S.SliderNav>
           <S.SliderNavArrow
             className="left"
-            onClick={() => slickRef.current.slickNext()}
+            onClick={() => slickRef.current.slickPrev()}
           ></S.SliderNavArrow>
           <S.SliderNavArrow
-            onClick={() => slickRef.current.slickPrev()}
+            onClick={() => slickRef.current.slickNext()}
             className="right"
           ></S.SliderNavArrow>
         </S.SliderNav>
@@ -52,11 +54,16 @@ const BannerFull = ({ items }: BannerFullProps) => {
         ref={slickRef}
       >
         {items.map((item, index) => (
-          <S.BannerFullItem
-            key={index}
-            backgroundPosition={item.backgroundPosition}
-            background={item.background}
-          >
+          <S.BannerFullItem key={index}>
+            <S.BannerFullItemBackground position={item.backgroundPosition}>
+              <Image
+                placeholder="blur"
+                blurDataURL={item.background}
+                src={item.background}
+                layout={`fill`}
+                alt={item.backgroundAlt}
+              />
+            </S.BannerFullItemBackground>
             <Container fillHeight>
               <S.BannerFullContent
                 width={item.width}

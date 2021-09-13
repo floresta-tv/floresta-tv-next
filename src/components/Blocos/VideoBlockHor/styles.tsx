@@ -1,15 +1,32 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const VideoBlockHorWrapper = styled.section`
+interface VideoBlockHorWrapperProps {
+  bgc?: string
+  color?: string
+}
+
+export const VideoBlockHorWrapper = styled.section<VideoBlockHorWrapperProps>`
   display: block;
   padding: 60px 0;
-  max-width: 1000px;
-  margin: 0 auto;
+  background-color: ${(props) => props.bgc};
 
   ${media.lessThan('medium')`
     padding-bottom: 0;
   `}
+
+  ${(props) =>
+    props.color &&
+    `
+    *{
+      color: #fff !important;
+    }
+  `}
+`
+
+export const VideoBlockHorContent = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
 `
 
 export const VideoBlockHorHeader = styled.header`

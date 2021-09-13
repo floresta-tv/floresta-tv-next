@@ -10,10 +10,11 @@ type ImageTextProps = {
   title: JSX.Element
   desc: JSX.Element
   image: string
+  imageAlt: string
   type: string
 }
 
-const ImageText = ({ title, desc, type, image }: ImageTextProps) => {
+const ImageText = ({ title, desc, type, image, imageAlt }: ImageTextProps) => {
   return (
     <S.ImageTextWrapper>
       <Container>
@@ -37,6 +38,7 @@ const ImageText = ({ title, desc, type, image }: ImageTextProps) => {
                     blurDataURL={image}
                     src={image}
                     layout={`fill`}
+                    alt={imageAlt}
                   />
                 </S.ImageTextImg>
               </Fade>

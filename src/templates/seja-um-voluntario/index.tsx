@@ -6,7 +6,6 @@ import {
   Instagram as InstagramIcon,
   Whatsapp as WhatsappIcon,
   Youtube as YoutubeIcon,
-  Twitter as TwitterIcon,
   Discord as DiscordIcon
 } from '@styled-icons/boxicons-logos'
 
@@ -26,6 +25,7 @@ const SejaUmVoluntario = () => {
           <BannerFull
             items={[
               {
+                backgroundAlt: `Família loresta TV`,
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
@@ -72,9 +72,6 @@ const SejaUmVoluntario = () => {
                           href="https://www.youtube.com/channel/UCo9JpvxflH3WP6vms6EBDYQ"
                         >
                           <YoutubeIcon />
-                        </S.SocialLink>
-                        <S.SocialLink>
-                          <TwitterIcon />
                         </S.SocialLink>
                         <S.SocialLink
                           target="_blank"

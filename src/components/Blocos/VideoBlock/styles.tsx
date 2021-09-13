@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const VideoBlockWrapper = styled.section`
+interface VideoBlockWrapperProps {
+  bgc?: string
+}
+
+export const VideoBlockWrapper = styled.section<VideoBlockWrapperProps>`
   display: block;
   padding: 60px 0;
+  background-color: ${(props) => props.bgc};
 `
 
 export const VideoBlockHeader = styled.header`

@@ -268,6 +268,7 @@ const Equipe = () => {
           <BannerFull
             items={[
               {
+                backgroundAlt: `Comunidade indigena banner`,
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
@@ -336,6 +337,7 @@ const Equipe = () => {
                 }}
               ></span>
             }
+            imageAlt={`Familia Floresta.tv`}
             image="/img/familia_floresta_tv.jpg"
           />
         </Element>
@@ -368,6 +370,7 @@ const Equipe = () => {
 
         <Element name="familia-original-brasileira">
           <ImageFullWidth
+            imageAlt={`Povo indígena huni kuin`}
             image="/img/povo_indigena_huni_kuin.jpg"
             caption={
               <span

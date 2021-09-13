@@ -11,13 +11,19 @@ import * as S from './styles'
 type ImageFullWidthProps = {
   image: string
   caption: JSX.Element
+  imageAlt: string
   style?: {
     paddingTop: string
     marginTop: string
   }
 }
 
-const ImageFullWidth = ({ image, caption, style }: ImageFullWidthProps) => {
+const ImageFullWidth = ({
+  image,
+  caption,
+  style,
+  imageAlt
+}: ImageFullWidthProps) => {
   return (
     <S.ImageFullWidthWrapper style={style}>
       <Container>
@@ -31,6 +37,7 @@ const ImageFullWidth = ({ image, caption, style }: ImageFullWidthProps) => {
                     blurDataURL={image}
                     src={image}
                     layout="fill"
+                    alt={imageAlt}
                   />
                 </S.ImageFullWidthImage>
               </Zoom>
