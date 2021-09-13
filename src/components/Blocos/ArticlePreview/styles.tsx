@@ -104,7 +104,7 @@ export const ArticlePreviewBody = styled.div`
 
 export const ArticlePreviewBox = styled.div`
   padding: 23px;
-  background-color: #ffffff;
+  background-color: rgba(250, 250, 250, 0.4);
   border-left: 6px solid #053310;
   font-family: 'Merriweather';
   margin-top: 55px;

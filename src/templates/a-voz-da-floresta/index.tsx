@@ -353,7 +353,7 @@ const VozDaFloresta = () => {
 
         <Element name="chief-phill">
           <VideoBlockHor
-            bgc={`#c0a3a3`}
+            bgc={`#ffd7d7`}
             title={
               <span
                 dangerouslySetInnerHTML={{

@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   position: relative;
-  background-color: #fff;
+  background-color: #fff5d1;
   min-height: 100vh;
   overflow: hidden;
 

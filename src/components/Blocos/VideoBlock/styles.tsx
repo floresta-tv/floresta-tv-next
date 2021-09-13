@@ -8,7 +8,7 @@ interface VideoBlockWrapperProps {
 export const VideoBlockWrapper = styled.section<VideoBlockWrapperProps>`
   display: block;
   padding: 60px 0;
-  background-color: ${(props) => props.bgc};
+  background-color: ${(props) => props.bgc || 'transparent'};
 `
 
 export const VideoBlockHeader = styled.header`

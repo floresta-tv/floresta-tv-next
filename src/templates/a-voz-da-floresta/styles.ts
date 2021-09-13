@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
+  background-color: #e8ffe6;
   position: relative;
-  background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
 

@@ -35,6 +35,7 @@ const DoubleImage = ({
             src={`/img/forma-triangular-de-arvore-com-raizes.png`}
             width={122}
             height={122}
+            alt="Fígura de uma arvore separando o conteúdo da página"
           />
         </Zoom>
       </S.DoubleImageDivisor>

@@ -26,7 +26,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: #e6e6e6;
     scroll-behavior: smooth;
 
     ::-webkit-scrollbar {
