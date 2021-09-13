@@ -120,12 +120,16 @@ const ProgressiveCount = ({
             <S.ProgressiveCountCaption>{caption}</S.ProgressiveCountCaption>
             <S.SocialLinks>
               <S.SocialLink
+                rel="noreferrer"
+                aria-label="Medium Floresta.tv"
                 target="_blank"
                 href="https://medium.com/florestatv/about"
               >
                 <MediumIcon />
               </S.SocialLink>
               <S.SocialLink
+                aria-label="Instagram Floresta.tv"
+                rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/florestatv/"
               >
@@ -133,15 +137,22 @@ const ProgressiveCount = ({
               </S.SocialLink>
 
               <S.SocialLink
+                rel="noreferrer"
                 target="_blank"
+                aria-label="Youtube Floresta.tv"
                 href="https://www.youtube.com/channel/UCo9JpvxflH3WP6vms6EBDYQ"
               >
                 <YoutubeIcon />
               </S.SocialLink>
               {/* <S.SocialLink>
-                <TwitterIcon />
-              </S.SocialLink> */}
-              <S.SocialLink target="_blank" href="https://discord.gg/CSqAFfyM">
+                  <TwitterIcon />
+                </S.SocialLink> */}
+              <S.SocialLink
+                rel="noreferrer"
+                aria-label="Discord Floresta.tv"
+                target="_blank"
+                href="https://discord.gg/CSqAFfyM"
+              >
                 <DiscordIcon />
               </S.SocialLink>
             </S.SocialLinks>

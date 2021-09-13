@@ -1,6 +1,26 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+interface BannerFullItemBackgroundProps {
+  position?: string
+}
+
+export const BannerFullItemBackground = styled.div<BannerFullItemBackgroundProps>`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  div,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: ${(props) => props.position || `center center`};
+  }
+`
+
 interface HeroBlockProps {
   background: string
 }

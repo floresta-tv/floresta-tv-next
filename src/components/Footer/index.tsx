@@ -44,12 +44,16 @@ const Footer = ({ links }: FooterProps) => {
               </S.Brand>
               <S.SocialLinks>
                 <S.SocialLink
+                  rel="noreferrer"
+                  aria-label="Medium Floresta.tv"
                   target="_blank"
                   href="https://medium.com/florestatv/about"
                 >
                   <MediumIcon />
                 </S.SocialLink>
                 <S.SocialLink
+                  aria-label="Instagram Floresta.tv"
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.instagram.com/florestatv/"
                 >
@@ -57,7 +61,9 @@ const Footer = ({ links }: FooterProps) => {
                 </S.SocialLink>
 
                 <S.SocialLink
+                  rel="noreferrer"
                   target="_blank"
+                  aria-label="Youtube Floresta.tv"
                   href="https://www.youtube.com/channel/UCo9JpvxflH3WP6vms6EBDYQ"
                 >
                   <YoutubeIcon />
@@ -66,6 +72,8 @@ const Footer = ({ links }: FooterProps) => {
                   <TwitterIcon />
                 </S.SocialLink> */}
                 <S.SocialLink
+                  rel="noreferrer"
+                  aria-label="Discord Floresta.tv"
                   target="_blank"
                   href="https://discord.gg/CSqAFfyM"
                 >
