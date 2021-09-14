@@ -22,7 +22,7 @@ import * as animations from './animations'
 import * as S from './styles'
 
 const VozDaFloresta = () => {
-  const t = useTranslations('Home')
+  const t = useTranslations('a-voz-da-floresta')
 
   return (
     <motion.div key={6} {...animations.wrapper}>
