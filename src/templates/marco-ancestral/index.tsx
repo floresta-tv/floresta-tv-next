@@ -11,8 +11,9 @@ import Footer from 'components/Footer'
 import * as animations from './animations'
 import * as S from './styles'
 
-const UrucumNaBandeira = () => {
-  const t = useTranslations('urucum-na-bandeira')
+const MarcoAncestral = () => {
+  // const tpage = useTranslations('marco-ancestral')
+  const tbanners = useTranslations('banners')
 
   return (
     <motion.div key={6} {...animations.wrapper}>
@@ -23,40 +24,56 @@ const UrucumNaBandeira = () => {
             items={[
               {
                 backgroundAlt:
-                  'Homem indígena cantando com expressão de grito, expressando fortemente sua voz',
-                background: '/img/homem_indigena_banner.png',
+                  'Grande grupo de Indígenas protestando em Brasilía',
+                background: '/img/protestos_indigenas-marco_ancestral.jpg',
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item1.title')
+                      __html: tbanners.raw('item5.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item1.desc')
+                      __html: tbanners.raw('item5.desc')
                     }}
                   ></span>
                 ),
                 links: (
                   <>
-                    <Link passHref={true} href="/equipe">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="white">
-                          {t.raw('bannerfull1.item1.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                    <ScrollLink to="carta-aberta">
+                    <ScrollLink to="home">
                       <Button variant="green">
-                        {t.raw('bannerfull1.item1.botao-2')}
+                        {tbanners.raw('item5.botao-1')}
                       </Button>
                     </ScrollLink>
-                    <Link passHref={true} href="/contato">
+                  </>
+                )
+              },
+              {
+                backgroundAlt:
+                  'Homem indígena cantando com expressão de grito, expressando fortemente sua voz',
+                background: '/img/homem_indigena_banner.png',
+                title: (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: tbanners.raw('item1.title')
+                    }}
+                  ></span>
+                ),
+                desc: (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: tbanners.raw('item1.desc')
+                    }}
+                  ></span>
+                ),
+                links: (
+                  <>
+                    <Link passHref={true} href="/">
                       <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="transparent">
-                          {t.raw('bannerfull1.item1.botao-3')}
+                        <Button variant="green">
+                          {tbanners.raw('item2.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -71,23 +88,23 @@ const UrucumNaBandeira = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item2.title')
+                      __html: tbanners.raw('item2.title')
                     }}
                   ></span>
                 ),
                 subtitle: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item2.desc')
+                      __html: tbanners.raw('item2.desc')
                     }}
                   ></span>
                 ),
                 links: (
                   <>
-                    <Link passHref={true} href="/urucum-na-bandeira">
+                    <Link passHref={true} href="/dia-da-amazonia">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {t.raw('bannerfull1.item2.botao-1')}
+                          {tbanners.raw('item2.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -103,14 +120,14 @@ const UrucumNaBandeira = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item3.title')
+                      __html: tbanners.raw('item3.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item3.desc')
+                      __html: tbanners.raw('item3.desc')
                     }}
                   ></span>
                 ),
@@ -119,7 +136,7 @@ const UrucumNaBandeira = () => {
                     <Link passHref={true} href="/o-ultimo-recurso">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {t.raw('bannerfull1.item3.botao-1')}
+                          {tbanners.raw('item3.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -135,14 +152,14 @@ const UrucumNaBandeira = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item4.title')
+                      __html: tbanners.raw('item4.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item4.desc')
+                      __html: tbanners.raw('item4.desc')
                     }}
                   ></span>
                 ),
@@ -151,7 +168,7 @@ const UrucumNaBandeira = () => {
                     <Link passHref={true} href="/marcha-mulheres-indigenas">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {t.raw('bannerfull1.item4.botao-1')}
+                          {tbanners.raw('item4.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -175,4 +192,4 @@ const UrucumNaBandeira = () => {
   )
 }
 
-export default UrucumNaBandeira
+export default MarcoAncestral

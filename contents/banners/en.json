@@ -1,0 +1,32 @@
+{
+  "banners": {
+    "item1": {
+      "title": "<span>Listen to the forest voice</span>",
+      "desc": "<span>The collective TV forest movement has been requested from a request from the world's own people in the world to have autonomy to register, share and expand thousands of years of culture and highly sustainable, integrative, collective and peaceful wisdom with the binary digital world.</span>",
+      "botao-1": "Team",
+      "botao-2": "Open letter",
+      "botao-3": "Contact"
+    },
+    "item2": {
+      "title": "<span>Day of the Amazon</span>",
+      "desc": "<span>It's Urucum on the flag!</span>",
+      "botao-1": "Read more",
+      "botao-2": "Forest"
+    },
+    "item3": {
+      "title": "<span>The last resource</span>",
+      "desc": "<span>September 7, 2021: </ b> Manifestations of support for President Jair Bolsonaro on Independence Day of Brazil.In the speech the ultimatum and rupture with the Federal Supreme Court attacking Alexander de Moraes.</span>",
+      "botao-1": "Read more"
+    },
+    "item4": {
+      "title": "<span>Maracá in Brasilia in the strength of aboriginal women</span>",
+      "desc": "<span>September 10, 2021, Brasilia stopped to listen to thousands of women who shouted strongly and very clear that the Amazon burns, the fish dies to heat the already contaminated waters and politicians do not do anything. In the burning sun.33 degrees, the Mars II Aboriginal women followed peaceful in the streets of the Federal Capital as one of the greatest art, culture and respect for human rights shows in recent decades inglobal historical events.</span>",
+      "botao-1": "Read more"
+    },
+    "item5": {
+      "title": "<span>Ancestral frame</span>",
+      "desc": "<span><h5>25ago-3set-2021</h5><br/>Is an invention of each of us.Face to the milestones of democracy, the original peoples are concerned and define the limit. The ancestral monument has been delimited with the presence of +6,000 people who attended the Federal DistrictTo say # marcotemporalnão.</span>",
+      "botao-1": "Read more"
+    }
+  }
+}

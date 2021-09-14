@@ -22,7 +22,8 @@ import * as animations from './animations'
 import * as S from './styles'
 
 const VozDaFloresta = () => {
-  const t = useTranslations('a-voz-da-floresta')
+  const tpage = useTranslations('a-voz-da-floresta')
+  const tbanners = useTranslations('banners')
 
   return (
     <motion.div key={6} {...animations.wrapper}>
@@ -38,14 +39,14 @@ const VozDaFloresta = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item1.title')
+                      __html: tbanners.raw('item1.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item1.desc')
+                      __html: tbanners.raw('item1.desc')
                     }}
                   ></span>
                 ),
@@ -54,19 +55,19 @@ const VozDaFloresta = () => {
                     <Link passHref={true} href="/equipe">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="white">
-                          {t.raw('bannerfull1.item1.botao-1')}
+                          {tbanners.raw('item1.botao-1')}
                         </Button>
                       </a>
                     </Link>
                     <ScrollLink to="carta-aberta">
                       <Button variant="green">
-                        {t.raw('bannerfull1.item1.botao-2')}
+                        {tbanners.raw('item1.botao-2')}
                       </Button>
                     </ScrollLink>
                     <Link passHref={true} href="/contato">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="transparent">
-                          {t.raw('bannerfull1.item1.botao-3')}
+                          {tbanners.raw('item1.botao-3')}
                         </Button>
                       </a>
                     </Link>
@@ -81,23 +82,23 @@ const VozDaFloresta = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item2.title')
+                      __html: tbanners.raw('item2.title')
                     }}
                   ></span>
                 ),
                 subtitle: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item2.desc')
+                      __html: tbanners.raw('item2.desc')
                     }}
                   ></span>
                 ),
                 links: (
                   <>
-                    <Link passHref={true} href="/urucum-na-bandeira">
+                    <Link passHref={true} href="/dia-da-amazonia">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {t.raw('bannerfull1.item2.botao-1')}
+                          {tbanners.raw('item2.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -113,14 +114,14 @@ const VozDaFloresta = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item3.title')
+                      __html: tbanners.raw('item3.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item3.desc')
+                      __html: tbanners.raw('item3.desc')
                     }}
                   ></span>
                 ),
@@ -129,7 +130,7 @@ const VozDaFloresta = () => {
                     <Link passHref={true} href="/o-ultimo-recurso">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {t.raw('bannerfull1.item3.botao-1')}
+                          {tbanners.raw('item3.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -145,14 +146,14 @@ const VozDaFloresta = () => {
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item4.title')
+                      __html: tbanners.raw('item4.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull1.item4.desc')
+                      __html: tbanners.raw('item4.desc')
                     }}
                   ></span>
                 ),
@@ -161,7 +162,37 @@ const VozDaFloresta = () => {
                     <Link passHref={true} href="/marcha-mulheres-indigenas">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {t.raw('bannerfull1.item4.botao-1')}
+                          {tbanners.raw('item4.botao-1')}
+                        </Button>
+                      </a>
+                    </Link>
+                  </>
+                )
+              },
+              {
+                backgroundAlt:
+                  'Grande grupo de Indígenas protestando em Brasilía',
+                background: '/img/protestos_indigenas-marco_ancestral.jpg',
+                title: (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: tbanners.raw('item5.title')
+                    }}
+                  ></span>
+                ),
+                desc: (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: tbanners.raw('item5.desc')
+                    }}
+                  ></span>
+                ),
+                links: (
+                  <>
+                    <Link passHref={true} href="/marco-ancestral">
+                      <a href="#" style={{ textDecoration: 'none' }}>
+                        <Button variant="green">
+                          {tbanners.raw('item5.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -177,12 +208,12 @@ const VozDaFloresta = () => {
               <span
                 style={{ textTransform: 'uppercase' }}
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videoblock1.title')
+                  __html: tpage.raw('videoblock1.title')
                 }}
               ></span>
             }
-            desc={t.raw('videoblock1.desc')}
-            caption={t.raw('videoblock1.caption')}
+            desc={tpage.raw('videoblock1.desc')}
+            caption={tpage.raw('videoblock1.caption')}
             videoId={`WVmItbV5rbg`}
           />
         </Element>
@@ -190,29 +221,29 @@ const VozDaFloresta = () => {
         <Element name="contagem-progressiva">
           <ProgressiveCount
             texts={{
-              days: t.raw('contagemprogress1.dias'),
-              hours: t.raw('contagemprogress1.horas'),
-              seconds: t.raw('contagemprogress1.segundos'),
-              minutes: t.raw('contagemprogress1.minutos')
+              days: tpage.raw('contagemprogress1.dias'),
+              hours: tpage.raw('contagemprogress1.horas'),
+              seconds: tpage.raw('contagemprogress1.segundos'),
+              minutes: tpage.raw('contagemprogress1.minutos')
             }}
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.title')
+                  __html: tpage.raw('contagemprogress1.title')
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.desc')
+                  __html: tpage.raw('contagemprogress1.desc')
                 }}
               ></span>
             }
             caption={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.caption')
+                  __html: tpage.raw('contagemprogress1.caption')
                 }}
               ></span>
             }
@@ -225,20 +256,20 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.title')
+                  __html: tpage.raw('articlepreview1.title')
                 }}
               ></span>
             }
             subtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.subtitle')
+                  __html: tpage.raw('articlepreview1.subtitle')
                 }}
               ></span>
             }
             buttonText={
               <span>
-                {t.raw('articlepreview1.botao')} <Signature size={24} />
+                {tpage.raw('articlepreview1.botao')} <Signature size={24} />
               </span>
             }
             buttonLink={`https://www.change.org/p/carta-aberta-dos-povos-origin%C3%A1rios-do-brasil-contagem-progressiva`}
@@ -247,21 +278,21 @@ const VozDaFloresta = () => {
             body={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.body')
+                  __html: tpage.raw('articlepreview1.body')
                 }}
               ></span>
             }
             boxtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.box-title')
+                  __html: tpage.raw('articlepreview1.box-title')
                 }}
               ></span>
             }
             boxdesc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.box-desc')
+                  __html: tpage.raw('articlepreview1.box-desc')
                 }}
               ></span>
             }
@@ -276,14 +307,14 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('heroblock1.title')
+                  __html: tpage.raw('heroblock1.title')
                 }}
               ></span>
             }
             body={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('heroblock1.body')
+                  __html: tpage.raw('heroblock1.body')
                 }}
               ></span>
             }
@@ -296,12 +327,12 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videoblock2.title')
+                  __html: tpage.raw('videoblock2.title')
                 }}
               ></span>
             }
-            desc={t.raw('videoblock2.desc')}
-            caption={t.raw('videoblock2.caption')}
+            desc={tpage.raw('videoblock2.desc')}
+            caption={tpage.raw('videoblock2.caption')}
             videoId={`7HzO-IiJZYw`}
           />
         </Element>
@@ -311,21 +342,21 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('doubleimage1.title')
+                  __html: tpage.raw('doubleimage1.title')
                 }}
               ></span>
             }
             subtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('doubleimage1.subtitle')
+                  __html: tpage.raw('doubleimage1.subtitle')
                 }}
               ></span>
             }
             image1={`/img/indigena_escrevendo_rabiscando_tablet.png`}
             image2={`/img/indigena_usando_tablet_tecnologia.png`}
-            caption1={t.raw('doubleimage1.caption1')}
-            caption2={t.raw('doubleimage1.caption2')}
+            caption1={tpage.raw('doubleimage1.caption1')}
+            caption2={tpage.raw('doubleimage1.caption2')}
           />
         </Element>
 
@@ -334,7 +365,7 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videobackground1.title')
+                  __html: tpage.raw('videobackground1.title')
                 }}
               ></span>
             }
@@ -342,11 +373,11 @@ const VozDaFloresta = () => {
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videobackground1.desc')
+                  __html: tpage.raw('videobackground1.desc')
                 }}
               ></span>
             }
-            caption={t.raw('videobackground1.caption')}
+            caption={tpage.raw('videobackground1.caption')}
             videoId={`9qbc0xnPQNI`}
           />
         </Element>
@@ -357,14 +388,14 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videoblockhor1.title')
+                  __html: tpage.raw('videoblockhor1.title')
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videoblockhor1.body')
+                  __html: tpage.raw('videoblockhor1.body')
                 }}
               ></span>
             }
@@ -378,14 +409,14 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('imagetext1.title')
+                  __html: tpage.raw('imagetext1.title')
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('imagetext1.desc')
+                  __html: tpage.raw('imagetext1.desc')
                 }}
               ></span>
             }
@@ -398,35 +429,35 @@ const VozDaFloresta = () => {
       <Footer
         links={[
           {
-            label: t.raw('footer-links.link-1'),
+            label: tpage.raw('footer-links.link-1'),
             to: 'home'
           },
           {
-            label: t.raw('footer-links.link-2'),
+            label: tpage.raw('footer-links.link-2'),
             to: 'documentario-em-tempo-real'
           },
           {
-            label: t.raw('footer-links.link-3'),
+            label: tpage.raw('footer-links.link-3'),
             to: 'contagem-progressiva'
           },
           {
-            label: t.raw('footer-links.link-3'),
+            label: tpage.raw('footer-links.link-3'),
             to: 'mapu-huni-kui'
           },
           {
-            label: t.raw('footer-links.link-4'),
+            label: tpage.raw('footer-links.link-4'),
             to: 'chief-phill'
           },
           {
-            label: t.raw('footer-links.link-5'),
+            label: tpage.raw('footer-links.link-5'),
             to: 'protecao-cultural'
           },
           {
-            label: t.raw('footer-links.link-6'),
+            label: tpage.raw('footer-links.link-6'),
             to: 'amazonia-a-live'
           },
           {
-            label: t.raw('footer-links.link-7'),
+            label: tpage.raw('footer-links.link-7'),
             to: 'biblioteca-viva'
           }
         ]}

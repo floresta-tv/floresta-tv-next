@@ -1,0 +1,32 @@
+{
+  "banners": {
+    "item1": {
+      "title": "<span>Écoutez la voix forestière</span>",
+      "desc": "<span>Le mouvement des forêts de télévision collective a été demandé à une demande du peuple mondial au monde à avoir une autonomie à enregistrer, à partager et à étendre des milliers d'années de culture et de sagesse hautement durable, intégrative, collective et pacifique avec le monde numérique binaire.</span>",
+      "botao-1": "Équipe",
+      "botao-2": "Lettre ouverte",
+      "botao-3": "Contact"
+    },
+    "item2": {
+      "title": "<span>Jour de l'Amazonie</span>",
+      "desc": "<span>C'est Urucum sur le drapeau!</span>",
+      "botao-1": "Lire la suite",
+      "botao-2": "forêt"
+    },
+    "item3": {
+      "title": "<span>Le dernier recours</span>",
+      "desc": "<span>7 septembre 2021:</b> Manifestations du soutien au président Jair Bolsonaro le jour indépendance du Brésil.Dans le discours, l'ultimatum et la rupture de la Cour suprême fédérale attaquent Alexander de Moraes.</span>",
+      "botao-1": "Leia mais"
+    },
+    "item4": {
+      "title": "<span>Maracá à Brasilia dans la force des femmes autochtones</span>",
+      "desc": "<span>10 septembre 2021, Brasilia s'est arrêté pour écouter des milliers de femmes qui crièrent fort et très clair que l'Amazonie brûle, le poisson meurt pour chauffer les eaux déjà contaminées et les politiciens ne font rien.Ainsi, dans le Soleil brûlant de 33 degrés, la mars II des femmes autochtones a suivi pacifique dans les rues de la capitale fédérale comme l'un des plus grands spectacles d'art, de culture et de respect des droits de l'homme jamais observés au cours des dernières décennies dans les manifestations historiques mondiales.</span>",
+      "botao-1": "Lire la suite"
+    },
+    "item5": {
+      "title": "<span>Cadre ancestral</span>",
+      "desc": "<span><h5>25ago-3set-2021</h5><br/>'I' est une invention de chacun de nous.Face aux jalons de la démocratie, les peuples d'origine sont concernés et définissent la limite.Le monument ancestral a été délimité avec la présence de +6 000 personnes qui ont assisté au district fédéral pour dire # marcotemporalnão.</span>",
+      "botao-1": "Lire la suite"
+    }
+  }
+}

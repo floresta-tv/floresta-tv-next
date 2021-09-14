@@ -11,8 +11,8 @@ import Footer from 'components/Footer'
 import * as animations from './animations'
 import * as S from './styles'
 
-const MarchaMulheresIndigenas = () => {
-  // const tpage = useTranslations('marcha-mulheres-indigenas')
+const OUltimoRecurso = () => {
+  // const tpage = useTranslations('marco-ancestral')
   const tbanners = useTranslations('banners')
 
   return (
@@ -24,21 +24,21 @@ const MarchaMulheresIndigenas = () => {
             items={[
               {
                 backgroundAlt:
-                  'Protesto de mulheres indígenas em Brasília sobre o Marco Temporal',
+                  'Protesto indígenas em Brasília sobre o Marco Temporal',
                 backgroundPosition: 'center 40% !important',
-                width: 'extralarge',
-                background: '/img/protesto_mulheres_indigenas_brasilia.jpg',
+                background:
+                  '/img/protesto_indigenas_brasilia_marco_temporal.png',
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item4.title')
+                      __html: tbanners.raw('item3.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item4.desc')
+                      __html: tbanners.raw('item3.desc')
                     }}
                   ></span>
                 ),
@@ -46,7 +46,7 @@ const MarchaMulheresIndigenas = () => {
                   <>
                     <ScrollLink to="home">
                       <Button variant="green">
-                        {tbanners.raw('item4.botao-1')}
+                        {tbanners.raw('item3.botao-1')}
                       </Button>
                     </ScrollLink>
                   </>
@@ -75,7 +75,7 @@ const MarchaMulheresIndigenas = () => {
                     <Link passHref={true} href="/">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {tbanners.raw('item4.botao-1')}
+                          {tbanners.raw('item3.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -115,30 +115,30 @@ const MarchaMulheresIndigenas = () => {
               },
               {
                 backgroundAlt:
-                  'Protesto indígenas em Brasília sobre o Marco Temporal',
+                  'Protesto de mulheres indígenas em Brasília sobre o Marco Temporal',
                 backgroundPosition: 'center 40% !important',
-                background:
-                  '/img/protesto_indigenas_brasilia_marco_temporal.png',
+                width: 'extralarge',
+                background: '/img/protesto_mulheres_indigenas_brasilia.jpg',
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item3.title')
+                      __html: tbanners.raw('item4.title')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item3.desc')
+                      __html: tbanners.raw('item4.desc')
                     }}
                   ></span>
                 ),
                 links: (
                   <>
-                    <Link passHref={true} href="/o-ultimo-recurso">
+                    <Link passHref={true} href="/marcha-mulheres-indigenas">
                       <a href="#" style={{ textDecoration: 'none' }}>
                         <Button variant="green">
-                          {tbanners.raw('item3.botao-1')}
+                          {tbanners.raw('item4.botao-1')}
                         </Button>
                       </a>
                     </Link>
@@ -192,4 +192,4 @@ const MarchaMulheresIndigenas = () => {
   )
 }
 
-export default MarchaMulheresIndigenas
+export default OUltimoRecurso
