@@ -395,7 +395,7 @@ const VozDaFloresta = () => {
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videoblockhor1.body')
+                  __html: tpage.raw('videoblockhor1.desc')
                 }}
               ></span>
             }
