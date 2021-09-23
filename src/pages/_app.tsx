@@ -81,7 +81,8 @@ App.getInitialProps = async function getInitialProps(context: AppContext) {
       ...require(`../../contents/marcha-mulheres-indigenas/${locale}.json`),
       ...require(`../../contents/equipe/${locale}.json`),
       ...require(`../../contents/contato/${locale}.json`),
-      ...require(`../../contents/voluntareer/${locale}.json`)
+      ...require(`../../contents/voluntareer/${locale}.json`),
+      ...require(`../../contents/projetos/${locale}.json`)
     }
   }
 }
