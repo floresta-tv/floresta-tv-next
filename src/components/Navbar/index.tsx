@@ -49,6 +49,10 @@ const Navbar = () => {
       href: '/equipe'
     },
     {
+      label: 'projetos',
+      href: '/projetos'
+    },
+    {
       label: 'news',
       href: 'https://medium.com/florestatv/about',
       external: true
