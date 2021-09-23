@@ -24,12 +24,17 @@ function App({ Component, pageProps, messages, router }: AppProps) {
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           {/* @ts-ignore */}
+          <meta
+            property="og:image"
+            content="https://www.floresta.tv/img/logo-floresta.png"
+          />
           <link
             rel="og:image"
             itemProp="image"
             // @ts-ignore
-            content="https://www.floresta.tv/img/og-img.png"
+            content="https://www.floresta.tv/img/logo-floresta.png"
           />
+          <meta property="og:image:type" content="image/png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#149A41" />
           <meta name="format-detection" content="telephone=no" />
