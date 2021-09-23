@@ -47,8 +47,8 @@ const BannerFull = ({ items }: BannerFullProps) => {
         slidesToScroll={1}
         autoplay={true}
         fade={true}
-        speed={1200}
-        autoplaySpeed={3000}
+        speed={1400}
+        autoplaySpeed={5000}
         cssEase={'linear'}
         arrows={false}
         ref={slickRef}

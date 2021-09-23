@@ -112,6 +112,30 @@ const Equipe = () => {
       }
     },
     {
+      image: '/img/hugo.jpg',
+      bgc: '#ffa844',
+      color: '#4e3b07',
+      title: <span>Hugo Takemoto</span>,
+      subtitle: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw('team.hugo.subtitle')
+          }}
+        ></span>
+      ),
+      desc: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw('team.hugo.desc')
+          }}
+        ></span>
+      ),
+      social: {
+        website: 'https://www.hugotakemoto.com',
+        instagram: 'https://www.instagram.com/hugotakemoto/?hl=pt-br'
+      }
+    },
+    {
       image: '/img/camila_saibro_florestatv.jpeg',
       title: <span>Camila Saibro</span>,
       bgc: '#ffd642',
@@ -162,6 +186,30 @@ const Equipe = () => {
       }
     },
     {
+      image: '/img/betina_terra_florestatv.jfif',
+      title: <span>Betina Terra</span>,
+      subtitle: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw('team.betina.subtitle')
+          }}
+        ></span>
+      ),
+      bgc: '#d42f45',
+      color: '#ffffff',
+      desc: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw('team.betina.desc')
+          }}
+        ></span>
+      ),
+      social: {
+        instagram: 'https://www.instagram.com/betinatirra/?hl=pt-br',
+        medium: 'https://medium.com/@betinarwaskow'
+      }
+    },
+    {
       image: '/img/advan_haschi_florestatv.jpeg',
       title: <span>Advan Haschi</span>,
       subtitle: (
@@ -185,6 +233,31 @@ const Equipe = () => {
         facebook:
           'https://www.facebook.com/Advan-Haschi-Vision%C3%A1rio-Vegetal-109359397505378/?ref=py_c',
         instagram: 'https://www.instagram.com/advanhx/'
+      }
+    },
+    {
+      image: '/img/vitor_regis_florestatv.jpeg',
+      bgc: '#fff68c',
+      color: '#634a04',
+      title: <span>Vitor Régis de Ramos</span>,
+      subtitle: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw('team.vitor.subtitle')
+          }}
+        ></span>
+      ),
+      desc: (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw('team.vitor.desc')
+          }}
+        ></span>
+      ),
+      social: {
+        website: 'https://www.vitorr.dev',
+        medium: 'https://medium.com/@vitorregisrr',
+        instagram: 'https://www.instagram.com/caminomedicina/'
       }
     },
     {
@@ -232,31 +305,6 @@ const Equipe = () => {
       ),
       social: {
         instagram: 'https://www.instagram.com/sheidemara/'
-      }
-    },
-    {
-      image: '/img/vitor_regis_florestatv.jpeg',
-      bgc: '#fff68c',
-      color: '#634a04',
-      title: <span>Vitor Régis de Ramos</span>,
-      subtitle: (
-        <span
-          dangerouslySetInnerHTML={{
-            __html: t.raw('team.vitor.subtitle')
-          }}
-        ></span>
-      ),
-      desc: (
-        <span
-          dangerouslySetInnerHTML={{
-            __html: t.raw('team.vitor.desc')
-          }}
-        ></span>
-      ),
-      social: {
-        website: 'https://www.vitorr.dev',
-        medium: 'https://medium.com/@vitorregisrr',
-        instagram: 'https://www.instagram.com/caminomedicina/'
       }
     }
   ]
