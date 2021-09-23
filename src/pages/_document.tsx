@@ -1,3 +1,4 @@
+import Analytics from 'components/Tools/Analytics/analytics'
 import Document, {
   Html,
   Head,
@@ -51,6 +52,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap"
             rel="stylesheet"
           ></link>
+          <Analytics />
         </Head>
         <body>
           <Main />
