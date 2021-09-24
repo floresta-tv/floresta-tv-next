@@ -26,9 +26,9 @@ function App({ Component, pageProps, messages, router }: AppProps) {
           {/* @ts-ignore */}
           <meta
             property="og:image"
-            content="https://www.floresta.tv/img/logo-floresta.png"
+            content="https://www.floresta.tv/img/logo-floresta.jpg"
           />
-          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:type" content="image/jpg" />
           <meta
             property="og:title"
             content="Floresta.TV | Movimento em serviço da Floresta."
