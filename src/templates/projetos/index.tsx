@@ -30,6 +30,18 @@ const Projetos = () => {
             <Container>
               <Row style={{ justifyContent: 'center' }}>
                 <Col lg={3}>
+                  <S.ProjetoIcon bgc={`#2d801c`}>
+                    <Image
+                      placeholder="blur"
+                      blurDataURL="/img/logo-florestatv-branco.png"
+                      src="/img/logo-florestatv-branco.png"
+                      width={300}
+                      height={300}
+                      alt="Logo Floresta TV"
+                    />
+                  </S.ProjetoIcon>
+                </Col>
+                <Col lg={3}>
                   <S.ProjetoIcon bgc={`#881717`}>
                     <Image
                       placeholder="blur"
@@ -103,19 +115,6 @@ const Projetos = () => {
                       width={300}
                       height={300}
                       alt="Logo Floresta Market"
-                    />
-                  </S.ProjetoIcon>
-                </Col>
-
-                <Col lg={3}>
-                  <S.ProjetoIcon bgc={`#2d801c`}>
-                    <Image
-                      placeholder="blur"
-                      blurDataURL="/img/logo-florestatv-branco.png"
-                      src="/img/logo-florestatv-branco.png"
-                      width={300}
-                      height={300}
-                      alt="Logo Floresta TV"
                     />
                   </S.ProjetoIcon>
                 </Col>
