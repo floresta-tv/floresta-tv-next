@@ -19,7 +19,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
           <title>Floresta.TV • Movimento em serviço da Floresta.</title>
           <meta
             name="description"
-            content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria altamente sustentável, integrativa, coletiva e pacífica com o mundo digital binário."
+            content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria."
           />
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
@@ -28,13 +28,21 @@ function App({ Component, pageProps, messages, router }: AppProps) {
             property="og:image"
             content="https://www.floresta.tv/img/logo-floresta.png"
           />
-          <link
-            rel="og:image"
-            itemProp="image"
-            // @ts-ignore
-            content="https://www.floresta.tv/img/logo-floresta.png"
-          />
           <meta property="og:image:type" content="image/png" />
+          <meta
+            property="og:title"
+            content="Floresta.TV | Movimento em serviço da Floresta."
+          />
+          <meta
+            property="og:description"
+            content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria."
+          />
+          <meta property="og:url" content="https://www.floresta.tv" />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="og:site_name" content="Floresta.TV" />
+          <meta name="twitter:image:alt" content="Floresta.TV" />
+          <meta name="twitter:site" content="@florestatv" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#149A41" />
           <meta name="format-detection" content="telephone=no" />
@@ -48,7 +56,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
           <meta name="apple-mobile-web-app-title" content="Floresta.TV" />
           <meta
             name="description"
-            content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria altamente sustentável, integrativa, coletiva e pacífica com o mundo digital binário."
+            content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria."
           />
         </Head>
         <GlobalStyles />
