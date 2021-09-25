@@ -1,27 +1,43 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const ImageTextWrapper = styled.section`
+interface ImageTextWrapperProps {
+  bgc?: string
+}
+
+interface ImageTextImgProps {
+  titleTop?: boolean
+}
+
+interface ImageTextHeaderProps {
+  titleTop?: boolean
+}
+
+export const ImageTextWrapper = styled.section<ImageTextWrapperProps>`
   display: block;
   padding: 60px 0;
-  max-width: 1200px;
+  max-width: ${(props) => (props.bgc ? '100%' : '1200px')};
   margin: 0 auto;
+  background-color: ${(props) => (props.bgc ? props.bgc : 'transparent')};
 `
 
-export const ImageTextHeader = styled.header`
+export const ImageTextHeader = styled.header<ImageTextHeaderProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: 'column';
   justify-content: center;
   text-align: right;
   margin-bottom: 30px;
   padding: 0 30px;
+  flex-direction: column;
 
   .title {
-    font-family: 'Merriweather', serif;
+    font-family: ${(props) =>
+      props.titleTop ? "'Open Sans', sans-serif" : "'Merriweather', serif"};
     font-weight: 800;
     font-size: 36px;
-    color: var(--navy);
+    color: ${(props) => (props.titleTop ? '#FFFFFF' : 'var(--navy)')};
     padding-top: 30px;
+    line-height: ${(props) => (props.titleTop ? '1.1' : '1')};
 
     ${media.lessThan('medium')`
       font-size: 32px;
@@ -41,10 +57,10 @@ export const ImageTextHeader = styled.header`
   `}
 `
 
-export const ImageTextImg = styled.div`
+export const ImageTextImg = styled.div<ImageTextImgProps>`
   position: relative;
   width: 100%;
-  height: 320px;
+  height: ${(props) => (props.titleTop ? '600px' : '320px')};
 
   ${media.lessThan('medium')`
       height: 300px;

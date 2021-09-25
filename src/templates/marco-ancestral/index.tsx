@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion'
-import { useTranslations } from 'use-intl'
-import { Element, Link as ScrollLink } from 'react-scroll'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Element } from 'react-scroll'
 
-import { Button } from 'components/UI'
 import BannerFull from 'components/Blocos/BannerFull'
 import ContactButton from 'components/ContactButton'
+import ProgressiveCount from 'components/Blocos/ProgressiveCount'
+import VideoBlock from 'components/Blocos/VideoBlock'
 import Footer from 'components/Footer'
 
 import * as animations from './animations'
 import * as S from './styles'
+import ArticleLit from 'components/Blocos/ArticleLit'
 
 const MarcoAncestral = () => {
-  // const tpage = useTranslations('marco-ancestral')
-  const tbanners = useTranslations('banners')
+  const t = useTranslations('marco-ancestral')
 
   return (
     <motion.div key={6} {...animations.wrapper}>
@@ -23,159 +23,139 @@ const MarcoAncestral = () => {
           <BannerFull
             items={[
               {
-                backgroundAlt:
-                  'Grande grupo de Indígenas protestando em Brasilía',
-                background: '/img/protestos_indigenas-marco_ancestral.jpg',
+                backgroundAlt: `Família floresta TV`,
+                width: 'large',
+                position: 'center',
+                textAlign: 'center',
+                background: '/img/marcoancestral-meta.jpeg',
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item5.title')
-                    }}
-                  ></span>
-                ),
-                desc: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item5.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <ScrollLink to="home">
-                      <Button variant="green">
-                        {tbanners.raw('item5.botao-1')}
-                      </Button>
-                    </ScrollLink>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Homem indígena cantando com expressão de grito, expressando fortemente sua voz',
-                background: '/img/homem_indigena_banner.png',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item1.title')
-                    }}
-                  ></span>
-                ),
-                desc: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item1.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item2.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Menino indígena coberto de Urucum em cima da Bandeira do Brasil',
-                backgroundPosition: 'center 40% !important',
-                background: '/img/indigena_com_urucum_banner.png',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item2.title')
+                      __html: t.raw('bannerfull.title')
                     }}
                   ></span>
                 ),
                 subtitle: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item2.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/dia-da-amazonia">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item2.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Protesto indígenas em Brasília sobre o Marco Temporal',
-                backgroundPosition: 'center 40% !important',
-                background:
-                  '/img/protesto_indigenas_brasilia_marco_temporal.png',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item3.title')
+                      __html: t.raw('bannerfull.subtitle')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item3.desc')
+                      __html: t.raw('bannerfull.desc')
                     }}
                   ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/o-ultimo-recurso">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item3.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Protesto de mulheres indígenas em Brasília sobre o Marco Temporal',
-                backgroundPosition: 'center 40% !important',
-                width: 'extralarge',
-                background: '/img/protesto_mulheres_indigenas_brasilia.jpg',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item4.title')
-                    }}
-                  ></span>
-                ),
-                desc: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item4.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/marcha-mulheres-indigenas">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item4.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
                 )
               }
             ]}
+          />
+        </Element>
+
+        <Element name="3-setembro">
+          <ArticleLit
+            title={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('articlepreview1.title')
+                }}
+              ></span>
+            }
+            subtitle={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('articlepreview1.subtitle')
+                }}
+              ></span>
+            }
+            // buttonText={
+            //   <span>
+            //     {tpage.raw('articlepreview1.botao')} <Signature size={24} />
+            //   </span>
+            // }
+            // buttonLink={`https://www.change.org/p/carta-aberta-dos-povos-origin%C3%A1rios-do-brasil-contagem-progressiva`}
+            firstImage={`/img/indigena_bandeira.jpg`}
+            firstImageSubtitle={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('articlepreview1.firstImageSubtitle')
+                }}
+              ></span>
+            }
+            // imageAlt={`Mulheres indígenas em Brasília segurando velas`}
+            body={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('articlepreview1.body')
+                }}
+              ></span>
+            }
+            secondImage={`/img/nativo-deitado-na-bandeira.jpg`}
+            thirsdImage={`/img/carregando-bandeira.jpg`}
+            // boxtitle={
+            //   <span
+            //     dangerouslySetInnerHTML={{
+            //       __html: tpage.raw('articlepreview1.box-title')
+            //     }}
+            //   ></span>
+            // }
+            // boxdesc={
+            //   <span
+            //     dangerouslySetInnerHTML={{
+            //       __html: tpage.raw('articlepreview1.box-desc')
+            //     }}
+            //   ></span>
+            // }
+          />
+        </Element>
+
+        <Element name="contagem-progressiva">
+          <ProgressiveCount
+            texts={{
+              days: t.raw('contagemprogress1.dias'),
+              hours: t.raw('contagemprogress1.horas'),
+              seconds: t.raw('contagemprogress1.segundos'),
+              minutes: t.raw('contagemprogress1.minutos')
+            }}
+            title={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('contagemprogress1.title')
+                }}
+              ></span>
+            }
+            desc={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('contagemprogress1.desc')
+                }}
+              ></span>
+            }
+            caption={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('contagemprogress1.caption')
+                }}
+              ></span>
+            }
+          />
+        </Element>
+
+        <Element name="documentario-em-tempo-real">
+          <VideoBlock
+            title={
+              <span
+                style={{ textTransform: 'uppercase' }}
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('videoblock1.title')
+                }}
+              ></span>
+            }
+            desc={t.raw('videoblock1.desc')}
+            caption={t.raw('videoblock1.caption')}
+            videoId={`WVmItbV5rbg`}
           />
         </Element>
 
@@ -183,7 +163,7 @@ const MarcoAncestral = () => {
           links={[
             {
               to: 'home',
-              label: 'Dia da Amazônia'
+              label: t.raw('footer-links.link1')
             }
           ]}
         />

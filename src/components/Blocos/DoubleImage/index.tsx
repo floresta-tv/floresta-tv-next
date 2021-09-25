@@ -15,6 +15,8 @@ type DoubleImageProps = {
   image2: string
   caption1: string
   caption2: string
+  lit?: boolean
+  bgc?: string
 }
 
 const DoubleImage = ({
@@ -23,22 +25,29 @@ const DoubleImage = ({
   image1,
   image2,
   caption1,
-  caption2
+  caption2,
+  lit,
+  bgc
 }: DoubleImageProps) => {
   return (
-    <S.DoubleImageWrapper>
-      <S.DoubleImageDivisor>
-        <Zoom>
-          <Image
-            placeholder="blur"
-            blurDataURL={`/img/forma-triangular-de-arvore-com-raizes.png`}
-            src={`/img/forma-triangular-de-arvore-com-raizes.png`}
-            width={122}
-            height={122}
-            alt="Fígura de uma arvore separando o conteúdo da página"
-          />
-        </Zoom>
-      </S.DoubleImageDivisor>
+    <S.DoubleImageWrapper bgc={bgc} lit={lit}>
+      {!lit ? (
+        <S.DoubleImageDivisor>
+          <Zoom>
+            <Image
+              placeholder="blur"
+              blurDataURL={`/img/forma-triangular-de-arvore-com-raizes.png`}
+              src={`/img/forma-triangular-de-arvore-com-raizes.png`}
+              width={122}
+              height={122}
+              alt="Fígura de uma arvore separando o conteúdo da página"
+            />
+          </Zoom>
+        </S.DoubleImageDivisor>
+      ) : (
+        <></>
+      )}
+
       <Container>
         <>
           <S.DoubleImageHeader>
@@ -52,7 +61,7 @@ const DoubleImage = ({
           <Row>
             <Col lg={6}>
               <Zoom>
-                <S.DoubleImageImage>
+                <S.DoubleImageImage lit={lit}>
                   <Image
                     placeholder="blur"
                     blurDataURL={image1}
@@ -63,12 +72,14 @@ const DoubleImage = ({
                 </S.DoubleImageImage>
               </Zoom>
               <Fade bottom>
-                <S.DoubleImageCaption>{caption1}</S.DoubleImageCaption>
+                <S.DoubleImageCaption lit={lit}>
+                  {caption1}
+                </S.DoubleImageCaption>
               </Fade>
             </Col>
             <Col lg={6}>
               <Zoom>
-                <S.DoubleImageImage>
+                <S.DoubleImageImage lit={lit}>
                   <Image
                     placeholder="blur"
                     blurDataURL={image2}
@@ -79,7 +90,9 @@ const DoubleImage = ({
                 </S.DoubleImageImage>
               </Zoom>
               <Fade bottom>
-                <S.DoubleImageCaption>{caption2}</S.DoubleImageCaption>
+                <S.DoubleImageCaption lit={lit}>
+                  {caption2}
+                </S.DoubleImageCaption>
               </Fade>
             </Col>
           </Row>

@@ -1,11 +1,23 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const DoubleImageWrapper = styled.section`
+interface DoubleImageWrapperProps {
+  bgc?: string
+  lit?: boolean
+}
+interface DoubleImageCaption {
+  lit?: boolean
+}
+interface DoubleImageImage {
+  lit?: boolean
+}
+
+export const DoubleImageWrapper = styled.section<DoubleImageWrapperProps>`
   display: block;
   padding: 30px 0 60px 0;
-  max-width: 1100px;
+  max-width: ${(props) => (props.lit ? '100%' : '1100px')};
   margin: 0 auto;
+  background-color: ${(props) => props.bgc || 'transparent'};
 
   ${media.lessThan('medium')`
     padding-top: 0;
@@ -38,10 +50,10 @@ export const DoubleImageHeader = styled.header`
   }
 `
 
-export const DoubleImageImage = styled.div`
+export const DoubleImageImage = styled.div<DoubleImageImage>`
   position: relative;
   width: 100%;
-  height: 600px;
+  height: ${(props) => (props.lit ? '300px' : '600px')};
 
   ${media.lessThan('medium')`
       height: 300px;
@@ -54,14 +66,15 @@ export const DoubleImageImage = styled.div`
   }
 `
 
-export const DoubleImageCaption = styled.p`
-  font-size: 15px;
+export const DoubleImageCaption = styled.p<DoubleImageCaption>`
+  font-size: ${(props) => (props.lit ? '18px' : '15px')};
   max-width: 840px;
   font-style: italic;
-  font-weight: 500;
+  font-weight: ${(props) => (props.lit ? '800' : '500')};
   text-align: center;
   margin: 0 auto;
   margin-top: 20px;
+  color: ${(props) => (props.lit ? '#ffffff' : '#000000')};
 `
 
 export const DoubleImageDivisor = styled.div`

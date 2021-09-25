@@ -8,21 +8,35 @@ import * as S from './styles'
 
 type ImageTextProps = {
   title: JSX.Element
-  desc: JSX.Element
+  desc?: JSX.Element
   image: string
   imageAlt: string
-  type: string
+  type?: string
+  bgc?: string
+  titleTop?: boolean
 }
 
-const ImageText = ({ title, desc, type, image, imageAlt }: ImageTextProps) => {
+const ImageText = ({
+  title,
+  desc,
+  type,
+  image,
+  imageAlt,
+  bgc,
+  titleTop
+}: ImageTextProps) => {
+  const columnSize = () => {
+    return titleTop ? 12 : 6
+  }
   return (
-    <S.ImageTextWrapper>
+    <S.ImageTextWrapper bgc={bgc}>
       <Container>
         <>
           <Row>
-            <Col style={{ order: type === 'left' ? 0 : 2 }} lg={6}>
+            <Col style={{ order: type === 'left' ? 0 : 2 }} lg={columnSize()}>
               <Fade right>
                 <S.ImageTextHeader
+                  titleTop={titleTop}
                   style={{ textAlign: type === 'left' ? 'right' : 'left' }}
                 >
                   <h2 className="title">{title}</h2>
@@ -30,9 +44,9 @@ const ImageText = ({ title, desc, type, image, imageAlt }: ImageTextProps) => {
                 </S.ImageTextHeader>
               </Fade>
             </Col>
-            <Col lg={6}>
+            <Col lg={columnSize()}>
               <Fade left>
-                <S.ImageTextImg>
+                <S.ImageTextImg titleTop={titleTop}>
                   <Image
                     placeholder="blur"
                     blurDataURL={image}

@@ -10,35 +10,30 @@ import * as S from './styles'
 type ArticlePreviewProps = {
   title: JSX.Element
   subtitle: JSX.Element
-  buttonText: JSX.Element
-  buttonLink: string
+  firstImage: string
+  firstImageSubtitle: JSX.Element
   body: JSX.Element
-  image: string
-  imageAlt: string
-  boxtitle: JSX.Element
-  boxdesc: JSX.Element
-  bgc?: string
+  secondImage: string
+  thirsdImage: string
 }
 
-const ArticlePreview = ({
+const ArticleLit = ({
   title,
   subtitle,
-  buttonText,
-  buttonLink,
+  firstImage,
+  firstImageSubtitle,
   body,
-  image,
-  boxtitle,
-  imageAlt,
-  boxdesc,
-  bgc
+  secondImage,
+  thirsdImage
 }: ArticlePreviewProps) => {
   return (
-    <S.ArticlePreviewWrapper bgc={bgc}>
+    // <S.ArticlePreviewWrapper bgc={bgc}>
+    <S.ArticlePreviewWrapper>
       <S.ArticlePreviewContent>
         <Container>
           <>
             <Row>
-              <Col lg={4}>
+              <Col lg={12}>
                 <S.ArticlePreviewHeader>
                   <Fade left>
                     <h2 className="title">{title}</h2>
@@ -46,7 +41,7 @@ const ArticlePreview = ({
                   <Fade left>
                     <p className="desc">{subtitle}</p>
                   </Fade>
-                  <Fade left>
+                  {/* <Fade left>
                     <a
                       href={buttonLink}
                       target="_blank"
@@ -55,20 +50,25 @@ const ArticlePreview = ({
                     >
                       {buttonText}
                     </a>
-                  </Fade>
+                  </Fade> */}
                 </S.ArticlePreviewHeader>
               </Col>
-              <Col lg={8}>
+            </Row>
+            <Row>
+              <Col lg={12}>
                 <Fade right>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
-                      blurDataURL={image}
-                      src={image}
+                      blurDataURL={firstImage}
+                      src={firstImage}
                       layout="fill"
-                      alt={imageAlt}
+                      // alt={imageAlt}
                     />
                   </S.ArticlePreviewImage>
+                  <S.ImageSubtitle className="first-image-subtitle">
+                    {firstImageSubtitle}
+                  </S.ImageSubtitle>
                 </Fade>
               </Col>
             </Row>
@@ -77,12 +77,40 @@ const ArticlePreview = ({
               <S.ArticlePreviewBody>{body}</S.ArticlePreviewBody>
             </Fade>
 
-            <Fade up>
+            <Row>
+              <Col lg={6}>
+                <Fade right>
+                  <S.ArticlePreviewImage>
+                    <Image
+                      placeholder="blur"
+                      blurDataURL={secondImage}
+                      src={secondImage}
+                      layout="fill"
+                      // alt={imageAlt}
+                    />
+                  </S.ArticlePreviewImage>
+                </Fade>
+              </Col>
+              <Col lg={6}>
+                <Fade right>
+                  <S.ArticlePreviewImage>
+                    <Image
+                      placeholder="blur"
+                      blurDataURL={thirsdImage}
+                      src={thirsdImage}
+                      layout="fill"
+                      // alt={imageAlt}
+                    />
+                  </S.ArticlePreviewImage>
+                </Fade>
+              </Col>
+            </Row>
+            {/* <Fade up>
               <S.ArticlePreviewBox>
                 <h3 className="box-title">{boxtitle}</h3>
                 <p className="box-desc">{boxdesc}</p>
               </S.ArticlePreviewBox>
-            </Fade>
+            </Fade> */}
           </>
         </Container>
       </S.ArticlePreviewContent>
@@ -90,4 +118,4 @@ const ArticlePreview = ({
   )
 }
 
-export default ArticlePreview
+export default ArticleLit
