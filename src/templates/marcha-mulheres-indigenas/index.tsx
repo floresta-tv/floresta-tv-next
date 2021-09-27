@@ -16,6 +16,7 @@ import SimpleText from 'components/Blocos/SimpleText'
 import ImageText from 'components/Blocos/ImageText'
 import LongQuote from 'components/Blocos/LongQuote2'
 import DoubleButton from 'components/Blocos/DoubleButton'
+import { Container } from 'components/UI'
 
 const MarchaMulheresIndigenas = () => {
   const t = useTranslations('marcha-mulheres-indigenas')
@@ -239,6 +240,18 @@ const MarchaMulheresIndigenas = () => {
             style={{ marginTop: '30px', paddingTop: '0' }}
           />
         </Element>
+
+        <Container>
+          <div style={{ padding: '60px 0' }}>
+            <h2>
+              ➡️ <b>Texto:</b> Flora Dutra
+            </h2>
+            <br />
+            <h2>
+              ➡️ <b>Imagens:</b> Guilherme Meneghelli
+            </h2>
+          </div>
+        </Container>
 
         <Element name="botoes-de-acao">
           <DoubleButton
