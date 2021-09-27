@@ -6,6 +6,7 @@ import BannerFull from 'components/Blocos/BannerFull'
 import ContactButton from 'components/ContactButton'
 import ProgressiveCount from 'components/Blocos/ProgressiveCount'
 import VideoBlock from 'components/Blocos/VideoBlock'
+import DoubleButton from 'components/Blocos/DoubleButton'
 import Footer from 'components/Footer'
 
 import * as animations from './animations'
@@ -156,6 +157,30 @@ const MarcoAncestral = () => {
             desc={t.raw('videoblock1.desc')}
             caption={t.raw('videoblock1.caption')}
             videoId={`WVmItbV5rbg`}
+          />
+        </Element>
+
+        <Element name="botoes-de-acao">
+          <DoubleButton
+            textBt1={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('buttons.bt1text')
+                }}
+              ></span>
+            }
+            textBt2={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('buttons.bt2text')
+                }}
+              ></span>
+            }
+            bt1Color="#ff6666"
+            bt2Color="#00ff05"
+            bt1Link="/"
+            bt2Link="/dia-da-amazonia"
+            bgc="#017300"
           />
         </Element>
 

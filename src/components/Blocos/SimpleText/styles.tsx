@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const HeaderTextWrapper = styled.section`
   display: block;
-  padding: 0px 0 60px 0;
+  padding: 0px 0 20px 0;
   max-width: 1100px;
   margin: 0 auto;
 
@@ -32,8 +32,7 @@ export const HeaderTextHeader = styled.header`
   }
 
   .desc {
-    padding-top: 60px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     max-width: 700px;
   }

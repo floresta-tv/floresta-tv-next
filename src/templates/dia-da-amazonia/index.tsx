@@ -57,7 +57,7 @@ const DiaDaAmazonia = () => {
                       </ScrollLink>
                     </div>
                     <div className="link-2">
-                      <Link href="/marcha-mulheres-indígenas">
+                      <Link href="/marcha-mulheres-indigenas">
                         Maracás em Brasília
                       </Link>
                     </div>
@@ -199,15 +199,17 @@ const DiaDaAmazonia = () => {
         </Element>
 
         <Element name="o-floresta-tv">
-          <SimpleText
-            text={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('simpletext.text')
-                }}
-              ></span>
-            }
-          />
+          <div style={{ paddingTop: 50 }}>
+            <SimpleText
+              text={
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t.raw('simpletext.text')
+                  }}
+                ></span>
+              }
+            />
+          </div>
         </Element>
 
         <Element name="rafael-quadros">
@@ -299,8 +301,8 @@ const DiaDaAmazonia = () => {
             }
             bt1Color="#ff6666"
             bt2Color="#00ff05"
-            bt1Link="/voz-da-floresta"
-            bt2Link="/"
+            bt1Link="/"
+            bt2Link="/o-ultimo-recurso"
             bgc="#017300"
           />
         </Element>

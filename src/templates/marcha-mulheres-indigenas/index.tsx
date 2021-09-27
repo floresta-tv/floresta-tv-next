@@ -101,7 +101,7 @@ const MarchaMulheresIndigenas = () => {
           />
         </Element>
 
-        <Element name="dia-da-amazonia">
+        <Element name="espetaculo-global">
           <ArticleBlock
             title={
               <span
@@ -167,15 +167,17 @@ const MarchaMulheresIndigenas = () => {
         </Element>
 
         <Element name="protagonismo-mulher-indigena">
-          <SimpleText
-            text={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('simpletext.text')
-                }}
-              ></span>
-            }
-          />
+          <div style={{ paddingTop: 40 }}>
+            <SimpleText
+              text={
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t.raw('simpletext.text')
+                  }}
+                ></span>
+              }
+            />
+          </div>
         </Element>
 
         <Element name="sinal-verde">
@@ -226,7 +228,7 @@ const MarchaMulheresIndigenas = () => {
           />
         </Element>
 
-        <Element name="foto-final">
+        <Element name="credits">
           <ImageFullWidth
             image={`/img/marcha_mulheres_indigenas_4.jpg`}
             caption={
@@ -288,32 +290,28 @@ const MarchaMulheresIndigenas = () => {
               label: t.raw('footer-links.link2')
             },
             {
-              to: 'documentario-em-tempo-real',
-              label: t.raw('footer-links.link3')
-            },
-            {
-              to: 'dia-da-amazonia',
+              to: 'espetaculo-global',
               label: t.raw('footer-links.link4')
             },
             {
-              to: 'povos',
+              to: 'protagonismo-mulher-indigena',
               label: t.raw('footer-links.link5')
             },
             {
-              to: 'o-florestatv',
+              to: 'sinal-verde',
+              label: t.raw('footer-links.link5')
+            },
+            {
+              to: 'uma-marcha-historica',
               label: t.raw('footer-links.link6')
             },
             {
-              to: 'urucum-na-bandeira',
+              to: 'urucum-sinal-vermelho',
               label: t.raw('footer-links.link7')
             },
             {
-              to: 'declaracao-rafael-quadros',
+              to: 'credits',
               label: t.raw('footer-links.link8')
-            },
-            {
-              to: 'obra-final',
-              label: t.raw('footer-links.link9')
             }
           ]}
         />

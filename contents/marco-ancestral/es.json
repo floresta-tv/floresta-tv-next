@@ -30,6 +30,10 @@
       "link2": "3 de setembro de 2021",
       "link3": "Contagem progressiva",
       "link4": "Documentário em tempo real"
+    },
+    "buttons": {
+      "bt1text": "<< A Voz da Floresta",
+      "bt2text": "Dia da Amazônia >>"
     }
   }
 }

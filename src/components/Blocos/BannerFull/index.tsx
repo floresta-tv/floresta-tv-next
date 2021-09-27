@@ -67,6 +67,7 @@ const BannerFull = ({ items }: BannerFullProps) => {
             <Container fillHeight>
               <S.BannerFullContent
                 width={item.width}
+                textAlign={item.textAlign}
                 style={{
                   alignItems: item.position || 'flex-start',
                   // @ts-ignore

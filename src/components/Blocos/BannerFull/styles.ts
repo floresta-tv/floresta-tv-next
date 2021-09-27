@@ -64,6 +64,7 @@ export const BannerFullItem = styled.div`
 `
 interface BannerFullContent {
   width: string
+  textAlign?: string
 }
 
 export const BannerFullContent = styled.div<BannerFullContent>`
@@ -117,15 +118,19 @@ export const BannerFullContent = styled.div<BannerFullContent>`
       ${(props) =>
         props.width === 'large' &&
         `
-        margin: 0 auto;
         max-width: 560px;
         `}
 
       ${(props) =>
         props.width === 'extralarge' &&
         `
-        margin: 0 auto;
         max-width: 700px;
+    `}
+
+    ${(props) =>
+        props.textAlign === 'center' &&
+        `
+        margin: 0 auto;
     `}
 
       ${media.lessThan('medium')`
