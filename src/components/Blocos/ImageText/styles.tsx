@@ -15,7 +15,7 @@ interface ImageTextHeaderProps {
 
 export const ImageTextWrapper = styled.section<ImageTextWrapperProps>`
   display: block;
-  padding: 60px 0;
+  padding: 30px 0 60px 0;
   max-width: ${(props) => (props.bgc ? '100%' : '1200px')};
   margin: 0 auto;
   background-color: ${(props) => (props.bgc ? props.bgc : 'transparent')};

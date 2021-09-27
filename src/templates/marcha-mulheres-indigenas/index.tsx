@@ -11,7 +11,7 @@ import * as animations from './animations'
 import * as S from './styles'
 import ProgressiveCount from 'components/Blocos/ProgressiveCount'
 import ArticleBlock from 'components/Blocos/ArticleBlock'
-import DoubleImage from 'components/Blocos/DoubleImage'
+import ImageFullWidth from 'components/Blocos/ImageFullWidth'
 import SimpleText from 'components/Blocos/SimpleText'
 import ImageText from 'components/Blocos/ImageText'
 import LongQuote from 'components/Blocos/LongQuote2'
@@ -222,6 +222,21 @@ const MarchaMulheresIndigenas = () => {
             imageAlt="Marcha mulheres indígenas no Sinal Vermelho"
             titleTop={true}
             type="left"
+          />
+        </Element>
+
+        <Element name="foto-final">
+          <ImageFullWidth
+            image={`/img/marcha_mulheres_indigenas_4.jpg`}
+            caption={
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('imageFullWidth.desc')
+                }}
+              ></span>
+            }
+            imageAlt={t.raw('imageFullWidth.desc')}
+            style={{ marginTop: '30px', paddingTop: '0' }}
           />
         </Element>
 
