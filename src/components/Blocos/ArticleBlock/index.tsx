@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 import { Container } from 'components/UI'
 import { Row, Col } from 'react-bootstrap'
@@ -45,13 +46,13 @@ const ArticleBlock = ({
             <Row>
               <Col lg={12}>
                 <S.ArticlePreviewHeader>
-                  <Fade left>
+                  <Fade bottom>
                     <h2 className="title">{title}</h2>
                   </Fade>
-                  <Fade left>
+                  <Fade bottom>
                     <p className="desc">{subtitle}</p>
                   </Fade>
-                  <Fade left>
+                  <Fade bottom>
                     <p className="text">{text}</p>
                   </Fade>
                   {/* <Fade left>
@@ -69,7 +70,7 @@ const ArticleBlock = ({
             </Row>
             <Row>
               <Col lg={12}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -82,7 +83,7 @@ const ArticleBlock = ({
                   <S.ImageSubtitle className="first-image-subtitle">
                     {firstImageSubtitle}
                   </S.ImageSubtitle>
-                </Fade>
+                </Zoom>
               </Col>
             </Row>
 
@@ -96,7 +97,7 @@ const ArticleBlock = ({
             <br />
             <Row>
               <Col lg={6}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -106,10 +107,10 @@ const ArticleBlock = ({
                       // alt={imageAlt}
                     />
                   </S.ArticlePreviewImage>
-                </Fade>
+                </Zoom>
               </Col>
               <Col lg={6}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -119,7 +120,7 @@ const ArticleBlock = ({
                       // alt={imageAlt}
                     />
                   </S.ArticlePreviewImage>
-                </Fade>
+                </Zoom>
               </Col>
             </Row>
             <br />
@@ -144,7 +145,7 @@ const ArticleBlock = ({
             <br />
             <Row>
               <Col lg={12}>
-                <Fade right>
+                <Zoom right>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -157,7 +158,7 @@ const ArticleBlock = ({
                   <S.ImageSubtitle className="first-image-subtitle">
                     {lastImageSubtitle}
                   </S.ImageSubtitle>
-                </Fade>
+                </Zoom>
               </Col>
             </Row>
 

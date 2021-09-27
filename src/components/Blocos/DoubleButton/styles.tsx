@@ -21,7 +21,7 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
   background-color: ${(props) => (props.bgc ? props.bgc : 'transparent')};
 
   ${media.lessThan('medium')`
-    padding-top: 0;
+    padding: 40px 0;
   `}
 
   .bt-1 {
@@ -36,6 +36,10 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+
+    ${media.lessThan('medium')`
+      font-size: 14.5px;
+    `}
   }
 
   .bt-2 {
@@ -50,5 +54,9 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+
+    ${media.lessThan('medium')`
+      font-size: 14.5px;
+    `}
   }
 `

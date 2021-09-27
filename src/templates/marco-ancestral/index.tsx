@@ -27,7 +27,7 @@ const MarcoAncestral = () => {
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
-                background: '/img/marcoancestral-meta.jpeg',
+                background: '/img/marcoancestral-meta.png',
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
@@ -38,14 +38,14 @@ const MarcoAncestral = () => {
                 subtitle: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.subtitle')
+                      __html: t.raw('bannerfull.desc')
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.desc')
+                      __html: t.raw('bannerfull.subtitle')
                     }}
                   ></span>
                 )
@@ -164,6 +164,18 @@ const MarcoAncestral = () => {
             {
               to: 'home',
               label: t.raw('footer-links.link1')
+            },
+            {
+              to: '3-setembro',
+              label: t.raw('footer-links.link2')
+            },
+            {
+              to: 'contagem-progressiva',
+              label: t.raw('footer-links.link3')
+            },
+            {
+              to: 'documentario-em-tempo-real',
+              label: t.raw('footer-links.link4')
             }
           ]}
         />

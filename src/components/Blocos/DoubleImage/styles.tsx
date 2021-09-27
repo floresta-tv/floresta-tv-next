@@ -59,6 +59,7 @@ export const DoubleImageImage = styled.div<DoubleImageImage>`
       height: 300px;
       width: 100%;
       margin-top: 20px;
+      margin-bottom: 15px;
   `}
 
   img {

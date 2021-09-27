@@ -10,7 +10,6 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
   padding: 60px 0;
   max-width: 100%;
   margin: 0 auto;
-
   background-color: ${(props) => (props.bgc ? props.bgc : 'transparent')};
 
   ${media.lessThan('medium')`
@@ -27,14 +26,23 @@ export const HeaderTextHeader = styled.header`
   // text-align: center;
   border-left: 3px solid #ffffff;
   max-width: 600px;
-  background-color: #00ff05;
+  background-color: #8cfc8e;
   border-radius: 4px;
+  color: black;
+
+  ${media.lessThan('medium')`
+    padding-bottom: 15px;
+  `}
 
   .title {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 22px;
     padding-top: 30px;
+
+    ${media.lessThan('medium')`
+      padding-left: 20px;
+  `};
   }
 
   .desc {
@@ -45,6 +53,10 @@ export const HeaderTextHeader = styled.header`
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     font-style: italic;
+
+    ${media.lessThan('medium')`
+      padding: 0 20px;
+    `};
   }
 `
 

@@ -11,10 +11,6 @@ export const Wrapper = styled.section`
     z-index: 100;
   }
 
-  ${media.greaterThan('large')`
-    padding-bottom: 50px;
-  `}
-
   .link-1 {
     background-color: #00ff05 !important;
     border-color: #00ff05 !important;

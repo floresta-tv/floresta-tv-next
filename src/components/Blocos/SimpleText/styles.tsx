@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const HeaderTextWrapper = styled.section`
   display: block;
-  padding: 30px 0 60px 0;
+  padding: 0px 0 60px 0;
   max-width: 1100px;
   margin: 0 auto;
 

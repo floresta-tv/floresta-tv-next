@@ -34,7 +34,7 @@ const DiaDaAmazonia = () => {
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
-                background: '/img/desenho-indigena.jpg',
+                background: '/img/indigena_com_urucum_banner.png',
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
@@ -57,7 +57,9 @@ const DiaDaAmazonia = () => {
                       </ScrollLink>
                     </div>
                     <div className="link-2">
-                      <Link href="/equipe">Maracás em Brasília</Link>
+                      <Link href="/marcha-mulheres-indígenas">
+                        Maracás em Brasília
+                      </Link>
                     </div>
                     <div className="link-3">
                       <Link href="/">Voz da Floresta</Link>
@@ -103,7 +105,7 @@ const DiaDaAmazonia = () => {
 
         <Element name="documentario-em-tempo-real">
           <VideoBlock
-            bgc="#e43f3f"
+            bgc="#ffb4b4"
             title={
               <span
                 style={{ textTransform: 'uppercase' }}
@@ -192,11 +194,11 @@ const DiaDaAmazonia = () => {
             title={<></>}
             subtitle={<></>}
             lit={true}
-            bgc="#e43f3f"
+            bgc="#fc6868"
           />
         </Element>
 
-        <Element name="povos">
+        <Element name="o-floresta-tv">
           <SimpleText
             text={
               <span
@@ -208,9 +210,9 @@ const DiaDaAmazonia = () => {
           />
         </Element>
 
-        <Element name="povos">
+        <Element name="rafael-quadros">
           <SimpleQuote
-            bgc="#00ff05"
+            bgc="#017300"
             text={
               <span
                 dangerouslySetInnerHTML={{
@@ -223,7 +225,7 @@ const DiaDaAmazonia = () => {
 
         <Element name="urucum-na-bandeira">
           <ImageText
-            bgc="#e43f3f"
+            bgc="#f57272"
             title={
               <span
                 dangerouslySetInnerHTML={{
@@ -258,11 +260,9 @@ const DiaDaAmazonia = () => {
           />
         </Element>
 
-        <Element name="creditos"></Element>
-
         <Element name="obra-final">
           <ImageText
-            image="/img/desenho-indigena.jpg"
+            image="/img/desenho-indigena-urucum-na-bandeira.jpg"
             title={
               <span
                 dangerouslySetInnerHTML={{
@@ -309,7 +309,39 @@ const DiaDaAmazonia = () => {
           links={[
             {
               to: 'home',
-              label: 'Dia da Amazônia'
+              label: t.raw('footer-links.link1')
+            },
+            {
+              to: 'contagem-progressiva',
+              label: t.raw('footer-links.link2')
+            },
+            {
+              to: 'documentario-em-tempo-real',
+              label: t.raw('footer-links.link3')
+            },
+            {
+              to: 'dia-da-amazonia',
+              label: t.raw('footer-links.link4')
+            },
+            {
+              to: 'povos',
+              label: t.raw('footer-links.link5')
+            },
+            {
+              to: 'o-florestatv',
+              label: t.raw('footer-links.link6')
+            },
+            {
+              to: 'urucum-na-bandeira',
+              label: t.raw('footer-links.link7')
+            },
+            {
+              to: 'declaracao-rafael-quadros',
+              label: t.raw('footer-links.link8')
+            },
+            {
+              to: 'obra-final',
+              label: t.raw('footer-links.link9')
             }
           ]}
         />

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Container } from 'components/UI'
 import { Col, Row } from 'react-bootstrap'
 
+import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
 
 import * as S from './styles'
@@ -34,7 +35,7 @@ const ImageText = ({
         <>
           <Row>
             <Col style={{ order: type === 'left' ? 0 : 2 }} lg={columnSize()}>
-              <Fade right>
+              <Fade top>
                 <S.ImageTextHeader
                   titleTop={titleTop}
                   style={{ textAlign: type === 'left' ? 'right' : 'left' }}
@@ -45,7 +46,7 @@ const ImageText = ({
               </Fade>
             </Col>
             <Col lg={columnSize()}>
-              <Fade left>
+              <Zoom left>
                 <S.ImageTextImg titleTop={titleTop}>
                   <Image
                     placeholder="blur"
@@ -55,7 +56,7 @@ const ImageText = ({
                     alt={imageAlt}
                   />
                 </S.ImageTextImg>
-              </Fade>
+              </Zoom>
             </Col>
           </Row>
         </>

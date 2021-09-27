@@ -19,11 +19,11 @@ export const ArticlePreviewContent = styled.div`
 export const ArticlePreviewHeader = styled.header`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
-  text-align: left;
+  text-align: center;
   height: 100%;
 
   ${media.lessThan('medium')`
@@ -39,6 +39,7 @@ export const ArticlePreviewHeader = styled.header`
     text-transform: uppercase;
     color: var(--dark);
     max-width: 600px;
+    text-align: center;
 
     ${media.lessThan('medium')`
       font-size: 32px;
@@ -48,7 +49,8 @@ export const ArticlePreviewHeader = styled.header`
   .desc {
     font-size: 18px;
     font-weight: 500;
-    max-width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   .link {

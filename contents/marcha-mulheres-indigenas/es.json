@@ -1,5 +1,67 @@
 {
   "marcha-mulheres-indigenas": {
-
+    "bannerfull": {
+      "title": "<span> Maracá em Brasília na força das mulheres indígenas </span>",
+      "desc": "<span>10 de Setembro de 2021, Brasília parou para escutar milhares de mulheres que gritavam alto e bem claro que a Amazônia está queimando, os peixes estão morrendo pelo aquecimento das águas já contaminadas e os políticos não estão fazendo nada. Assim, no sol escaldante de 33º graus, a II Marcha das Mulheres Indígenas seguiu pacífica pelas ruas da capital federal como um dos maiores espetáculos de arte, cultura e respeito aos direitos humanos jamais visto nas últimas décadas em manifestações históricas globais.</span>"
+    },
+    "contagemprogress1": {
+      "title": "<span>Contagem Progressiva </span>",
+      "desc": "<span> Documentário longa-metragem sobre o crescimento da cultura originária a partir de registros independentes em colaboração com os próprios povos originários. </span>",
+      "caption": "<span>Contando desde 25 de Agosto de 2021</span>",
+      "dias": "Dias",
+      "horas": "Horas",
+      "minutos": "Minutos",
+      "segundos": "Segundos"
+    },
+    "videoblock1": {
+      "title": "A HISTÓRIA DE VERDADE, EM TEMPO REAL SOBRE O MARCO ANCESTRAL",
+      "desc": "Levantamento crescente da influência dos Povos Originários no mundo através da sabedoria ancestral que zela pela vida e meio ambiente.",
+      "caption": "Direto de Brasília um breve resumo dos conteúdos que viemos somando na realização da CONTAGEM PROGRESSIVA, um documentário longa-metragem que cresce com a participação e compartilhamento de cada um de vocês. Uma carta aberta acompanha esse filme e já passam 3900 assinaturas! [25ago-5set2021]"
+    },
+    "articleblock": {
+      "title": "",
+      "subtitle": "<span><i>Como um espetáculo global, as mulheres indígenas têm se organizando coletivamente para lutar pela demarcação de seus territórios e contra todo tipo de violência</i></span>",
+      "text": "Hoje é uma data simbólica, nossa floresta agrega 9 estados da Amazônia legal, o estado mais preservado do Brasil. A importância da missão da Floresta TV e do Instituto Nawá é proteger o maior bioma do mundo. É a nossa luta constante contra o desmonte através das políticas destrutivas com um avanço de mais de 41% somente neste ano, assim, somos resistência com nossa soberania amazônica que é o maior berço da biodiversidade do mundo.",
+      "firstImageSubtitle": "II Marcha das Mulheres Indígenas. 10 de Setembro de 2021. Foto: Guilherme Meneghelli",
+      "lastImageSubtitle": "",
+      "leftText": "",
+      "rightText": "",
+      "finalText": ""
+    },
+    "simpletext": {
+      "text": "<span>  <p>O protagonismo da força da mulher indígena foi passar em alto e bom tom que nossas florestas estão sendo devastadas, as crianças estão morrendo pelas águas contaminadas. É necessário fortalecer a articulação das redes em torno do movimento indígena feminino.</p> <p>De pé, cabeça erguida, sua dignidade é completa. Essa é a imagem de uma mulher indígena empoderada confrontando discriminação e violência, dizendo “chega, é o suficiente” para o trágico impacto do extrativismo industrial e outros projetos de desenvolvimento contra seus territórios ancestrais.</p> <p>A Floresta TV simboliza através das mulheres indígenas a valorização da sua identidade e individualidade, mostrando sempre a relação semiótica e simbiótica com a Mãe Terra e o Capital Espiritual. Os territórios se transformam em elementos de resistência contra a desigualdade, o racismo, sexismo e a pobreza. </p></span>"
+    },
+    "simpletext2": {
+      "text": "Buscamos uma articulação global que desperte uma consciência e inteligência coletiva global para que o Capital Espiritual se torne soberano entre todos nós. Pensar coletivamente em novas maneiras de coexistirmos juntos nos ajuda a entender desdobramentos de novas maneiras de vida em sociedades aqui e além."
+    },
+    "simplequote": {
+      "quote": "Algumas pessoas voltaram para suas aldeias, mas eu fiquei porque eu senti no meu coração que eu tinha que ficar — Rafael Quadros. Guarani Mbya"
+    },
+    "urucum": {
+      "title": "Urucum no Sinal Vermelho!"
+    },
+    "longquote": {
+      "title": "<b>Sinal Verde</b> <br/> múltiplas formas <br/> históricas de <br/> discriminação ",
+      "body": "<span><p>Nas Américas, as mulheres indígenas frequentemente enfrentam múltiplas formas históricas de discriminação que as expõe aos direitos humanos violações em todos os aspectos de suas vidas diárias: de seus direitos civis e políticos e seu direito de acesso à justiça, aos seus aspectos sociais e direitos culturais e seu direito de viver livre de violência.</p> <p> As mulheres indígenas enfrentam diversos obstáculos, incluindo desafios geográficos e econômicos para ganhar acesso a serviços de saúde e educação; a limitação de acesso a programas e serviços sociais; baixa participação nos processos políticos e até a marginalização social. A marginalização social e econômica de mulheres indígenas contribui para a manutenção estrutural de discriminação e as tornam particularmente suscetíveis a uma variedade de atos de violência contra mulheres.</p><p>Embora estejam sujeitas a discriminação e violações de seus direitos humanos, mulheres indígenas não devem ser entendidas simplesmente como vítimas. Elas desempenham um papel crucial na história da luta de seus povos em plena crise da democracia brasileira.</p></span>"
+    },
+    "buttons": {
+      "bt1text": "<< A Voz da Floresta",
+      "bt2text": "O Último Recurso >>"
+    },
+    "obra": {
+      "title": "Entre a vida e a devastação",
+      "text": "obra de Gabriela Guidetti é artista plástica e design de sustentabilidade. Também é comunicadora de várias comunidade e projetos ambientais."
+    },
+    "footer-links": {
+      "link1": "Dia da Amazônia",
+      "link2": "Contagem progressiva",
+      "link3": "A história da verdade",
+      "link4": "Dia da Amazônia",
+      "link5": "Povos",
+      "link6": "O Floresta.TV",
+      "link7": "É Urucum na bandeira!",
+      "link8": "Declaração Rafael Quadros",
+      "link9": "Entre a vida e a Devastação"
+    }
   }
 }

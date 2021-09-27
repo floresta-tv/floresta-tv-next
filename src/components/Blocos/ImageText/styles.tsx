@@ -25,24 +25,28 @@ export const ImageTextHeader = styled.header<ImageTextHeaderProps>`
   display: flex;
   flex-direction: 'column';
   justify-content: center;
-  text-align: right;
   margin-bottom: 30px;
   padding: 0 30px;
   flex-direction: column;
+  text-align: ${(props) => (props.titleTop ? 'center' : 'left')};
+
+  ${media.lessThan('medium')`
+      margin-bottom: 0px;
+  `};
 
   .title {
-    font-family: ${(props) =>
-      props.titleTop ? "'Open Sans', sans-serif" : "'Merriweather', serif"};
+    font-family: 'Merriweather', serif;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 37px;
     color: ${(props) => (props.titleTop ? '#FFFFFF' : 'var(--navy)')};
     padding-top: 30px;
     line-height: ${(props) => (props.titleTop ? '1.1' : '1')};
+    text-align: ${(props) => (props.titleTop ? 'center' : 'left')};
 
     ${media.lessThan('medium')`
       font-size: 32px;
       padding-top: 0;
-    `}
+    `};
   }
 
   .desc {

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 import { Container } from 'components/UI'
 import { Row, Col } from 'react-bootstrap'
@@ -56,7 +57,7 @@ const ArticleLit = ({
             </Row>
             <Row>
               <Col lg={12}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -69,7 +70,7 @@ const ArticleLit = ({
                   <S.ImageSubtitle className="first-image-subtitle">
                     {firstImageSubtitle}
                   </S.ImageSubtitle>
-                </Fade>
+                </Zoom>
               </Col>
             </Row>
 
@@ -79,7 +80,7 @@ const ArticleLit = ({
 
             <Row>
               <Col lg={6}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -89,10 +90,10 @@ const ArticleLit = ({
                       // alt={imageAlt}
                     />
                   </S.ArticlePreviewImage>
-                </Fade>
+                </Zoom>
               </Col>
               <Col lg={6}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -102,7 +103,7 @@ const ArticleLit = ({
                       // alt={imageAlt}
                     />
                   </S.ArticlePreviewImage>
-                </Fade>
+                </Zoom>
               </Col>
             </Row>
             {/* <Fade up>

@@ -8,6 +8,7 @@ interface ArticlePreviewWrapperProps {
 export const ArticlePreviewWrapper = styled.section<ArticlePreviewWrapperProps>`
   display: block;
   padding: 60px 0;
+  padding-top: 50px;
   background-color: ${(props) => props.bgc};
 `
 
@@ -23,17 +24,18 @@ export const ArticlePreviewContent = styled.div`
 export const ArticlePreviewHeader = styled.header`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 30px;
-  text-align: left;
+  text-align: center;
   height: 100%;
+  margin-bottom: 60px;
 
   ${media.lessThan('medium')`
     text-align: center;
     align-items: center;
     margin-top: -10px;
+    margin-bottom: 30px;
   `}
 
   .title {
@@ -43,6 +45,7 @@ export const ArticlePreviewHeader = styled.header`
     text-transform: uppercase;
     color: var(--dark);
     max-width: 600px;
+    text-align: center;
 
     ${media.lessThan('medium')`
       font-size: 32px;
@@ -52,10 +55,15 @@ export const ArticlePreviewHeader = styled.header`
   .desc {
     font-size: 18px;
     font-weight: 500;
+    margin: 0 auto;
+    max-width: 830px;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .text {
-    font-size: 14px;
+    font-size: 15px;
+    max-width: 600px;
   }
 
   .link {
@@ -123,9 +131,12 @@ export const ArticlePreviewBox = styled.div`
 export const ImageSubtitle = styled.span`
   font-size: 16px;
   display: flex;
-  flex-align: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
 `
 
 export const ArticlePreviewCaption = styled.p`

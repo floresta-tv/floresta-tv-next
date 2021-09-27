@@ -17,6 +17,7 @@ type ProgressiveCountProps = {
   desc: JSX.Element
   countStart?: string
   caption: JSX.Element
+  background?: string
   texts: {
     seconds: string
     minutes: string
@@ -29,7 +30,8 @@ const ProgressiveCount = ({
   title,
   desc,
   caption,
-  texts
+  texts,
+  background
 }: ProgressiveCountProps) => {
   const [years, setYears] = useState(0)
   const [days, setDays] = useState(0)
@@ -83,7 +85,7 @@ const ProgressiveCount = ({
   }
 
   return (
-    <S.ProgressiveCountWrapper>
+    <S.ProgressiveCountWrapper background={background}>
       <Container>
         <>
           <S.ProgressiveCountHeader>

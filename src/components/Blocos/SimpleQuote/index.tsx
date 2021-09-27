@@ -1,6 +1,6 @@
 import { Container } from 'components/UI'
 
-import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 import * as S from './styles'
 
@@ -16,9 +16,9 @@ const SimpleQuote = ({ text, bgc }: HeaderTextProps) => {
       <Container>
         <>
           <S.HeaderTextHeader>
-            <Fade bottom>
+            <Zoom>
               <p className="desc">{text}</p>
-            </Fade>
+            </Zoom>
           </S.HeaderTextHeader>
         </>
       </Container>

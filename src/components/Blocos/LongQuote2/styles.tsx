@@ -10,7 +10,6 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
   padding: 60px 0;
   max-width: 100%;
   margin: 0 auto;
-
   background-color: ${(props) => (props.bgc ? props.bgc : 'transparent')};
 
   ${media.lessThan('medium')`
@@ -20,25 +19,47 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
 
 export const HeaderTextHeader = styled.header`
   display: flex;
-  margin: 0 auto;
+  margin: 30px auto;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 30px;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  max-width: 900px;
-  color: #fff;
+  // text-align: center;
+  border-left: 3px solid #ffffff;
+  max-width: 750px;
+  background-color: #8cfc8e;
+  border-radius: 4px;
+  color: black;
+
+  ${media.lessThan('medium')`
+    padding-bottom: 15px;
+  `}
+
+  .title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-left: 60px;
+    font-style: italic;
+
+    ${media.lessThan('medium')`
+    font-size: 30px;
+      padding-left: 20px;
+  `};
+  }
 
   .desc {
-    padding: 30px 0;
-    font-size: 20px;
+    padding: 10px 60px 60px 60px;
+    font-size: 16px;
     font-weight: 500;
     max-width: 700px;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     font-style: italic;
+
+    ${media.lessThan('medium')`
+      padding: 0 20px;
+    `};
   }
 `
 

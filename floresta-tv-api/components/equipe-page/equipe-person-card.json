@@ -1,0 +1,40 @@
+{
+  "collectionName": "equipe-person",
+  "info": {
+    "name": "equipe-person-card",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "name": {
+      "type": "string"
+    },
+    "ocuppation": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "textcolor": {
+      "type": "string"
+    },
+    "backgroundcolor": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    }
+  }
+}

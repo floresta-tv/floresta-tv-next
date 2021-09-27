@@ -107,6 +107,14 @@ const Footer = ({ links }: FooterProps) => {
                   <Link href="/marco-ancestral">Marco ancestral</Link>
                 </S.GridListItem>
                 <S.GridListItem>
+                  <Link href="/o-ultimo-recurso">O último recurso</Link>
+                </S.GridListItem>
+                <S.GridListItem>
+                  <Link href="/marcha-mulheres-indigenas">
+                    Marcha das mulheres indígenas
+                  </Link>
+                </S.GridListItem>
+                <S.GridListItem>
                   <Link href="/equipe">{t('nossa-equipe')}</Link>
                 </S.GridListItem>
                 <S.GridListItem>

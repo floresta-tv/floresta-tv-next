@@ -1,5 +1,64 @@
 {
   "dia-da-amazonia": {
-
+    "bannerfull": {
+      "title": "<span> Dia da Amazônia </span>",
+      "desc": "<span>É urucum na bandeira!</span>"
+    },
+    "contagemprogress1": {
+      "title": "<span>Contagem Progressiva </span>",
+      "desc": "<span> Documentário longa-metragem sobre o crescimento da cultura originária a partir de registros independentes em colaboração com os próprios povos originários. </span>",
+      "caption": "<span>Contando desde 25 de Agosto de 2021</span>",
+      "dias": "Dias",
+      "horas": "Horas",
+      "minutos": "Minutos",
+      "segundos": "Segundos"
+    },
+    "videoblock1": {
+      "title": "A HISTÓRIA DE VERDADE, EM TEMPO REAL SOBRE O MARCO ANCESTRAL",
+      "desc": "Levantamento crescente da influência dos Povos Originários no mundo através da sabedoria ancestral que zela pela vida e meio ambiente.",
+      "caption": "Direto de Brasília um breve resumo dos conteúdos que viemos somando na realização da CONTAGEM PROGRESSIVA, um documentário longa-metragem que cresce com a participação e compartilhamento de cada um de vocês. Uma carta aberta acompanha esse filme e já passam 3900 assinaturas! [25ago-5set2021]"
+    },
+    "articleblock": {
+      "title": "<span>Dia da Amazônia</span>",
+      "subtitle": "<span>Brasília, 5 de Setembro de 2021 – 19:06</span>",
+      "text": "Hoje é uma data simbólica, nossa floresta agrega 9 estados da Amazônia legal, o estado mais preservado do Brasil. A importância da missão da Floresta TV e do Instituto Nawá é proteger o maior bioma do mundo. É a nossa luta constante contra o desmonte através das políticas destrutivas com um avanço de mais de 41% somente neste ano, assim, somos resistência com nossa soberania amazônica que é o maior berço da biodiversidade do mundo.",
+      "firstImageSubtitle": "Rafael de Quadros . 20 anos . Guarani Mbya | Imagens: Guilherme Meneghelli",
+      "lastImageSubtitle": "‘Eu’ é uma invenção de cada um de nós. Diante dos marcos da democracia os Povos Originários pedem respeito e definem limite. O Marco Ancestral foi demarcado com a presença de +6000 pessoas que compareceram no Distrito Federal para dizer #marcotemporalnão. — por Guilherme Meneghelli",
+      "leftText": "\"eu conheci vários guerreiros e várias guerreiras e cada um dava força, aquela vontade de lutar mais, foi me contagiando isso e agora eu fiquei.\"",
+      "rightText": "Hoje, apesar das lutas e resistência cuidamos da Amazônia e de todos nós, do nosso planeta. Existem segredos tão bem guardados de cura em nossas florestas que as maiores agências de inteligência do mundo estão de olho. É preciso entender os que nos mantém vivos, é preciso zelar pelo que nos faz respirar, é preciso salvar a floresta para nos libertar.",
+      "finalText": "Há dois dias da “Independência” precisamos entender a dependência histórica que temos da Amazônia para continuar nos compreendendo somo seres humanos que habitam um planeta doente. Há cura, há possibilidades que podem ser acessadas através da sustentabilidade e do capital espiritual para uma elevação de uma própria meta-política planetária."
+    },
+    "simpletext": {
+      "text": "A Floresta TV está produzindo um documentário em tempo real do que estamos presenciando em Brasília. Depois de muita troca de conhecimento e vivências entre nossa equipe e os Povos Originários. Estamos ocupando o Distrito Federal e apresentando possibilidades viáveis as autoridades responsáveis: Ministério do Meio Ambiente, Ministério da Mulher, da Família e dos Direitos Humanos, Câmara e Senado, nossas propostas são através de projetos socioambientais e de comunicação entre o Instituto Nawá e Floresta TV, capacitando e dialogando entre a cultura oral e digital com propostas reais e concretas pela preservação da vida, do meio ambiente, e das futuras gerações neste Planeta. A FLORESTA não depende de nós, mas nós dependemos da “FLORESTA AMAZÔNICA’’ como fonte direta da maior biodiversidade do mundo. A seguir, vocês acompanham um breve depoimento com o Rafael Quadros que acompanha as manifestações políticas indígenas desde julho no Brasil."
+    },
+    "simplequote": {
+      "quote": "Algumas pessoas voltaram para suas aldeias, mas eu fiquei porque eu senti no meu coração que eu tinha que ficar — Rafael Quadros. Guarani Mbya"
+    },
+    "urucum": {
+      "title": "É urucum na bandeira!"
+    },
+    "longquote": {
+      "title": "DECLARAÇÃO RAFAEL DE QUADROS (20 ANOS)",
+      "text": "Em julho tinha poucas pessoas, poucos indígenas, mas foi legal conhecer vários povos, várias etnias, em ver a cultura deles e compartilhar, tipo fazer uma troca de culturas e costumes. Nesse mês do Marco Temporal eu não esperava isso, mas o pessoal me chamou para vir, aí eu vim. Tinha muito indígena e no começo eu me assustei um pouco, eu não sabia como lidar com isso. Aí foram acontecendo várias coisas também, o calor, a mudança de temperatura, essas coisas foram me desanimando, mas depois eu conheci vários guerreiros e várias guerreiras e cada um dava força, aquela vontade de lutar mais, foi me contagiando isso e agora eu fiquei. Algumas pessoas voltaram para suas aldeias, mas eu fiquei porque eu senti no meu coração que eu tinha que ficar. Conheci vários amigos de outras etnias, e as línguas faladas são diversas, é interessante. Fico muito curioso e fico perguntando como é aquilo e eu conto como é na minha língua. Tudo isso sem acreditar de ter fé que vai dar tudo certo."
+    },
+    "buttons": {
+      "bt1text": "<< A Voz da Floresta",
+      "bt2text": "O Último Recurso >>"
+    },
+    "obra": {
+      "title": "Entre a vida e a devastação",
+      "text": "obra de Gabriela Guidetti é artista plástica e design de sustentabilidade. Também é comunicadora de várias comunidade e projetos ambientais."
+    },
+    "footer-links": {
+      "link1": "Dia da Amazônia",
+      "link2": "Contagem progressiva",
+      "link3": "A história da verdade",
+      "link4": "Dia da Amazônia",
+      "link5": "Povos",
+      "link6": "O Floresta.TV",
+      "link7": "É Urucum na bandeira!",
+      "link8": "Declaração Rafael Quadros",
+      "link9": "Entre a vida e a Devastação"
+    }
   }
 }

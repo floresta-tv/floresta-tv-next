@@ -1,10 +1,18 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const ProgressiveCountWrapper = styled.section`
+interface ProgressiveCountWrapper {
+  background?: string
+}
+
+export const ProgressiveCountWrapper = styled.section<ProgressiveCountWrapper>`
   min-height: 90vh;
-  background-image: url('/img/indigenas_em_brasilia_banner.png');
-  background-position: center bottom;
+  background-image: ${(props) =>
+    props.background
+      ? `url(${props.background})`
+      : `url(/img/indigenas_em_brasilia_banner.png)`};
+  background-position: ${(props) =>
+    props.background ? `center center` : `center bottom`};
   padding: 70px 0;
   background-attachment: fixed;
 `

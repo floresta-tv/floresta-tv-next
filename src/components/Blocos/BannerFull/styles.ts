@@ -118,12 +118,13 @@ export const BannerFullContent = styled.div<BannerFullContent>`
         props.width === 'large' &&
         `
         margin: 0 auto;
-       max-width: 560px;
-    `}
+        max-width: 560px;
+        `}
 
       ${(props) =>
         props.width === 'extralarge' &&
         `
+        margin: 0 auto;
         max-width: 700px;
     `}
 
@@ -135,7 +136,12 @@ export const BannerFullContent = styled.div<BannerFullContent>`
 
   .links {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
+
+    div {
+      margin-bottom: 10px;
+    }
   }
 `
 

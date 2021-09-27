@@ -5,9 +5,6 @@
       "desc": "<span>25ago-3set2021</span>",
       "subtitle": "<span>‘Eu’ é uma invenção de cada um de nós. Diante dos marcos da democracia os Povos Originários pedem respeito e definem limite. O Marco Ancestral foi demarcado com a presença de +6000 pessoas que compareceram no Distrito Federal para dizer #marcotemporalnão.</span>"
     },
-    "footer-links": {
-      "link1": "Marco ancestral"
-    },
     "contagemprogress1": {
       "title": "<span>Contagem Progressiva </span>",
       "desc": "<span> Documentário longa-metragem sobre o crescimento da cultura originária a partir de registros independentes em colaboração com os próprios povos originários. </span>",
@@ -27,6 +24,12 @@
       "subtitle": "<span>Milhares seguem aqui, seguimos aqui, não existe outro e existe ancestralidade. Alto capital espiritual orientando os rumos da prosperidade a partir de sua ação histórica preservacionista.</span>",
       "firstImageSubtitle": "@kajequadros",
       "body": "<p>Hoje, a Luta pela Vida é um grito de meditação ativa diante do risco iminente à vida de todos. Os Povos Originários estão ameaçados por políticas que refletem uma forte pressão da bancada dos 300 [ruralistas] no Congresso Nacional, mas nossa resposta é na presença.<br/><br/>Com um plano de 200 anos de independência, que se cumpre em 2022, seguimos em alta dedicação à preservação da vida em visão meta-política, além da esquerda e da direita está a espiritualidade que observa às mesas da democracia em todas as dimensões construindo um caminho de paz em todas as direções.</p>"
+    },
+    "footer-links": {
+      "link1": "Marco Ancestral",
+      "link2": "3 de setembro de 2021",
+      "link3": "Contagem progressiva",
+      "link4": "Documentário em tempo real"
     }
   }
 }
