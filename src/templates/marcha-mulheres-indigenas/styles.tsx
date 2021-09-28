@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   background-color: #e8ffe6;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  background-color: #ffe9e9;
 
   .react-reveal {
     z-index: 100;

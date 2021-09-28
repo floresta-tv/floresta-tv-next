@@ -79,6 +79,7 @@ const DiaDaAmazonia = () => {
               seconds: t.raw('contagemprogress1.segundos'),
               minutes: t.raw('contagemprogress1.minutos')
             }}
+            background={`/img/indigena_protestos_brasilia.jpg`}
             title={
               <span
                 dangerouslySetInnerHTML={{

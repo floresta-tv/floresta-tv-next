@@ -14,7 +14,7 @@ export const HeaderTextWrapper = styled.section<HeaderTextWrapperProps>`
   background-color: ${(props) => (props.bgc ? props.bgc : 'transparent')};
 
   ${media.lessThan('medium')`
-    padding-top: 0;
+    padding: 30px 0 10px 0;
   `}
 `
 

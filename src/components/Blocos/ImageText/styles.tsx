@@ -46,6 +46,7 @@ export const ImageTextHeader = styled.header<ImageTextHeaderProps>`
     ${media.lessThan('medium')`
       font-size: 32px;
       padding-top: 0;
+      text-align: center;
     `};
   }
 

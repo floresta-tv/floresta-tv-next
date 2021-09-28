@@ -1,39 +1,39 @@
 {
   "marco-ancestral": {
     "bannerfull": {
-      "title": "<span> Marco Ancestral </span>",
+      "title": "<span> Cadre ancestral </span>",
       "desc": "<span>25ago-3set2021</span>",
-      "subtitle": "<span>‘Eu’ é uma invenção de cada um de nós. Diante dos marcos da democracia os Povos Originários pedem respeito e definem limite. O Marco Ancestral foi demarcado com a presença de +6000 pessoas que compareceram no Distrito Federal para dizer #marcotemporalnão.</span>"
+      "subtitle": "<span>'I' est une invention de chacun de nous.Face aux jalons de la démocratie, les peuples d'origine sont concernés et définissent la limite.Le monument ancestral a été délimité avec la présence de +6 000 personnes qui ont assisté au district fédéral pour dire # marcotemporalnão.</span>"
     },
     "contagemprogress1": {
-      "title": "<span>Contagem Progressiva </span>",
-      "desc": "<span> Documentário longa-metragem sobre o crescimento da cultura originária a partir de registros independentes em colaboração com os próprios povos originários. </span>",
-      "caption": "<span>Contando desde 25 de Agosto de 2021</span>",
+      "title": "<span>Compte progressiste </span>",
+      "desc": "<span> Documentaire de longue date sur la croissance de la culture provenant d'archives indépendantes en collaboration avec les personnes originales elles-mêmes. </span>",
+      "caption": "<span>Compter depuis le 25 août 2021</span>",
       "dias": "Dias",
-      "horas": "Horas",
-      "minutos": "Minutos",
-      "segundos": "Segundos"
+      "horas": "Heures",
+      "minutos": "Minutes",
+      "segundos": "Secondes"
     },
     "videoblock1": {
-      "title": "DOCUMENTÁRIO EM TEMPO REAL SOBRE O MARCO ANCESTRAL",
-      "desc": "Levantamento crescente da influência dos Povos Originários no mundo através da sabedoria ancestral que zela pela vida e meio ambiente.",
-      "caption": "Direto de Brasília um breve resumo dos conteúdos que viemos somando na realização da CONTAGEM PROGRESSIVA, um documentário longa-metragem que cresce com a participação e compartilhamento de cada um de vocês. Uma carta aberta acompanha esse filme e já passam 1300 assinaturas! [25-31ago2021]"
+      "title": "Documentaire en temps réel sur le monument ancestral",
+      "desc": "Enquête croissante de l'influence des personnes originaires du monde par la sagesse ancestrale qui zapne pour la vie et l'environnement.",
+      "caption": "Direct de Brasilia Un bref résumé du contenu que nous avons entré dans la réalisation du nombre progressiste, un documentaire de longue durée qui pousse avec la participation et le partage de chacun de vous.Une lettre ouverte accompagne ce film et passez déjà 1300 signatures![25-31ago2021]"
     },
     "articlepreview1": {
       "title": "<span>3 de setembro de 2021</span>",
-      "subtitle": "<span>Milhares seguem aqui, seguimos aqui, não existe outro e existe ancestralidade. Alto capital espiritual orientando os rumos da prosperidade a partir de sua ação histórica preservacionista.</span>",
+      "subtitle": "<span>Des milliers de personnes suivent ici, nous suivons ici, il n'y a pas d'autre et il y a des ascendances.Haute capitale spirituelle en guidant le cours de prospérité de son action historique préservationiste.</span>",
       "firstImageSubtitle": "@kajequadros",
-      "body": "<p>Hoje, a Luta pela Vida é um grito de meditação ativa diante do risco iminente à vida de todos. Os Povos Originários estão ameaçados por políticas que refletem uma forte pressão da bancada dos 300 [ruralistas] no Congresso Nacional, mas nossa resposta é na presença.<br/><br/>Com um plano de 200 anos de independência, que se cumpre em 2022, seguimos em alta dedicação à preservação da vida em visão meta-política, além da esquerda e da direita está a espiritualidade que observa às mesas da democracia em todas as dimensões construindo um caminho de paz em todas as direções.</p>"
+      "body": "<p>Aujourd'hui, la lutte pour la vie est un cri de méditation active devant le risque imminent pour la vie de chacun.Les peuples originaires sont menacés par des politiques qui reflètent une forte pression du Banc de 300 [ruraliste] au Congrès national, mais notre réponse est en présence. <br/> <br/> avec un plan de 200 ans, qui EST EN 2022, nous continuons dans une grande dévouement à la préservation de la vie dans la vision méta-politique, au-delà de la gauche et à droite est la spiritualité qui observe les tables de la démocratie dans toutes les dimensions construisant une voie de la paix dans toutes les directions.</p>"
     },
     "footer-links": {
-      "link1": "Marco Ancestral",
-      "link2": "3 de setembro de 2021",
-      "link3": "Contagem progressiva",
-      "link4": "Documentário em tempo real"
+      "link1": "Cadre ancestral",
+      "link2": "3 septembre2021",
+      "link3": "Compte progressiste",
+      "link4": "Documentaire en temps réel"
     },
     "buttons": {
-      "bt1text": "<< A Voz da Floresta",
-      "bt2text": "Dia da Amazônia >>"
+      "bt1text": "<<forêt",
+      "bt2text": "Jour de l'Amazonie >>"
     }
   }
 }

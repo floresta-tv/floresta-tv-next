@@ -1,39 +1,38 @@
 {
   "marco-ancestral": {
-    "bannerfull": {
-      "title": "<span> Marco Ancestral </span>",
+    "bannerfull": {"title": "<span>Marco Ancestral </span>",
       "desc": "<span>25ago-3set2021</span>",
-      "subtitle": "<span>‘Eu’ é uma invenção de cada um de nós. Diante dos marcos da democracia os Povos Originários pedem respeito e definem limite. O Marco Ancestral foi demarcado com a presença de +6000 pessoas que compareceram no Distrito Federal para dizer #marcotemporalnão.</span>"
+      "subtitle": "<span>'I' is an invention of each of us.Faced with democracy milestones, the original peoples are concerned and define limit.The ancestral landmark was demarcated with the presence of +6000 people who attended the Federal District to say # marcotemporalnão.</span>"
     },
     "contagemprogress1": {
-      "title": "<span>Contagem Progressiva </span>",
-      "desc": "<span> Documentário longa-metragem sobre o crescimento da cultura originária a partir de registros independentes em colaboração com os próprios povos originários. </span>",
-      "caption": "<span>Contando desde 25 de Agosto de 2021</span>",
-      "dias": "Dias",
-      "horas": "Horas",
-      "minutos": "Minutos",
-      "segundos": "Segundos"
+      "title": "<span>Progressive count</span>",
+      "desc": "<span>Long-footage documentary on the growth of culture originating from independent records in collaboration with the original people themselves.</span>",
+      "caption": "<span>Counting from August 25, 2021</span>",
+      "dias": "Days",
+      "horas": "Hours",
+      "minutos": "Minutes",
+      "segundos": "Seconds"
     },
     "videoblock1": {
-      "title": "DOCUMENTÁRIO EM TEMPO REAL SOBRE O MARCO ANCESTRAL",
-      "desc": "Levantamento crescente da influência dos Povos Originários no mundo através da sabedoria ancestral que zela pela vida e meio ambiente.",
-      "caption": "Direto de Brasília um breve resumo dos conteúdos que viemos somando na realização da CONTAGEM PROGRESSIVA, um documentário longa-metragem que cresce com a participação e compartilhamento de cada um de vocês. Uma carta aberta acompanha esse filme e já passam 1300 assinaturas! [25-31ago2021]"
+      "title": "Real-time documentary on the ancestral landmark",
+      "desc": "Growing survey of the influence of people originating in the world through ancestral wisdom that zaps for life and environment.",
+      "caption": "Direct from Brasilia a brief summary of the contents that we came in in carrying out the progressive count, a long-footage documentary that grows with the participation and sharing of each of you.An open letter accompanies this movie and already pass 1300 signatures![25-31ago2021]"
     },
     "articlepreview1": {
-      "title": "<span>3 de setembro de 2021</span>",
-      "subtitle": "<span>Milhares seguem aqui, seguimos aqui, não existe outro e existe ancestralidade. Alto capital espiritual orientando os rumos da prosperidade a partir de sua ação histórica preservacionista.</span>",
+      "title": "<span>September 3, 2021</span>",
+      "subtitle": "<span>Thousands follow here, we follow here, there is no other and there is ancestry.High Spiritual Capital by guiding the course of prosperity from its preservationist historical action.</span>",
       "firstImageSubtitle": "@kajequadros",
-      "body": "<p>Hoje, a Luta pela Vida é um grito de meditação ativa diante do risco iminente à vida de todos. Os Povos Originários estão ameaçados por políticas que refletem uma forte pressão da bancada dos 300 [ruralistas] no Congresso Nacional, mas nossa resposta é na presença.<br/><br/>Com um plano de 200 anos de independência, que se cumpre em 2022, seguimos em alta dedicação à preservação da vida em visão meta-política, além da esquerda e da direita está a espiritualidade que observa às mesas da democracia em todas as dimensões construindo um caminho de paz em todas as direções.</p>"
+      "body": "<p>Today, the struggle for life is a cry of active meditation before the impending risk to everyone's life.The originating peoples are threatened by policies that reflect a strong pressure from the 300 [ruralist] Bench in the National Congress, but our response is in the presence. <br/> <br/> With a 200-year-old plan, which isIn 2022, we continue in high dedication to the preservation of life in meta-political vision, beyond left and right is the spirituality that observes the tables of democracy in all dimensions building a path of peace in all directions.</p>"
     },
     "footer-links": {
-      "link1": "Marco Ancestral",
-      "link2": "3 de setembro de 2021",
-      "link3": "Contagem progressiva",
-      "link4": "Documentário em tempo real"
+      "link1": "Ancestral framework",
+      "link2": "September 3, 2021",
+      "link3": "Progressive count",
+      "link4": "Real-time documentary"
     },
     "buttons": {
-      "bt1text": "<< A Voz da Floresta",
-      "bt2text": "Dia da Amazônia >>"
+      "bt1text": "<<Forest",
+      "bt2text": "Day of the Amazon >>"
     }
   }
 }
