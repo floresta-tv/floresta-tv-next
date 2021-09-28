@@ -273,8 +273,8 @@ const MarchaMulheresIndigenas = () => {
             }
             bt1Color="#ff6666"
             bt2Color="#00ff05"
-            bt1Link="/voz-da-floresta"
-            bt2Link="/"
+            bt1Link="/"
+            bt2Link="/o-ultimo-recurso"
             bgc="#017300"
           />
         </Element>
