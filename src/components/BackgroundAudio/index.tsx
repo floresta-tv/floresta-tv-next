@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import usePersistedState from '../../utils/usePersistedState'
 import { Sound, SoundMute } from '@styled-icons/entypo'
 
@@ -9,25 +9,38 @@ const BackgroundAudio = () => {
   const [audioInstance, setAudioInstance] = useState<HTMLAudioElement>()
   const audioUrl = '/audio/florest.mp3'
 
+  const playAudio = useCallback(() => {
+    setPlay(true)
+    audioInstance.play()
+  }, [audioInstance, setPlay])
+
+  const pauseAudio = () => {
+    setPlay(false)
+    audioInstance.pause()
+  }
+
   useEffect(() => {
     setAudioInstance(new Audio(audioUrl))
   }, [])
+
+  useEffect(() => {
+    if (audioInstance) {
+      audioInstance.addEventListener(
+        'ended',
+        function () {
+          audioInstance.currentTime = 0
+          playAudio()
+        },
+        false
+      )
+    }
+  }, [audioInstance, playAudio])
 
   useEffect(() => {
     if (audioInstance && play) {
       audioInstance.play()
     }
   }, [play, audioInstance])
-
-  const playAudio = () => {
-    setPlay(true)
-    audioInstance.play()
-  }
-
-  const pauseAudio = () => {
-    setPlay(false)
-    audioInstance.pause()
-  }
 
   return (
     <div>
