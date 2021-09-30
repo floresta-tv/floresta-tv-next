@@ -7,7 +7,7 @@ export const BackgroundAudioButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: #fff;
+  background-color: #fff;
   width: 45px;
   height: 37px;
   padding: 5px;
