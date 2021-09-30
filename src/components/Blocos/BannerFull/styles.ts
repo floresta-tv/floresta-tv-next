@@ -23,7 +23,7 @@ export const BannerFullItemBackground = styled.div<BannerFullItemBackgroundProps
 export const BannerFullWrapper = styled.section`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: auto;
   background-position: 40% bottom;
 
   .slick-dots {
@@ -56,10 +56,13 @@ export const BannerFullCarousel = styled.div`
 export const BannerFullItem = styled.div`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  display: flex !important;
+  align-items: center;
+  min-height: 100vh;
 
   @media screen and (max-width: 768px) {
     background-position: 40%;
+    padding: 150px 0 100px 0;
   }
 `
 interface BannerFullContent {
