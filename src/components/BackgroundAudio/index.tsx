@@ -9,7 +9,7 @@ const AudioPlayer = () => {
   // State
   const [trackIndex, setTrackIndex] = useState(0)
   const [trackProgress, setTrackProgress] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
 
   // Destructure for conciseness
@@ -87,8 +87,7 @@ const AudioPlayer = () => {
     } else {
       audioRef.current.pause()
     }
-
-    screen.width < 768 ? setIsVisible(false) : setIsVisible(false)
+    screen.width < 768 ? setIsVisible(false) : setIsVisible(true)
   }, [])
 
   useEffect(() => {
@@ -123,6 +122,10 @@ const AudioPlayer = () => {
       audioRef.current.pause()
       clearInterval(intervalRef.current)
     }
+  }, [])
+
+  useEffect(() => {
+    audioRef.current.play()
   }, [])
 
   return (
