@@ -22,8 +22,9 @@ const BackgroundAudio = () => {
   }
 
   useEffect(() => {
-    setAudioInstance(new Audio(audioUrl))
-    setIos(
+    const audioInstance = new Audio(audioUrl)
+    setAudioInstance(audioInstance)
+    const isIos =
       [
         'iPad Simulator',
         'iPhone Simulator',
@@ -32,10 +33,17 @@ const BackgroundAudio = () => {
         'iPhone',
         'iPod'
       ].includes(navigator.platform) ||
-        // iPad on iOS 13 detection
-        (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
-    )
+      // iPad on iOS 13 detection
+      (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
   }, [])
+
+  useEffect(() => {
+    if (ios && play) {
+      window.addEventListener('scroll', function () {
+        audioInstance.play()
+      })
+    }
+  }, [audioInstance, play, ios])
 
   useEffect(() => {
     if (audioInstance && play) {
