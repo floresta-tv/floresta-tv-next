@@ -4,6 +4,7 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import Navbar from '../components/Navbar'
 import { NextIntlProvider } from 'next-intl'
+import BackgroundAudio from '../components/BackgroundAudio'
 
 import 'nprogress/nprogress.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -61,6 +62,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
         </Head>
         <GlobalStyles />
         <Navbar />
+        <BackgroundAudio />
         <main>
           <Component {...pageProps} key={router.route} />
         </main>
