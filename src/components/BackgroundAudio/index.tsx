@@ -6,7 +6,8 @@ import { MusicNote2Play } from '@styled-icons/fluentui-system-filled'
 import * as S from './styles'
 
 const BackgroundAudio = () => {
-  const [play, setPlay] = usePersistedState('audioBackground', true)
+  const [ios, setIos] = useState<boolean>(false)
+  const [play, setPlay] = usePersistedState<boolean>('audioBackground', true)
   const [audioInstance, setAudioInstance] = useState<HTMLAudioElement>()
   const audioUrl = '/audio/florest.mp3'
 
@@ -22,6 +23,18 @@ const BackgroundAudio = () => {
 
   useEffect(() => {
     setAudioInstance(new Audio(audioUrl))
+    setIos(
+      [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ].includes(navigator.platform) ||
+        // iPad on iOS 13 detection
+        (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+    )
   }, [])
 
   useEffect(() => {
