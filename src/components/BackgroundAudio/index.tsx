@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import usePersistedState from '../../utils/usePersistedState'
-import { Sound, SoundMute } from '@styled-icons/entypo'
+import { SoundMute } from '@styled-icons/entypo'
+import { MusicNote2Play } from '@styled-icons/fluentui-system-filled'
 
 import * as S from './styles'
 
@@ -47,7 +48,7 @@ const BackgroundAudio = () => {
       <S.BackgroundAudioButton
         onClick={() => (play === true ? pauseAudio() : playAudio())}
       >
-        {play ? <SoundMute size={25} /> : <Sound size={25} />}
+        {play ? <SoundMute size={25} /> : <MusicNote2Play size={25} />}
       </S.BackgroundAudioButton>
     </div>
   )
