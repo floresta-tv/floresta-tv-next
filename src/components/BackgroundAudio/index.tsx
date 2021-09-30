@@ -24,7 +24,7 @@ const BackgroundAudio = () => {
   }, [])
 
   useEffect(() => {
-    if (audioInstance) {
+    if (audioInstance && play) {
       audioInstance.addEventListener(
         'ended',
         function () {
@@ -34,13 +34,13 @@ const BackgroundAudio = () => {
         false
       )
     }
-  }, [audioInstance, playAudio])
+  }, [audioInstance, playAudio, play])
 
   useEffect(() => {
     if (audioInstance && play) {
       audioInstance.play()
     }
-  }, [play, audioInstance])
+  }, [audioInstance, play])
 
   return (
     <div>
