@@ -9,13 +9,13 @@ export default [
   {
     title: 'Mãos Calejadas',
     artist: 'Giulianne',
-    audioSrc: '/audio/22abril.mp3',
+    audioSrc: '/audio/maoscalejadas.mp3',
     color: '#00aeb0'
   },
   {
     title: '22 de Abril',
     artist: 'Txanã Ixã ft. Bitibetano',
-    audioSrc: '/audio/maoscalejadas.mp3',
+    audioSrc: '/audio/22abril.mp3',
     color: '#00aeb0'
   }
 ]
