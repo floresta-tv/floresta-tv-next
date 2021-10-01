@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   position: relative;
-  background-color: #fff;
+  background-color: #fffde8;
   min-height: 100vh;
   overflow: hidden;
 
@@ -83,19 +83,48 @@ interface ProjetoIcon {
   bgc: string
 }
 
+interface ProjetoCaption {
+  bgc: string
+}
+
+export const ProjetoWrapper = styled.article`
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 30px;
+`
+
+export const ProjetoCaption = styled.div<ProjetoCaption>`
+  font-size: 20px;
+  padding: 30px;
+  width: 80%;
+  background-color: ${(props) => props.bgc};
+  border-radius: 0 30px 30px 0;
+  color: black;
+
+  h2 {
+    font-size: 32px;
+    opacity: 0.9;
+    font-weight: bold;
+    color: black;
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 650px;
+  }
+`
+
 export const ProjetoIcon = styled.button<ProjetoIcon>`
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 40px 0;
-  border-radius: 20px;
+  position: relative;
+  width: 30%;
+  padding: 10px 0;
+  border-radius: 30px 0 0 30px;
   background-color: ${(props) => props.bgc};
   transition: transform 0.4s ease-in-out;
-  margin: 0 auto;
   border: none;
-  margin-bottom: 30px;
 
   &:hover {
     transform: scale(1.05);
@@ -103,8 +132,8 @@ export const ProjetoIcon = styled.button<ProjetoIcon>`
 
   div,
   img {
-    width: 70%;
-    height: 70%;
+    width: 84%;
+    height: 84%;
     object-fit: contain;
     object-position: center center;
   }

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Element } from 'react-scroll'
+import Head from 'next/head'
 
 import BannerFull from 'components/Blocos/BannerFull'
 import ContactButton from 'components/ContactButton'
@@ -20,6 +21,9 @@ const MarcoAncestral = () => {
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
       <S.Wrapper>
+        <Head>
+          <title>Marco Ancestral | Floresta.TV</title>
+        </Head>
         <Element name="home">
           <BannerFull
             items={[

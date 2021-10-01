@@ -1,6 +1,7 @@
 import { Button } from '../../components/UI'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Element, Link as ScrollLink } from 'react-scroll'
 import { useTranslations } from 'next-intl'
 
@@ -312,6 +313,9 @@ const Equipe = () => {
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
       <S.Wrapper>
+        <Head>
+          <title>Equipe | Floresta.TV</title>
+        </Head>
         <Element name="home">
           <BannerFull
             items={[

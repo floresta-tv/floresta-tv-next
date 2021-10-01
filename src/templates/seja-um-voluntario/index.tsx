@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { motion } from 'framer-motion'
 import { Element } from 'react-scroll'
 import { useTranslations } from 'next-intl'
@@ -21,6 +22,9 @@ const SejaUmVoluntario = () => {
   return (
     <motion.div key={6} {...animations.wrapper}>
       <S.Wrapper>
+        <Head>
+          <title>Seja um voluntário | Floresta.TV</title>
+        </Head>
         <Element name="home">
           <BannerFull
             items={[

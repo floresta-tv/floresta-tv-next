@@ -51,6 +51,7 @@ const BannerFull = ({ items }: BannerFullProps) => {
         autoplaySpeed={5000}
         cssEase={'linear'}
         arrows={false}
+        touchMove={false}
         adaptiveHeight={true}
         ref={slickRef}
       >

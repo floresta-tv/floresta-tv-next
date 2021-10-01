@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useTranslations } from 'use-intl'
 import { Element, Link as ScrollLink } from 'react-scroll'
 import Link from 'next/link'
+import Head from 'next/head'
 
 import { Button } from 'components/UI'
 import BannerFull from 'components/Blocos/BannerFull'
@@ -19,6 +20,9 @@ const OUltimoRecurso = () => {
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
       <S.Wrapper>
+        <Head>
+          <title>O Último Recurso | Floresta.TV</title>
+        </Head>
         <Element name="home">
           <BannerFull
             items={[

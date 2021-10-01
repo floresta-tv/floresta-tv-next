@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Element, Link as ScrollLink } from 'react-scroll'
+import Head from 'next/head'
 import Link from 'next/link'
 
 import BannerFull from 'components/Blocos/BannerFull'
@@ -26,6 +27,9 @@ const DiaDaAmazonia = () => {
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
       <S.Wrapper>
+        <Head>
+          <title>Dia da Amazônia | Floresta.TV</title>
+        </Head>
         <Element name="home">
           <BannerFull
             items={[

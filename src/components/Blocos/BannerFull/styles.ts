@@ -26,6 +26,13 @@ export const BannerFullWrapper = styled.section`
   min-height: auto;
   background-position: 40% bottom;
 
+  .slick-slider {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
   .slick-dots {
     transform: translateY(-45px);
 

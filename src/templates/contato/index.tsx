@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { Element } from 'react-scroll'
 import { useTranslations } from 'next-intl'
+import Head from 'next/head'
+
 import {
   Medium as MediumIcon,
   Instagram as InstagramIcon,
@@ -20,6 +22,9 @@ const Contato = () => {
   return (
     <motion.div key={6} {...animations.wrapper}>
       <S.Wrapper>
+        <Head>
+          <title>Contato | Floresta.TV</title>
+        </Head>
         <Element name="home">
           <BannerFull
             items={[
