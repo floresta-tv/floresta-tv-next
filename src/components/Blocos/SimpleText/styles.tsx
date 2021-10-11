@@ -8,7 +8,7 @@ export const HeaderTextWrapper = styled.section`
   margin: 0 auto;
 
   ${media.lessThan('medium')`
-    padding-top: 0;
+    padding-top: 45px;
   `}
 `
 
