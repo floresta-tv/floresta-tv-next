@@ -1,4 +1,3 @@
-// All of these artists are at https://pixabay.com/music/search/mood/laid%20back/
 export default [
   {
     title: '3 Lutas',

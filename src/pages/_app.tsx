@@ -1,10 +1,11 @@
 import NextApp, { AppProps, AppContext } from 'next/app'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import Navbar from '../components/Navbar'
 import { NextIntlProvider } from 'next-intl'
-import BackgroundAudio from '../components/BackgroundAudio'
+const BackgroundAudio = dynamic(() => import('../components/BackgroundAudio'))
 
 import 'nprogress/nprogress.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
