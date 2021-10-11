@@ -62,7 +62,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
         </Head>
         <GlobalStyles />
         <Navbar />
-        {/* <BackgroundAudio /> */}
+        <BackgroundAudio />
         <main>
           <Component {...pageProps} key={router.route} />
         </main>

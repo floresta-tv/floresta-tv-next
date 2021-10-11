@@ -145,6 +145,7 @@ const MarcoAncestral = () => {
                 }}
               ></span>
             }
+            background={`/img/protestos_indigenas_ensolarado.jpg`}
           />
         </Element>
 

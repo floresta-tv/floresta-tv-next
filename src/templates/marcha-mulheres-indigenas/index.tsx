@@ -14,10 +14,12 @@ import ProgressiveCount from 'components/Blocos/ProgressiveCount'
 import ArticleBlock from 'components/Blocos/ArticleBlock'
 import ImageFullWidth from 'components/Blocos/ImageFullWidth'
 import SimpleText from 'components/Blocos/SimpleText'
+import VideoBlock from 'components/Blocos/VideoBlock'
 import ImageText from 'components/Blocos/ImageText'
 import LongQuote from 'components/Blocos/LongQuote2'
 import DoubleButton from 'components/Blocos/DoubleButton'
 import { Container } from 'components/UI'
+import { Row } from 'react-bootstrap'
 
 const MarchaMulheresIndigenas = () => {
   const t = useTranslations('marcha-mulheres-indigenas')
@@ -102,6 +104,22 @@ const MarchaMulheresIndigenas = () => {
                 }}
               ></span>
             }
+          />
+        </Element>
+
+        <Element name="documentario-em-tempo-real">
+          <VideoBlock
+            title={
+              <span
+                style={{ textTransform: 'uppercase' }}
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('videoblock1.title')
+                }}
+              ></span>
+            }
+            desc={t.raw('videoblock1.desc')}
+            caption={t.raw('videoblock1.caption')}
+            videoId={`Q_yIh9lwIWc`}
           />
         </Element>
 
