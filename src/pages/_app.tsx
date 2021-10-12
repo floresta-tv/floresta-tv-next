@@ -63,7 +63,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
         </Head>
         <GlobalStyles />
         <Navbar />
-        <RadioMusic />
+        {/* <RadioMusic /> */}
         <main>
           <Component {...pageProps} key={router.route} />
         </main>
