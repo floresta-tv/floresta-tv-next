@@ -5,7 +5,6 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import Navbar from '../components/Navbar'
 import { NextIntlProvider } from 'next-intl'
-const RadioMusic = dynamic(() => import('../components/RadioMusic'))
 
 import 'nprogress/nprogress.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
