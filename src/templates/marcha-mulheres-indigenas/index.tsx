@@ -19,7 +19,6 @@ import ImageText from 'components/Blocos/ImageText'
 import LongQuote from 'components/Blocos/LongQuote2'
 import DoubleButton from 'components/Blocos/DoubleButton'
 import { Container } from 'components/UI'
-import { Row } from 'react-bootstrap'
 
 const MarchaMulheresIndigenas = () => {
   const t = useTranslations('marcha-mulheres-indigenas')
