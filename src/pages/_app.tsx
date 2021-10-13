@@ -1,5 +1,4 @@
 import NextApp, { AppProps, AppContext } from 'next/app'
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
