@@ -1,5 +1,93 @@
 {
   "o-ultimo-recurso": {
-
+    "bannerfull": {
+      "title": "<span> O Último Recurso </span>",
+      "desc": "<span><b>7 de Setembro de 2021:</b> manifestações de apoio ao presidente Jair Bolsonaro no dia da Independência do Brasil. No discurso o ultimato e a ruptura com o Supremo Tribunal Federal atacando Alexandre de Moraes.</span>"
+    },
+    "titletext": {
+      "title": "Reunimos argumentos constitucionais para construirmos filmes pautados na verdade",
+      "text": "A fala na íntegra de Fernando Andrade, manifestante do 7 de Setembro, vemos claras contradições entre suas falas e as premissas constitucionais citadas. Há uma ordem para defesa da Constituição onde o Executivo, o qual Jair representa, está abaixo do Supremo. Ler a Constituição é fundamental."
+    },
+    "backgroundtext": {
+      "title": "A gota d'água",
+      "subtitle": "Símbolos semióticos de estado fascista: um Impeachment a caminho",
+      "text": "Com o Senado 'fechado para balanço', as ruínas do executivo são deflagradas com matérias que comprovam o envolvimento de dinheiro público nas manifestações. Temos depoimentos de manifestantes que contam sobre o uso de dinheiro público para transporte, gente que atravessou o país vindo do Mato do Grosso para aparecer nas fotos volumosas da manhã de 7 de Setembro. Estivemos à tarde lá e um mínimo de manifestantes que somavam pouco mais de 3.000 pessoas relatavam, ao hálito de cervejas populares, o esvaziamento e simulacro da política.<br><br> Assim como o depoimento apresentado no filme, temos muitos outros que atestam o discurso falacioso em unidade formada com dinheiro desviado de forma ilícita e também financiados pelo agronegócio estampado nas bandeiras impressas e fardas patrocinadas."
+    },
+    "videoblock1": {
+      "title": "DOCUMENTÁRIO EM TEMPO REAL",
+      "desc": "A profunda crise da política brasileira ganhou palco na Avenida Paulista e alcançou um dos maiores espaços do mundo em um discurso que atacou Instituições como o Supremo Tribunal Federal e Alexandre de Moraes. O calabouço é tanto que os manifestantes, longe de partilhar saberes e culturas, partilham a queda do STF e a campanha da volta do voto impresso. Muitos manifestantes ainda confessam que a política brasileira não está fazendo realmente nada.",
+      "caption": "Contagem Progressiva [Contraponto] — O Último Recurso do Presidente"
+    },
+    "longquote": {
+      "title": "Alessandro Vieira (Cidadania-SE) - senador e líder do Cidadania no Senado",
+      "text": "A lei 1079 define os crimes de responsabilidade do Presidente da República. No seu art 4º, VIII, fala exatamente do não cumprimento de decisões judiciais. A pena é perda do cargo (impeachment) e dos direitos políticos por até 5 anos."
+    },
+    "simplearcticle": {
+      "title": "Arroz com Fuzil",
+      "text": "\"Aí tem um idiota: ‘Ah, tem que comprar é feijão’. Cara, se você não quer comprar fuzil, não enche o saco de quem quer comprar... — fala de Jair Messias Bolsonaro OMM no dia 26 de Agosto de 2021 direto do 'cercadinho' como é chamado pela imprensa seu local de propagação de informação às mídias de sua base.",
+      "firstcapt": "A estética da instalação automobilística \"1000ª DP\" atrai famílias para fotos históricas de valores ultrapassados. Foto: Guilherme Meneghelli",
+      "secondcapt": "Símbolo forte da cultura dos manifestantes, os caminhões ornamentados com mensagem em favor do frágil presidente trouxeram reflexões psicanalíticas à estudiosos de diversas partes do Brasil. Foto: Hugo Takemoto"
+    },
+    "longquote2": {
+      "title": "",
+      "text": "Bolsonaro afirma que não irá cumprir as decisões do STF e pede a saída de Alexandre de Moraes.<br><br>Em nota, o Supremo informou que se manifestará sobre as falas de Bolsonaro nesta quarta-feira (8), por meio de seu presidente, ministro Luiz Fux, no início da sessão da Corte."
+    },
+    "longquote3": {
+      "title": "Carlos Ayres de Britto - ministro aposentado e ex-presidente do STF",
+      "text": "Em nenhum dispositivo da Constituição, o presidente da República enquadra membro do poder Judiciário, menos ainda ministro do Supremo e o Supremo como um todo. Os ministros do Supremo e o Supremo como um todo é que podem enquadrar membros do poder Executivo, isso está na Constituição."
+    },
+    "longquote4": {
+      "title": "Associação Nacional dos Magistrados da Justiça do Trabalho (Anamatra)",
+      "text": "As decisões judiciais devem ser cumpridas e que constitui crime de responsabilidade de um mandatário incitar o seu descumprimento, fazendo referência expressa ao Supremo Tribunal Federal."
+    },
+    "sqwb": {
+      "buttontext": "Clique e leia a CONSTITUIÇÃO DA REPÚBLICA FEDERATIVA DO BRASIL DE 1988",
+      "text": "Quase como um conto que não conta nada, a manifestação do governo bolsonarista entrega água vestida de morte e ilusão saindo das fumaças dos caminhões. Talvez fosse um momento histórico para pessoas que vieram de longe, de tão longe quanto a capacidade carregar a camiseta escrita “SUPREMO É O POVO”. Mensagens de ataque direto ao STF eram estampadas em varais espalhados por todos os cantos na Esplanada dos Ministérios.",
+      "quotted": "Flora Dutra"
+    },
+    "iarticle": {
+      "title": "Lendo Mentes",
+      "text": "No dia 7 de setembro de 2021 VEJA o que PENSAM os manifestantes que ocuparam a Esplanada dos Ministérios.",
+      "ficapt": "Estas são imagens transmitidas ao vivo no Instagram de Guilherme Meneghelli.",
+      "sicapt": "A incitação à violência nos cartazes, gestos e opressão a qualquer um de 'fora' ou 'alternativo' como fomos tratados e saímos escoltados pela polícia. <a href=\"https://www.instagram.com/tv/CTh_i4Bp8-2/\">Link da Live!</a>",
+      "ticapt": "Comparações entre Supremo e Taliban faziam parte do coro de fundamentalismo raso dos manifestantes.",
+      "fticapt": "Frases que chocam fora do Brasil e que apontam para 23% dos brasileiros desinformados sistematicamente desde 2013 com os movimentos sociais verde e amarelo que trouxeram uma coesão rasa de consciência capaz de construir um mito frágil como Jair."
+    },
+    "final": {
+      "text": "Em mais um episódio da nossa série você acompanhou o dia da Independência diretamente de Brasília.",
+      "imageSubtitle": "Esplanada dos Ministérios, Brasília. 7 de Setembro de 2021. Foto: Hugo Takemoto",
+      "elements": [
+        {
+          "title": "Texto",
+          "subtitle": "Flora Dutra, Guilherme Meneghelli e Mathilde Everaere"
+        },
+        {
+          "title": "Imagens",
+          "subtitle": "Guilherme Meneghelli e Hugo Takemoto"
+        },
+        {
+          "title": "Entrevistas",
+          "subtitle": "Eduardo Pizaroli, Flora Dutra e Mathilde Everaere"
+        },
+        {
+          "title": "Declaração",
+          "subtitle": "Fernando Andrade"
+        }
+      ]
+    },
+    "apmathilde": {
+      "title": "O ÚLTIMO RECURSO",
+      "subtitle": "É o momento de entender que os povos originários representam um modelo de gestão de espaços, de terras, de economias, de culturas e de povos altamente sustentável e positivamente replicável a cada individuo, instituição ou nação.",
+      "bttext": "Leia na íntegra o artigo de Mathilde Everaere"
+    },
+    "contagemprogress1": {
+      "title": "<span>Contagem Progressiva </span>",
+      "desc": "<span> No contra-ponto da contagem manifestantes em favor de Jair Messias Bolsonaro OMM se manifestam em Brasília e nós abrimos espaço de fala na íntegra para que todos possam dialogar. </span>",
+      "caption": "<span>A partir do dia 25 de Agosto de 2021</span>",
+      "dias": "Dias",
+      "horas": "Horas",
+      "minutos": "Minutos",
+      "segundos": "Segundos"
+    }
   }
 }

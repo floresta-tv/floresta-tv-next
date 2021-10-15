@@ -21,6 +21,7 @@ type BannerFullProps = {
     links?: JSX.Element
     position?: string
     textAlign?: string
+    bgc?: boolean
   }[]
 }
 
@@ -58,6 +59,7 @@ const BannerFull = ({ items }: BannerFullProps) => {
         {items.map((item, index) => (
           <S.BannerFullItem key={index}>
             <S.BannerFullItemBackground position={item.backgroundPosition}>
+              {item.bgc && <div className="background"></div>}
               <Image
                 placeholder="blur"
                 blurDataURL={item.background}

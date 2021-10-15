@@ -217,7 +217,7 @@ const DiaDaAmazonia = () => {
           </div>
         </Element>
 
-        <Element name="rafael-quadros">
+        <Element name="algumas-pessoas">
           <SimpleQuote
             bgc="#017300"
             text={
