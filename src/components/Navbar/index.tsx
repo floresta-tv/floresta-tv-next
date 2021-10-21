@@ -54,8 +54,7 @@ const Navbar = () => {
     },
     {
       label: 'news',
-      href: 'https://medium.com/florestatv/',
-      external: true
+      href: '/blog'
     },
     {
       label: 'contato',

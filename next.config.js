@@ -21,5 +21,8 @@ module.exports = {
       '/equipe': ['equipe'],
       '/seja-um-voluntario': ['seja-um-voluntario']
     }
-  }
+  },
+  images: {
+    domains: ['tech.floresta.tv'],
+  },
 }

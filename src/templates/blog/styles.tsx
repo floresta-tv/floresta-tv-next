@@ -25,7 +25,7 @@ export const Header = styled.div`
   padding-bottom: 50px;
   padding-top: 200px;
   width: 100vw;
-  background-color: #012506;
+  background-color: #012557;
   background-image: url('/img/comunidade_indigena_banner.png');
   background-position: top top;
   background-attachment: fixed;
@@ -42,7 +42,7 @@ export const Header = styled.div`
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #c56307;
+    background-color: #012557;
     opacity: 0.8;
     z-index: 2;
 
