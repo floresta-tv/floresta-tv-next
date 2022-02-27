@@ -7,6 +7,7 @@ import { X as TimesIcon } from '@styled-icons/octicons'
 import { Container } from '../UI'
 import { useRouter } from 'next/router'
 import { useMediaQuery } from 'react-responsive'
+import { Handshake } from '@styled-icons/fluentui-system-filled'
 
 import * as S from './styles'
 
@@ -128,6 +129,7 @@ const Navbar = () => {
                 isActive={router.pathname === '/seja-um-voluntario'}
               >
                 {t.raw('seja-um-voluntario')}
+                <Handshake size={20} style={{ marginLeft: 5 }} />
               </S.ItemButton>
             </Link>
           </S.List>
