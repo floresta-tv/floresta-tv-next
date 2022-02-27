@@ -99,7 +99,7 @@ export const InfoCardWrapper = styled.article`
 
       ${InfoCardBody} {
         margin-left: none;
-        transform: translateX(150px);
+        transform: translateX(190px);
         text-align: right;
         border-radius: 130px 0 0 130px;
       }
