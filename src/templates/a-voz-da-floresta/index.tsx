@@ -71,7 +71,15 @@ const VozDaFloresta = ({ content }: VozDaFlorestaProps) => {
                       </Link>
                     )}
 
-                    {item.greenButtonHref && (
+                    {item.greenButtonHref && item.greenButtonHref[0] === '/' ? (
+                      <Link passHref={true} href={item.greenButtonHref}>
+                        <a href="#" style={{ textDecoration: 'none' }}>
+                          <Button variant="green">
+                            {item.greenButtonText}
+                          </Button>
+                        </a>
+                      </Link>
+                    ) : (
                       <ScrollLink to={item.greenButtonHref}>
                         <Button variant="green">{item.greenButtonText}</Button>
                       </ScrollLink>
