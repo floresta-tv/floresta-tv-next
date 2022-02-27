@@ -18,5 +18,19 @@
   },
   "contact-button": {
     "label": "How can we help?"
+  },
+  "misc": {
+    "back_text": "Back to ",
+    "share_text": "Share on:",
+    "simple_share_text": "Share",
+    "click_to_open_text": "Click to open",
+    "open_page_text": "Access full page",
+    "related_gallery_text": "Images in the gallery",
+    "related_articles_text": "Related news",
+    "published_at_text": "Published at",
+    "by_text": "By",
+    "continue_reading_text": "Continue reading..",
+    "writted_by_text": "Written by:",
+    "indisponible_schedule": "Schedule not available for this day."
   }
 }

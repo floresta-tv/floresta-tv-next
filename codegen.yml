@@ -1,0 +1,10 @@
+overwrite: true
+schema: "https://api.floresta.tv/graphql"
+documents: "src/graphql/queries/noticias.ts"
+generates:
+  src/graphql/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - add:
+          content: '/* eslint-disable */'

@@ -32,7 +32,15 @@ const SimpleQuoteWithButton = ({
           <S.HeaderTextHeader>
             <Zoom>
               <p className="desc">{text}</p>
-              <p className="quotted">— {quotted} —</p>
+              <p className="quotted">
+                —{' '}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: quotted
+                  }}
+                ></span>{' '}
+                —
+              </p>
             </Zoom>
           </S.HeaderTextHeader>
         </>

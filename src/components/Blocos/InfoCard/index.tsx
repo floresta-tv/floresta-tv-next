@@ -21,6 +21,7 @@ type InfoCardProps = {
   desc: JSX.Element
   bgc?: string
   color?: string
+  label?: string
   social?: {
     website?: string
     instagram?: string
@@ -38,6 +39,7 @@ const InfoCard = ({
   desc,
   social,
   bgc,
+  label,
   color
 }: InfoCardProps) => {
   return (
@@ -61,6 +63,7 @@ const InfoCard = ({
           <Col lg={9} style={{ display: 'flex', alignItems: 'center' }}>
             <S.InfoCardBody bgc={bgc} color={color}>
               <div className="caption">
+                <span className="desc">{label}</span>
                 <h2 className="title">{title}</h2>
                 <h3 className="subtitle">{subtitle}</h3>
                 <p className="desc">{desc}</p>

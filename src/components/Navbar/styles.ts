@@ -209,20 +209,6 @@ export const ItemButton = styled.a<ItemButtonProps>`
   }
 `
 
-export const LanguagesWrapper = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-
-  span {
-    font-size: 13px;
-    color: #ffffff;
-    margin-right: 10px;
-  }
-`
-
 export const LanguageButton = styled.button`
   position: relative;
   width: 27px;

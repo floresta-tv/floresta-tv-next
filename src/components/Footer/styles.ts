@@ -8,6 +8,7 @@ export const Wrapper = styled.footer`
   background-color: #0d2e03;
   background-size: cover;
   z-index: 400;
+  box-shadow: -5px -5px 30px rgba(250, 250, 250, 0.1);
 
   ${media.greaterThan('large')`
     padding: 84px 90px 34px 130px;

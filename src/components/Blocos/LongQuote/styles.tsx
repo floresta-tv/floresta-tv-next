@@ -34,17 +34,6 @@ export const HeaderTextHeader = styled.header`
     padding-bottom: 15px;
   `}
 
-  .title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-    padding-top: 30px;
-
-    ${media.lessThan('medium')`
-      padding-left: 20px;
-  `};
-  }
-
   .desc {
     padding: 10px 60px 60px 60px;
     font-size: 16px;
@@ -57,6 +46,17 @@ export const HeaderTextHeader = styled.header`
     ${media.lessThan('medium')`
       padding: 0 20px;
     `};
+
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      padding-top: 30px;
+
+      ${media.lessThan('medium')`
+          padding-left: 20px;
+      `};
+    }
   }
 `
 

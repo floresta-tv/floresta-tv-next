@@ -18,5 +18,19 @@
   },
   "contact-button": {
     "label": "Comment pouvons nous aider?"
+  },
+  "misc": {
+    "back_text": "Retour à la",
+    "share_text": "Partager sur:",
+    "simple_share_text": "Partager",
+    "click_to_open_text": "Cliquez pour ouvrir",
+    "open_page_text": "Accéder à la page complète",
+    "related_gallery_text": "Images dans la galerie",
+    "related_articles_text": "Nouvelles connexes ",
+    "published_at_text": "Publié dans ",
+    "by_text": "Pour",
+    "continue_reading_text": "Continuer la lecture ...",
+    "writted_by_text": "Écrit par:",
+    "indisponible_schedule": "Horaire non disponible pour cette journée."
   }
 }

@@ -2,7 +2,6 @@ import { Button } from '../../components/UI'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Element, Link as ScrollLink } from 'react-scroll'
-import { useTranslations } from 'next-intl'
 
 import { Signature } from '@styled-icons/fluentui-system-regular'
 
@@ -17,189 +16,80 @@ import HeroBlock from 'components/Blocos/HeroBlock'
 import DoubleImage from 'components/Blocos/DoubleImage'
 import ContactButton from 'components/ContactButton'
 import Footer from 'components/Footer'
+import LanguageButton from 'components/Navbar/LanguagesButton'
+import { PAVozDaFloresta } from 'types/pages'
 
 import * as animations from './animations'
 import * as S from './styles'
 
-const VozDaFloresta = () => {
-  const tpage = useTranslations('a-voz-da-floresta')
-  const tbanners = useTranslations('banners')
+type VozDaFlorestaProps = {
+  content: PAVozDaFloresta
+}
 
+const VozDaFloresta = ({ content }: VozDaFlorestaProps) => {
   return (
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
+      <LanguageButton />
       <S.Wrapper>
         <Element name="home">
           <BannerFull
-            items={[
-              {
-                backgroundAlt:
-                  'Homem indígena cantando com expressão de grito, expressando fortemente sua voz',
-                background: '/img/homem_indigena_banner.png',
+            items={content.HomeCarrousel.FullCarouselItem.map((item) => {
+              return {
+                backgroundAlt: item.title,
+                background: item.image.url,
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item1.title')
+                      __html: item.title
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item1.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/equipe">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="white">
-                          {tbanners.raw('item1.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                    <ScrollLink to="carta-aberta">
-                      <Button variant="green">
-                        {tbanners.raw('item1.botao-2')}
-                      </Button>
-                    </ScrollLink>
-                    <Link passHref={true} href="/contato">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="transparent">
-                          {tbanners.raw('item1.botao-3')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Menino indígena coberto de Urucum em cima da Bandeira do Brasil',
-                backgroundPosition: 'center 40% !important',
-                background: '/img/indigena_com_urucum_banner.png',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item2.title')
+                      __html: item.paragraph
                     }}
                   ></span>
                 ),
                 subtitle: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item2.desc')
+                      __html: item.subtitle
                     }}
                   ></span>
                 ),
                 links: (
                   <>
-                    <Link passHref={true} href="/dia-da-amazonia">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item2.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Protesto indígenas em Brasília sobre o Marco Temporal',
-                backgroundPosition: 'center 40% !important',
-                background:
-                  '/img/protesto_indigenas_brasilia_marco_temporal.png',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item3.title')
-                    }}
-                  ></span>
-                ),
-                desc: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item3.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/o-ultimo-recurso">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item3.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Protesto de mulheres indígenas em Brasília sobre o Marco Temporal',
-                backgroundPosition: 'center 40% !important',
-                width: 'extralarge',
-                background: '/img/protesto_mulheres_indigenas_brasilia.jpg',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item4.title')
-                    }}
-                  ></span>
-                ),
-                desc: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item4.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/marcha-mulheres-indigenas">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item4.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
-                  </>
-                )
-              },
-              {
-                backgroundAlt:
-                  'Grande grupo de Indígenas protestando em Brasilía',
-                background: '/img/protestos_indigenas-marco_ancestral.jpg',
-                title: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item5.title')
-                    }}
-                  ></span>
-                ),
-                desc: (
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: tbanners.raw('item5.desc')
-                    }}
-                  ></span>
-                ),
-                links: (
-                  <>
-                    <Link passHref={true} href="/marco-ancestral">
-                      <a href="#" style={{ textDecoration: 'none' }}>
-                        <Button variant="green">
-                          {tbanners.raw('item5.botao-1')}
-                        </Button>
-                      </a>
-                    </Link>
+                    {item.whiteButtonHref && (
+                      <Link passHref={true} href={item.whiteButtonHref}>
+                        <a href="#" style={{ textDecoration: 'none' }}>
+                          <Button variant="white">
+                            {item.whiteButtonText}
+                          </Button>
+                        </a>
+                      </Link>
+                    )}
+
+                    {item.greenButtonHref && (
+                      <ScrollLink to={item.greenButtonHref}>
+                        <Button variant="green">{item.greenButtonText}</Button>
+                      </ScrollLink>
+                    )}
+
+                    {item.transparentButtonHref && (
+                      <Link passHref={true} href={item.transparentButtonHref}>
+                        <a href="#" style={{ textDecoration: 'none' }}>
+                          <Button variant="transparent">
+                            {item.transparentButtonText}
+                          </Button>
+                        </a>
+                      </Link>
+                    )}
                   </>
                 )
               }
-            ]}
+            })}
           />
         </Element>
         <Element name="documentario-em-tempo-real">
@@ -208,45 +98,46 @@ const VozDaFloresta = () => {
               <span
                 style={{ textTransform: 'uppercase' }}
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videoblock1.title')
+                  __html: content.VideoDocumentario.title
                 }}
               ></span>
             }
-            desc={tpage.raw('videoblock1.desc')}
-            caption={tpage.raw('videoblock1.caption')}
-            videoId={`WVmItbV5rbg`}
+            desc={content.VideoDocumentario.subtitle}
+            caption={content.VideoDocumentario.video_description}
+            videoId={content.VideoDocumentario.video_id}
           />
         </Element>
 
         <Element name="contagem-progressiva">
           <ProgressiveCount
             texts={{
-              days: tpage.raw('contagemprogress1.dias'),
-              hours: tpage.raw('contagemprogress1.horas'),
-              seconds: tpage.raw('contagemprogress1.segundos'),
-              minutes: tpage.raw('contagemprogress1.minutos')
+              days: content.ContagemProgressiva.days,
+              hours: content.ContagemProgressiva.hours,
+              seconds: content.ContagemProgressiva.seconds,
+              minutes: content.ContagemProgressiva.minutes
             }}
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('contagemprogress1.title')
+                  __html: content.ContagemProgressiva.title
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('contagemprogress1.desc')
+                  __html: content.ContagemProgressiva.description
                 }}
               ></span>
             }
             caption={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('contagemprogress1.caption')
+                  __html: content.ContagemProgressiva.subtitle
                 }}
               ></span>
             }
+            background={content.ContagemProgressiva.image.url}
           />
         </Element>
 
@@ -256,20 +147,20 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('articlepreview1.title')
+                  __html: content.CartaAberta.title
                 }}
               ></span>
             }
             subtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('articlepreview1.subtitle')
+                  __html: content.CartaAberta.subtitle
                 }}
               ></span>
             }
             buttonText={
               <span>
-                {tpage.raw('articlepreview1.botao')} <Signature size={24} />
+                {content.CartaAberta.button_text} <Signature size={24} />
               </span>
             }
             buttonLink={`https://www.change.org/p/carta-aberta-dos-povos-origin%C3%A1rios-do-brasil-contagem-progressiva`}
@@ -278,21 +169,21 @@ const VozDaFloresta = () => {
             body={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('articlepreview1.body')
+                  __html: content.CartaAberta.body
                 }}
               ></span>
             }
             boxtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('articlepreview1.box-title')
+                  __html: content.CartaAberta.box_title
                 }}
               ></span>
             }
             boxdesc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('articlepreview1.box-desc')
+                  __html: content.CartaAberta.box_content
                 }}
               ></span>
             }
@@ -301,20 +192,18 @@ const VozDaFloresta = () => {
 
         <Element name="autonomia-cultural">
           <HeroBlock
-            image={
-              '/img/indigenas_usando_equipamento_de_gravacao_na_natureza.png'
-            }
+            image={content.AutonomiaBlock.image.url}
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('heroblock1.title')
+                  __html: content.AutonomiaBlock.title
                 }}
               ></span>
             }
             body={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('heroblock1.body')
+                  __html: content.AutonomiaBlock.body
                 }}
               ></span>
             }
@@ -327,13 +216,13 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videoblock2.title')
+                  __html: content.VideoMapu.title
                 }}
               ></span>
             }
-            desc={tpage.raw('videoblock2.desc')}
-            caption={tpage.raw('videoblock2.caption')}
-            videoId={`7HzO-IiJZYw`}
+            desc={content.VideoMapu.subtitle}
+            caption={content.VideoMapu.video_description}
+            videoId={content.VideoMapu.video_id}
           />
         </Element>
 
@@ -342,21 +231,21 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('doubleimage1.title')
+                  __html: content.ProtecaoCultura.title
                 }}
               ></span>
             }
             subtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('doubleimage1.subtitle')
+                  __html: content.ProtecaoCultura.description
                 }}
               ></span>
             }
-            image1={`/img/indigena_escrevendo_rabiscando_tablet.png`}
-            image2={`/img/indigena_usando_tablet_tecnologia.png`}
-            caption1={tpage.raw('doubleimage1.caption1')}
-            caption2={tpage.raw('doubleimage1.caption2')}
+            image1={content.ProtecaoCultura.first_image.url}
+            image2={content.ProtecaoCultura.second_image.url}
+            caption1={content.ProtecaoCultura.first_image_alt}
+            caption2={content.ProtecaoCultura.second_image_alt}
           />
         </Element>
 
@@ -365,7 +254,7 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videobackground1.title')
+                  __html: content.VideoAmazonia.title
                 }}
               ></span>
             }
@@ -373,12 +262,12 @@ const VozDaFloresta = () => {
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videobackground1.desc')
+                  __html: content.VideoAmazonia.subtitle
                 }}
               ></span>
             }
-            caption={tpage.raw('videobackground1.caption')}
-            videoId={`9qbc0xnPQNI`}
+            caption={content.VideoAmazonia.video_description}
+            videoId={content.VideoAmazonia.video_id}
           />
         </Element>
 
@@ -388,19 +277,19 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videoblockhor1.title')
+                  __html: content.ChiefPhill.title
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('videoblockhor1.desc')
+                  __html: content.ChiefPhill.subtitle
                 }}
               ></span>
             }
-            caption={`Vídeo do Chief Phill compartilhando sua sabedoria.`}
-            videoId={`0bDVbECBgcM`}
+            caption={content.ChiefPhill.video_description}
+            videoId={content.ChiefPhill.video_id}
           />
         </Element>
 
@@ -409,58 +298,30 @@ const VozDaFloresta = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('imagetext1.title')
+                  __html: content.BibliotecaImage.title
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tpage.raw('imagetext1.desc')
+                  __html: content.BibliotecaImage.description
                 }}
               ></span>
             }
-            image={`/img/sementes_no_chao_da_floresta.png`}
-            imageAlt={`Sementes no chão da floresta`}
+            image={content.BibliotecaImage.image.url}
+            imageAlt={content.BibliotecaImage.image_description}
             type={'right'}
           />
         </Element>
       </S.Wrapper>
       <Footer
-        links={[
-          {
-            label: tpage.raw('footer-links.link-1'),
-            to: 'home'
-          },
-          {
-            label: tpage.raw('footer-links.link-2'),
-            to: 'documentario-em-tempo-real'
-          },
-          {
-            label: tpage.raw('footer-links.link-3'),
-            to: 'contagem-progressiva'
-          },
-          {
-            label: tpage.raw('footer-links.link-3'),
-            to: 'mapu-huni-kui'
-          },
-          {
-            label: tpage.raw('footer-links.link-4'),
-            to: 'chief-phill'
-          },
-          {
-            label: tpage.raw('footer-links.link-5'),
-            to: 'protecao-cultural'
-          },
-          {
-            label: tpage.raw('footer-links.link-6'),
-            to: 'amazonia-a-live'
-          },
-          {
-            label: tpage.raw('footer-links.link-7'),
-            to: 'biblioteca-viva'
+        links={content.footer_links.map((item) => {
+          return {
+            to: item.target,
+            label: item.label
           }
-        ]}
+        })}
       />
     </motion.div>
   )

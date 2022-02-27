@@ -40,6 +40,7 @@ export const InfoCardBody = styled.div<ColorProps>`
   padding: 0 140px 0 150px;
   border-radius: 0 130px 130px 0;
   max-width: 1000px;
+  width: 100%;
   background-color: ${(props) => props.bgc};
   color: ${(props) => props.color};
 
@@ -77,6 +78,11 @@ export const InfoCardWrapper = styled.article`
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  width: 100%;
+
+  .react-reveal {
+    width: 100%;
+  }
 
   &:nth-child(1n) {
     @media screen and (min-width: 992px) and (max-width: 1300px) {

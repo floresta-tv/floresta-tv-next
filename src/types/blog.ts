@@ -1,15 +1,16 @@
-export type BlogPost = {
+import { AuthorT } from './author'
+
+export type ArticleT = {
   id: number
-  status: number
   title: string
-  slug: string
-  summary: string
-  content: string
-  image: string
-  keywords: string
   description: string
-  created_at: string
-  updated_at: string
-  created: string
-  author: string
+  body: string
+  image: {
+    url: string
+    width?: string
+    height?: string
+  }
+  date: string
+  slug: string
+  author: AuthorT
 }

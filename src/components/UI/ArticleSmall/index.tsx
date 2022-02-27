@@ -1,37 +1,61 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight } from '@styled-icons/bootstrap/'
+import Image from 'next/image'
+import { ChevronDoubleRight } from '@styled-icons/bootstrap/'
+import { useTranslations } from 'next-intl'
 
 import * as S from './styles'
 
 type ArticleSmallProps = {
-  img: string
-  date: string
   title: string
+  img: string
   slug: string
+  description: string
+  date: string
+  author: {
+    name: string
+  }
+  variant?: string
 }
 
-const ArticleSmall = ({ img, date, title, slug }: ArticleSmallProps) => {
+const ArticleSmall = ({
+  title,
+  img,
+  slug,
+  date,
+  author,
+  description,
+  variant
+}: ArticleSmallProps) => {
+  const t = useTranslations('misc')
+
   return (
-    <S.ArticleSmall>
-      <div className="img">
-        <Image
-          placeholder="blur"
-          blurDataURL={img || '/img/blog-thumbnail.jpg'}
-          src={img || '/img/blog-thumbnail.jpg'}
-          layout={'fill'}
-        />
-      </div>
-      <div className="caption">
-        <span className="date">{date}</span>
-        <p className="desc">{title}</p>
-        <Link href={`/blog/${slug}`}>
-          <a className="link">
-            Confira <ArrowRight width={30} fill="006686" />
-          </a>
-        </Link>
-      </div>
-    </S.ArticleSmall>
+    <Link passHref href={slug}>
+      <S.ArticleSmallWrapper
+        style={variant === `thin` ? { minHeight: 160 } : null}
+      >
+        <S.ArticleSmallImage>
+          <Image
+            placeholder="blur"
+            blurDataURL={img}
+            src={img}
+            alt={title}
+            layout={`fill`}
+          />
+        </S.ArticleSmallImage>
+        <S.ArticleSmallCaption>
+          <S.ArticleSmallDate>
+            {t.raw('published_at_text')} {date}{' '}
+            {author && `• ${t.raw('by_text')} ${author.name}`}
+          </S.ArticleSmallDate>
+          <S.ArticleSmallTitle>{title}</S.ArticleSmallTitle>
+          <S.ArticleSmallDesc>{description}</S.ArticleSmallDesc>
+          <S.ArticleSmallMore href={slug}>
+            Leia mais
+            <ChevronDoubleRight size={20} />
+          </S.ArticleSmallMore>
+        </S.ArticleSmallCaption>
+      </S.ArticleSmallWrapper>
+    </Link>
   )
 }
 

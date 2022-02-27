@@ -12,7 +12,7 @@ type ArticlePreviewProps = {
   text: JSX.Element
   image: string
   imageSubtitle: JSX.Element
-  elements: [{ title: string; subtitle: string }]
+  elements: string
 }
 
 const FinalArticle = ({
@@ -63,16 +63,11 @@ const FinalArticle = ({
             <br />
             <br />
             <br />
-            <S.List>
-              {elements.map((element, i) => {
-                return (
-                  <li key={i}>
-                    <p className="title">{element.title}</p>
-                    <p className="subtitle">{element.subtitle}</p>
-                  </li>
-                )
-              })}
-            </S.List>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: elements
+              }}
+            ></span>
           </>
         </Container>
       </S.ArticlePreviewContent>

@@ -7,7 +7,8 @@ export const BlogItemWrapper = styled.article`
   overflow: hidden;
   width: 100%;
   height: auto;
-  max-width: 330px;
+  max-width: 380px;
+  height: 320px;
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 6px 4px 20px rgba(0, 0, 0, 0.2);
@@ -22,31 +23,48 @@ export const BlogItemWrapper = styled.article`
 `
 
 export const BlogItemImage = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 190px;
+  height: 100%;
   transition: all 0.4s;
-  z-index: 1;
   object-fit: cover;
   object-position: center center;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+  }
 
   ${media.lessThan('small')`
         height: 140px;
     `}
 
-  img {
+  div, img {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 `
 
 export const BlogItemCaption = styled.article`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
-  height: 52%;
+  height: 100%;
   padding: 35px 25px 17px 35px;
   color: var(--dark);
   text-align: left;
+  z-index: 3;
 
   ${media.lessThan('large')`
         padding: 25px 15px 25px 25px;
@@ -58,9 +76,9 @@ export const BlogItemCaption = styled.article`
 `
 
 export const BlogItemDate = styled.p`
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.1;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: normal;
   opacity: 0.8;
   z-index: 2;
@@ -92,9 +110,9 @@ export const BlogItemTitle = styled.h1`
 export const BlogItemDesc = styled.p`
   font-size: 15px;
   line-height: 1.1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: normal;
-  opacity: 0.8;
+  opacity: 0.95;
   z-index: 2;
   color: #fff;
 
@@ -108,7 +126,6 @@ export const BlogItemMore = styled.a`
   font-weight: normal;
   z-index: 2;
   text-decoration: none;
-  backgrund-color: none;
   color: #fff;
   transition: all 0.3s;
 

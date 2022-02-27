@@ -26,9 +26,10 @@ export const Header = styled.div`
   padding-top: 200px;
   width: 100vw;
   background-color: #012506;
-  background-image: url('/img/comunidade_indigena_banner.png');
-  background-position: top top;
+  background-image: url('/img/indigenas_usando_equipamento_de_gravacao_na_natureza.png');
+  background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 
   @media screen and (max-width: 768px) {
     background-position: center center;
@@ -42,7 +43,7 @@ export const Header = styled.div`
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #c56307;
+    background-color: #035209;
     opacity: 0.8;
     z-index: 2;
 

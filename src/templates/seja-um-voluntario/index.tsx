@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import LanguagesButton from 'components/Navbar/LanguagesButton'
 import { Element } from 'react-scroll'
-import { useTranslations } from 'next-intl'
 import {
   Medium as MediumIcon,
   Instagram as InstagramIcon,
@@ -16,35 +16,34 @@ import Footer from 'components/Footer'
 import * as animations from './animations'
 import * as S from './styles'
 
-const SejaUmVoluntario = () => {
-  const t = useTranslations('Voluntareer')
-
+const SejaUmVoluntario = ({ content }) => {
   return (
     <motion.div key={6} {...animations.wrapper}>
+      <LanguagesButton />
       <S.Wrapper>
         <Head>
-          <title>Seja um voluntário | Floresta.TV</title>
+          <title> {content.title} | Floresta.TV</title>
         </Head>
         <Element name="home">
           <BannerFull
             items={[
               {
-                backgroundAlt: `Família loresta TV`,
+                backgroundAlt: content.BannerHeader.description,
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
-                background: '/img/familia-florestatv-2.png',
+                background: content.BannerHeader.image.url,
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.title')
+                      __html: content.BannerHeader.title
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.desc')
+                      __html: content.BannerHeader.description
                     }}
                   ></span>
                 ),
@@ -52,10 +51,11 @@ const SejaUmVoluntario = () => {
                   <>
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                       <S.WhatsappLink
-                        href="https://api.whatsapp.com/send?phone=554891818781&text=Hey!%20Estou%20em%20entrando%20em%20SejaUmVoluntario%20atrav%C3%A9s%20do%20website%20Floresta.TV"
+                        href={content.button_href}
                         target="_blank"
                       >
-                        {t.raw('bannerfull.botao-1')} <WhatsappIcon size={30} />
+                        {content.button_text}
+                        <WhatsappIcon size={30} />
                       </S.WhatsappLink>
                       <S.SocialLinks>
                         <S.SocialLink
@@ -83,9 +83,6 @@ const SejaUmVoluntario = () => {
                         >
                           <YoutubeIcon />
                         </S.SocialLink>
-                        {/* <S.SocialLink>
-                  <TwitterIcon />
-                </S.SocialLink> */}
                         <S.SocialLink
                           rel="noreferrer"
                           aria-label="Discord Floresta.tv"
@@ -104,12 +101,12 @@ const SejaUmVoluntario = () => {
         </Element>
       </S.Wrapper>
       <Footer
-        links={[
-          {
-            label: t.raw('footer-links.link1'),
-            to: 'home'
+        links={content.footer_links.map((item) => {
+          return {
+            to: item.target,
+            label: item.label
           }
-        ]}
+        })}
       />
     </motion.div>
   )

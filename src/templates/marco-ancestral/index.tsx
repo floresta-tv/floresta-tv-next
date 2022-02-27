@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
 import { Element } from 'react-scroll'
 import Head from 'next/head'
 
@@ -9,209 +8,185 @@ import ProgressiveCount from 'components/Blocos/ProgressiveCount'
 import VideoBlock from 'components/Blocos/VideoBlock'
 import DoubleButton from 'components/Blocos/DoubleButton'
 import Footer from 'components/Footer'
+import LanguagesButton from 'components/Navbar/LanguagesButton'
 
 import * as animations from './animations'
 import * as S from './styles'
 import ArticleLit from 'components/Blocos/ArticleLit'
 
-const MarcoAncestral = () => {
-  const t = useTranslations('marco-ancestral')
+import { PMarcoAncestralT } from 'types/pages'
 
+type MarcoAncestralTemplateProps = {
+  content: PMarcoAncestralT
+}
+const MarcoAncestralTemplate = ({ content }: MarcoAncestralTemplateProps) => {
   return (
-    <motion.div key={6} {...animations.wrapper}>
-      <ContactButton />
-      <S.Wrapper>
-        <Head>
-          <title>Marco Ancestral | Floresta.TV</title>
-        </Head>
-        <Element name="home">
-          <BannerFull
-            items={[
-              {
-                backgroundAlt: `Família floresta TV`,
-                width: 'large',
-                position: 'center',
-                textAlign: 'center',
-                background: '/img/marcoancestral-meta.png',
-                title: (
+    <>
+      {content && (
+        <motion.div key={6} {...animations.wrapper}>
+          <LanguagesButton />
+          <ContactButton />
+          <S.Wrapper>
+            <Head>
+              <title>Marco Ancestral | Floresta.TV</title>
+            </Head>
+            <Element name="home">
+              <BannerFull
+                items={[
+                  {
+                    backgroundAlt: content.home_banner_title,
+                    width: 'large',
+                    position: 'center',
+                    textAlign: 'center',
+                    background: content.home_banner_background.url,
+                    title: (
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: content.home_banner_title
+                        }}
+                      ></span>
+                    ),
+                    subtitle: (
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: content.home_banner_subtitle
+                        }}
+                      ></span>
+                    ),
+                    desc: (
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: content.home_banner_paragraph
+                        }}
+                      ></span>
+                    )
+                  }
+                ]}
+              />
+            </Element>
+
+            <Element name="3-setembro">
+              <ArticleLit
+                title={
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.title')
+                      __html: content.ImageKaje.title
                     }}
                   ></span>
-                ),
-                subtitle: (
+                }
+                subtitle={
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.desc')
+                      __html: content.ImageKaje.description
                     }}
                   ></span>
-                ),
-                desc: (
+                }
+                firstImage={content.ImageKaje.image.url}
+                firstImageSubtitle={
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.subtitle')
+                      __html: content.ImageKaje.image_description
                     }}
                   ></span>
-                )
-              }
-            ]}
-          />
-        </Element>
+                }
+                body={
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.DoubleImage.description
+                    }}
+                  ></span>
+                }
+                secondImage={content.DoubleImage.first_image.url}
+                thirsdImage={content.DoubleImage.second_image.url}
+              />
+            </Element>
 
-        <Element name="3-setembro">
-          <ArticleLit
-            title={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.title')
+            <Element name="contagem-progressiva">
+              <ProgressiveCount
+                texts={{
+                  days: content.ContagemProgressiva.days,
+                  hours: content.ContagemProgressiva.hours,
+                  seconds: content.ContagemProgressiva.seconds,
+                  minutes: content.ContagemProgressiva.minutes
                 }}
-              ></span>
-            }
-            subtitle={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.subtitle')
-                }}
-              ></span>
-            }
-            // buttonText={
-            //   <span>
-            //     {tpage.raw('articlepreview1.botao')} <Signature size={24} />
-            //   </span>
-            // }
-            // buttonLink={`https://www.change.org/p/carta-aberta-dos-povos-origin%C3%A1rios-do-brasil-contagem-progressiva`}
-            firstImage={`/img/indigena_bandeira.jpg`}
-            firstImageSubtitle={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.firstImageSubtitle')
-                }}
-              ></span>
-            }
-            // imageAlt={`Mulheres indígenas em Brasília segurando velas`}
-            body={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('articlepreview1.body')
-                }}
-              ></span>
-            }
-            secondImage={`/img/nativo-deitado-na-bandeira.jpg`}
-            thirsdImage={`/img/carregando-bandeira.jpg`}
-            // boxtitle={
-            //   <span
-            //     dangerouslySetInnerHTML={{
-            //       __html: tpage.raw('articlepreview1.box-title')
-            //     }}
-            //   ></span>
-            // }
-            // boxdesc={
-            //   <span
-            //     dangerouslySetInnerHTML={{
-            //       __html: tpage.raw('articlepreview1.box-desc')
-            //     }}
-            //   ></span>
-            // }
-          />
-        </Element>
+                title={
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.ContagemProgressiva.title
+                    }}
+                  ></span>
+                }
+                desc={
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.ContagemProgressiva.subtitle
+                    }}
+                  ></span>
+                }
+                caption={
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.ContagemProgressiva.description
+                    }}
+                  ></span>
+                }
+                background={content.ContagemProgressiva.image.url}
+              />
+            </Element>
 
-        <Element name="contagem-progressiva">
-          <ProgressiveCount
-            texts={{
-              days: t.raw('contagemprogress1.dias'),
-              hours: t.raw('contagemprogress1.horas'),
-              seconds: t.raw('contagemprogress1.segundos'),
-              minutes: t.raw('contagemprogress1.minutos')
-            }}
-            title={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.title')
-                }}
-              ></span>
-            }
-            desc={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.desc')
-                }}
-              ></span>
-            }
-            caption={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.caption')
-                }}
-              ></span>
-            }
-            background={`/img/protestos_indigenas_ensolarado.jpg`}
-          />
-        </Element>
+            <Element name="documentario-em-tempo-real">
+              <VideoBlock
+                title={
+                  <span
+                    style={{ textTransform: 'uppercase' }}
+                    dangerouslySetInnerHTML={{
+                      __html: content.VideoDocumentario.title
+                    }}
+                  ></span>
+                }
+                desc={content.VideoDocumentario.subtitle}
+                caption={content.VideoDocumentario.video_description}
+                videoId={content.VideoDocumentario.video_id}
+              />
+            </Element>
 
-        <Element name="documentario-em-tempo-real">
-          <VideoBlock
-            title={
-              <span
-                style={{ textTransform: 'uppercase' }}
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('videoblock1.title')
-                }}
-              ></span>
-            }
-            desc={t.raw('videoblock1.desc')}
-            caption={t.raw('videoblock1.caption')}
-            videoId={`WVmItbV5rbg`}
-          />
-        </Element>
+            <Element name="botoes-de-acao">
+              <DoubleButton
+                textBt1={
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.button_left_text
+                    }}
+                  ></span>
+                }
+                textBt2={
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.button_right_text
+                    }}
+                  ></span>
+                }
+                bt1Color="#ff6666"
+                bt2Color="#00ff05"
+                bt1Link="/"
+                bt2Link="/dia-da-amazonia"
+                bgc="#017300"
+              />
+            </Element>
 
-        <Element name="botoes-de-acao">
-          <DoubleButton
-            textBt1={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('buttons.bt1text')
-                }}
-              ></span>
-            }
-            textBt2={
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('buttons.bt2text')
-                }}
-              ></span>
-            }
-            bt1Color="#ff6666"
-            bt2Color="#00ff05"
-            bt1Link="/"
-            bt2Link="/dia-da-amazonia"
-            bgc="#017300"
-          />
-        </Element>
-
-        <Footer
-          links={[
-            {
-              to: 'home',
-              label: t.raw('footer-links.link1')
-            },
-            {
-              to: '3-setembro',
-              label: t.raw('footer-links.link2')
-            },
-            {
-              to: 'contagem-progressiva',
-              label: t.raw('footer-links.link3')
-            },
-            {
-              to: 'documentario-em-tempo-real',
-              label: t.raw('footer-links.link4')
-            }
-          ]}
-        />
-      </S.Wrapper>
-    </motion.div>
+            <Footer
+              links={content.footer_links.map((item) => {
+                return {
+                  to: item.target,
+                  label: item.label
+                }
+              })}
+            />
+          </S.Wrapper>
+        </motion.div>
+      )}
+    </>
   )
 }
 
-export default MarcoAncestral
+export default MarcoAncestralTemplate

@@ -23,6 +23,6 @@ module.exports = {
     }
   },
   images: {
-    domains: ['tech.floresta.tv'],
-  },
+    domains: ['floresta.tv', 'floresta-tv-api.s3.us-east-2.amazonaws.com']
+  }
 }

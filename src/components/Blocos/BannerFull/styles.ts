@@ -98,6 +98,16 @@ export const BannerFullContent = styled.div<BannerFullContent>`
   z-index: 3;
   color: #ffffff;
 
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  span {
+    color: #ffffff !important;
+  }
+
   .caption {
     max-width: 590px;
 

@@ -35,6 +35,10 @@ export const HeaderTextHeader = styled.header`
     font-size: 20px;
     font-weight: 500;
     max-width: 800px;
+
+    h5 {
+      font-size: 30px;
+    }
   }
 `
 

@@ -86,17 +86,7 @@ App.getInitialProps = async function getInitialProps(context: AppContext) {
   return {
     ...(await NextApp.getInitialProps(context)),
     messages: {
-      ...require(`../../contents/common/${locale}.json`),
-      ...require(`../../contents/banners/${locale}.json`),
-      ...require(`../../contents/a-voz-da-floresta/${locale}.json`),
-      ...require(`../../contents/o-ultimo-recurso/${locale}.json`),
-      ...require(`../../contents/marco-ancestral/${locale}.json`),
-      ...require(`../../contents/dia-da-amazonia/${locale}.json`),
-      ...require(`../../contents/marcha-mulheres-indigenas/${locale}.json`),
-      ...require(`../../contents/equipe/${locale}.json`),
-      ...require(`../../contents/contato/${locale}.json`),
-      ...require(`../../contents/voluntareer/${locale}.json`),
-      ...require(`../../contents/projetos/${locale}.json`)
+      ...require(`../../contents/common/${locale}.json`)
     }
   }
 }

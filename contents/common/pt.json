@@ -20,5 +20,20 @@
 
   "contact-button": {
     "label": "Como podemos ajudar?"
+  },
+
+  "misc": {
+    "back_text": "Voltar para o",
+    "share_text": "Compartilhar no:",
+    "simple_share_text": "Compartilhar",
+    "click_to_open_text": "Clique para abrir",
+    "open_page_text": "Acessar página completa",
+    "related_gallery_text": "imagens na galeria",
+    "related_articles_text": "noticias relacionadas",
+    "published_at_text": "Publicado em ",
+    "by_text": "Por",
+    "continue_reading_text": "Continuar lendo...",
+    "writted_by_text": "Escrito por:",
+    "indisponible_schedule": "Cronograma indisponível para este dia."
   }
 }

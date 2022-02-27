@@ -7,6 +7,7 @@ import Link from 'next/link'
 import BannerFull from 'components/Blocos/BannerFull'
 import ContactButton from 'components/ContactButton'
 import Footer from 'components/Footer'
+import LanguagesButton from 'components/Navbar/LanguagesButton'
 
 import * as animations from './animations'
 import * as S from './styles'
@@ -26,6 +27,7 @@ const DiaDaAmazonia = () => {
   return (
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
+      <LanguagesButton />
       <S.Wrapper>
         <Head>
           <title>Dia da Amazônia | Floresta.TV</title>

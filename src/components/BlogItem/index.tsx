@@ -15,7 +15,7 @@ type BlogItemProps = {
 const BlogItem = ({ description, title, img, slug, date }: BlogItemProps) => {
   return (
     <Fade>
-      <Link href={slug}>
+      <Link passHref href={slug}>
         <S.BlogItemWrapper>
           <S.BlogItemImage>
             <Image

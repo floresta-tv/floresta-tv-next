@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 import { Container } from 'components/UI'
 import { Row, Col } from 'react-bootstrap'
@@ -35,13 +36,13 @@ const ArticlePreviewMathilde = ({
             <Row>
               <Col lg={12}>
                 <S.ArticlePreviewHeader>
-                  <Fade left>
+                  <Fade bottom>
                     <h2 className="title">{title}</h2>
                   </Fade>
-                  <Fade left>
+                  <Fade bottom>
                     <p className="desc">{subtitle}</p>
                   </Fade>
-                  <Fade left>
+                  <Fade bottom>
                     <a
                       href={buttonLink}
                       target="_blank"
@@ -56,7 +57,7 @@ const ArticlePreviewMathilde = ({
             </Row>
             <Row>
               <Col lg={12}>
-                <Fade right>
+                <Zoom>
                   <S.ArticlePreviewImage>
                     <Image
                       placeholder="blur"
@@ -66,7 +67,7 @@ const ArticlePreviewMathilde = ({
                       alt={imageAlt}
                     />
                   </S.ArticlePreviewImage>
-                </Fade>
+                </Zoom>
               </Col>
             </Row>
           </>
