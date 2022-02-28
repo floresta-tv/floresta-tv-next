@@ -36,7 +36,7 @@ export const Brand = styled.div`
 
 export const Toggler = styled.button`
   position: absolute;
-  top: 72px;
+  top: 14px;
   right: 16px;
   display: flex;
   align-items: center;
