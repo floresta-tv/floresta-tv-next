@@ -26,7 +26,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
           {/* @ts-ignore */}
           <meta
             property="og:image"
-            content="https://www.tech.floresta.tv/img/logo-floresta.jpg"
+            content="https://www.floresta.tv/img/logo-floresta.jpg"
           />
           <meta property="og:image:type" content="image/jpg" />
           <meta
