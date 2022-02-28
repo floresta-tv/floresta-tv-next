@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
 import { Element, Link as ScrollLink } from 'react-scroll'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -20,10 +19,13 @@ import ImageText from 'components/Blocos/ImageText'
 import SimpleQuote from 'components/Blocos/SimpleQuote'
 import LongQuote from 'components/Blocos/LongQuote'
 import DoubleButton from 'components/Blocos/DoubleButton'
+import { PDiaDaAmazoniaT } from 'types/pages'
 
-const DiaDaAmazonia = () => {
-  const t = useTranslations('dia-da-amazonia')
+type DiaDaAmazoniaProps = {
+  content: PDiaDaAmazoniaT
+}
 
+const DiaDaAmazonia = ({ content }: DiaDaAmazoniaProps) => {
   return (
     <motion.div key={6} {...animations.wrapper}>
       <ContactButton />
@@ -36,22 +38,22 @@ const DiaDaAmazonia = () => {
           <BannerFull
             items={[
               {
-                backgroundAlt: `Família floresta TV`,
+                backgroundAlt: content.HomeBanner.title,
                 width: 'large',
                 position: 'center',
                 textAlign: 'center',
-                background: '/img/indigena_com_urucum_banner.png',
+                background: content.HomeBanner.image.url,
                 title: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.title')
+                      __html: content.HomeBanner.title
                     }}
                   ></span>
                 ),
                 desc: (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('bannerfull.desc')
+                      __html: content.HomeBanner.description
                     }}
                   ></span>
                 ),
@@ -59,16 +61,18 @@ const DiaDaAmazonia = () => {
                   <>
                     <div className="link-1">
                       <ScrollLink to="documentario-em-tempo-real">
-                        Leia mais
+                        {content.HomeBanner.first_button.text}
                       </ScrollLink>
                     </div>
                     <div className="link-2">
                       <Link href="/marcha-mulheres-indigenas">
-                        Maracás em Brasília
+                        {content.HomeBanner.second_button.text}
                       </Link>
                     </div>
                     <div className="link-3">
-                      <Link href="/">Voz da Floresta</Link>
+                      <Link href="/">
+                        {content.HomeBanner.terc_button.text}
+                      </Link>
                     </div>
                   </>
                 )
@@ -80,33 +84,33 @@ const DiaDaAmazonia = () => {
         <Element name="contagem-progressiva">
           <ProgressiveCount
             texts={{
-              days: t.raw('contagemprogress1.dias'),
-              hours: t.raw('contagemprogress1.horas'),
-              seconds: t.raw('contagemprogress1.segundos'),
-              minutes: t.raw('contagemprogress1.minutos')
+              days: content.ContagemProgressiva.days,
+              hours: content.ContagemProgressiva.hours,
+              seconds: content.ContagemProgressiva.seconds,
+              minutes: content.ContagemProgressiva.minutes
             }}
-            background={`/img/indigena_protestos_brasilia.jpg`}
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.title')
+                  __html: content.ContagemProgressiva.title
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.desc')
+                  __html: content.ContagemProgressiva.subtitle
                 }}
               ></span>
             }
             caption={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('contagemprogress1.caption')
+                  __html: content.ContagemProgressiva.description
                 }}
               ></span>
             }
+            background={content.ContagemProgressiva.image.url}
           />
         </Element>
 
@@ -117,13 +121,13 @@ const DiaDaAmazonia = () => {
               <span
                 style={{ textTransform: 'uppercase' }}
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('videoblock1.title')
+                  __html: content.VideoHistoria.title
                 }}
               ></span>
             }
-            desc={t.raw('videoblock1.desc')}
-            caption={t.raw('videoblock1.caption')}
-            videoId={`Vw244cDbxyc`}
+            desc={content.VideoHistoria.subtitle}
+            caption={content.VideoHistoria.video_description}
+            videoId={content.VideoHistoria.video_id}
           />
         </Element>
 
@@ -132,60 +136,60 @@ const DiaDaAmazonia = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.title')
+                  __html: content.large_content_3213.title
                 }}
               ></span>
             }
             subtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.subtitle')
+                  __html: content.large_content_3213.subtitle
                 }}
               ></span>
             }
             text={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.text')
+                  __html: content.large_content_3213.paragraph
                 }}
               ></span>
             }
-            firstImage={`/img/indigena_bandeira.jpg`}
+            firstImage={content.large_content_3213.image_1.url}
             firstImageSubtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.firstImageSubtitle')
+                  __html: content.large_content_3213.image_1_desc
                 }}
               ></span>
             }
-            secondImage={`/img/segurando-bandeira.jpg`}
-            thirsdImage={`/img/carregando-bandeira.jpg`}
+            secondImage={content.large_content_3213.image_2.url}
+            thirsdImage={content.large_content_3213.image_3.url}
             leftText={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.leftText')
+                  __html: content.large_content_3213.image_2_desc
                 }}
               ></span>
             }
             rightText={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.rightText')
+                  __html: content.large_content_3213.image_3_desc
                 }}
               ></span>
             }
-            lastImage={`/img/povos-em-brasilia.jpg`}
+            lastImage={content.large_content_3213.image_4.url}
             lastImageSubtitle={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.lastImageSubtitle')
+                  __html: content.large_content_3213.image_4_desc
                 }}
               ></span>
             }
             finalText={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('articleblock.finalText')
+                  __html: content.large_content_3213.paragraph_2
                 }}
               ></span>
             }
@@ -194,10 +198,10 @@ const DiaDaAmazonia = () => {
 
         <Element name="povos">
           <DoubleImage
-            image1="/img/povo-terena.jpg"
-            image2="/img/povo-pataxo.jpg"
-            caption1="Povo Terena"
-            caption2="Povo Pataxó"
+            image1={content.DoubleImageStripe.image_1.url}
+            image2={content.DoubleImageStripe.image_2.url}
+            caption1={content.DoubleImageStripe.image_2_desc}
+            caption2={content.DoubleImageStripe.image_2_desc}
             title={<></>}
             subtitle={<></>}
             lit={true}
@@ -211,7 +215,7 @@ const DiaDaAmazonia = () => {
               text={
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: t.raw('simpletext.text')
+                    __html: content.paragraph_3
                   }}
                 ></span>
               }
@@ -225,7 +229,7 @@ const DiaDaAmazonia = () => {
             text={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('simplequote.quote')
+                  __html: content.quote
                 }}
               ></span>
             }
@@ -238,12 +242,12 @@ const DiaDaAmazonia = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('urucum.title')
+                  __html: content.ImageUrucum.title
                 }}
               ></span>
             }
-            image="/img/urucum-na-bandeira.jpg"
-            imageAlt="Indígena deitado na bandeira."
+            image={content.ImageUrucum.image.url}
+            imageAlt={content.ImageUrucum.image_description}
             titleTop={true}
             type="left"
           />
@@ -254,14 +258,14 @@ const DiaDaAmazonia = () => {
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('longquote.title')
+                  __html: content.DeclaracaoRafael.title
                 }}
               ></span>
             }
             text={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('longquote.text')
+                  __html: content.DeclaracaoRafael.body
                 }}
               ></span>
             }
@@ -271,22 +275,22 @@ const DiaDaAmazonia = () => {
 
         <Element name="obra-final">
           <ImageText
-            image="/img/desenho-indigena-urucum-na-bandeira.jpg"
+            image={content.DevastacaoImage.image.url}
             title={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('obra.title')
+                  __html: content.DevastacaoImage.title
                 }}
               ></span>
             }
             desc={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('obra.text')
+                  __html: content.DevastacaoImage.description
                 }}
               ></span>
             }
-            imageAlt="Desenho de indígena."
+            imageAlt={content.DevastacaoImage.image_description}
           />
         </Element>
 
@@ -295,14 +299,14 @@ const DiaDaAmazonia = () => {
             textBt1={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('buttons.bt1text')
+                  __html: content.button_left_text
                 }}
               ></span>
             }
             textBt2={
               <span
                 dangerouslySetInnerHTML={{
-                  __html: t.raw('buttons.bt2text')
+                  __html: content.button_right_text
                 }}
               ></span>
             }
@@ -315,44 +319,12 @@ const DiaDaAmazonia = () => {
         </Element>
 
         <Footer
-          links={[
-            {
-              to: 'home',
-              label: t.raw('footer-links.link1')
-            },
-            {
-              to: 'contagem-progressiva',
-              label: t.raw('footer-links.link2')
-            },
-            {
-              to: 'documentario-em-tempo-real',
-              label: t.raw('footer-links.link3')
-            },
-            {
-              to: 'dia-da-amazonia',
-              label: t.raw('footer-links.link4')
-            },
-            {
-              to: 'povos',
-              label: t.raw('footer-links.link5')
-            },
-            {
-              to: 'o-florestatv',
-              label: t.raw('footer-links.link6')
-            },
-            {
-              to: 'urucum-na-bandeira',
-              label: t.raw('footer-links.link7')
-            },
-            {
-              to: 'declaracao-rafael-quadros',
-              label: t.raw('footer-links.link8')
-            },
-            {
-              to: 'obra-final',
-              label: t.raw('footer-links.link9')
+          links={content.footer_links.map((item) => {
+            return {
+              to: item.target,
+              label: item.label
             }
-          ]}
+          })}
         />
       </S.Wrapper>
     </motion.div>

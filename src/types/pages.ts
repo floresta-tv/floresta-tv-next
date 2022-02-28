@@ -273,3 +273,110 @@ export type PContatoT = {
     label: string
   }[]
 }
+
+export type PDiaDaAmazoniaT = {
+  HomeBanner: {
+    title: string
+    description: string
+    image: {
+      url: string
+    }
+    first_button: {
+      href: string
+      text: string
+    }
+    second_button: {
+      href: string
+      text: string
+    }
+    terc_button: {
+      href: string
+      text: string
+    }
+  }
+  ContagemProgressiva: {
+    image: {
+      url: string
+    }
+    title: string
+    subtitle: string
+    days: string
+    hours: string
+    minutes: string
+    seconds: string
+    description: string
+  }
+  VideoHistoria: {
+    title: string
+    subtitle: string
+    video_id: string
+    video_description: string
+  }
+  large_content_3213: {
+    title: string
+    subtitle: string
+    paragraph: string
+    image_1: {
+      url: string
+    }
+    image_1_desc: string
+    image_2: {
+      url: string
+    }
+    image_2_desc: string
+    image_3: {
+      url: string
+    }
+    image_3_desc: string
+    image_4: {
+      url: string
+    }
+    image_4_desc: string
+    paragraph_2: string
+  }
+  DoubleImageStripe: {
+    image_1: {
+      url: string
+    }
+    image_1_desc: string
+    image_2: {
+      url: string
+    }
+    image_2_desc: string
+  }
+  paragraph_3: string
+  quote: string
+  ImageUrucum: {
+    title: string
+    description: string
+    image: {
+      url: string
+    }
+    image_description: string
+    button_text: string
+    button_link: string
+  }
+
+  DeclaracaoRafael: {
+    title: string
+    body: string
+  }
+
+  DevastacaoImage: {
+    title: string
+    description: string
+    image: {
+      url: string
+    }
+    image_description: string
+    button_text: string
+    button_link: string
+  }
+
+  button_left_text: string
+  button_right_text: string
+  footer_links: {
+    target: string
+    label: string
+  }[]
+}

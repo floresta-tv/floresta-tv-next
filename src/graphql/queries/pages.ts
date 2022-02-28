@@ -544,3 +544,115 @@ export const GET_PAGE_EQUIPE = gql`
     }
   }
 `
+
+export const GET_PAGE_DIA_DA_AMAZONIA = gql`
+  query getPaginaDiaDaAmazonia {
+    paginaDiaDaAmazonia {
+      HomeBanner {
+        title
+        description
+        image {
+          url
+        }
+        first_button {
+          href
+          text
+        }
+        second_button {
+          href
+          text
+        }
+        terc_button {
+          href
+          text
+        }
+      }
+      ContagemProgressiva {
+        image {
+          url
+        }
+        title
+        subtitle
+        days
+        hours
+        minutes
+        seconds
+        description
+      }
+      VideoHistoria {
+        title
+        subtitle
+        video_id
+        video_description
+      }
+      large_content_3213 {
+        title
+        subtitle
+        paragraph
+        image_1 {
+          url
+        }
+        image_1_desc
+        image_2 {
+          url
+        }
+        image_2_desc
+        image_3 {
+          url
+        }
+        image_3_desc
+        image_4 {
+          url
+        }
+        image_4_desc
+        paragraph_2
+      }
+      DoubleImageStripe {
+        image_1 {
+          url
+        }
+        image_1_desc
+        image_2 {
+          url
+        }
+        image_2_desc
+      }
+
+      paragraph_3
+      quote
+      ImageUrucum {
+        title
+        description
+        image {
+          url
+        }
+        image_description
+        button_text
+        button_link
+      }
+
+      DeclaracaoRafael {
+        title
+        body
+      }
+
+      DevastacaoImage {
+        title
+        description
+        image {
+          url
+        }
+        image_description
+        button_text
+        button_link
+      }
+
+      button_left_text
+      button_right_text
+      footer_links {
+        target
+        label
+      }
+    }
+  }
+`
