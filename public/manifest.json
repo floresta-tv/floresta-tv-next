@@ -1,8 +1,7 @@
 {
   "name": "Floresta.TV • Movimento em serviço da Floresta",
-  "short_name": "Floresta.TV",
-  "icons": [
-    {
+  "short_name": "Floresta TV",
+  "icons": [{
       "src": "/img/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
