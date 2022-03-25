@@ -22,7 +22,7 @@ function App({ Component, pageProps, messages, router }: AppProps) {
             content="O movimento coletivo Floresta TV partiu de um pedido dos próprios Povos Originários do mundo em ter autonomia para registrar, compartilhar e ampliar milhares de anos de cultura e sabedoria."
           />
           <link rel="shortcut icon" href="/img/favicon.png" />
-          <link rel="apple-touch-icon" href="/img/favicon.png" />
+          <link rel="apple-touch-icon" href="/img/icon-192.png" />
           {/* @ts-ignore */}
           <meta
             property="og:image"
